@@ -198,10 +198,18 @@ details[open] summary{color:var(--red)}
   #hero{grid-template-columns:1fr}
   
 .hright{flex:1;display:flex;align-items:center;justify-content:center;background:#000;min-height:400px}
-  .hleft{padding:25px 5vw 55px}
+  .hleft{padding:90px 5vw 55px}
+  .hright{display:none}
+  #hero{grid-template-columns:1fr}
   .fcards{grid-template-columns:1fr}
   .hrloc{grid-template-columns:1fr}
   .cgrid{grid-template-columns:1fr;gap:2.5rem}
+}
+
+@media(max-width:480px){
+  .hsub{font-size:.85rem}
+  .hbtns{flex-direction:column;gap:.5rem}
+  .hbtns a{text-align:center}
 }
 @media(max-width:600px){
   section{padding:65px 5vw!important}
