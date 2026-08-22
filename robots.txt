@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+Disallow: /small-group-pt.html
+
+Sitemap: https://crazystrength.co.uk/sitemap.xml
