@@ -141,6 +141,7 @@ footer{background:var(--drk);border-top:1px solid var(--bdr);padding:2.5rem 5vw}
         <div class="ddcol">
           <a href="legends-that-lift.html">Legends That Lift</a>
           <a href="cubs.html">Youth Strength Training</a>
+          <a href="open-gym.html">Open Gym</a>
           <a href="class-packs.html">Class Packs</a>
           <a href="small-group-pt-info.html">Small Group PT</a>
         </div>
@@ -172,6 +173,7 @@ footer{background:var(--drk);border-top:1px solid var(--bdr);padding:2.5rem 5vw}
   <a href="ladies-that-lift.html" onclick="mm()">Ladies That Lift</a>
   <a href="legends-that-lift.html" onclick="mm()">Legends That Lift</a>
   <a href="cubs.html" onclick="mm()">Youth Strength Training</a>
+  <a href="open-gym.html" onclick="mm()">Open Gym</a>
   <a href="class-packs.html" onclick="mm()">Class Packs</a>
   <a href="small-group-pt-info.html" onclick="mm()">Small Group PT</a>
   <div class="msec">Coaching</div>
@@ -309,9 +311,41 @@ footer{background:var(--drk);border-top:1px solid var(--bdr);padding:2.5rem 5vw}
       <h3 style="font-family:'Bebas Neue',sans-serif;font-size:1.9rem;color:var(--wht)">Want to Host or Enquire About an Event?</h3>
       <p style="color:var(--gry);font-size:.88rem;margin-top:.25rem">Get in touch &mdash; we&rsquo;re an approved venue for both British Weightlifting and British Powerlifting competitions.</p>
     </div>
-    <a href="privacy.html">Privacy Policy</a> &nbsp;|&nbsp; <a href="index.html#contact" class="btn btn-r" style="background:var(--red);color:#fff;padding:.8rem 1.8rem;text-decoration:none;font-size:.8rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;border-radius:2px">Get In Touch &rarr;</a>
+    <a href="privacy.html">Privacy Policy</a> &nbsp;|&nbsp; <a href="contact.html" class="btn btn-r" style="background:var(--red);color:#fff;padding:.8rem 1.8rem;text-decoration:none;font-size:.8rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;border-radius:2px">Get In Touch &rarr;</a>
   </div>
 </div>
+<hr class="divider">
+<!-- Email signup — Brevo Leads list -->
+<section style="padding:60px 5vw;background:var(--drk);border-top:1px solid var(--bdr)">
+  <div style="max-width:540px;margin:0 auto;text-align:center">
+    <div style="font-size:.7rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--red);margin-bottom:.8rem">Stay in the loop</div>
+    <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(1.8rem,4vw,2.6rem);color:var(--wht);margin-bottom:.8rem">Get Notified About Future Events</h2>
+    <p style="color:var(--gry);font-size:.95rem;line-height:1.7;margin-bottom:1.8rem">Competitions, courses, community days — we&rsquo;ll let you know first.</p>
+    <form class="cs-signup-form" style="display:flex;flex-direction:column;gap:.8rem">
+      <div style="display:flex;gap:.6rem;flex-wrap:wrap">
+        <input type="text" name="first_name" placeholder="First name" style="flex:1;min-width:120px;background:var(--card);border:1px solid var(--bdr);color:var(--wht);padding:.7rem 1rem;font-size:.9rem;font-family:'DM Sans',sans-serif;border-radius:2px;outline:none" onfocus="this.style.borderColor='var(--red)'" onblur="this.style.borderColor='var(--bdr)'">
+        <input type="email" name="email" placeholder="Email address" required style="flex:2;min-width:180px;background:var(--card);border:1px solid var(--bdr);color:var(--wht);padding:.7rem 1rem;font-size:.9rem;font-family:'DM Sans',sans-serif;border-radius:2px;outline:none" onfocus="this.style.borderColor='var(--red)'" onblur="this.style.borderColor='var(--bdr)'">
+      </div>
+      <button type="submit" style="background:var(--red);color:#fff;padding:.8rem;font-size:.8rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;border:none;border-radius:2px;cursor:pointer;font-family:'DM Sans',sans-serif;transition:background .2s" onmouseover="this.style.background='var(--rd2)'" onmouseout="this.style.background='var(--red)'">Sign Me Up &rarr;</button>
+      <p style="font-size:.72rem;color:var(--gry)">We respect your privacy. Unsubscribe any time. <a href="privacy.html" style="color:var(--red);text-decoration:none">Privacy Policy</a>.</p>
+      <div class="cs-signup-msg" style="display:none;padding:.7rem 1rem;background:rgba(74,222,128,.1);border:1px solid rgba(74,222,128,.25);border-radius:2px;font-size:.84rem;color:#4ade80">&#10003; You&#8217;re in. Thanks for signing up!</div>
+    </form>
+  </div>
+</section>
+<script>
+(function(){
+  document.querySelectorAll('.cs-signup-form').forEach(function(form){
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var msg = form.querySelector('.cs-signup-msg');
+      var emailVal = form.querySelector('[name="email"]').value;
+      var nameEl = form.querySelector('[name="first_name"]');
+      var nameVal = nameEl ? nameEl.value : '';
+      fetch('/api/subscribe',{method:'POST',body:JSON.stringify({email:emailVal,first_name:nameVal}),headers:{'Content-Type':'application/json'}}).then(function(r){msg.style.color=r.ok?'#4ade80':'#f87171';msg.textContent=r.ok?'✓ You’re in. Thanks for signing up!':'Something went wrong. Email us at contact@crazystrength.co.uk';msg.style.display='block';if(r.ok)form.reset();}).catch(function(){msg.style.color='#f87171';msg.textContent='Something went wrong. Email us at contact@crazystrength.co.uk';msg.style.display='block';});
+    });
+  });
+})();
+</script>
 <footer><div class="fi">
   <div style="display:flex;gap:.8rem;align-items:center">
     <a href="https://www.instagram.com/crazystrengthhq" target="_blank" rel="noopener" aria-label="Instagram" style="color:var(--gry);transition:color .2s" onmouseover="this.style.color='#f4f4ef'" onmouseout="this.style.color='var(--gry)'">
@@ -335,7 +369,7 @@ footer{background:var(--drk);border-top:1px solid var(--bdr);padding:2.5rem 5vw}
     <a href="the-den.html">The Den</a>
     <a href="personal-trainers.html">Personal Trainers</a>
     <a href="index.html#faq">FAQ</a>
-    <a href="privacy.html">Privacy Policy</a> &nbsp;|&nbsp; <a href="index.html#contact">Contact</a>
+    <a href="privacy.html">Privacy Policy</a> &nbsp;|&nbsp; <a href="contact.html">Contact</a>
   </nav>
   <div style="width:100%;display:flex;flex-wrap:wrap;gap:1rem;align-items:center;padding-top:1.2rem;margin-top:1.2rem;border-top:1px solid var(--bdr)">
     <a href="https://www.instagram.com/crazystrengthhq" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:.5rem;color:var(--gry);text-decoration:none;font-size:.8rem;font-weight:500" onmouseover="this.style.color='#e1306c'" onmouseout="this.style.color='var(--gry)'">&#128247; @crazystrengthhq</a>
