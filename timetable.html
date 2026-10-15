@@ -201,10 +201,20 @@ section+section{border-top:1px solid var(--bdr)}
   </div>
 </section>
 
-<section>
+<section id="programmes">
   <div class="slabel">Strength Programmes</div>
   <h2 class="stitle">Train With Purpose</h2>
   <p class="sbody">Coached sessions across powerlifting, weightlifting and specialist programmes. All skill levels welcome — sessions are structured, safe and built around you.</p>
+
+  <!-- Programme jump-nav — helps mobile users skip straight to their section -->
+  <nav style="display:flex;flex-wrap:wrap;gap:.5rem;margin:1.5rem 0 0;padding-bottom:1.5rem;border-bottom:1px solid var(--bdr)">
+    <a href="#prog-powerlifting" style="display:inline-block;padding:.5rem 1rem;background:var(--card);border:1px solid var(--bdr);color:var(--gry);text-decoration:none;font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;border-radius:2px;transition:all .2s" onmouseover="this.style.borderColor='var(--red)';this.style.color='var(--wht)'" onmouseout="this.style.borderColor='var(--bdr)';this.style.color='var(--gry)'">Powerlifting</a>
+    <a href="#prog-weightlifting" style="display:inline-block;padding:.5rem 1rem;background:var(--card);border:1px solid var(--bdr);color:var(--gry);text-decoration:none;font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;border-radius:2px;transition:all .2s" onmouseover="this.style.borderColor='var(--red)';this.style.color='var(--wht)'" onmouseout="this.style.borderColor='var(--bdr)';this.style.color='var(--gry)'">Weightlifting</a>
+    <a href="#prog-ladies" style="display:inline-block;padding:.5rem 1rem;background:var(--card);border:1px solid var(--bdr);color:var(--gry);text-decoration:none;font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;border-radius:2px;transition:all .2s" onmouseover="this.style.borderColor='var(--red)';this.style.color='var(--wht)'" onmouseout="this.style.borderColor='var(--bdr)';this.style.color='var(--gry)'">Ladies That Lift</a>
+    <a href="#prog-legends" style="display:inline-block;padding:.5rem 1rem;background:var(--card);border:1px solid var(--bdr);color:var(--gry);text-decoration:none;font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;border-radius:2px;transition:all .2s" onmouseover="this.style.borderColor='var(--red)';this.style.color='var(--wht)'" onmouseout="this.style.borderColor='var(--bdr)';this.style.color='var(--gry)'">Legends</a>
+    <a href="#prog-cubs" style="display:inline-block;padding:.5rem 1rem;background:var(--card);border:1px solid var(--bdr);color:var(--gry);text-decoration:none;font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;border-radius:2px;transition:all .2s" onmouseover="this.style.borderColor='var(--red)';this.style.color='var(--wht)'" onmouseout="this.style.borderColor='var(--bdr)';this.style.color='var(--gry)'">CUBS</a>
+    <a href="#prog-open-gym" style="display:inline-block;padding:.5rem 1rem;background:var(--card);border:1px solid var(--bdr);color:var(--gry);text-decoration:none;font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;border-radius:2px;transition:all .2s" onmouseover="this.style.borderColor='var(--red)';this.style.color='var(--wht)'" onmouseout="this.style.borderColor='var(--bdr)';this.style.color='var(--gry)'">Open Gym</a>
+  </nav>
 
   <div class="tt-notice">
     All sessions require pre-booking via Evini. Spaces are limited — book early. <a href="https://evini.com/locations/390" target="_blank" rel="noopener">Book online</a> or message us on <a href="https://wa.me/447734824897" target="_blank" rel="noopener">WhatsApp</a>.
@@ -213,7 +223,7 @@ section+section{border-top:1px solid var(--bdr)}
   <div class="prog-grid">
 
     <!-- POWERLIFTING -->
-    <div class="prog-card reveal">
+    <div id="prog-powerlifting" class="prog-card reveal">
       <div class="pc-label">Coached Programme</div>
       <h3 class="pc-title">Powerlifting Club</h3>
       <p class="pc-desc">Squat, bench and deadlift — properly coached. Whether you're new to the platform or chasing competition totals, this is where it happens.</p>
@@ -237,7 +247,7 @@ section+section{border-top:1px solid var(--bdr)}
     </div>
 
     <!-- WEIGHTLIFTING -->
-    <div class="prog-card reveal">
+    <div id="prog-weightlifting" class="prog-card reveal">
       <div class="pc-label">Coached Programme</div>
       <h3 class="pc-title">Weightlifting Club</h3>
       <p class="pc-desc">Snatch and clean &amp; jerk with coaching that actually makes a difference. Technical, demanding and rewarding.</p>
@@ -261,7 +271,7 @@ section+section{border-top:1px solid var(--bdr)}
     </div>
 
     <!-- LADIES THAT LIFT -->
-    <div class="prog-card reveal">
+    <div id="prog-ladies" class="prog-card reveal">
       <div class="pc-label">Women&rsquo;s Programme <span class="pc-badge bdg-ladies">Ladies Only</span></div>
       <h3 class="pc-title">Ladies That Lift</h3>
       <p class="pc-desc">A serious women&rsquo;s programme built on strength. More sessions, more flexibility. Early mornings, daytime and evenings available throughout the week.</p>
@@ -292,7 +302,7 @@ section+section{border-top:1px solid var(--bdr)}
     </div>
 
     <!-- LEGENDS THAT LIFT -->
-    <div class="prog-card reveal">
+    <div id="prog-legends" class="prog-card reveal">
       <div class="pc-label">50+ Programme <span class="pc-badge bdg-legends">Legends</span></div>
       <h3 class="pc-title">Legends That Lift</h3>
       <p class="pc-desc">Strength training for over-50s. Age is not a reason to hold back. Properly coached, appropriately loaded, completely serious.</p>
@@ -311,7 +321,7 @@ section+section{border-top:1px solid var(--bdr)}
   </div>
 </section>
 
-<section>
+<section id="prog-cubs">
   <div class="slabel">Youth Strength</div>
   <h2 class="stitle">CUBS</h2>
   <p class="sbody">Strength training for ages 6&ndash;11. Three stages, properly structured, no compromise on quality. <a href="cubs.html" style="color:var(--red);text-decoration:none">Find out more about CUBS</a>.</p>
@@ -417,7 +427,7 @@ section+section{border-top:1px solid var(--bdr)}
   </div>
 </section>
 
-<section>
+<section id="prog-open-gym">
   <div class="slabel">Open Access</div>
   <h2 class="stitle">Open Gym</h2>
   <p class="sbody">Train on your own terms. Multiple sessions throughout the day, every day. A member of the team is always present. Pre-booking required.</p>

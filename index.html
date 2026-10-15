@@ -203,7 +203,24 @@ details[open] summary{color:var(--red)}
   .flinks{gap:1rem}
   .fcopy{margin-top:.8rem;padding-top:.8rem}
   .ttnote{font-size:.8rem}
+  /* Sticky mobile taster bar */
+  .mob-taster-bar{display:flex}
+  /* Timetable widget tabs bigger on mobile */
+  .tt-tab{min-height:44px!important;font-size:.8rem!important;padding:10px 4px!important}
+  /* Services group headings */
+  .svc-group-heading{font-size:.65rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gry);padding:.6rem 0 .5rem;border-top:1px solid var(--bdr);margin-top:.8rem;grid-column:1/-1}
+  /* Show only first 3 FAQs on mobile */
+  .faqlist details:nth-child(n+4){display:none}
+  /* Reviews: hide carousel nav dots on mobile, just show the 5-star summary */
+  .mob-reviews-show{display:block}
+  .mob-reviews-hide{display:none}
+  /* Hero body text: trim on mobile */
+  .hero-body-extra{display:none}
 }
+/* Sticky mobile taster bar — hidden on desktop */
+.mob-taster-bar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:200;background:var(--red);border-top:2px solid var(--rd2);padding:.85rem 5vw;align-items:center;justify-content:space-between;gap:.8rem}
+.mob-taster-bar span{font-size:.78rem;font-weight:600;letter-spacing:.04em;color:#fff;line-height:1.3}
+.mob-taster-bar a{background:#fff;color:var(--red);padding:.55rem 1.1rem;text-decoration:none;font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;border-radius:2px;white-space:nowrap;flex-shrink:0}
 </style>
 <script type="application/ld+json">
 {
@@ -478,11 +495,13 @@ details[open] summary{color:var(--red)}
     <p class="sbody">From competitive strength sport to our youngest CUBS athletes every programme is coached with passion and tailored to where you are on your journey.</p>
   </div>
   <div class="sgrid reveal">
+    <div class="svc-group-heading">Coached Classes &mdash; with a free taster session</div>
     <div class="scard" style="border-top:2px solid var(--red);"><div class="sname">Powerlifting</div><p class="sdesc">Squat, bench and deadlift. Compete or just get strong.</p><span class="stag">All Levels</span><div style="font-size:.72rem;font-weight:600;color:var(--red);margin:.3rem 0">from &pound;90/mo</div><a href="powerlifting.html" class="scard-cta" style="background:var(--drk);border:1px solid var(--bdr);color:var(--wht)">Find Out More &rarr;</a><a href="https://www.evini.com/locations/390/forms/448/5cc6fc19ef6b9905/new?class_type=3855" target="_blank" rel="noopener" class="scard-cta" style="background:var(--red);color:#fff;margin-top:.4rem">Free Taster &rarr;</a></div>
     <div class="scard" style="border-top:2px solid var(--red);"><div class="sname">Weightlifting</div><p class="sdesc">Olympic lifting. Snatch and clean &amp; jerk for all levels.</p><span class="stag">All Levels</span><div style="font-size:.72rem;font-weight:600;color:var(--red);margin:.3rem 0">from &pound;90/mo</div><a href="weightlifting.html" class="scard-cta" style="background:var(--drk);border:1px solid var(--bdr);color:var(--wht)">Find Out More &rarr;</a><a href="https://www.evini.com/locations/390/forms/448/5cc6fc19ef6b9905/new?class_type=3856" target="_blank" rel="noopener" class="scard-cta" style="background:var(--red);color:#fff;margin-top:.4rem">Free Taster &rarr;</a></div>
     <div class="scard" style="border-top:2px solid var(--red);"><div class="sname">Ladies That Lift</div><p class="sdesc">Women-only coached strength. No experience needed.</p><span class="stag">Women Only</span><div style="font-size:.72rem;font-weight:600;color:var(--red);margin:.3rem 0">from &pound;55/mo</div><a href="ladies-that-lift.html" class="scard-cta" style="background:var(--drk);border:1px solid var(--bdr);color:var(--wht)">Find Out More &rarr;</a><a href="https://www.evini.com/locations/390/forms/448/5cc6fc19ef6b9905/new?class_type=3860" target="_blank" rel="noopener" class="scard-cta" style="background:var(--red);color:#fff;margin-top:.4rem">Free Taster &rarr;</a></div>
     <div class="scard" style="border-top:2px solid var(--red);"><div class="sname">Legends That Lift</div><p class="sdesc">Coached strength for 50+ and special populations.</p><span class="stag">50+ &amp; All Abilities</span><div style="font-size:.72rem;font-weight:600;color:var(--red);margin:.3rem 0">from &pound;50/mo</div><a href="legends-that-lift.html" class="scard-cta" style="background:var(--drk);border:1px solid var(--bdr);color:var(--wht)">Find Out More &rarr;</a><a href="https://www.evini.com/locations/390/forms/448/5cc6fc19ef6b9905/new?class_type=9114" target="_blank" rel="noopener" class="scard-cta" style="background:var(--red);color:#fff;margin-top:.4rem">Free Taster &rarr;</a></div>
     <div class="scard" style="border-top:2px solid var(--red);"><div class="sname">CUBS Programme</div><p class="sdesc">Youth strength development from age 8. Three structured stages.</p><span class="stag">Ages 8&ndash;16</span><div style="font-size:.72rem;font-weight:600;color:var(--red);margin:.3rem 0">from &pound;50/mo</div><a href="cubs.html" class="scard-cta" style="background:var(--drk);border:1px solid var(--bdr);color:var(--wht)">Find Out More &rarr;</a><a href="https://www.evini.com/locations/390/forms/448/5cc6fc19ef6b9905/new?class_type=3857" target="_blank" rel="noopener" class="scard-cta" style="background:var(--red);color:#fff;margin-top:.4rem">Free Taster &rarr;</a></div>
+    <div class="svc-group-heading">Flexible Options</div>
     <div class="scard" style=""><div class="sname">Semi-Remote Coaching</div><p class="sdesc">In-person sessions + remote programming &amp; direct coach access.</p><span class="stag">Limited Spaces</span><div style="font-size:.72rem;font-weight:600;color:var(--red);margin:.3rem 0">from &pound;150/mo</div><a href="semi-remote-coaching.html" class="scard-cta" style="background:var(--drk);border:1px solid var(--bdr);color:var(--wht)">Find Out More &rarr;</a></div>
     <div class="scard" style=""><div class="sname">Personal Training</div><p class="sdesc">1:1 coaching for any age, goal or ability.</p><span class="stag">Bespoke</span><a href="personal-trainers.html" class="scard-cta" style="background:var(--drk);border:1px solid var(--bdr);color:var(--wht)">Find Out More &rarr;</a></div>
     <div class="scard" style=""><div class="sname">Class Packs</div><p class="sdesc">Flexible 4, 8 or 12 class passes. No monthly commitment.</p><span class="stag">Flexible</span><div style="font-size:.72rem;font-weight:600;color:var(--red);margin:.3rem 0">from &pound;72</div><a href="class-packs.html" class="scard-cta" style="background:var(--drk);border:1px solid var(--bdr);color:var(--wht)">Find Out More &rarr;</a></div>
@@ -609,7 +628,7 @@ details[open] summary{color:var(--red)}
     <div style="position:relative;overflow:hidden">
       <div id="reviewTrack" style="display:flex;transition:transform .4s ease;gap:1px"></div>
     </div>
-    <div style="display:flex;align-items:center;justify-content:space-between;margin-top:1.2rem">
+    <div class="mob-reviews-hide" style="display:flex;align-items:center;justify-content:space-between;margin-top:1.2rem">
       <div style="display:flex;gap:.5rem" id="reviewDots"></div>
       <div style="display:flex;gap:.5rem">
         <button onclick="reviewPrev()" style="background:var(--card);border:1px solid var(--bdr);color:var(--wht);width:36px;height:36px;border-radius:2px;cursor:pointer;font-size:1rem;transition:background .2s" onmouseover="this.style.background='var(--bdr)'" onmouseout="this.style.background='var(--card)'">&larr;</button>
@@ -953,5 +972,12 @@ document.getElementById('emailSignupForm').addEventListener('submit', function(e
 
 }());
 </script>
+
+<!-- Sticky mobile taster bar — shown only on mobile via CSS -->
+<div class="mob-taster-bar">
+  <span>Ready to start?<br>Book a free session today.</span>
+  <a href="timetable.html#tasters">Free Taster &rarr;</a>
+</div>
+
 </body>
 </html>
