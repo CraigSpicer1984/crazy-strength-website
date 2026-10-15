@@ -511,34 +511,17 @@ details[open] summary{color:var(--red)}
 </section>
 <hr class="divider">
 
-<section id="timetable" style="padding:60px 5vw;background:var(--drk)">
-  <div class="reveal">
-
-    <div style="display:flex;flex-wrap:wrap;gap:1.5rem;justify-content:space-between;align-items:flex-end;margin-bottom:1.6rem">
-      <div>
-        <div class="slabel">When To Find Us</div>
-        <h2 class="stitle">Weekly Timetable</h2>
-        <p class="sbody" style="margin-top:.4rem;font-size:.86rem">Open Gym runs 05:00&ndash;23:00 every day. Coached sessions below. All at Unit&nbsp;13, The Beacon Centre, Amesbury.</p>
-      </div>
-      <a href="https://www.google.com/maps/search/Unit+13+The+Beacon+Centre+Solar+Way+Amesbury+SP4+7SZ" target="_blank" rel="noopener" style="background:var(--red);color:#fff;padding:.5rem .9rem;font-size:.74rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;border-radius:2px;align-self:flex-start;flex-shrink:0;white-space:nowrap">Get Directions &rarr;</a>
+<section id="timetable" style="padding:60px 5vw;background:var(--drk);border-top:1px solid var(--bdr)">
+  <div class="reveal" style="display:flex;flex-wrap:wrap;gap:2rem;justify-content:space-between;align-items:center">
+    <div>
+      <div class="slabel">When To Find Us</div>
+      <h2 class="stitle">Sessions &amp; Timetable</h2>
+      <p class="sbody" style="margin-top:.4rem;font-size:.86rem;max-width:520px">Every programme, every session time. Open Gym runs 05:00&ndash;23:00 every day. All at Unit&nbsp;13, The Beacon Centre, Amesbury.</p>
     </div>
-
-    <!-- Day tabs -->
-    <div style="display:flex;gap:2px;margin-bottom:1.5rem;background:var(--blk);padding:3px;border:1px solid var(--bdr)" role="tablist" aria-label="Select a day">
-      <button class="tt-tab" role="tab" aria-selected="false" style="flex:1;padding:10px 2px;background:transparent;border:none;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:.68rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gry);border-radius:1px;transition:background .15s,color .15s;line-height:1.3">Mon</button>
-      <button class="tt-tab" role="tab" aria-selected="false" style="flex:1;padding:10px 2px;background:transparent;border:none;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:.68rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gry);border-radius:1px;transition:background .15s,color .15s;line-height:1.3">Tue</button>
-      <button class="tt-tab" role="tab" aria-selected="false" style="flex:1;padding:10px 2px;background:transparent;border:none;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:.68rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gry);border-radius:1px;transition:background .15s,color .15s;line-height:1.3">Wed</button>
-      <button class="tt-tab" role="tab" aria-selected="false" style="flex:1;padding:10px 2px;background:transparent;border:none;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:.68rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gry);border-radius:1px;transition:background .15s,color .15s;line-height:1.3">Thu</button>
-      <button class="tt-tab" role="tab" aria-selected="false" style="flex:1;padding:10px 2px;background:transparent;border:none;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:.68rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gry);border-radius:1px;transition:background .15s,color .15s;line-height:1.3">Fri</button>
-      <button class="tt-tab" role="tab" aria-selected="false" style="flex:1;padding:10px 2px;background:transparent;border:none;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:.68rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gry);border-radius:1px;transition:background .15s,color .15s;line-height:1.3">Sat</button>
-      <button class="tt-tab" role="tab" aria-selected="false" style="flex:1;padding:10px 2px;background:transparent;border:none;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:.68rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gry);border-radius:1px;transition:background .15s,color .15s;line-height:1.3">Sun</button>
+    <div style="display:flex;gap:1rem;flex-wrap:wrap">
+      <a href="timetable.html" style="display:inline-block;background:var(--red);color:#fff;padding:.75rem 1.6rem;font-size:.8rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;border-radius:2px;white-space:nowrap">View Full Timetable &rarr;</a>
+      <a href="https://www.google.com/maps/search/Unit+13+The+Beacon+Centre+Solar+Way+Amesbury+SP4+7SZ" target="_blank" rel="noopener" style="display:inline-block;background:transparent;color:var(--lt);border:1px solid var(--bdr);padding:.75rem 1.6rem;font-size:.8rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;border-radius:2px;white-space:nowrap">Get Directions &rarr;</a>
     </div>
-
-    <!-- Session content — populated automatically by the script below -->
-    <div id="tt-content" role="tabpanel"></div>
-
-    <p class="ttnote">&#9432;&nbsp; <strong style="color:#10b981">Open Gym</strong> runs 05:00&ndash;23:00 every day, around all coached sessions. <a href="index.html#contact" style="color:var(--red);text-decoration:none">Get in touch</a> for the latest on Sat &amp; Sun coached sessions.</p>
-
   </div>
 </section>
 <hr class="divider">
@@ -833,152 +816,6 @@ document.getElementById('emailSignupForm').addEventListener('submit', function(e
 });
 </script>
 
-<script>
-(function () {
-  'use strict';
-
-  /* ─────────────────────────────────────────────────────────────────
-     SESSION DATA  ← edit this to update the timetable
-     day: 0=Mon  1=Tue  2=Wed  3=Thu  4=Fri  5=Sat  6=Sun
-     Sessions at the same start time appear as grouped cards.
-  ───────────────────────────────────────────────────────────────── */
-  var SESSIONS = [
-
-    // MONDAY
-    { day:0, start:'08:00', end:'09:00', name:'Legends That Lift',           color:'#2dd4bf', link:'legends-that-lift.html' },
-    { day:0, start:'09:15', end:'10:15', name:'Ladies That Lift',            color:'#a78bfa', link:'ladies-that-lift.html'  },
-    { day:0, start:'12:00', end:'13:00', name:'WL Club',                     color:'#3b82f6', link:'weightlifting.html'     },
-    { day:0, start:'12:00', end:'13:00', name:'PL Club',                     color:'#e8220a', link:'powerlifting.html'      },
-    { day:0, start:'13:15', end:'14:15', name:'Stonehenge School WL',        color:'#f97316', link:'cubs.html'              },
-    { day:0, start:'16:00', end:'16:45', name:'CUBS S1',                     color:'#f59e0b', link:'cubs.html'              },
-    { day:0, start:'16:30', end:'17:30', name:'CUBS S3',                     color:'#f97316', link:'cubs.html'              },
-    { day:0, start:'18:00', end:'19:00', name:'WL Club',                     color:'#3b82f6', link:'weightlifting.html'     },
-    { day:0, start:'18:00', end:'19:00', name:'PL Club',                     color:'#e8220a', link:'powerlifting.html'      },
-    { day:0, start:'19:30', end:'21:00', name:'Combined WL/PL',              color:'#8b5cf6', link:'timetable.html'         },
-
-    // TUESDAY
-    { day:1, start:'07:00', end:'08:00', name:'Ladies That Lift',            color:'#a78bfa', link:'ladies-that-lift.html'  },
-    { day:1, start:'09:15', end:'10:15', name:'Ladies That Lift',            color:'#a78bfa', link:'ladies-that-lift.html'  },
-    { day:1, start:'13:00', end:'14:00', name:'Ladies That Lift',            color:'#a78bfa', link:'ladies-that-lift.html'  },
-    { day:1, start:'17:00', end:'18:00', name:'CUBS S2',                     color:'#f59e0b', link:'cubs.html'              },
-    { day:1, start:'18:00', end:'19:00', name:'Ladies That Lift',            color:'#a78bfa', link:'ladies-that-lift.html'  },
-    { day:1, start:'19:00', end:'20:00', name:'Ladies That Lift',            color:'#a78bfa', link:'ladies-that-lift.html'  },
-
-    // WEDNESDAY
-    { day:2, start:'09:15', end:'10:15', name:'Ladies That Lift',            color:'#a78bfa', link:'ladies-that-lift.html'  },
-    { day:2, start:'12:00', end:'13:00', name:'WL Club',                     color:'#3b82f6', link:'weightlifting.html'     },
-    { day:2, start:'12:00', end:'13:00', name:'PL Club',                     color:'#e8220a', link:'powerlifting.html'      },
-    { day:2, start:'16:00', end:'16:45', name:'CUBS S1',                     color:'#f59e0b', link:'cubs.html'              },
-    { day:2, start:'16:30', end:'17:30', name:'CUBS S3',                     color:'#f97316', link:'cubs.html'              },
-    { day:2, start:'18:00', end:'19:00', name:'WL Club',                     color:'#3b82f6', link:'weightlifting.html'     },
-    { day:2, start:'18:00', end:'19:00', name:'PL Club',                     color:'#e8220a', link:'powerlifting.html'      },
-    { day:2, start:'19:30', end:'21:00', name:'Combined WL/PL',              color:'#8b5cf6', link:'timetable.html'         },
-
-    // THURSDAY
-    { day:3, start:'08:00', end:'09:00', name:'Legends That Lift',           color:'#2dd4bf', link:'legends-that-lift.html' },
-    { day:3, start:'09:15', end:'10:15', name:'Ladies That Lift',            color:'#a78bfa', link:'ladies-that-lift.html'  },
-    { day:3, start:'13:00', end:'14:00', name:'Ladies That Lift',            color:'#a78bfa', link:'ladies-that-lift.html'  },
-    { day:3, start:'13:15', end:'14:15', name:'Stonehenge School WL',        color:'#f97316', link:'cubs.html'              },
-    { day:3, start:'17:00', end:'18:00', name:'CUBS S2',                     color:'#f59e0b', link:'cubs.html'              },
-    { day:3, start:'18:00', end:'19:00', name:'Ladies That Lift',            color:'#a78bfa', link:'ladies-that-lift.html'  },
-    { day:3, start:'19:00', end:'20:00', name:'Ladies That Lift',            color:'#a78bfa', link:'ladies-that-lift.html'  },
-
-    // FRIDAY
-    { day:4, start:'07:00', end:'08:00', name:'Ladies That Lift',            color:'#a78bfa', link:'ladies-that-lift.html'  },
-    { day:4, start:'09:15', end:'10:15', name:'Ladies That Lift',            color:'#a78bfa', link:'ladies-that-lift.html'  },
-    { day:4, start:'12:00', end:'13:00', name:'WL Club',                     color:'#3b82f6', link:'weightlifting.html'     },
-    { day:4, start:'12:00', end:'13:00', name:'PL Club',                     color:'#e8220a', link:'powerlifting.html'      },
-    { day:4, start:'16:00', end:'16:45', name:'CUBS S1',                     color:'#f59e0b', link:'cubs.html'              },
-    { day:4, start:'16:30', end:'17:30', name:'CUBS S3',                     color:'#f97316', link:'cubs.html'              },
-    { day:4, start:'18:00', end:'19:00', name:'WL Club',                     color:'#3b82f6', link:'weightlifting.html'     },
-    { day:4, start:'18:00', end:'19:00', name:'PL Club',                     color:'#e8220a', link:'powerlifting.html'      },
-    { day:4, start:'19:30', end:'21:00', name:'Combined WL/PL',              color:'#8b5cf6', link:'timetable.html'         },
-
-    // SATURDAY (5) & SUNDAY (6)
-    // Add sessions here once confirmed
-
-  ];
-
-  /* ─── internals — no need to edit below ─── */
-
-  var JS_DAY_MAP = { 0:6, 1:0, 2:1, 3:2, 4:3, 5:4, 6:5 };
-  var TODAY = JS_DAY_MAP[new Date().getDay()];
-  if (TODAY === undefined) TODAY = 0;
-
-  function hexRgba(hex, a) {
-    var r = parseInt(hex.slice(1,3),16), g = parseInt(hex.slice(3,5),16), b = parseInt(hex.slice(5,7),16);
-    return 'rgba('+r+','+g+','+b+','+a+')';
-  }
-
-  function renderDay(idx) {
-    var el = document.getElementById('tt-content');
-    if (!el) return;
-
-    // Sat / Sun TBC
-    if (idx >= 5) {
-      el.innerHTML =
-        '<div style="padding:48px 20px;text-align:center;border:1px solid var(--bdr);background:var(--blk)">'
-        +'<div style="font-family:\'Bebas Neue\',sans-serif;font-size:2.4rem;color:#333;margin-bottom:8px;letter-spacing:.04em">Sessions TBC</div>'
-        +'<p style="font-size:.86rem;color:#555;font-family:\'DM Sans\',sans-serif;line-height:1.7">'
-        +'Open Gym available 05:00\u201323:00 &middot; <a href="index.html#contact" style="color:var(--red);text-decoration:none">Get in touch</a> for updates</p></div>';
-      return;
-    }
-
-    var ds = SESSIONS.filter(function(s){ return s.day === idx; });
-
-    if (!ds.length) {
-      el.innerHTML =
-        '<div style="padding:48px 20px;text-align:center;border:1px solid var(--bdr);background:var(--blk)">'
-        +'<div style="font-family:\'Bebas Neue\',sans-serif;font-size:2.4rem;color:#333;margin-bottom:8px">No Coached Sessions</div>'
-        +'<p style="font-size:.86rem;color:#555;font-family:\'DM Sans\',sans-serif">Open Gym available 05:00\u201323:00</p></div>';
-      return;
-    }
-
-    // group by start+end so different-duration sessions at the same start each get their own row
-    var byTime = {};
-    ds.forEach(function(s){ var k=s.start+'|'+s.end; if (!byTime[k]) byTime[k]=[]; byTime[k].push(s); });
-
-    var html = Object.keys(byTime).sort().map(function(time){
-      var sessions = byTime[time];
-      var parts   = time.split('|');
-      var startTime = parts[0];
-      var endTime   = parts[1];
-
-      var cards = sessions.map(function(s){
-        var bgN = hexRgba(s.color,0.10), bgH = hexRgba(s.color,0.18);
-        return '<a href="'+s.link+'" style="display:block;padding:14px 18px;background:'+bgN+';border-left:3px solid '+s.color
-          +';text-decoration:none;transition:background .15s" onmouseover="this.style.background=\''+bgH+'\'" onmouseout="this.style.background=\''+bgN+'\'"><div style="color:'+s.color+';font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:4px;font-family:\'DM Sans\',sans-serif">'+s.name+'</div><div style="color:#666;font-size:.78rem;font-family:\'DM Sans\',sans-serif">Find out more →</div></a>';
-      }).join('<div style="height:1px;background:var(--bdr)"></div>');
-
-      return '<div style="border:1px solid var(--bdr);overflow:hidden;margin-bottom:10px"><div style="background:var(--blk);padding:10px 18px;border-bottom:1px solid var(--bdr);display:flex;align-items:baseline;justify-content:space-between;gap:12px"><span style="font-family:\'Bebas Neue\',sans-serif;font-size:1.9rem;color:var(--wht);line-height:1;letter-spacing:.04em">'+startTime+'</span><span style="font-size:.74rem;color:#555;font-family:\'DM Sans\',sans-serif;font-weight:500">until '+endTime+'</span></div>'+cards+'</div>';
-    }).join('');
-
-    el.innerHTML = html;
-  }
-
-  function updateTabs(activeIdx) {
-    document.querySelectorAll('.tt-tab').forEach(function(tab, i){
-      var isActive = i === activeIdx, isToday = i === TODAY;
-      tab.style.background = isActive ? 'var(--red)' : 'transparent';
-      tab.style.color      = isActive ? '#fff' : isToday ? 'var(--red)' : 'var(--gry)';
-      tab.setAttribute('aria-selected', isActive ? 'true' : 'false');
-    });
-  }
-
-  function init() {
-    document.querySelectorAll('.tt-tab').forEach(function(tab, i){
-      tab.addEventListener('click', function(){ updateTabs(i); renderDay(i); });
-    });
-    updateTabs(TODAY);
-    renderDay(TODAY);
-  }
-
-  document.readyState === 'loading'
-    ? document.addEventListener('DOMContentLoaded', init)
-    : init();
-
-}());
-</script>
 
 <!-- Sticky mobile taster bar — shown only on mobile via CSS -->
 <div class="mob-taster-bar">
