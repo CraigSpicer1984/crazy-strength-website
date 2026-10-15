@@ -176,45 +176,33 @@ details[open] summary{color:var(--red)}
 .stitle{font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,4vw,3.2rem);line-height:1;color:var(--wht);margin-bottom:.9rem}
 .sbody{font-size:.97rem;color:var(--gry);max-width:560px;line-height:1.8}
 @media(max-width:900px){
-  #about 
-/* Ticker */
-@keyframes tickerScroll {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-.tick-item {
-  display:inline-block;
-  white-space:nowrap;
-  padding:0 2.5rem;
-  font-size:.76rem;
-  color:var(--lt);
-  text-decoration:none;
-  letter-spacing:.04em;
-  transition:color .2s;
-}
-.tick-item:hover { color:var(--red); }
-#tickerTrack:hover { animation-play-state:paused; }
-.reveal{grid-template-columns:1fr!important;gap:2rem!important}
   #hero{grid-template-columns:1fr}
-  
-.hright{flex:1;display:flex;align-items:center;justify-content:center;background:#000;min-height:400px}
   .hleft{padding:90px 5vw 55px}
   .hright{display:none}
-  #hero{grid-template-columns:1fr}
   .fcards{grid-template-columns:1fr}
   .hrloc{grid-template-columns:1fr}
   .cgrid{grid-template-columns:1fr;gap:2.5rem}
-}
-
-@media(max-width:480px){
-  .hsub{font-size:.85rem}
-  .hbtns{flex-direction:column;gap:.5rem}
-  .hbtns a{text-align:center}
+  .reveal{grid-template-columns:1fr!important;gap:2rem!important}
 }
 @media(max-width:600px){
-  section{padding:65px 5vw!important}
+  section{padding:55px 5vw!important}
   .sgrid{grid-template-columns:1fr}
   .fgrow{grid-template-columns:1fr}
+  .htitle{font-size:clamp(2.8rem,16vw,5rem)}
+  .hsub{font-size:.88rem;max-width:100%}
+  .hbtns{flex-direction:column;gap:.5rem}
+  .hbtns a{text-align:center}
+  .hstats{gap:1.2rem}
+  .snum{font-size:2rem}
+  .stitle{font-size:clamp(1.6rem,7vw,2.4rem)}
+  .sbody{font-size:.9rem}
+  .fcard{padding:1.5rem}
+  .scard{padding:1.4rem}
+  .btn{padding:.75rem 1.4rem;font-size:.78rem}
+  .fi{flex-direction:column;align-items:flex-start;gap:1rem}
+  .flinks{gap:1rem}
+  .fcopy{margin-top:.8rem;padding-top:.8rem}
+  .ttnote{font-size:.8rem}
 }
 </style>
 <script type="application/ld+json">
