@@ -37,34 +37,12 @@ body>nav{position:fixed;top:28px;left:0;right:0;z-index:100;height:56px;display:
 .mmenu a{color:var(--lt);text-decoration:none;font-size:.9rem;font-weight:500;letter-spacing:.05em;text-transform:uppercase;border-bottom:1px solid var(--bdr);padding:.85rem 0}
 .msec{font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;padding:.9rem 0 .2rem;font-weight:600;color:var(--red)}
 .divider{border:none;height:1px;background:var(--bdr)}
-
-/* Ticker */
-@keyframes tickerScroll {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-.tick-item {
-  display:inline-block;
-  white-space:nowrap;
-  padding:0 2.5rem;
-  font-size:.76rem;
-  color:var(--lt);
-  text-decoration:none;
-  letter-spacing:.04em;
-  transition:color .2s;
-}
-.tick-item:hover { color:var(--red); }
-#tickerTrack:hover { animation-play-state:paused; }
 .reveal{opacity:0;transform:translateY(22px);transition:opacity .55s ease,transform .55s ease}
 .reveal.vis{opacity:1;transform:translateY(0)}
 .btn{display:inline-block;padding:.8rem 1.8rem;font-size:.8rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;border-radius:2px;text-decoration:none;transition:background .2s,transform .15s}
 .btn:hover{transform:translateY(-1px)}
 .btn-r{background:var(--red);color:var(--wht)}.btn-r:hover{background:var(--rd2)}
 .btn-o{background:transparent;color:var(--wht);border:1px solid var(--bdr)}.btn-o:hover{border-color:var(--wht)}
-.scard-cta{display:inline-block;margin-top:.7rem;padding:.55rem 1.1rem;background:var(--red);color:var(--wht);text-decoration:none;font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;border-radius:2px;transition:background .2s}
-.scard-cta:hover{background:var(--rd2)}
-.scard-cta[style*="background:var(--drk)"]:hover{background:var(--card)!important}
-
 footer{background:var(--drk);border-top:1px solid var(--bdr);padding:2.5rem 5vw}
 .fi{display:flex;flex-wrap:wrap;gap:1.5rem;justify-content:space-between;align-items:center}
 .flogo{display:flex;align-items:center;gap:.6rem;text-decoration:none}
@@ -75,152 +53,74 @@ footer{background:var(--drk);border-top:1px solid var(--bdr);padding:2.5rem 5vw}
 .flinks a{font-size:.75rem;color:var(--gry);text-decoration:none;letter-spacing:.06em;text-transform:uppercase;transition:color .2s}
 .flinks a:hover{color:var(--wht)}
 .fcopy{font-size:.74rem;color:var(--gry);width:100%;margin-top:1.2rem;padding-top:1.2rem;border-top:1px solid var(--bdr)}
-@media(max-width:900px){.nlinks{display:none}.hbg{display:flex}}
-
-#hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;overflow:hidden}
-.hleft{display:flex;flex-direction:column;justify-content:center;padding:120px 5vw 70px;background:var(--blk);position:relative}
-.hleft::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 80% at 0 50%,rgba(232,34,10,.07),transparent 70%);pointer-events:none}
-
-.hright{flex:1;display:flex;align-items:center;justify-content:center;background:#000;min-height:400px}
-.hgfx{width:100%;height:100%;display:flex;align-items:center;justify-content:center;padding:2rem}
-.htitle{font-family:'Bebas Neue',sans-serif;font-size:clamp(3.5rem,9vw,8rem);line-height:.9;color:var(--wht)}
-.htitle em{font-style:normal;color:var(--red);display:block}
-.hhash{font-size:.75rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gry);margin-top:.7rem}
-.htag{display:inline-block;font-size:.7rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--red);border:1px solid var(--red);padding:.28rem .7rem;margin-bottom:1.1rem}
-.hsub{margin-top:1.3rem;font-size:.97rem;color:var(--gry);max-width:400px;line-height:1.7}
-.hbtns{margin-top:1.8rem;display:flex;gap:.8rem;flex-wrap:wrap}
-.hstats{margin-top:3rem;display:flex;gap:2rem;flex-wrap:wrap}
-.snum{font-family:'Bebas Neue',sans-serif;font-size:2.4rem;color:var(--wht);line-height:1}
-.snum span{color:var(--red)}
-.slbl{font-size:.68rem;color:var(--gry);letter-spacing:.1em;text-transform:uppercase;margin-top:.15rem}
-.fcards{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--bdr);border:1px solid var(--bdr);margin-top:2.5rem}
-.fcard{background:var(--card);padding:2.2rem;text-decoration:none;display:block;position:relative;overflow:hidden;transition:background .25s}
-.fcard::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .3s}
-.fcard:hover::before{transform:scaleX(1)}.fcard:hover{background:#1d1d1d}
-.fclabel{font-size:.65rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--red);margin-bottom:.5rem}
-.fctitle{font-family:'Bebas Neue',sans-serif;font-size:1.8rem;color:var(--wht);margin-bottom:.7rem}
-.fcdesc{font-size:.86rem;color:var(--gry);line-height:1.7}
-.fcarrow{margin-top:1.2rem;font-size:.78rem;color:var(--red);font-weight:600;letter-spacing:.1em;text-transform:uppercase}
-.sgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:1px;background:var(--bdr);border:1px solid var(--bdr);margin-top:2.5rem}
-.scard{background:var(--card);padding:2rem;transition:background .25s;position:relative;overflow:hidden}
-.scard::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .3s}
-.scard:hover::before{transform:scaleX(1)}.scard:hover{background:#1d1d1d}
-.sname{font-family:'Bebas Neue',sans-serif;font-size:1.5rem;color:var(--wht);margin-bottom:.5rem}
-.sdesc{font-size:.86rem;color:var(--gry);line-height:1.7}
-.stag{display:inline-block;margin-top:.7rem;font-size:.65rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--red);border:1px solid rgba(232,34,10,.3);padding:.18rem .5rem;border-radius:2px}
-.ttwrap{overflow-x:auto;margin-top:2.5rem}
-table.tt{width:100%;border-collapse:collapse;min-width:580px}
-.tt th{background:var(--card);padding:.8rem 1rem;font-size:.68rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--gry);text-align:left;border-bottom:2px solid var(--bdr)}
-.tt td{padding:.82rem 1rem;font-size:.86rem;border-bottom:1px solid var(--bdr);vertical-align:top}
-.tt tr:last-child td{border-bottom:none}
-.tt tr:hover td{background:rgba(255,255,255,.015)}
-.ttime{color:var(--red);font-weight:600;font-size:.82rem;white-space:nowrap}
-.tname{color:var(--wht);font-weight:500}
-.tsub{color:var(--gry);font-size:.8rem;margin-top:.18rem}
-.bdg{display:inline-block;font-size:.62rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:.13rem .48rem;border-radius:2px;margin-top:.25rem}
-.bo{background:rgba(74,222,128,.08);color:#4ade80;border:1px solid rgba(74,222,128,.25)}
-.bc{background:rgba(232,34,10,.12);color:var(--red);border:1px solid rgba(232,34,10,.28)}
-.bl{background:rgba(192,132,252,.08);color:#c084fc;border:1px solid rgba(192,132,252,.25)}
-.bg{background:rgba(251,191,36,.08);color:#fbbf24;border:1px solid rgba(251,191,36,.25)}
-.bcu{background:rgba(251,146,60,.08);color:#fb923c;border:1px solid rgba(251,146,60,.25)}
-.ttnote{margin-top:1.2rem;font-size:.82rem;color:var(--gry);padding:.8rem 1.1rem;background:var(--card);border-left:3px solid var(--bdr)}
-.hrloc{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;margin-top:3rem}
-.htbl{width:100%;border-collapse:collapse}
-.htbl tr{border-bottom:1px solid var(--bdr)}.htbl tr:last-child{border-bottom:none}
-.htbl td{padding:.8rem 0;font-size:.9rem}
-.htbl td:first-child{color:var(--gry)}.htbl td:last-child{color:#4ade80;text-align:right}
-.locbox{background:var(--card);border:1px solid var(--bdr);padding:1.8rem}
-.locbox h3{font-family:'Bebas Neue',sans-serif;font-size:1.3rem;color:var(--wht);margin-bottom:.9rem}
-.locbox p{font-size:.88rem;color:var(--gry);line-height:1.8}
-.faqlist{max-width:740px;margin-top:2.5rem}
-details{border-bottom:1px solid var(--bdr)}
-details:first-child{border-top:1px solid var(--bdr)}
-summary{padding:1.2rem 0;font-size:.93rem;font-weight:500;color:var(--wht);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:1rem}
-summary::-webkit-details-marker{display:none}
-summary::after{content:'+';color:var(--red);font-size:1.2rem;flex-shrink:0;transition:transform .2s}
-details[open] summary::after{transform:rotate(45deg)}
-details[open] summary{color:var(--red)}
-.fa{padding:0 0 1.1rem;font-size:.88rem;color:var(--gry);line-height:1.8}
-.cgrid{display:grid;grid-template-columns:1fr 1.35fr;gap:4rem;margin-top:2.5rem;align-items:start}
-.cinfo p{font-size:.9rem;color:var(--gry);line-height:1.8;margin-bottom:1.1rem}
-.cnote{background:var(--card);border-left:3px solid var(--red);padding:.9rem 1.1rem;font-size:.83rem;color:var(--lt);margin-top:1.5rem}
-.cemail{margin-top:.7rem;font-size:.86rem;color:var(--gry)}
-.cemail a{color:var(--red);text-decoration:none;font-weight:500}
-.fg{margin-bottom:1rem}
-.fg label{display:block;font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--gry);margin-bottom:.4rem}
-.fg input,.fg select,.fg textarea{width:100%;background:var(--card);border:1px solid var(--bdr);color:var(--wht);padding:.72rem .95rem;font-family:'DM Sans',sans-serif;font-size:.88rem;border-radius:2px;outline:none;appearance:none;transition:border-color .2s}
-.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--red)}
-.fg select option{background:var(--card)}
-.fg textarea{resize:vertical;min-height:105px}
-.fgrow{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
-.fsbtn{width:100%;background:var(--red);color:var(--wht);padding:.95rem;border:none;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:.8rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;border-radius:2px;margin-top:.4rem;transition:background .2s}
-.fsbtn:hover{background:var(--rd2)}.fsbtn:disabled{opacity:.5;cursor:not-allowed}
-.fok{display:none;background:var(--card);border:1px solid #4ade80;padding:1.3rem;text-align:center;color:#4ade80;border-radius:2px;font-size:.92rem;margin-top:.8rem}
-.ferr{display:none;background:var(--card);border:1px solid var(--red);padding:.85rem;color:var(--red);border-radius:2px;font-size:.85rem;margin-top:.4rem}
 .slabel{font-size:.7rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--red);margin-bottom:.7rem}
 .stitle{font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,4vw,3.2rem);line-height:1;color:var(--wht);margin-bottom:.9rem}
 .sbody{font-size:.97rem;color:var(--gry);max-width:560px;line-height:1.8}
+
+/* Hero */
+#hero{min-height:42vh;display:flex;flex-direction:column;justify-content:flex-end;padding:120px 5vw 55px;background:var(--blk);position:relative;border-bottom:1px solid var(--bdr)}
+#hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 0 60%,rgba(232,34,10,.06),transparent 70%);pointer-events:none}
+.ptitle{font-family:'Bebas Neue',sans-serif;font-size:clamp(3rem,10vw,7rem);line-height:.9;color:var(--wht)}
+.ptitle em{font-style:normal;color:var(--red)}
+.psub{margin-top:1.2rem;font-size:.97rem;color:var(--gry);max-width:520px;line-height:1.7}
+.htag{display:inline-block;font-size:.7rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--red);border:1px solid var(--red);padding:.28rem .7rem;margin-bottom:1.1rem}
+.hbtns{margin-top:1.8rem;display:flex;gap:.8rem;flex-wrap:wrap}
+
+/* Programme cards grid */
+.prog-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1px;background:var(--bdr);border:1px solid var(--bdr);margin-top:3rem}
+.prog-card{background:var(--card);padding:2rem;position:relative;overflow:hidden;transition:background .25s}
+.prog-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.prog-card:hover::before{transform:scaleX(1)}
+.prog-card:hover{background:#1d1d1d}
+.pc-label{font-size:.63rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--red);margin-bottom:.4rem}
+.pc-title{font-family:'Bebas Neue',sans-serif;font-size:1.7rem;color:var(--wht);margin-bottom:.5rem;line-height:1.05}
+.pc-desc{font-size:.86rem;color:var(--gry);line-height:1.7;margin-bottom:1.2rem}
+.pc-sessions{margin-top:auto}
+.pc-day{margin-bottom:.9rem}
+.pc-day-label{font-size:.63rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--gry);margin-bottom:.3rem}
+.pc-times{display:flex;flex-wrap:wrap;gap:.35rem}
+.pc-time{display:inline-block;font-size:.78rem;font-weight:600;color:var(--wht);background:rgba(255,255,255,.05);border:1px solid var(--bdr);padding:.28rem .6rem;border-radius:2px;font-variant-numeric:tabular-nums}
+.pc-cta{margin-top:1.4rem;display:inline-block;padding:.6rem 1.2rem;background:var(--red);color:var(--wht);text-decoration:none;font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;border-radius:2px;transition:background .2s}
+.pc-cta:hover{background:var(--rd2)}
+.pc-cta-o{background:transparent;border:1px solid var(--bdr);color:var(--lt)}
+.pc-cta-o:hover{border-color:var(--wht);background:transparent}
+.pc-badge{display:inline-block;font-size:.6rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:.15rem .45rem;border-radius:2px;vertical-align:middle;margin-left:.4rem}
+.bdg-open{background:rgba(74,222,128,.08);color:#4ade80;border:1px solid rgba(74,222,128,.25)}
+.bdg-cubs{background:rgba(251,146,60,.08);color:#fb923c;border:1px solid rgba(251,146,60,.25)}
+.bdg-ladies{background:rgba(192,132,252,.08);color:#c084fc;border:1px solid rgba(192,132,252,.25)}
+.bdg-legends{background:rgba(251,191,36,.08);color:#fbbf24;border:1px solid rgba(251,191,36,.25)}
+
+/* Open gym full-width card */
+.og-card{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;gap:2.5rem}
+.og-days{display:flex;flex-direction:column;gap:1.2rem}
+
+/* Notice bar */
+.tt-notice{background:var(--card);border-left:3px solid var(--red);padding:.85rem 1.2rem;font-size:.85rem;color:var(--lt);margin-top:1.5rem;line-height:1.7}
+.tt-notice a{color:var(--red);text-decoration:none}
+.tt-notice a:hover{text-decoration:underline}
+
+/* Section */
+section{padding:70px 5vw}
+section+section{border-top:1px solid var(--bdr)}
+
 @media(max-width:900px){
-  #about 
-/* Ticker */
-@keyframes tickerScroll {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-.tick-item {
-  display:inline-block;
-  white-space:nowrap;
-  padding:0 2.5rem;
-  font-size:.76rem;
-  color:var(--lt);
-  text-decoration:none;
-  letter-spacing:.04em;
-  transition:color .2s;
-}
-.tick-item:hover { color:var(--red); }
-#tickerTrack:hover { animation-play-state:paused; }
-.reveal{grid-template-columns:1fr!important;gap:2rem!important}
-  #hero{grid-template-columns:1fr}
-  
-.hright{flex:1;display:flex;align-items:center;justify-content:center;background:#000;min-height:400px}
-  .hleft{padding:25px 5vw 55px}
-  .fcards{grid-template-columns:1fr}
-  .hrloc{grid-template-columns:1fr}
-  .cgrid{grid-template-columns:1fr;gap:2.5rem}
+  .nlinks{display:none}
+  .hbg{display:flex}
+  .og-card{grid-template-columns:1fr}
 }
 @media(max-width:600px){
-  section{padding:65px 5vw!important}
-  .sgrid{grid-template-columns:1fr}
-  .fgrow{grid-template-columns:1fr}
+  section{padding:55px 5vw!important}
+  .ptitle{font-size:clamp(2.8rem,15vw,5rem)}
+  .psub{font-size:.9rem}
+  .hbtns{flex-direction:column;gap:.5rem}
+  .hbtns a{text-align:center}
+  .prog-grid{grid-template-columns:1fr}
+  .fi{flex-direction:column;align-items:flex-start;gap:1rem}
+  .flinks{gap:1rem}
 }
-</style>
-<style>
-.tt-section{margin-bottom:2.5rem}
-.tt-section:last-child{margin-bottom:0}
-.tt-heading{font-family:'Bebas Neue',sans-serif;font-size:1.6rem;color:var(--wht);margin-bottom:1rem;padding-bottom:.7rem;border-bottom:2px solid var(--red)}
-table.tt{width:100%;border-collapse:collapse}
-.tt th{background:var(--card);padding:.75rem 1rem;font-size:.7rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--gry);text-align:left;border-bottom:2px solid var(--bdr)}
-.tt td{padding:.85rem 1rem;font-size:.9rem;border-bottom:1px solid var(--bdr);color:var(--lt)}
-.tt tr:last-child td{border-bottom:none}
-.tt tr:hover td{background:rgba(255,255,255,.02)}
-.tt td:first-child{color:var(--gry);font-size:.85rem;white-space:nowrap}
-.tt td:nth-child(2){color:var(--red);font-weight:600;font-size:.85rem;white-space:nowrap}
-.tt-note{margin-top:.9rem;font-size:.85rem;color:var(--gry);padding:.8rem 1.1rem;background:var(--card);border-left:3px solid var(--bdr);display:flex;align-items:flex-start;gap:.8rem;flex-wrap:wrap}
-.tt-cta{display:inline-flex;align-items:center;gap:.5rem;padding:.55rem 1.2rem;border-radius:2px;text-decoration:none;font-size:.78rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;transition:background .2s}
-.tt-wa{background:#25d366;color:#fff}
-.tt-wa:hover{background:#1fac52}
-.tt-em{background:transparent;border:1px solid var(--bdr);color:var(--wht)}
-.tt-em:hover{border-color:var(--wht)}
-.tt-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
-@media(max-width:700px){.tt-grid{grid-template-columns:1fr}.tt{min-width:0;font-size:.82rem}.tt td,.tt th{padding:.65rem .75rem}}
 </style>
 </head>
 <body>
-<!-- Utility bar -->
-<div style="position:fixed;top:0;left:0;right:0;z-index:101;height:28px;background:#000;border-bottom:1px solid #1a1a1a;display:flex;align-items:center;justify-content:flex-end;padding:0 5vw;gap:1.4rem">
-  <a href="shop.html" style="font-size:.62rem;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:#999;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#f4f4ef'" onmouseout="this.style.color='#999'">Shop</a>
-  <a href="contact.html" style="font-size:.62rem;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:#999;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#f4f4ef'" onmouseout="this.style.color='#999'">Contact Us</a>
-</div>
 
 <nav>
   <a href="index.html" class="nlogo">
@@ -289,98 +189,280 @@ table.tt{width:100%;border-collapse:collapse}
   <a href="contact.html" onclick="mm()">Contact Us</a>
 </div>
 
-
-
 <div style="height:98px"></div>
 
-<div style="padding:2rem 5vw 0;max-width:860px">
-  <div style="font-size:.72rem;color:rgba(255,255,255,.4);letter-spacing:.1em;text-transform:uppercase;margin-bottom:1.5rem">
-    <a href="index.html" style="color:rgba(255,255,255,.4);text-decoration:none">Crazy Strength</a> &rsaquo; Timetable
-  </div>
-</div>
-
-<section style="padding:40px 5vw 90px;background:var(--blk)">
-  <div class="reveal">
-    <div class="slabel">Every Session &middot; Every Day</div>
-    <h1 class="stitle">Class Timetable</h1>
-    <p class="sbody">All sessions at The Beacon Centre, Amesbury. Sessions are coached unless marked otherwise. Timetable is subject to change &mdash; <a href="https://wa.me/447734824897" target="_blank" rel="noopener" style="color:var(--red);text-decoration:none">get in touch via WhatsApp</a> if you&rsquo;re unsure about a specific session.</p>
-  </div>
-
-  <div class="tt-grid reveal" style="margin-top:3rem">
-    <div class="tt-section">
-      <div class="tt-heading">Powerlifting</div>
-      <table class="tt">
-        <thead><tr><th>Day</th><th>Time</th><th>Session</th></tr></thead>
-        <tbody>
-          <tr><td>Mon, Wed, Fri</td><td>12:00&ndash;13:30</td><td>Lunchtime Coached Session</td></tr>
-          <tr><td>Mon, Wed, Fri</td><td>18:00&ndash;19:30</td><td>Evening Coached Session</td></tr>
-          <tr><td>Mon, Wed, Fri</td><td>19:30&ndash;21:00</td><td>Club Session</td></tr>
-          <tr><td>Daily</td><td>05:00&ndash;23:00</td><td>Open Gym</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="tt-section">
-      <div class="tt-heading">Olympic Weightlifting</div>
-      <table class="tt">
-        <thead><tr><th>Day</th><th>Time</th><th>Session</th></tr></thead>
-        <tbody>
-          <tr><td>Mon, Wed, Fri</td><td>12:00&ndash;13:30</td><td>Lunchtime Coached Session</td></tr>
-          <tr><td>Mon, Wed, Fri</td><td>18:00&ndash;19:30</td><td>Evening Coached Session</td></tr>
-          <tr><td>Mon, Wed, Fri</td><td>19:30&ndash;21:00</td><td>Club Session</td></tr>
-          <tr><td>Daily</td><td>05:00&ndash;23:00</td><td>Open Gym</td></tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-
-  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.5rem;margin-top:2.5rem" class="reveal">
-    <div class="tt-section">
-      <div class="tt-heading">Ladies That Lift</div>
-      <div class="tt-note">&#128222; Session days/times &mdash; contact us for the current schedule.
-        <a href="https://wa.me/447734824897" target="_blank" rel="noopener" class="tt-cta tt-wa">WhatsApp Us</a>
-      </div>
-    </div>
-    <div class="tt-section">
-      <div class="tt-heading">Ladies That Lift Lite</div>
-      <div class="tt-note">&#128222; Session days/times &mdash; contact us for the current schedule.
-        <a href="https://wa.me/447734824897" target="_blank" rel="noopener" class="tt-cta tt-wa">WhatsApp Us</a>
-      </div>
-    </div>
-    <div class="tt-section">
-      <div class="tt-heading">Legends That Lift (50+)</div>
-      <div class="tt-note">&#128222; Session days/times &mdash; contact us for the current schedule.
-        <a href="https://wa.me/447734824897" target="_blank" rel="noopener" class="tt-cta tt-wa">WhatsApp Us</a>
-      </div>
-    </div>
-    <div class="tt-section">
-      <div class="tt-heading">CUBS Programme (Youth)</div>
-      <div class="tt-note">&#128222; Session days/times &mdash; contact us for the current schedule.
-        <a href="https://wa.me/447734824897" target="_blank" rel="noopener" class="tt-cta tt-wa">WhatsApp Us</a>
-      </div>
-    </div>
-    <div class="tt-section">
-      <div class="tt-heading">The Den Classes</div>
-      <div class="tt-note">B-Fit, Yoga, Pilates and Calisthenics &mdash; see <a href="the-den.html" style="color:var(--red);text-decoration:none">The Den page</a> for instructor schedules.</div>
-    </div>
-    <div class="tt-section">
-      <div class="tt-heading">Recovery Hub</div>
-      <div class="tt-note">
-        <div><strong style="color:var(--lt)">Fox Recovery:</strong> book at <a href="https://foxrecoveryuk.janeapp.co.uk/" target="_blank" rel="noopener" style="color:var(--red);text-decoration:none">foxrecoveryuk.janeapp.co.uk</a></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="reveal" style="margin-top:3.5rem;padding:2rem;background:var(--card);border:1px solid var(--bdr);border-radius:2px;max-width:700px">
-    <h2 style="font-family:'Bebas Neue',sans-serif;font-size:1.6rem;color:var(--wht);margin-bottom:.6rem">Not sure which session is right for you?</h2>
-    <p style="font-size:.9rem;color:var(--gry);margin-bottom:1.2rem">Get in touch and we&rsquo;ll point you in the right direction. We&rsquo;re a friendly bunch and no question is too small.</p>
-    <div style="display:flex;gap:.8rem;flex-wrap:wrap">
-      <a href="https://wa.me/447734824897" target="_blank" rel="noopener" class="tt-cta tt-wa">&#128222; WhatsApp Us</a>
-      <a href="mailto:contact@crazystrength.co.uk" class="tt-cta tt-em">&#9993; Email Us</a>
-    </div>
+<section id="hero" style="padding-top:120px;padding-bottom:55px">
+  <div class="htag">Classes &amp; Sessions</div>
+  <h1 class="ptitle">Class <em>Timetable</em></h1>
+  <p class="psub">Every session, every day. Book through Evini — all sessions require pre-booking. Not sure which programme is right for you? <a href="which-programme.html" style="color:var(--red);text-decoration:none">Find your fit</a>.</p>
+  <div class="hbtns">
+    <a href="https://evini.com/locations/390" target="_blank" rel="noopener" class="btn btn-r">Book a Session</a>
+    <a href="which-programme.html" class="btn btn-o">Which Programme?</a>
   </div>
 </section>
 
+<section>
+  <div class="slabel">Strength Programmes</div>
+  <h2 class="stitle">Train With Purpose</h2>
+  <p class="sbody">Coached sessions across powerlifting, weightlifting and specialist programmes. All skill levels welcome — sessions are structured, safe and built around you.</p>
 
+  <div class="tt-notice">
+    All sessions require pre-booking via Evini. Spaces are limited — book early. <a href="https://evini.com/locations/390" target="_blank" rel="noopener">Book online</a> or message us on <a href="https://wa.me/447734824897" target="_blank" rel="noopener">WhatsApp</a>.
+  </div>
+
+  <div class="prog-grid">
+
+    <!-- POWERLIFTING -->
+    <div class="prog-card reveal">
+      <div class="pc-label">Coached Programme</div>
+      <h3 class="pc-title">Powerlifting Club</h3>
+      <p class="pc-desc">Squat, bench and deadlift — properly coached. Whether you're new to the platform or chasing competition totals, this is where it happens.</p>
+      <div class="pc-sessions">
+        <div class="pc-day">
+          <div class="pc-day-label">Monday &middot; Wednesday &middot; Friday</div>
+          <div class="pc-times">
+            <span class="pc-time">12:00</span>
+            <span class="pc-time">18:00</span>
+            <span class="pc-time">19:30</span>
+          </div>
+        </div>
+      </div>
+      <a href="https://evini.com/locations/390" target="_blank" rel="noopener" class="pc-cta">Book Now</a>
+      <a href="powerlifting.html" class="pc-cta pc-cta-o" style="margin-left:.5rem">Programme Info</a>
+    </div>
+
+    <!-- WEIGHTLIFTING -->
+    <div class="prog-card reveal">
+      <div class="pc-label">Coached Programme</div>
+      <h3 class="pc-title">Weightlifting Club</h3>
+      <p class="pc-desc">Snatch and clean &amp; jerk with coaching that actually makes a difference. Technical, demanding and rewarding.</p>
+      <div class="pc-sessions">
+        <div class="pc-day">
+          <div class="pc-day-label">Monday &middot; Wednesday &middot; Friday</div>
+          <div class="pc-times">
+            <span class="pc-time">12:00</span>
+            <span class="pc-time">18:00</span>
+            <span class="pc-time">19:30</span>
+          </div>
+        </div>
+      </div>
+      <a href="https://evini.com/locations/390" target="_blank" rel="noopener" class="pc-cta">Book Now</a>
+      <a href="weightlifting.html" class="pc-cta pc-cta-o" style="margin-left:.5rem">Programme Info</a>
+    </div>
+
+    <!-- LADIES THAT LIFT -->
+    <div class="prog-card reveal">
+      <div class="pc-label">Women&rsquo;s Programme <span class="pc-badge bdg-ladies">Ladies Only</span></div>
+      <h3 class="pc-title">Ladies That Lift</h3>
+      <p class="pc-desc">A serious women&rsquo;s programme built on strength. More sessions, more flexibility. Early mornings, daytime and evenings available throughout the week.</p>
+      <div class="pc-sessions">
+        <div class="pc-day">
+          <div class="pc-day-label">Monday &middot; Wednesday</div>
+          <div class="pc-times">
+            <span class="pc-time">09:15</span>
+            <span class="pc-time">18:00</span>
+          </div>
+        </div>
+        <div class="pc-day">
+          <div class="pc-day-label">Tuesday &middot; Thursday</div>
+          <div class="pc-times">
+            <span class="pc-time">07:00</span>
+            <span class="pc-time">13:00</span>
+            <span class="pc-time">19:00</span>
+          </div>
+        </div>
+      </div>
+      <a href="https://evini.com/locations/390" target="_blank" rel="noopener" class="pc-cta">Book Now</a>
+      <a href="ladies-that-lift.html" class="pc-cta pc-cta-o" style="margin-left:.5rem">Programme Info</a>
+    </div>
+
+    <!-- MUMS AND CHILDREN -->
+    <div class="prog-card reveal">
+      <div class="pc-label">Women&rsquo;s Programme <span class="pc-badge bdg-ladies">Ladies Only</span></div>
+      <h3 class="pc-title">Mums &amp; Children</h3>
+      <p class="pc-desc">Part of Ladies That Lift — bring the kids. Train while they play. A proper session, not a compromise.</p>
+      <div class="pc-sessions">
+        <div class="pc-day">
+          <div class="pc-day-label">Monday &middot; Wednesday &middot; Friday</div>
+          <div class="pc-times">
+            <span class="pc-time">09:00</span>
+          </div>
+        </div>
+      </div>
+      <a href="https://evini.com/locations/390" target="_blank" rel="noopener" class="pc-cta">Book Now</a>
+      <a href="ladies-that-lift.html" class="pc-cta pc-cta-o" style="margin-left:.5rem">Programme Info</a>
+    </div>
+
+    <!-- LEGENDS THAT LIFT -->
+    <div class="prog-card reveal">
+      <div class="pc-label">50+ Programme <span class="pc-badge bdg-legends">Legends</span></div>
+      <h3 class="pc-title">Legends That Lift</h3>
+      <p class="pc-desc">Strength training for over-50s. Age is not a reason to hold back. Properly coached, appropriately loaded, completely serious.</p>
+      <div class="pc-sessions">
+        <div class="pc-day">
+          <div class="pc-day-label">Tuesday &middot; Thursday</div>
+          <div class="pc-times">
+            <span class="pc-time">08:00</span>
+          </div>
+        </div>
+      </div>
+      <a href="https://evini.com/locations/390" target="_blank" rel="noopener" class="pc-cta">Book Now</a>
+      <a href="legends-that-lift.html" class="pc-cta pc-cta-o" style="margin-left:.5rem">Programme Info</a>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <div class="slabel">Youth Strength</div>
+  <h2 class="stitle">CUBS</h2>
+  <p class="sbody">Strength training for ages 6&ndash;11. Three stages, properly structured, no compromise on quality. <a href="cubs.html" style="color:var(--red);text-decoration:none">Find out more about CUBS</a>.</p>
+
+  <div class="prog-grid">
+
+    <!-- CUBS STAGE 1 -->
+    <div class="prog-card reveal">
+      <div class="pc-label">Ages 6&ndash;8 <span class="pc-badge bdg-cubs">Stage 1</span></div>
+      <h3 class="pc-title">Cubs Stage 1</h3>
+      <p class="pc-desc">Introduction to movement, coordination and physical confidence. The foundation every young athlete needs.</p>
+      <div class="pc-sessions">
+        <div class="pc-day">
+          <div class="pc-day-label">Monday &middot; Wednesday &middot; Friday</div>
+          <div class="pc-times">
+            <span class="pc-time">16:00</span>
+          </div>
+        </div>
+      </div>
+      <a href="https://evini.com/locations/390" target="_blank" rel="noopener" class="pc-cta">Book Now</a>
+    </div>
+
+    <!-- CUBS STAGE 2 -->
+    <div class="prog-card reveal">
+      <div class="pc-label">Ages 8&ndash;10 <span class="pc-badge bdg-cubs">Stage 2</span></div>
+      <h3 class="pc-title">Cubs Stage 2</h3>
+      <p class="pc-desc">Building on Stage 1 with more structured training. Developing strength, discipline and the habits that carry through.</p>
+      <div class="pc-sessions">
+        <div class="pc-day">
+          <div class="pc-day-label">Monday &middot; Wednesday</div>
+          <div class="pc-times">
+            <span class="pc-time">17:00</span>
+          </div>
+        </div>
+        <div class="pc-day">
+          <div class="pc-day-label">Thursday</div>
+          <div class="pc-times">
+            <span class="pc-time">09:00</span>
+          </div>
+        </div>
+      </div>
+      <a href="https://evini.com/locations/390" target="_blank" rel="noopener" class="pc-cta">Book Now</a>
+    </div>
+
+    <!-- CUBS STAGE 3 POWERLIFTING -->
+    <div class="prog-card reveal">
+      <div class="pc-label">Ages 10&ndash;11 <span class="pc-badge bdg-cubs">Stage 3</span></div>
+      <h3 class="pc-title">Cubs Stage 3 &mdash; Powerlifting</h3>
+      <p class="pc-desc">Squat, bench and deadlift — technically coached, age-appropriate loading. For young athletes ready to get serious about strength.</p>
+      <div class="pc-sessions">
+        <div class="pc-day">
+          <div class="pc-day-label">Monday &middot; Wednesday &middot; Friday</div>
+          <div class="pc-times">
+            <span class="pc-time">16:30</span>
+          </div>
+        </div>
+      </div>
+      <a href="https://evini.com/locations/390" target="_blank" rel="noopener" class="pc-cta">Book Now</a>
+    </div>
+
+    <!-- CUBS STAGE 3 WEIGHTLIFTING -->
+    <div class="prog-card reveal">
+      <div class="pc-label">Ages 10&ndash;11 <span class="pc-badge bdg-cubs">Stage 3</span></div>
+      <h3 class="pc-title">Cubs Stage 3 &mdash; Weightlifting</h3>
+      <p class="pc-desc">Olympic lifting at youth level. Technical, exciting and a real pathway into the sport for young athletes.</p>
+      <div class="pc-sessions">
+        <div class="pc-day">
+          <div class="pc-day-label">Monday &middot; Wednesday &middot; Friday</div>
+          <div class="pc-times">
+            <span class="pc-time">16:30</span>
+          </div>
+        </div>
+      </div>
+      <a href="https://evini.com/locations/390" target="_blank" rel="noopener" class="pc-cta">Book Now</a>
+    </div>
+
+    <!-- STONEHENGE EXPERIENCE CUBS -->
+    <div class="prog-card reveal">
+      <div class="pc-label">Weekend <span class="pc-badge bdg-cubs">Cubs</span></div>
+      <h3 class="pc-title">Stonehenge Experience Cubs</h3>
+      <p class="pc-desc">Saturday sessions for young athletes. Strength training with the energy and community that makes Crazy Strength different.</p>
+      <div class="pc-sessions">
+        <div class="pc-day">
+          <div class="pc-day-label">Saturday</div>
+          <div class="pc-times">
+            <span class="pc-time">15:15</span>
+          </div>
+        </div>
+      </div>
+      <a href="https://evini.com/locations/390" target="_blank" rel="noopener" class="pc-cta">Book Now</a>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <div class="slabel">Open Access</div>
+  <h2 class="stitle">Open Gym</h2>
+  <p class="sbody">Train on your own terms. Multiple sessions throughout the day, every day. A member of the team is always present. Pre-booking required.</p>
+
+  <div class="prog-grid">
+
+    <div class="prog-card og-card reveal">
+      <div class="og-days">
+        <div>
+          <div class="pc-day-label" style="font-size:.63rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--gry);margin-bottom:.5rem">Monday &middot; Tuesday &middot; Wednesday &middot; Thursday &middot; Friday</div>
+          <div class="pc-times">
+            <span class="pc-time">05:00</span>
+            <span class="pc-time">10:00</span>
+            <span class="pc-time">13:30</span>
+            <span class="pc-time">14:00</span>
+            <span class="pc-time">19:00</span>
+            <span class="pc-time">20:30</span>
+            <span class="pc-time">21:00</span>
+          </div>
+        </div>
+      </div>
+      <div class="og-days">
+        <div>
+          <div class="pc-day-label" style="font-size:.63rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--gry);margin-bottom:.5rem">Saturday &middot; Sunday</div>
+          <div class="pc-times">
+            <span class="pc-time">05:00</span>
+            <span class="pc-time">10:00</span>
+            <span class="pc-time">12:00</span>
+            <span class="pc-time">15:00</span>
+            <span class="pc-time">18:00</span>
+            <span class="pc-time">18:30</span>
+            <span class="pc-time">21:00</span>
+          </div>
+        </div>
+        <div style="margin-top:1.4rem">
+          <a href="https://evini.com/locations/390" target="_blank" rel="noopener" class="pc-cta">Book Open Gym</a>
+          <a href="class-packs.html" class="pc-cta pc-cta-o" style="margin-left:.5rem">Class Packs</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <div class="slabel">Need Help Choosing?</div>
+  <h2 class="stitle">Not Sure Where to Start?</h2>
+  <p class="sbody">Answer a few quick questions and we&rsquo;ll point you in the right direction. No fluff, just the right programme for where you are right now.</p>
+  <div class="hbtns" style="margin-top:1.5rem">
+    <a href="which-programme.html" class="btn btn-r">Find Your Programme</a>
+    <a href="contact.html" class="btn btn-o">Talk to Us</a>
+  </div>
+</section>
 
 <footer><div class="fi">
   <div style="display:flex;gap:.8rem;align-items:center">
@@ -415,16 +497,12 @@ table.tt{width:100%;border-collapse:collapse}
   </div>
 </div></footer>
 
-
-<script>
-
-</script>
-
 <script>
 document.getElementById('hbg').addEventListener('click',function(){document.getElementById('mmenu').classList.toggle('open')});
 function mm(){document.getElementById('mmenu').classList.remove('open')}
 document.querySelectorAll('.reveal').forEach(function(el){
   new IntersectionObserver(function(e){if(e[0].isIntersecting)el.classList.add('vis');},{threshold:.08}).observe(el);
 });
-</script></body>
+</script>
+</body>
 </html>
