@@ -108,10 +108,18 @@ footer{background:var(--drk);border-top:1px solid var(--bdr);padding:2.5rem 5vw}
 .patc:disabled{opacity:.38;cursor:not-allowed;background:#444}
 .patc.ok{background:#16a34a}
 .sdot{position:absolute;top:.5rem;right:.5rem;background:var(--red);color:#fff;font-size:.56rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:.1rem .35rem;border-radius:2px}
-.fbar{display:flex;flex-wrap:wrap;gap:.4rem;padding:1.2rem 5vw 0}
-.fb{background:var(--card);border:1px solid var(--bdr);color:var(--gry);padding:.3rem .85rem;font-size:.7rem;font-weight:500;letter-spacing:.07em;text-transform:uppercase;border-radius:20px;cursor:pointer;transition:all .18s;font-family:"DM Sans",sans-serif}
-.fb:hover{color:var(--lt);border-color:rgba(255,255,255,.2)}
-.fb.on{background:var(--red);border-color:var(--red);color:#fff}
+.shopnav{padding:2rem 5vw 0}
+.sntabs{display:flex;gap:0;border-bottom:1px solid var(--bdr);margin-bottom:1.5rem}
+.sntab{background:none;border:none;border-bottom:2px solid transparent;color:var(--gry);padding:.6rem 1.2rem;font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;font-family:"DM Sans",sans-serif;transition:all .2s;margin-bottom:-1px}
+.sntab:hover{color:var(--lt)}
+.sntab.on{color:var(--wht);border-bottom-color:var(--red)}
+.sncards{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:.5rem}
+.sncard{background:var(--card);border:1px solid var(--bdr);border-top:2px solid transparent;padding:1rem .8rem;cursor:pointer;transition:all .2s;text-align:left;font-family:"DM Sans",sans-serif;border-radius:2px}
+.sncard:hover{background:#1d1d1d;border-color:rgba(255,255,255,.15)}
+.sncard.on{border-top-color:var(--red);border-color:var(--bdr)}
+.sncard-icon{font-size:1.3rem;margin-bottom:.4rem;line-height:1}
+.sncard-label{font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--wht);display:block;margin-bottom:.15rem}
+.sncard-count{font-size:.65rem;color:var(--gry)}
 .spin{width:26px;height:26px;border:2px solid var(--bdr);border-top-color:var(--red);border-radius:50%;animation:sp .7s linear infinite;margin:0 auto .7rem}
 @keyframes sp{to{transform:rotate(360deg)}}
 @media(max-width:480px){.pgrid{grid-template-columns:repeat(2,1fr)!important}}
@@ -244,11 +252,17 @@ footer{background:var(--drk);border-top:1px solid var(--bdr);padding:2.5rem 5vw}
 </div>
 <hr class="divider">
 
-<!-- Filter bar -->
-<div class="fbar" id="fbar"></div>
+<!-- Shop navigation -->
+<div class="shopnav" id="shopnav">
+  <div class="sntabs">
+    <button class="sntab on" data-mode="type">Shop by Type</button>
+    <button class="sntab" data-mode="programme">Shop by Programme</button>
+  </div>
+  <div class="sncards" id="sncards"></div>
+</div>
 
 <!-- Product grid -->
-<div style="padding:0 5vw 60px">
+<div style="padding:1.5rem 5vw 60px">
   <div class="pgrid" id="grid">
     <div style="grid-column:1/-1;padding:3rem;text-align:center;background:var(--card)">
       <div class="spin"></div>
@@ -319,17 +333,49 @@ var cart = [], prods = [], curCat = 'all';
 
 function fp(n) { return '£' + parseFloat(n).toFixed(2); }
 
-function getCat(p) {
-  var t = p.title.toLowerCase(), h = p.handle;
-  if (h.indexOf('gift') > -1) return 'Gift Cards';
-  if (h.indexOf('cubs') > -1) return 'CUBS Kit';
-  if (h.indexOf('singlet') > -1) return 'Competition Kit';
-  if (t.indexOf('hoodie') > -1 || t.indexOf('jumper') > -1) return 'Hoodies & Jumpers';
-  if (t.indexOf('t-shirt') > -1 || t.indexOf('vest') > -1) return 'T-Shirts';
-  if (t.indexOf('jogger') > -1 || t.indexOf('hat') > -1 || t.indexOf('beanie') > -1 || t.indexOf('patch') > -1) return 'Clothing';
-  if (t.indexOf('sock') > -1 || t.indexOf('tape') > -1 || t.indexOf('shaker') > -1 || t.indexOf('ball') > -1 || t.indexOf('diary') > -1 || t.indexOf('book') > -1) return 'Accessories';
-  return 'Other';
+// --- Category helpers ---
+// Type categories (by garment)
+var TYPE_CATS = [
+  { key: 'tshirts',     label: 'T-Shirts',         icon: '👕', match: function(t,h){ return t.indexOf('t-shirt') > -1 || t.indexOf('vest') > -1; } },
+  { key: 'hoodies',     label: 'Hoodies & Jumpers', icon: '🧥', match: function(t,h){ return t.indexOf('hoodie') > -1 || t.indexOf('jumper') > -1 || t.indexOf('sweatshirt') > -1; } },
+  { key: 'bottoms',     label: 'Bottoms',           icon: '👖', match: function(t,h){ return t.indexOf('jogger') > -1 || t.indexOf('short') > -1 || t.indexOf('legging') > -1; } },
+  { key: 'headwear',    label: 'Headwear',          icon: '🧢', match: function(t,h){ return t.indexOf('hat') > -1 || t.indexOf('beanie') > -1 || t.indexOf('cap') > -1; } },
+  { key: 'accessories', label: 'Accessories',       icon: '🎽', match: function(t,h){ return t.indexOf('sock') > -1 || t.indexOf('tape') > -1 || t.indexOf('shaker') > -1 || t.indexOf('patch') > -1 || t.indexOf('bag') > -1 || t.indexOf('belt') > -1; } },
+  { key: 'equipment',   label: 'Equipment',         icon: '🏋️', match: function(t,h){ return t.indexOf('ball') > -1 || t.indexOf('band') > -1 || t.indexOf('diary') > -1 || t.indexOf('book') > -1; } },
+  { key: 'gift',        label: 'Gift Cards',        icon: '🎁', match: function(t,h){ return h.indexOf('gift') > -1; } },
+];
+
+// Programme categories (by discipline)
+var PROG_CATS = [
+  { key: 'powerlifting',  label: 'Powerlifting',   icon: '🔴', match: function(t,h){ return h.indexOf('powerlifting') > -1 || t.indexOf('powerlifting') > -1 || h.indexOf('singlet') > -1; } },
+  { key: 'weightlifting', label: 'Weightlifting',  icon: '🥇', match: function(t,h){ return h.indexOf('weightlifting') > -1 || t.indexOf('weightlifting') > -1 || t.indexOf('olympic') > -1; } },
+  { key: 'cubs',          label: 'CUBS',           icon: '🦁', match: function(t,h){ return h.indexOf('cubs') > -1 || t.indexOf('cubs') > -1; } },
+  { key: 'ladiesthatl',   label: 'Ladies That Lift', icon: '💪', match: function(t,h){ return h.indexOf('ladies') > -1 || t.indexOf('ladies') > -1; } },
+  { key: 'legends',       label: 'Legends That Lift', icon: '⭐', match: function(t,h){ return h.indexOf('legends') > -1 || t.indexOf('legends') > -1; } },
+  { key: 'crazystrength', label: 'Crazy Strength', icon: '💥', match: function(t,h){ return true; } }, // catch-all
+];
+
+function getTypeCat(p) {
+  var t = p.title.toLowerCase(), h = p.handle.toLowerCase();
+  for (var i = 0; i < TYPE_CATS.length - 1; i++) { // skip catch-all
+    if (TYPE_CATS[i].match(t, h)) return TYPE_CATS[i].key;
+  }
+  return 'tshirts'; // default
 }
+
+function getProgCat(p) {
+  var t = p.title.toLowerCase(), h = p.handle.toLowerCase();
+  for (var i = 0; i < PROG_CATS.length - 1; i++) { // skip catch-all
+    if (PROG_CATS[i].match(t, h)) return PROG_CATS[i].key;
+  }
+  return 'crazystrength'; // catch-all
+}
+
+// Keep getCat for backward-compat (not used for display)
+function getCat(p) { return getTypeCat(p); }
+
+var activeMode = 'type'; // 'type' or 'programme'
+var activeCat  = 'all';
 
 function loadShop() {
   var tried = 0;
@@ -360,32 +406,57 @@ function showFallback() {
 }
 
 function buildFilters() {
-  var cats = [];
-  prods.forEach(function(p) { var c = getCat(p); if (cats.indexOf(c) < 0) cats.push(c); });
-  cats.sort();
-  var fbar = document.getElementById('fbar');
-  fbar.innerHTML = '';
-  var allBtn = document.createElement('button');
-  allBtn.className = 'fb on'; allBtn.textContent = 'All (' + prods.length + ')'; allBtn.dataset.cat = 'all';
-  fbar.appendChild(allBtn);
-  cats.forEach(function(c) {
-    var n = prods.filter(function(p) { return getCat(p) === c; }).length;
-    var btn = document.createElement('button');
-    btn.className = 'fb'; btn.textContent = c + ' (' + n + ')'; btn.dataset.cat = c;
-    fbar.appendChild(btn);
+  // Tab switching
+  document.querySelectorAll('.sntab').forEach(function(tab) {
+    tab.addEventListener('click', function() {
+      document.querySelectorAll('.sntab').forEach(function(t) { t.classList.remove('on'); });
+      tab.classList.add('on');
+      activeMode = tab.dataset.mode;
+      activeCat = 'all';
+      renderCategoryCards();
+      renderGrid('all');
+    });
   });
-  fbar.addEventListener('click', function(e) {
-    var b = e.target.closest('.fb'); if (!b) return;
-    document.querySelectorAll('.fb').forEach(function(x) { x.classList.remove('on'); });
-    b.classList.add('on');
-    renderGrid(b.dataset.cat);
+  renderCategoryCards();
+}
+
+function renderCategoryCards() {
+  var cats = activeMode === 'type' ? TYPE_CATS : PROG_CATS;
+  var container = document.getElementById('sncards');
+  // Build "All" card
+  var html = '<button class="sncard' + (activeCat === 'all' ? ' on' : '') + '" data-cat="all">' +
+    '<div class="sncard-icon">🛍️</div>' +
+    '<span class="sncard-label">All</span>' +
+    '<span class="sncard-count">' + prods.length + ' items</span>' +
+    '</button>';
+  cats.forEach(function(cat) {
+    var matchFn = activeMode === 'type' ? getTypeCat : getProgCat;
+    var n = prods.filter(function(p) { return matchFn(p) === cat.key; }).length;
+    if (n === 0) return; // hide empty categories
+    html += '<button class="sncard' + (activeCat === cat.key ? ' on' : '') + '" data-cat="' + cat.key + '">' +
+      '<div class="sncard-icon">' + cat.icon + '</div>' +
+      '<span class="sncard-label">' + cat.label + '</span>' +
+      '<span class="sncard-count">' + n + ' item' + (n !== 1 ? 's' : '') + '</span>' +
+      '</button>';
+  });
+  container.innerHTML = html;
+  container.querySelectorAll('.sncard').forEach(function(card) {
+    card.addEventListener('click', function() {
+      activeCat = card.dataset.cat;
+      container.querySelectorAll('.sncard').forEach(function(c) { c.classList.remove('on'); });
+      card.classList.add('on');
+      renderGrid(activeCat);
+    });
   });
 }
 
 function renderGrid(cat) {
-  var list = cat === 'all' ? prods : prods.filter(function(p) { return getCat(p) === cat; });
-  document.getElementById('grid').innerHTML = list.map(function(p, i) { return cardHTML(p, i); }).join('');
-  document.getElementById('meta').textContent = list.length + ' products';
+  var matchFn = activeMode === 'type' ? getTypeCat : getProgCat;
+  var list = (cat === 'all') ? prods : prods.filter(function(p) { return matchFn(p) === cat; });
+  document.getElementById('grid').innerHTML = list.length
+    ? list.map(function(p, i) { return cardHTML(p, i); }).join('')
+    : '<div style="grid-column:1/-1;padding:3rem;text-align:center;background:var(--card)"><p style="color:var(--gry);font-size:.86rem">No products in this category yet.</p></div>';
+  document.getElementById('meta').textContent = list.length + ' product' + (list.length !== 1 ? 's' : '');
 }
 
 function cardHTML(p, i) {
