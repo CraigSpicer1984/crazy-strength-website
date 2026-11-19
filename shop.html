@@ -337,7 +337,7 @@ function fp(n) { return '£' + parseFloat(n).toFixed(2); }
 // Type categories (by garment)
 var TYPE_CATS = [
   { key: 'tshirts',     label: 'T-Shirts',         icon: '👕', match: function(t,h){ return t.indexOf('t-shirt') > -1 || t.indexOf('vest') > -1; } },
-  { key: 'hoodies',     label: 'Hoodies & Jumpers', icon: '🧥', match: function(t,h){ return t.indexOf('hoodie') > -1 || t.indexOf('jumper') > -1 || t.indexOf('sweatshirt') > -1; } },
+  { key: 'hoodies',     label: 'Hoodies & Jumpers', icon: '🧥', match: function(t,h){ return t.indexOf('hoodie') > -1 || t.indexOf('jumper') > -1 || t.indexOf('sweatshirt') > -1 || t.indexOf('crewneck') > -1; } },
   { key: 'bottoms',     label: 'Bottoms',           icon: '👖', match: function(t,h){ return t.indexOf('jogger') > -1 || t.indexOf('short') > -1 || t.indexOf('legging') > -1; } },
   { key: 'headwear',    label: 'Headwear',          icon: '🧢', match: function(t,h){ return t.indexOf('hat') > -1 || t.indexOf('beanie') > -1 || t.indexOf('cap') > -1; } },
   { key: 'accessories', label: 'Accessories',       icon: '🎽', match: function(t,h){ return t.indexOf('sock') > -1 || t.indexOf('tape') > -1 || t.indexOf('shaker') > -1 || t.indexOf('patch') > -1 || t.indexOf('bag') > -1 || t.indexOf('belt') > -1; } },
