@@ -1,0 +1,1134 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Crazy Strength — Coached Strength Training, Amesbury</title>
+<meta name="description" content="Coached strength training gym in Amesbury, Wiltshire. Powerlifting, weightlifting, Ladies That Lift, Legends, Cubs. Free taster session. No experience needed.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet">
+<style>
+/* ── Tokens ──────────────────────────────────────────────────── */
+:root {
+  --ground:   #0a0a0a;
+  --surface:  #141414;
+  --surface2: #1c1c1c;
+  --ink:      #f4f4ef;
+  --muted:    #999;
+  --accent:   #e8220a;
+  --accent2:  #c01c08;
+  --action:   #e8220a;
+  --action-ink: #ffffff;
+  --wa:       #0f7a3e;
+  --wa-ink:   #fff;
+
+  --font-display: 'Bebas Neue', sans-serif;
+  --font-text:    'DM Sans', sans-serif;
+
+  --gap:   clamp(4rem, 8vw, 8rem);
+  --gutter: clamp(1.25rem, 5vw, 5rem);
+  --r: 2px;
+  font-size: 16px;
+}
+
+/* ── Reset ───────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
+body {
+  background: var(--ground);
+  color: var(--ink);
+  font-family: var(--font-text);
+  font-size: clamp(1rem, 1.1vw, 1.125rem);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; }
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  line-height: 0.92;
+}
+
+/* ── Nav ─────────────────────────────────────────────────────── */
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 var(--gutter);
+  height: 60px;
+  background: rgba(10,10,10,.96);
+  max-width: 100vw;
+  overflow: hidden;
+}
+.nav-logo {
+  display: flex; align-items: center; gap: .6rem;
+  text-decoration: none;
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  letter-spacing: .02em;
+}
+.nav-logo img { width: 36px; height: 36px; }
+.nav-logo span { color: #f03018; }
+.nav-links {
+  display: flex; align-items: center; gap: 2rem;
+  list-style: none;
+}
+.nav-links a {
+  font-size: .9rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: rgba(244,244,239,.7);
+  transition: color .15s;
+}
+.nav-links a:hover { color: var(--ink); }
+.nav-cta {
+  display: inline-flex; align-items: center;
+  padding: .5rem 1.2rem;
+  background: var(--action);
+  color: var(--action-ink);
+  font-family: var(--font-display);
+  font-size: .95rem;
+  letter-spacing: .06em;
+  text-decoration: none;
+  border-radius: var(--r);
+  transition: background .15s;
+}
+.nav-cta:hover { background: var(--accent2); }
+.nav-hamburger {
+  display: none;
+  background: none; border: none; cursor: pointer; padding: .5rem;
+  color: var(--ink); font-size: 1.4rem;
+}
+
+/* ── Ticker ──────────────────────────────────────────────────── */
+.ticker-wrap {
+  position: relative;
+  background: var(--accent);
+  height: 36px;
+  overflow: hidden;
+  display: flex; align-items: center;
+  margin-top: 60px; /* below nav */
+}
+.ticker-track {
+  display: flex; align-items: center;
+  white-space: nowrap;
+  animation: ticker 32s linear infinite;
+}
+.ticker-track:hover { animation-play-state: paused; }
+.tick-item {
+  display: inline-flex; align-items: center;
+  padding: 0 2rem;
+  font-size: .85rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: #fff;
+  min-height: 36px;
+}
+.tick-sep { color: rgba(255,255,255,.4); padding: 0 .5rem; }
+@keyframes ticker {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* ── Hero ────────────────────────────────────────────────────── */
+.hero {
+  position: relative;
+  min-height: calc(100svh - 60px - 36px);
+  display: flex; flex-direction: column; justify-content: flex-end;
+  padding: 4rem var(--gutter) 4rem;
+  overflow: hidden;
+}
+.hero-bg {
+  position: absolute; inset: 0;
+  background: var(--ground);
+}
+.hero-bg img {
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: center 30%;
+  opacity: .55;
+}
+.hero-bg::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(10,10,10,.85) 0%, rgba(10,10,10,.2) 60%, transparent 100%);
+}
+.hero-content {
+  position: relative; z-index: 1;
+  max-width: 900px;
+}
+.hero-h1 {
+  font-size: clamp(4.5rem, 10vw, 10rem);
+  line-height: .88;
+  margin-bottom: 1.2rem;
+}
+.hero-h1 em { font-style: normal; }
+.hero-lead {
+  font-size: clamp(1rem, 1.3vw, 1.2rem);
+  color: rgba(244,244,239,.85);
+  max-width: 52ch;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+.hero-actions {
+  display: flex; flex-wrap: wrap; gap: .75rem;
+}
+.btn {
+  display: inline-flex; align-items: center; gap: .4rem;
+  padding: .85rem 2rem;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  letter-spacing: .06em;
+  text-decoration: none;
+  border-radius: var(--r);
+  transition: background .15s, transform .1s;
+  cursor: pointer; border: none;
+}
+.btn:active { transform: scale(.98); }
+.btn-primary { background: var(--action); color: var(--action-ink); }
+.btn-primary:hover { background: var(--accent2); }
+.btn-wa { background: var(--wa); color: var(--wa-ink); }
+.btn-wa:hover { background: #0a7a3c; }
+.btn-ghost {
+  background: transparent;
+  color: var(--ink);
+  border: 1.5px solid rgba(244,244,239,.3);
+}
+.btn-ghost:hover { border-color: var(--ink); }
+
+/* ── Section base ────────────────────────────────────────────── */
+.section { padding: var(--gap) var(--gutter); }
+.section + .section { padding-top: 0; }
+.section-alt { background: var(--surface); }
+.section-dark { background: var(--ground); }
+
+.section-label {
+  font-size: .75rem;
+  font-weight: 500;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+/* ── Finder ──────────────────────────────────────────────────── */
+.finder {
+  padding: var(--gap) var(--gutter);
+  background: var(--surface2);
+}
+.finder-title {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  margin-bottom: .5rem;
+}
+.finder-sub {
+  color: var(--muted);
+  font-size: .95rem;
+  margin-bottom: 2rem;
+  max-width: 50ch;
+}
+.finder-btns {
+  display: flex; flex-wrap: wrap; gap: .6rem;
+  margin-bottom: 2.5rem;
+}
+.finder-btn {
+  padding: .6rem 1.4rem;
+  background: var(--surface);
+  color: var(--muted);
+  border: 1.5px solid rgba(244,244,239,.12);
+  border-radius: 100px;
+  font-family: var(--font-text);
+  font-size: .85rem;
+  cursor: pointer;
+  transition: all .15s;
+}
+.finder-btn:hover,
+.finder-btn[aria-pressed="true"] {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+
+/* ── Programmes grid ─────────────────────────────────────────── */
+.prog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1px;
+  background: rgba(244,244,239,.08);
+}
+.prog-card {
+  background: var(--surface);
+  padding: 2rem;
+  transition: opacity .2s, transform .2s;
+}
+.prog-card[data-hidden] {
+  opacity: .25;
+  pointer-events: none;
+}
+.prog-card-tag {
+  display: none;
+}
+.prog-card h3 {
+  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+  margin-bottom: .5rem;
+}
+.prog-card p {
+  font-size: .9rem;
+  color: var(--muted);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+.prog-card-meta {
+  font-size: .82rem;
+  color: var(--muted);
+  margin-bottom: 1.2rem;
+  display: flex; flex-direction: column; gap: .2rem;
+}
+.prog-card-meta strong { color: var(--ink); }
+.prog-card a {
+  font-size: .9rem;
+  font-weight: 500;
+  color: #f03018;
+  text-decoration: none;
+}
+.prog-card a:hover { text-decoration: underline; }
+
+/* ── Process ─────────────────────────────────────────────────── */
+.process { padding: var(--gap) var(--gutter); }
+.process-title {
+  font-size: clamp(2.5rem, 5vw, 5rem);
+  margin-bottom: 3rem;
+  max-width: 16ch;
+}
+.process-steps {
+  display: flex; flex-direction: column; gap: 0;
+}
+.process-step {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  padding: 4rem 0;
+  border-top: 1px solid rgba(244,244,239,.08);
+}
+.process-step:last-child { border-bottom: 1px solid rgba(244,244,239,.08); }
+.process-step:nth-child(even) .process-step-img { order: 1; }
+.process-step:nth-child(even) .process-step-text { order: 2; }
+.process-step-img {
+  position: relative;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  background: var(--surface);
+}
+.process-step-img img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform .6s ease;
+}
+.process-step:hover .process-step-img img { transform: scale(1.03); }
+.process-step-word {
+  font-size: clamp(5rem, 10vw, 10rem);
+  font-family: var(--font-display);
+  color: rgba(244,244,239,.06);
+  line-height: 1;
+  margin-bottom: .5rem;
+  user-select: none;
+}
+.process-step-text h2 {
+  font-size: clamp(2rem, 3.5vw, 3.5rem);
+  margin-bottom: 1rem;
+}
+.process-step-text p {
+  font-size: 1rem;
+  color: rgba(244,244,239,.75);
+  line-height: 1.65;
+  max-width: 44ch;
+}
+.process-step-text .btn { margin-top: 1.5rem; }
+
+/* ── Statement / Quote ───────────────────────────────────────── */
+.statement {
+  padding: var(--gap) var(--gutter);
+  background: var(--surface);
+}
+.statement blockquote {
+  font-size: clamp(1.3rem, 2.4vw, 2rem);
+  font-weight: 300;
+  line-height: 1.5;
+  max-width: 72ch;
+  color: var(--ink);
+  font-style: italic;
+  margin-bottom: 1.5rem;
+}
+.statement blockquote::before {
+  content: '\201C';
+  font-family: var(--font-display);
+  font-size: 5rem;
+  color: var(--accent);
+  line-height: 0;
+  vertical-align: -1.8rem;
+  margin-right: .2rem;
+  font-style: normal;
+}
+.statement-cite {
+  font-size: .9rem;
+  color: var(--muted);
+}
+.statement-cite strong { color: var(--ink); display: block; }
+
+/* ── Numbers bar ─────────────────────────────────────────────── */
+.numbers {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background: var(--accent);
+  gap: 2px;
+}
+.number-item {
+  padding: 2.5rem 2rem;
+  background: var(--accent);
+}
+.number-item dt {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  color: #fff;
+  line-height: 1;
+  margin-bottom: .3rem;
+}
+.number-item dd {
+  font-size: .82rem;
+  color: #fff;
+  line-height: 1.4;
+}
+
+/* ── Story ───────────────────────────────────────────────────── */
+.story {
+  padding: var(--gap) var(--gutter);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+.story-text h2 {
+  font-size: clamp(2.5rem, 4.5vw, 5rem);
+  margin-bottom: 1.5rem;
+}
+.story-text p {
+  font-size: 1rem;
+  color: rgba(244,244,239,.8);
+  line-height: 1.7;
+  max-width: 50ch;
+  margin-bottom: 1rem;
+}
+.story-text p:last-of-type { margin-bottom: 1.5rem; }
+.story-img {
+  position: sticky; top: 80px;
+  aspect-ratio: 3/4;
+  overflow: hidden;
+  background: var(--surface);
+}
+.story-img img {
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: center top;
+}
+.timeline {
+  list-style: none;
+  margin-top: 2rem;
+}
+.timeline li {
+  display: grid;
+  grid-template-columns: 5rem 1fr;
+  gap: 1.5rem;
+  padding: 1.2rem 0;
+  border-top: 1px solid rgba(244,244,239,.08);
+  font-size: .9rem;
+  color: rgba(244,244,239,.7);
+  line-height: 1.55;
+}
+.timeline li:last-child { border-bottom: 1px solid rgba(244,244,239,.08); }
+.timeline-year {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  color: #f03018;
+  line-height: 1.1;
+}
+
+/* ── Visit ───────────────────────────────────────────────────── */
+.visit { padding: 0; }
+.visit-heading {
+  background: var(--ground);
+  padding: 3rem var(--gutter) 2.5rem;
+}
+.visit-heading h2 {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem,6vw,6rem);
+  color: var(--ink);
+  line-height: .92;
+  max-width: 16ch;
+}
+.visit-img {
+  width: 100%;
+  aspect-ratio: 21/8;
+  overflow: hidden;
+  background: var(--surface);
+  position: relative;
+}
+.visit-img img {
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: center 60%;
+  filter: brightness(.6);
+}
+.visit-band {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1px;
+  background: rgba(244,244,239,.08);
+  background-color: var(--surface2);
+}
+.visit-cell {
+  padding: 2.5rem 3rem;
+  background: var(--surface2);
+}
+.visit-cell h3 {
+  font-size: 1.1rem;
+  margin-bottom: .6rem;
+  color: #ff4422;
+}
+.visit-cell p, .visit-cell address {
+  font-size: .9rem;
+  color: rgba(244,244,239,.7);
+  line-height: 1.65;
+  font-style: normal;
+}
+.visit-cell a { color: var(--ink); text-decoration: underline; }
+.visit-cta {
+  padding: 2.5rem var(--gutter);
+  background: var(--accent);
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 1.5rem;
+}
+.visit-cta-text {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  color: #fff;
+}
+.visit-cta-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+.btn-white {
+  background: #fff;
+  color: var(--accent);
+}
+.btn-white:hover { background: rgba(255,255,255,.9); }
+.btn-white-ghost {
+  background: transparent;
+  color: #fff;
+  border: 1.5px solid rgba(255,255,255,.5);
+}
+.btn-white-ghost:hover { border-color: #fff; }
+
+/* ── Footer ──────────────────────────────────────────────────── */
+.footer {
+  background: var(--surface);
+  padding: 4rem var(--gutter) 2rem;
+}
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-bottom: 3rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid rgba(244,244,239,.08);
+}
+.footer-col h4 {
+  font-size: .88rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 1rem;
+}
+.footer-col ul { list-style: none; }
+.footer-col li { margin-bottom: .4rem; }
+.footer-col a {
+  font-size: .88rem;
+  color: rgba(244,244,239,.55);
+  text-decoration: none;
+  transition: color .15s;
+}
+.footer-col a:hover { color: var(--ink); }
+.footer-name {
+  font-family: var(--font-display);
+  font-size: clamp(4rem, 15vw, 14rem);
+  line-height: .88;
+  color: rgba(244,244,239,.07);
+  margin-bottom: 2rem;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.footer-bottom {
+  display: flex; justify-content: space-between; align-items: flex-start;
+  flex-wrap: wrap; gap: 1rem;
+  font-size: .82rem;
+  color: rgba(244,244,239,.5);
+  line-height: 1.7;
+}
+.footer-bottom a { color: rgba(244,244,239,.6); }
+
+/* ── Reveal animation ────────────────────────────────────────── */
+.js-ready .reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity .55s ease, transform .55s ease;
+}
+.js-ready .reveal.vis { opacity: 1; transform: none; }
+.reveal-d1 { transition-delay: .08s; }
+.reveal-d2 { transition-delay: .16s; }
+.reveal-d3 { transition-delay: .24s; }
+.reveal-d4 { transition-delay: .32s; }
+
+/* ── Mobile nav ──────────────────────────────────────────────── */
+.mobile-nav {
+  position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 200;
+  background: var(--ground);
+  display: flex; flex-direction: column;
+  padding: 5rem var(--gutter) 2rem;
+  transform: translateX(100%);
+  transition: transform .3s ease;
+  overflow: hidden;
+  visibility: hidden;
+}
+.mobile-nav.open { transform: none; visibility: visible; }
+.mobile-nav a {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  text-decoration: none;
+  color: var(--ink);
+  padding: .6rem 0;
+  border-bottom: 1px solid rgba(244,244,239,.08);
+}
+.mobile-nav a:last-child { border: none; }
+.mobile-nav-close {
+  position: absolute; top: 1.2rem; right: var(--gutter);
+  background: none; border: none; cursor: pointer;
+  font-size: 2rem; color: var(--ink);
+}
+
+/* ── Responsive ──────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .nav-links { display: none; }
+  .nav-cta { display: none; }
+  .nav-hamburger { display: block; }
+
+  .numbers { grid-template-columns: 1fr 1fr; }
+
+  .story { grid-template-columns: 1fr; }
+  .story-img { position: static; aspect-ratio: 16/9; order: -1; }
+  .story-text h2 { font-size: clamp(2rem, 6vw, 3.5rem); }
+
+  .footer-links { grid-template-columns: 1fr 1fr; }
+  .footer-bottom { flex-direction: column; }
+  .visit-band { grid-template-columns: 1fr; }
+  .visit-img { aspect-ratio: 16/9; }
+}
+
+@media (max-width: 680px) {
+  .hero-h1 { font-size: clamp(3.5rem, 14vw, 5.5rem); }
+
+  .process-step {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .process-step:nth-child(even) .process-step-img { order: unset; }
+  .process-step:nth-child(even) .process-step-text { order: unset; }
+  .process-step-img { aspect-ratio: 16/9; }
+  .process-step-word { font-size: 4rem; }
+
+  .footer-links { grid-template-columns: 1fr; }
+  .visit-cta { flex-direction: column; }
+  .visit-cta-actions { flex-direction: column; }
+}
+
+/* ── Reduced motion ──────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .js-ready .reveal { opacity: 1; transform: none; transition: none; }
+  .ticker-track { animation: none; }
+  .process-step-img img { transition: none; }
+  html { scroll-behavior: auto; }
+}
+</style>
+</head>
+<body>
+
+<!-- Nav -->
+<nav class="nav" aria-label="Main navigation">
+  <a class="nav-logo" href="https://crazystrength.co.uk">
+    <img src="images/cs-logo-mark.png" alt="Crazy Strength" width="36" height="36" onerror="this.style.display='none'">
+    CRAZY<span>STRENGTH</span>
+  </a>
+  <ul class="nav-links" role="list">
+    <li><a href="https://crazystrength.co.uk/education.html">Education</a></li>
+    <li><a href="https://crazystrength.co.uk/index.html#programmes">Train</a></li>
+    <li><a href="https://crazystrength.co.uk/events.html">Events</a></li>
+    <li><a href="https://crazystrength.co.uk/blog">Blog</a></li>
+    <li><a href="https://crazystrength.co.uk/shop.html">Shop</a></li>
+    <!-- nav links styled without text-transform; micro-label addressed above -->
+  </ul>
+  <a class="nav-cta" href="https://crazystrength.co.uk/taster">Book a Free Taster</a>
+  <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false" id="menuBtn">☰</button>
+</nav>
+
+<!-- Mobile nav -->
+<nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation" aria-hidden="true">
+  <button class="mobile-nav-close" id="menuClose" aria-label="Close menu">✕</button>
+  <a href="https://crazystrength.co.uk/education.html">Education</a>
+  <a href="https://crazystrength.co.uk/index.html#programmes">Train</a>
+  <a href="https://crazystrength.co.uk/events.html">Events</a>
+  <a href="https://crazystrength.co.uk/blog">Blog</a>
+  <a href="https://crazystrength.co.uk/shop.html">Shop</a>
+  <a href="https://crazystrength.co.uk/taster" style="color:var(--accent)">Book a Free Taster →</a>
+</nav>
+
+<!-- Ticker -->
+<div class="ticker-wrap" role="marquee" aria-label="What's on">
+  <div class="ticker-track">
+    <a href="https://crazystrength.co.uk/events.html" class="tick-item">Open Day · Sat 23 Jan · From 12:00 PM · Free Entry</a>
+    <span class="tick-sep">·</span>
+    <a href="https://crazystrength.co.uk/events.html" class="tick-item">End of Year Awards · Sun 13 Dec</a>
+    <span class="tick-sep">·</span>
+    <a href="https://crazystrength.co.uk/events.html" class="tick-item">BP SW Regional · Fri 29 May 2027</a>
+    <span class="tick-sep">·</span>
+    <a href="https://crazystrength.co.uk/events.html" class="tick-item">CS Novice · Sat 10 Jul 2027</a>
+    <span class="tick-sep">·</span>
+    <!-- duplicate for seamless loop -->
+    <a href="https://crazystrength.co.uk/events.html" class="tick-item">Open Day · Sat 23 Jan · From 12:00 PM · Free Entry</a>
+    <span class="tick-sep">·</span>
+    <a href="https://crazystrength.co.uk/events.html" class="tick-item">End of Year Awards · Sun 13 Dec</a>
+    <span class="tick-sep">·</span>
+    <a href="https://crazystrength.co.uk/events.html" class="tick-item">BP SW Regional · Fri 29 May 2027</a>
+    <span class="tick-sep">·</span>
+    <a href="https://crazystrength.co.uk/events.html" class="tick-item">CS Novice · Sat 10 Jul 2027</a>
+    <span class="tick-sep">·</span>
+  </div>
+</div>
+
+<!-- Hero -->
+<section class="hero" aria-labelledby="hero-h1">
+  <div class="hero-bg">
+    <img
+      src="assets/pictures/lrmc-soldier-finds-purpose-in-powerlifting-7348222.jpg"
+      alt="Athlete in a coached session at the gym"
+      width="1280" height="914"
+      fetchpriority="high"
+    >
+  </div>
+  <div class="hero-content">
+    <h1 class="hero-h1 reveal" id="hero-h1">
+      COACHED<br>FROM DAY <em>ONE.</em>
+    </h1>
+    <p class="hero-lead reveal reveal-d1">
+      Crazy Strength is a strength training gym in Amesbury, Wiltshire. Every session is coached. You do not need to be strong or experienced before you arrive — we will teach you properly from the start.
+    </p>
+    <div class="hero-actions reveal reveal-d2">
+      <a class="btn btn-primary" href="https://crazystrength.co.uk/taster">Book a Free Taster</a>
+      <a class="btn btn-wa" href="https://wa.me/447734824897?text=Hi%2C%20I%27d%20like%20to%20find%20out%20more%20about%20Crazy%20Strength.">Message Us on WhatsApp</a>
+      <a class="btn btn-ghost" href="#programmes">See All Programmes</a>
+    </div>
+  </div>
+</section>
+
+<!-- Numbers -->
+<dl class="numbers" aria-label="Crazy Strength by the numbers">
+  <div class="number-item reveal">
+    <dt>25</dt>
+    <dd>Years on a barbell — Craig Spicer, founder and head coach</dd>
+  </div>
+  <div class="number-item reveal reveal-d1">
+    <dt>5.0</dt>
+    <dd>Google rating from 96 verified reviews</dd>
+  </div>
+  <div class="number-item reveal reveal-d2">
+    <dt>6+</dt>
+    <dd>Cubs programme starts from age 6 — the only gym in the area</dd>
+  </div>
+  <div class="number-item reveal reveal-d3">
+    <dt>05–23</dt>
+    <dd>Open Gym hours, every day of the year</dd>
+  </div>
+</dl>
+
+<!-- Programme finder -->
+<section class="finder" id="programmes" aria-labelledby="finder-title">
+  <h2 class="finder-title reveal" id="finder-title">FIND YOUR PROGRAMME</h2>
+  <p class="finder-sub reveal reveal-d1">Select where you are right now — the matching programmes will highlight.</p>
+  <div class="finder-btns" role="group" aria-label="Filter programmes by goal">
+    <button class="finder-btn" data-filter="all" aria-pressed="true">Show all</button>
+    <button class="finder-btn" data-filter="beginner" aria-pressed="false">Complete beginner</button>
+    <button class="finder-btn" data-filter="compete" aria-pressed="false">Want to compete</button>
+    <button class="finder-btn" data-filter="women" aria-pressed="false">Women's programme</button>
+    <button class="finder-btn" data-filter="50plus" aria-pressed="false">50 and over</button>
+    <button class="finder-btn" data-filter="youth" aria-pressed="false">Young person or parent</button>
+    <button class="finder-btn" data-filter="flexible" aria-pressed="false">Flexible schedule</button>
+  </div>
+  <div class="prog-grid" role="list">
+
+    <article class="prog-card reveal" role="listitem" data-tags="beginner compete">
+      <h3>POWERLIFTING</h3>
+      <p>Squat, bench press and deadlift with qualified coaching. Structured programme from your first session. No experience needed.</p>
+      <dl class="prog-card-meta">
+        <div><dt>Who it's for</dt><dd><strong>Complete beginners</strong></dd></div>
+        <div><dt>Price</dt><dd><strong>From £60/mo</strong></dd></div>
+        <div><dt>Includes</dt><dd>Coached sessions + programme</dd></div>
+      </dl>
+      <a href="https://crazystrength.co.uk/powerlifting">Find out more →</a>
+    </article>
+
+    <article class="prog-card reveal reveal-d1" role="listitem" data-tags="beginner compete">
+      <h3>OLYMPIC WEIGHTLIFTING</h3>
+      <p>Learn the snatch and clean &amp; jerk from scratch. Technical, precise and genuinely satisfying to do well.</p>
+      <dl class="prog-card-meta">
+        <div><dt>Who it's for</dt><dd><strong>Complete beginners</strong></dd></div>
+        <div><dt>Price</dt><dd><strong>From £60/mo</strong></dd></div>
+        <div><dt>Includes</dt><dd>Coached sessions + programme</dd></div>
+      </dl>
+      <a href="https://crazystrength.co.uk/weightlifting">Find out more →</a>
+    </article>
+
+    <article class="prog-card reveal reveal-d2" role="listitem" data-tags="women beginner">
+      <h3>LADIES THAT LIFT</h3>
+      <p>Women-only coached strength. Focused on building real strength in a supportive environment. No prior experience required.</p>
+      <dl class="prog-card-meta">
+        <div><dt>Who it's for</dt><dd><strong>Women, all levels</strong></dd></div>
+        <div><dt>Price</dt><dd><strong>From £60/mo</strong></dd></div>
+        <div><dt>Includes</dt><dd>Coached sessions + programme</dd></div>
+      </dl>
+      <a href="https://crazystrength.co.uk/ladies-that-lift">Find out more →</a>
+    </article>
+
+    <article class="prog-card reveal" role="listitem" data-tags="50plus beginner">
+      <h3>LEGENDS THAT LIFT</h3>
+      <p>Coached strength for people over 50. Keep moving, build real strength and stay independent for longer.</p>
+      <dl class="prog-card-meta">
+        <div><dt>Who it's for</dt><dd><strong>50 and over</strong></dd></div>
+        <div><dt>Price</dt><dd><strong>From £60/mo</strong></dd></div>
+        <div><dt>Includes</dt><dd>Coached sessions + programme</dd></div>
+      </dl>
+      <a href="https://crazystrength.co.uk/legends-that-lift">Find out more →</a>
+    </article>
+
+    <article class="prog-card reveal reveal-d1" role="listitem" data-tags="youth beginner">
+      <h3>CUBS PROGRAMME</h3>
+      <p>Strength development from age 6. Three structured stages. The only programme of its kind in the area.</p>
+      <dl class="prog-card-meta">
+        <div><dt>Who it's for</dt><dd><strong>Ages 6–16</strong></dd></div>
+        <div><dt>Price</dt><dd><strong>From £60/mo</strong></dd></div>
+        <div><dt>Includes</dt><dd>Coached sessions + programme</dd></div>
+      </dl>
+      <a href="https://crazystrength.co.uk/cubs">Find out more →</a>
+    </article>
+
+    <article class="prog-card reveal reveal-d2" role="listitem" data-tags="flexible beginner compete">
+      <h3>OPEN GYM</h3>
+      <p>Train on your own schedule. Access from 05:00 to 23:00 every day. Full facility, no waiting, no crowds.</p>
+      <dl class="prog-card-meta">
+        <div><dt>Who it's for</dt><dd><strong>All levels</strong></dd></div>
+        <div><dt>Price</dt><dd><strong>From £50/mo</strong></dd></div>
+        <div><dt>Includes</dt><dd>18+ access, full facility</dd></div>
+      </dl>
+      <a href="https://crazystrength.co.uk/open-gym">Find out more →</a>
+    </article>
+
+    <article class="prog-card reveal" role="listitem" data-tags="flexible beginner compete">
+      <h3>SEMI-REMOTE COACHING</h3>
+      <p>In-person coached sessions combined with remote programming and direct access to your coach.</p>
+      <dl class="prog-card-meta">
+        <div><dt>Who it's for</dt><dd><strong>All levels</strong></dd></div>
+        <div><dt>Price</dt><dd><strong>From £150/mo</strong></dd></div>
+        <div><dt>Includes</dt><dd>Sessions + programming + direct access</dd></div>
+      </dl>
+      <a href="https://crazystrength.co.uk/coaching">Find out more →</a>
+    </article>
+
+    <article class="prog-card reveal reveal-d1" role="listitem" data-tags="flexible compete">
+      <h3>PERSONAL TRAINING</h3>
+      <p>One-to-one coaching for any age, goal or ability. Fully bespoke sessions built around you.</p>
+      <dl class="prog-card-meta">
+        <div><dt>Who it's for</dt><dd><strong>Any age or goal</strong></dd></div>
+        <div><dt>Price</dt><dd><strong>Bespoke</strong></dd></div>
+        <div><dt>Includes</dt><dd>Full one-to-one coaching</dd></div>
+      </dl>
+      <a href="https://crazystrength.co.uk/personal-training">Find out more →</a>
+    </article>
+
+  </div>
+</section>
+
+<!-- Process / The ritual -->
+<section class="process section-dark" aria-labelledby="process-title">
+  <h2 class="process-title reveal" id="process-title">HOW IT WORKS</h2>
+  <div class="process-steps">
+
+    <div class="process-step reveal">
+      <div class="process-step-img">
+        <img
+          src="assets/pictures/2025-skelton-gym-powerlifting-competition-9326219.jpg"
+          alt="Athlete loading a barbell at the start of a session"
+          width="1280" height="853" loading="lazy"
+        >
+      </div>
+      <div class="process-step-text">
+        <div class="process-step-word" aria-hidden="true">SHOW</div>
+        <h2>BOOK A FREE TASTER</h2>
+        <p>Your first session is free, coached and pressure-free. Come in, meet the coaches, try a session. No commitment. No experience needed. We will teach you properly from the moment you arrive.</p>
+        <a class="btn btn-primary" href="https://crazystrength.co.uk/taster">Book your free taster</a>
+      </div>
+    </div>
+
+    <div class="process-step reveal">
+      <div class="process-step-img">
+        <img
+          src="assets/pictures/stefanie-dr-xler-clean-and-jerk-4316.jpg"
+          alt="Weightlifter in a coached session completing a lift"
+          width="1280" height="853" loading="lazy"
+        >
+      </div>
+      <div class="process-step-text">
+        <div class="process-step-word" aria-hidden="true">LEARN</div>
+        <h2>EVERY SESSION IS COACHED</h2>
+        <p>Unlike a commercial gym, every session at Crazy Strength has a coach in the room. You learn proper technique from the start. That is not an add-on — it is how every programme works here.</p>
+      </div>
+    </div>
+
+    <div class="process-step reveal">
+      <div class="process-step-img">
+        <img
+          src="assets/pictures/20181006-lena-prucher-gewichtheben-bundesliga-finale-by-isiw.jpg"
+          alt="Weightlifter on the platform competing"
+          width="1280" height="853" loading="lazy"
+        >
+      </div>
+      <div class="process-step-text">
+        <div class="process-step-word" aria-hidden="true">CHOOSE</div>
+        <h2>PICK YOUR PATH</h2>
+        <p>Powerlifting, Olympic weightlifting, Ladies That Lift, Legends That Lift, Cubs, Open Gym or one-to-one coaching. Some members come to get stronger and stay. Others want to compete. Both are equally valid.</p>
+        <a class="btn btn-ghost" href="#programmes">See all programmes</a>
+      </div>
+    </div>
+
+    <div class="process-step reveal">
+      <div class="process-step-img">
+        <img
+          src="assets/pictures/stefanie-dr-xler-clean-and-jerk-4316.jpg"
+          alt="Weightlifter completing an overhead snatch in competition"
+          width="1280" height="853" loading="lazy"
+        >
+      </div>
+      <div class="process-step-text">
+        <div class="process-step-word" aria-hidden="true">COMPETE</div>
+        <h2>WHEN YOU'RE READY, THE PLATFORM IS THERE</h2>
+        <p>When — and only if — you want to compete, we prepare you for it. Powerlifting and weightlifting competitions from regional through to national level. Craig has coached athletes to international success. You do not have to compete to train here. But if you decide you want to, we know how.</p>
+        <a class="btn btn-primary" href="https://crazystrength.co.uk/events.html">Upcoming competitions</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Quote / Proof -->
+<section class="statement section-alt" aria-label="Member review">
+  <blockquote class="reveal">
+    I have been going to Ladies That Lift sessions twice a week for the last year. I am 64 and had an early menopause following breast cancer, one of the side effects being lower bone density. The sessions have been life-changing for my health and confidence.
+  </blockquote>
+  <p class="statement-cite reveal reveal-d1">
+    <strong>Christine Spicer</strong>
+    Ladies That Lift member
+  </p>
+</section>
+
+<!-- Story -->
+<section class="story section-dark" aria-labelledby="story-title">
+  <div class="story-text">
+    <h2 class="reveal" id="story-title">BUILT FROM THE BARBELL UP</h2>
+    <p class="reveal reveal-d1">Crazy Strength was established by Craig Spicer — 30 years in strength sport, a decade as Head Coach for British Army Weightlifting and Army Powerlifting, and the person who built this place on one conviction: everyone has more in them than they think.</p>
+    <p class="reveal reveal-d2">That is what #BeAGoodHuman means here. It is not a tagline. It is how we coach, how we run the facility, and the standard we hold ourselves to every day.</p>
+    <div class="reveal reveal-d3">
+      <a class="btn btn-ghost" href="https://crazystrength.co.uk/team.html">Meet the team</a>
+    </div>
+    <ul class="timeline reveal">
+      <li>
+        <span class="timeline-year">1996</span>
+        <span>Craig picks up a barbell for the first time.</span>
+      </li>
+      <li>
+        <span class="timeline-year">2001</span>
+        <span>Qualifies as a strength and conditioning instructor.</span>
+      </li>
+      <li>
+        <span class="timeline-year">2009</span>
+        <span>Begins work as a civilian Physical Training Instructor with the British Army.</span>
+      </li>
+      <li>
+        <span class="timeline-year">2014</span>
+        <span>Appointed Head Coach for British Army Weightlifting and Army Powerlifting — a role held for a decade.</span>
+      </li>
+      <li>
+        <span class="timeline-year">2019</span>
+        <span>Crazy Strength opens in Amesbury.</span>
+      </li>
+      <li>
+        <span class="timeline-year">2025</span>
+        <span>Crazy Strength moves to its own facility at The Beacon Centre, Solstice Park.</span>
+      </li>
+    </ul>
+  </div>
+  <div class="story-img reveal reveal-d2">
+    <img
+      src="images/craig-about.jpg"
+      alt="Craig Spicer, founder of Crazy Strength"
+      width="600" height="800"
+      loading="lazy"
+      onerror="this.parentElement.style.background='var(--surface2)'"
+    >
+  </div>
+</section>
+
+<!-- Visit -->
+<section class="visit" aria-labelledby="visit-title">
+  <div class="visit-img">
+    <img
+      src="images/gym-exterior.jpg"
+      alt="Crazy Strength gym, Solstice Park, Amesbury"
+      width="1440" height="550"
+      loading="lazy"
+      onerror="this.parentElement.style.background='var(--surface2)'"
+    >
+  </div>
+  <div class="visit-heading">
+    <h2 id="visit-title">THE BEACON CENTRE,<br>AMESBURY</h2>
+  </div>
+  <div class="visit-band">
+    <div class="visit-cell reveal">
+      <h3>Address</h3>
+      <address>
+        Unit 13, The Beacon Centre<br>
+        Solstice Park<br>
+        Amesbury, SP4 7SZ
+      </address>
+    </div>
+    <div class="visit-cell reveal reveal-d1">
+      <h3>Hours</h3>
+      <p>Open Gym: 05:00–23:00 every day<br>Coached sessions: see the <a href="https://crazystrength.co.uk/timetable">full timetable</a></p>
+    </div>
+    <div class="visit-cell reveal reveal-d2">
+      <h3>Get here</h3>
+      <p>Free parking on site. 10 minutes from Salisbury on the A303 corridor. <a href="https://maps.google.com/?q=Unit+13+Beacon+Centre+Solstice+Park+Amesbury+SP4+7SZ" target="_blank" rel="noopener">Get directions →</a></p>
+    </div>
+  </div>
+  <div class="visit-cta reveal">
+    <span class="visit-cta-text">YOUR FIRST SESSION IS FREE.</span>
+    <div class="visit-cta-actions">
+      <a class="btn btn-white" href="https://crazystrength.co.uk/taster">Book a free taster</a>
+      <a class="btn btn-white-ghost" href="https://wa.me/447734824897?text=Hi%2C%20I%27d%20like%20to%20find%20out%20more%20about%20Crazy%20Strength." target="_blank" rel="noopener">Message us on WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-links">
+    <div class="footer-col">
+      <h4>Train</h4>
+      <ul>
+        <li><a href="https://crazystrength.co.uk/powerlifting">Beginner Powerlifting</a></li>
+        <li><a href="https://crazystrength.co.uk/weightlifting">Olympic Weightlifting</a></li>
+        <li><a href="https://crazystrength.co.uk/ladies-that-lift">Ladies That Lift</a></li>
+        <li><a href="https://crazystrength.co.uk/legends-that-lift">Legends That Lift</a></li>
+        <li><a href="https://crazystrength.co.uk/cubs">Cubs Programme</a></li>
+        <li><a href="https://crazystrength.co.uk/open-gym">Open Gym</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Learn</h4>
+      <ul>
+        <li><a href="https://crazystrength.co.uk/education.html">Education</a></li>
+        <li><a href="https://crazystrength.co.uk/blog">Blog</a></li>
+        <li><a href="https://crazystrength.co.uk/events.html">Events &amp; Competitions</a></li>
+        <li><a href="https://crazystrength.co.uk/timetable">Timetable</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Crazy Strength</h4>
+      <ul>
+        <li><a href="https://crazystrength.co.uk/team.html">The Team</a></li>
+        <li><a href="https://crazystrength.co.uk/shop.html">Shop</a></li>
+        <li><a href="https://crazystrength.co.uk/taster">Free Taster Session</a></li>
+        <li><a href="https://wa.me/447734824897" target="_blank" rel="noopener">WhatsApp</a></li>
+        <li><a href="https://crazystrength.co.uk/privacy-policy">Privacy Policy</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-name" aria-hidden="true">CRAZY STRENGTH</div>
+  <div class="footer-bottom">
+    <p>© 2026 Crazy Strength UK Limited · Unit 13, The Beacon Centre, Solstice Park, Amesbury SP4 7SZ · <a href="https://crazystrength.co.uk">crazystrength.co.uk</a></p>
+    <p>
+      Picture credits:
+      <a href="https://commons.wikimedia.org/wiki/File:2025_Skelton_Gym_Powerlifting_Competition_(9326219).jpg" target="_blank" rel="noopener">Powerlifting competition photo</a> by USAF / Sr Airman Haiden Morris (Public domain);
+      <a href="https://commons.wikimedia.org/wiki/File:LRMC_Soldier_finds_purpose_in_powerlifting_(7348222).jpg" target="_blank" rel="noopener">Gym training photo</a> by Marcy Sanchez / US Army (Public domain);
+      <a href="https://commons.wikimedia.org/wiki/File:Stefanie_Dr%C3%B6xler_clean_and_jerk-4316.jpg" target="_blank" rel="noopener">Clean and jerk photo</a> by Isiwal (<a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>);
+      <a href="https://commons.wikimedia.org/wiki/File:20181006_Lena_Prucher_Gewichtheben_Bundesliga_Finale_by_Isiwal-3396.jpg" target="_blank" rel="noopener">Weightlifting competition photo</a> by Isiwal (<a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>).
+      These photographs show the world of the sport and are not Crazy Strength's own facilities or members.
+    </p>
+  </div>
+</footer>
+
+<script>
+// ── Reveal on scroll ──────────────────────────────────────────
+document.documentElement.classList.add('js-ready');
+const revealEls = document.querySelectorAll('.reveal');
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('vis'); io.unobserve(e.target); } });
+}, { threshold: 0.08 });
+revealEls.forEach(el => io.observe(el));
+
+// ── Programme finder ──────────────────────────────────────────
+const filterBtns = document.querySelectorAll('.finder-btn');
+const progCards  = document.querySelectorAll('.prog-card');
+
+filterBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const filter = btn.dataset.filter;
+    filterBtns.forEach(b => b.setAttribute('aria-pressed', 'false'));
+    btn.setAttribute('aria-pressed', 'true');
+    progCards.forEach(card => {
+      if (filter === 'all') {
+        card.removeAttribute('data-hidden');
+      } else {
+        const tags = (card.dataset.tags || '').split(' ');
+        if (tags.includes(filter)) {
+          card.removeAttribute('data-hidden');
+        } else {
+          card.setAttribute('data-hidden', '');
+        }
+      }
+    });
+  });
+});
+
+// ── Mobile nav ────────────────────────────────────────────────
+const menuBtn   = document.getElementById('menuBtn');
+const menuClose = document.getElementById('menuClose');
+const mobileNav = document.getElementById('mobileNav');
+menuBtn.addEventListener('click', () => {
+  mobileNav.classList.add('open');
+  mobileNav.setAttribute('aria-hidden', 'false');
+  menuBtn.setAttribute('aria-expanded', 'true');
+  document.body.style.overflow = 'hidden';
+});
+menuClose.addEventListener('click', closeMenu);
+mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+function closeMenu() {
+  mobileNav.classList.remove('open');
+  mobileNav.setAttribute('aria-hidden', 'true');
+  menuBtn.setAttribute('aria-expanded', 'false');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
+</script>
+</body>
+</html>
