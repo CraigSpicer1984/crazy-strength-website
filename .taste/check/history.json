@@ -239,5 +239,89 @@
    "uncredited",
    "tap-size"
   ]
+ },
+ {
+  "at": "2026-11-22T21:40:44.516Z",
+  "target": "mockup.html",
+  "fail": 1,
+  "warn": 8,
+  "reading": "broken",
+  "ids": [
+   "broken-image",
+   "statement-length",
+   "default-font",
+   "size-count",
+   "small-text",
+   "repeated-picture",
+   "em-dashes",
+   "uncredited",
+   "tap-size"
+  ]
+ },
+ {
+  "at": "2026-11-22T21:41:57.327Z",
+  "target": "mockup.html",
+  "fail": 0,
+  "warn": 8,
+  "reading": "clean",
+  "ids": [
+   "statement-length",
+   "default-font",
+   "size-count",
+   "small-text",
+   "repeated-picture",
+   "em-dashes",
+   "uncredited",
+   "tap-size"
+  ]
+ },
+ {
+  "at": "2026-11-22T21:43:13.635Z",
+  "target": "mockup.html",
+  "fail": 0,
+  "warn": 8,
+  "reading": "clean",
+  "ids": [
+   "statement-length",
+   "default-font",
+   "size-count",
+   "small-text",
+   "repeated-picture",
+   "em-dashes",
+   "uncredited",
+   "tap-size"
+  ]
+ },
+ {
+  "at": "2026-11-22T21:43:49.048Z",
+  "target": "mockup.html",
+  "fail": 0,
+  "warn": 7,
+  "reading": "clean",
+  "ids": [
+   "statement-length",
+   "default-font",
+   "size-count",
+   "small-text",
+   "repeated-picture",
+   "em-dashes",
+   "tap-size"
+  ]
+ },
+ {
+  "at": "2026-11-22T21:46:15.284Z",
+  "target": "mockup.html",
+  "fail": 0,
+  "warn": 7,
+  "reading": "clean",
+  "ids": [
+   "statement-length",
+   "default-font",
+   "size-count",
+   "small-text",
+   "repeated-picture",
+   "em-dashes",
+   "tap-size"
+  ]
  }
 ]

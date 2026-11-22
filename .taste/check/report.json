@@ -1,6 +1,6 @@
 {
  "target": "mockup.html",
- "at": "2026-11-22T21:17:48.002Z",
+ "at": "2026-11-22T21:46:15.283Z",
  "findings": [
   {
    "id": "statement-length",
@@ -67,7 +67,7 @@
     "phone"
    ],
    "samples": [
-    "stefanie-dr-xler-clean-and-jerk-4316.jpg x2"
+    "community-group.jpg x2"
    ]
   },
   {
@@ -80,20 +80,6 @@
    ],
    "samples": [
     "9 em dashes"
-   ]
-  },
-  {
-   "id": "uncredited",
-   "level": "WARN",
-   "msg": "A found picture's credit is not on the page.",
-   "fix": "Add the credit line from taste-pictures to the footer.",
-   "where": [
-    "desktop",
-    "tablet",
-    "phone"
-   ],
-   "samples": [
-    "U.S. Air Force photo by Senior Airman Haiden Morris"
    ]
   },
   {
@@ -112,35 +98,16 @@
     "Show all",
     "Complete beginner"
    ]
-  },
-  {
-   "id": "broken-image",
-   "level": "NOTE",
-   "msg": "An image failed to load.",
-   "fix": "Fix the path or remove the image.",
-   "where": [
-    "desktop",
-    "tablet",
-    "phone"
-   ],
-   "samples": [
-    "http://127.0.0.1:42097/images/cs-logo-mark.png",
-    "http://127.0.0.1:42097/images/craig-about.jpg",
-    "http://127.0.0.1:42097/images/gym-exterior.jpg"
-   ],
-   "allowed": true
   }
  ],
  "counts": {
   "fail": 0,
-  "warn": 8,
-  "note": 1,
+  "warn": 7,
+  "note": 0,
   "tells": 1
  },
  "reading": "clean",
- "allow": [
-  "broken-image"
- ],
+ "allow": [],
  "runs": [
   {
    "width": 1440,
@@ -158,7 +125,7 @@
     "vh": 900,
     "docH": 8305,
     "dpr": 1,
-    "url": "http://127.0.0.1:42097/mockup.html",
+    "url": "http://127.0.0.1:45915/mockup.html",
     "headings": [
      {
       "tag": "h1",
@@ -537,7 +504,7 @@
     "families": [
      {
       "family": "DM Sans",
-      "chars": 5293,
+      "chars": 5207,
       "web": true,
       "loaded": true,
       "system": false
@@ -575,29 +542,27 @@
     "tinyText": [],
     "contrast": [],
     "pictures": {
-     "raster": 4,
+     "raster": 6,
      "video": 0,
      "ui": 0,
      "bg": 0,
      "drawings": 0,
      "canvas": 0,
-     "broken": [
-      "http://127.0.0.1:42097/images/cs-logo-mark.png",
-      "http://127.0.0.1:42097/images/craig-about.jpg",
-      "http://127.0.0.1:42097/images/gym-exterior.jpg"
-     ],
+     "broken": [],
      "upscaled": [],
      "noAlt": 0,
      "sources": [
-      "lrmc-soldier-finds-purpose-in-powerlifting-7348222.jpg",
-      "2025-skelton-gym-powerlifting-competition-9326219.jpg",
-      "stefanie-dr-xler-clean-and-jerk-4316.jpg",
-      "20181006-lena-prucher-gewichtheben-bundesliga-finale-by-isiw"
+      "hero-competition.jpg",
+      "community-group.jpg",
+      "coaching-deadlift.jpg",
+      "craig-lift-wide.jpg",
+      "craig-compete.jpg",
+      "craig-about.jpg"
      ],
      "repeated": [
-      "stefanie-dr-xler-clean-and-jerk-4316.jpg x2"
+      "community-group.jpg x2"
      ],
-     "real": 4
+     "real": 6
     },
     "overflow": {
      "scrollWidth": 1440,
@@ -639,10 +604,7 @@
      "description": "Coached strength training gym in Amesbury, Wiltshire. Powerlifting, weightlifting, Ladies That Lift, Legends, Cubs. Free taster session. No experience needed.",
      "viewport": true
     },
-    "hidden": [],
-    "uncredited": [
-     "U.S. Air Force photo by Senior Airman Haiden Morris"
-    ]
+    "hidden": []
    }
   },
   {
@@ -659,9 +621,9 @@
     "v": 1,
     "vw": 768,
     "vh": 1024,
-    "docH": 9114,
+    "docH": 9091,
     "dpr": 1,
-    "url": "http://127.0.0.1:42097/mockup.html",
+    "url": "http://127.0.0.1:45915/mockup.html",
     "headings": [
      {
       "tag": "h1",
@@ -1032,7 +994,7 @@
     "families": [
      {
       "family": "DM Sans",
-      "chars": 5265,
+      "chars": 5179,
       "web": true,
       "loaded": true,
       "system": false
@@ -1075,29 +1037,27 @@
     "tinyText": [],
     "contrast": [],
     "pictures": {
-     "raster": 4,
+     "raster": 6,
      "video": 0,
      "ui": 0,
      "bg": 0,
      "drawings": 0,
      "canvas": 0,
-     "broken": [
-      "http://127.0.0.1:42097/images/cs-logo-mark.png",
-      "http://127.0.0.1:42097/images/craig-about.jpg",
-      "http://127.0.0.1:42097/images/gym-exterior.jpg"
-     ],
+     "broken": [],
      "upscaled": [],
      "noAlt": 0,
      "sources": [
-      "lrmc-soldier-finds-purpose-in-powerlifting-7348222.jpg",
-      "2025-skelton-gym-powerlifting-competition-9326219.jpg",
-      "stefanie-dr-xler-clean-and-jerk-4316.jpg",
-      "20181006-lena-prucher-gewichtheben-bundesliga-finale-by-isiw"
+      "hero-competition.jpg",
+      "community-group.jpg",
+      "coaching-deadlift.jpg",
+      "craig-lift-wide.jpg",
+      "craig-compete.jpg",
+      "craig-about.jpg"
      ],
      "repeated": [
-      "stefanie-dr-xler-clean-and-jerk-4316.jpg x2"
+      "community-group.jpg x2"
      ],
-     "real": 4
+     "real": 6
     },
     "overflow": {
      "scrollWidth": 768,
@@ -1138,10 +1098,7 @@
      "description": "Coached strength training gym in Amesbury, Wiltshire. Powerlifting, weightlifting, Ladies That Lift, Legends, Cubs. Free taster session. No experience needed.",
      "viewport": true
     },
-    "hidden": [],
-    "uncredited": [
-     "U.S. Air Force photo by Senior Airman Haiden Morris"
-    ]
+    "hidden": []
    }
   },
   {
@@ -1158,9 +1115,9 @@
     "v": 1,
     "vw": 390,
     "vh": 844,
-    "docH": 11622,
+    "docH": 11599,
     "dpr": 1,
-    "url": "http://127.0.0.1:42097/mockup.html",
+    "url": "http://127.0.0.1:45915/mockup.html",
     "headings": [
      {
       "tag": "h1",
@@ -1526,7 +1483,7 @@
     "families": [
      {
       "family": "DM Sans",
-      "chars": 5265,
+      "chars": 5179,
       "web": true,
       "loaded": true,
       "system": false
@@ -1567,29 +1524,27 @@
     "tinyText": [],
     "contrast": [],
     "pictures": {
-     "raster": 4,
+     "raster": 6,
      "video": 0,
      "ui": 0,
      "bg": 0,
      "drawings": 0,
      "canvas": 0,
-     "broken": [
-      "http://127.0.0.1:42097/images/cs-logo-mark.png",
-      "http://127.0.0.1:42097/images/craig-about.jpg",
-      "http://127.0.0.1:42097/images/gym-exterior.jpg"
-     ],
+     "broken": [],
      "upscaled": [],
      "noAlt": 0,
      "sources": [
-      "lrmc-soldier-finds-purpose-in-powerlifting-7348222.jpg",
-      "2025-skelton-gym-powerlifting-competition-9326219.jpg",
-      "stefanie-dr-xler-clean-and-jerk-4316.jpg",
-      "20181006-lena-prucher-gewichtheben-bundesliga-finale-by-isiw"
+      "hero-competition.jpg",
+      "community-group.jpg",
+      "coaching-deadlift.jpg",
+      "craig-lift-wide.jpg",
+      "craig-compete.jpg",
+      "craig-about.jpg"
      ],
      "repeated": [
-      "stefanie-dr-xler-clean-and-jerk-4316.jpg x2"
+      "community-group.jpg x2"
      ],
-     "real": 4
+     "real": 6
     },
     "overflow": {
      "scrollWidth": 390,
@@ -1643,10 +1598,7 @@
      "description": "Coached strength training gym in Amesbury, Wiltshire. Powerlifting, weightlifting, Ladies That Lift, Legends, Cubs. Free taster session. No experience needed.",
      "viewport": true
     },
-    "hidden": [],
-    "uncredited": [
-     "U.S. Air Force photo by Senior Airman Haiden Morris"
-    ]
+    "hidden": []
    }
   }
  ],
