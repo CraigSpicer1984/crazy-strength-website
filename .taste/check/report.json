@@ -1,0 +1,1667 @@
+{
+ "target": "mockup.html",
+ "at": "2026-11-22T21:17:48.002Z",
+ "findings": [
+  {
+   "id": "statement-length",
+   "level": "WARN",
+   "msg": "A large paragraph reads as a long headline.",
+   "fix": "Keep statements under about 25 words and three lines on desktop, or set them at text size.",
+   "where": [
+    "desktop"
+   ],
+   "samples": [
+    "\"I have been going to Ladies That Lift sessions twice a week for the la\" (3 lines, 46 words)"
+   ]
+  },
+  {
+   "id": "default-font",
+   "level": "WARN",
+   "msg": "The display face is one of the most overused defaults.",
+   "fix": "Use the dealt type pairing.",
+   "where": [
+    "desktop",
+    "tablet",
+    "phone"
+   ],
+   "samples": [
+    "Bebas Neue"
+   ]
+  },
+  {
+   "id": "size-count",
+   "level": "WARN",
+   "msg": "Too many font sizes.",
+   "fix": "Five sizes on a page is the ceiling: one very large, one small, little in between.",
+   "where": [
+    "desktop",
+    "tablet",
+    "phone"
+   ],
+   "samples": [
+    "17 sizes: 13, 14, 15, 16, 18, 19, 22, 32, 35, 40, 50, 56, 65, 72, 86, 144, 216",
+    "15 sizes: 13, 14, 15, 16, 18, 21, 22, 24, 26, 32, 40, 46, 77, 80, 115",
+    "13 sizes: 13, 14, 15, 16, 18, 21, 22, 24, 26, 32, 40, 56, 64"
+   ]
+  },
+  {
+   "id": "small-text",
+   "level": "WARN",
+   "msg": "Running text is set below 15px.",
+   "fix": "Body text at 16 to 20px in full ink.",
+   "where": [
+    "desktop"
+   ],
+   "samples": [
+    "median running text 14.4px"
+   ]
+  },
+  {
+   "id": "repeated-picture",
+   "level": "WARN",
+   "msg": "The same picture is used large more than once.",
+   "fix": "One picture once: find another real picture, or make the section use a different kind of visual.",
+   "where": [
+    "desktop",
+    "tablet",
+    "phone"
+   ],
+   "samples": [
+    "stefanie-dr-xler-clean-and-jerk-4316.jpg x2"
+   ]
+  },
+  {
+   "id": "em-dashes",
+   "level": "WARN",
+   "msg": "Many em dashes in the copy.",
+   "fix": "Use commas, colons or full stops.",
+   "where": [
+    "desktop"
+   ],
+   "samples": [
+    "9 em dashes"
+   ]
+  },
+  {
+   "id": "uncredited",
+   "level": "WARN",
+   "msg": "A found picture's credit is not on the page.",
+   "fix": "Add the credit line from taste-pictures to the footer.",
+   "where": [
+    "desktop",
+    "tablet",
+    "phone"
+   ],
+   "samples": [
+    "U.S. Air Force photo by Senior Airman Haiden Morris"
+   ]
+  },
+  {
+   "id": "tap-size",
+   "level": "WARN",
+   "msg": "Small tap targets on the phone.",
+   "fix": "Make links and buttons at least 44px tall outside running text.",
+   "where": [
+    "phone"
+   ],
+   "samples": [
+    "CRAZYSTRENGTH",
+    "End of Year Awards · Sun 13 De",
+    "BP SW Regional · Fri 29 May 20",
+    "CS Novice · Sat 10 Jul 2027",
+    "Show all",
+    "Complete beginner"
+   ]
+  },
+  {
+   "id": "broken-image",
+   "level": "NOTE",
+   "msg": "An image failed to load.",
+   "fix": "Fix the path or remove the image.",
+   "where": [
+    "desktop",
+    "tablet",
+    "phone"
+   ],
+   "samples": [
+    "http://127.0.0.1:42097/images/cs-logo-mark.png",
+    "http://127.0.0.1:42097/images/craig-about.jpg",
+    "http://127.0.0.1:42097/images/gym-exterior.jpg"
+   ],
+   "allowed": true
+  }
+ ],
+ "counts": {
+  "fail": 0,
+  "warn": 8,
+  "note": 1,
+  "tells": 1
+ },
+ "reading": "clean",
+ "allow": [
+  "broken-image"
+ ],
+ "runs": [
+  {
+   "width": 1440,
+   "motion": {
+    "elements": 35,
+    "css": 1,
+    "transitions": 34,
+    "scripted": 0
+   },
+   "collisions": [],
+   "errors": [],
+   "probe": {
+    "v": 1,
+    "vw": 1440,
+    "vh": 900,
+    "docH": 8305,
+    "dpr": 1,
+    "url": "http://127.0.0.1:42097/mockup.html",
+    "headings": [
+     {
+      "tag": "h1",
+      "text": "COACHED FROM DAY ONE.",
+      "size": 144,
+      "lines": 2,
+      "top": 388,
+      "family": "Bebas Neue",
+      "weight": 400,
+      "align": "start",
+      "accentWord": false,
+      "sel": "h1#hero-h1"
+     },
+     {
+      "tag": "h2",
+      "text": "FIND YOUR PROGRAMME",
+      "size": 56,
+      "lines": 1,
+      "top": 1209,
+      "family": "Bebas Neue",
+      "weight": 400,
+      "align": "start",
+      "accentWord": false,
+      "sel": "h2#finder-title"
+     },
+     {
+      "tag": "h3",
+      "text": "POWERLIFTING",
+      "size": 35.2,
+      "lines": 1,
+      "top": 1434,
+      "family": "Bebas Neue",
+      "weight": 400,
+      "align": "start",
+      "accentWord": false,
+      "sel": "article.prog-card > h3"
+     },
+     {
+      "tag": "h3",
+      "text": "OLYMPIC WEIGHTLIFTING",
+      "size": 35.2,
+      "lines": 1,
+      "top": 1434,
+      "family": "Bebas Neue",
+      "weight": 400,
+      "align": "start",
+      "accentWord": false,
+      "sel": "article.prog-card > h3"
+     },
+     {
+      "tag": "h3",
+      "text": "LADIES THAT LIFT",
+      "size": 35.2,
+      "lines": 1,
+      "top": 1434,
+      "family": "Bebas Neue",
+      "weight": 400,
+      "align": "start",
+      "accentWord": false,
+      "sel": "article.prog-card > h3"
+     },
+     {
+      "tag": "h3",
+      "text": "LEGENDS THAT LIFT",
+      "size": 35.2,
+      "lines": 1,
+      "top": 1434,
+      "family": "Bebas Neue",
+      "weight": 400,
+      "align": "start",
+      "accentWord": false,
+      "sel": "article.prog-card > h3"
+     },
+     {
+      "tag": "h3",
+      "text": "CUBS PROGRAMME",
+      "size": 35.2,
+      "lines": 1,
+      "top": 1820,
+      "family": "Bebas Neue",
+      "weight": 400,
+      "align": "start",
+      "accentWord": false,
+      "sel": "article.prog-card > h3"
+     },
+     {
+      "tag": "h3",
+      "text": "OPEN GYM",
+      "size": 35.2,
+      "lines": 1,
+      "top": 1820,
+      "family": "Bebas Neue",
+      "weight": 400,
+      "align": "start",
+      "accentWord": false,
+      "sel": "article.prog-card > h3"
+     },
+     {
+      "tag": "h3",
+      "text": "SEMI-REMOTE COACHING",
+      "size": 35.2,
+      "lines": 1,
+      "top": 1820,
+      "family": "Bebas Neue",
+      "weight": 400,
+      "align": "start",
+      "accentWord": false,
+      "sel": "article.prog-card > h3"
+     },
+     {
+      "tag": "h3",
+      "text": "PERSONAL TRAINING",
+      "size": 35.2,
+      "lines": 1,
+      "top": 1820,
+      "family": "Bebas Neue",
+      "weight": 400,
+      "align": "start",
+      "accentWord": false,
+      "sel": "article.prog-card > h3"
+     },
+     {
+      "tag": "h2",
+      "text": "HOW IT WORKS",
+      "size": 72,
+      "lines": 1,
+      "top": 2380,
+      "family": "Bebas Neue",
+      "weight": 400,
+      "align": "start",
+      "accentWord": false,
+      "sel": "h2#process-title"
+     },
+     {
+      "tag": "h2",
+      "text": "BOOK A FREE TASTER",
+      "size": 50.4,
+      "lines": 1,
+      "top": 2758,
+      "family": "Bebas Neue",
+      "weight": 400,
+      "align": "start",
+      "accentWord": false,
+      "sel": "div.process-step-text > h2"
+     },
+     {
+      "tag": "h2",
+      "text": "EVERY SESSION IS COACHED",
+      "size": 50.4,
+      "lines": 1,
+      "top": 3387,
+      "family": "Bebas Neue",
+      "weight": 400,
+      "align": "start",
+      "accentWord": false,
+      "sel": "div.process-step-text > h2"
+     },
+     {
+      "tag": "h2",
+      "text": "PICK YOUR PATH",
+      "size": 50.4,
+      "lines": 1,
+      "top": 3926,
+      "family": "Bebas Neue",
+      "weight": 400,
+      "align": "start",
+      "accentWord": false,
+      "sel": "div.process-step-text > h2"
+     },
+     {
+      "tag": "h2",
+      "text": "WHEN YOU'RE READY, THE PLATFORM IS THERE",
+      "size": 50.4,
+      "lines": 2,
+      "top": 4485,
+      "family": "Bebas Neue",
+      "weight": 400,
+      "align": "start",
+      "accentWord": false,
+      "sel": "div.process-step-text > h2"
+     },
+     {
+      "tag": "h2",
+      "text": "BUILT FROM THE BARBELL UP",
+      "size": 64.8,
+      "lines": 1,
+      "top": 5540,
+      "family": "Bebas Neue",
+      "weight": 400,
+      "align": "start",
+      "accentWord": false,
+      "sel": "h2#story-title"
+     },
+     {
+      "tag": "h2",
+      "text": "THE BEACON CENTRE, AMESBURY",
+      "size": 86.4,
+      "lines": 2,
+      "top": 7073,
+      "family": "Bebas Neue",
+      "weight": 400,
+      "align": "start",
+      "accentWord": false,
+      "sel": "h2#visit-title"
+     },
+     {
+      "tag": "h3",
+      "text": "Address",
+      "size": 17.6,
+      "lines": 1,
+      "top": 7312,
+      "family": "Bebas Neue",
+      "weight": 400,
+      "align": "start",
+      "accentWord": false,
+      "sel": "div.visit-cell > h3"
+     },
+     {
+      "tag": "h3",
+      "text": "Hours",
+      "size": 17.6,
+      "lines": 1,
+      "top": 7312,
+      "family": "Bebas Neue",
+      "weight": 400,
+      "align": "start",
+      "accentWord": false,
+      "sel": "div.visit-cell > h3"
+     },
+     {
+      "tag": "h3",
+      "text": "Get here",
+      "size": 17.6,
+      "lines": 1,
+      "top": 7312,
+      "family": "Bebas Neue",
+      "weight": 400,
+      "align": "start",
+      "accentWord": false,
+      "sel": "div.visit-cell > h3"
+     },
+     {
+      "tag": "h4",
+      "text": "Train",
+      "size": 14.08,
+      "lines": 1,
+      "top": 7655,
+      "family": "Bebas Neue",
+      "weight": 600,
+      "align": "start",
+      "accentWord": false,
+      "sel": "div.footer-col > h4"
+     },
+     {
+      "tag": "h4",
+      "text": "Learn",
+      "size": 14.08,
+      "lines": 1,
+      "top": 7655,
+      "family": "Bebas Neue",
+      "weight": 600,
+      "align": "start",
+      "accentWord": false,
+      "sel": "div.footer-col > h4"
+     },
+     {
+      "tag": "h4",
+      "text": "Crazy Strength",
+      "size": 14.08,
+      "lines": 1,
+      "top": 7655,
+      "family": "Bebas Neue",
+      "weight": 600,
+      "align": "start",
+      "accentWord": false,
+      "sel": "div.footer-col > h4"
+     }
+    ],
+    "h1count": 1,
+    "mainLine": {
+     "text": "COACHEDFROM DAY",
+     "size": 144,
+     "lines": 2,
+     "tag": "h1",
+     "family": "Bebas Neue"
+    },
+    "statements": [
+     {
+      "text": "I have been going to Ladies That Lift sessions twice a week for the la",
+      "size": 32,
+      "lines": 3,
+      "words": 46
+     }
+    ],
+    "microLabels": [],
+    "eyebrows": [],
+    "mono": [],
+    "indexNums": [],
+    "rules": [],
+    "outlined": [],
+    "dashed": 0,
+    "gradients": [],
+    "shadows": [],
+    "textShadows": 0,
+    "glass": [],
+    "radii": [
+     2,
+     2,
+     2,
+     2,
+     100,
+     100,
+     100,
+     100,
+     100,
+     100,
+     100,
+     2,
+     2,
+     2,
+     2,
+     2,
+     2
+    ],
+    "pillNav": false,
+    "colours": {
+     "ground": "#0a0a0a",
+     "fields": [
+      "#0a0a0a",
+      "#e8220a",
+      "#1c1c1c",
+      "#141414"
+     ],
+     "buttons": [
+      "#e8220a",
+      "#0f7a3e",
+      "#f4f4ef",
+      "#141414",
+      "#ffffff"
+     ],
+     "links": [
+      "#ffffff",
+      "#f4f4ef",
+      "#f03018",
+      "#e8220a"
+     ],
+     "headings": [
+      "#f4f4ef",
+      "#ff4422"
+     ],
+     "gradients": [],
+     "accentText": [
+      "#f4f4ef",
+      "#f03018",
+      "#ffffff",
+      "#999999",
+      "#e8220a"
+     ],
+     "smallFields": [
+      "#0a0a0a",
+      "#e8220a",
+      "#0f7a3e",
+      "#1c1c1c",
+      "#141414",
+      "#ffffff"
+     ]
+    },
+    "iconCards": [],
+    "cardRows": [
+     {
+      "sel": "section#programmes > div.prog-grid",
+      "n": 8
+     }
+    ],
+    "centredShare": 0,
+    "families": [
+     {
+      "family": "DM Sans",
+      "chars": 5293,
+      "web": true,
+      "loaded": true,
+      "system": false
+     },
+     {
+      "family": "Bebas Neue",
+      "chars": 667,
+      "web": true,
+      "loaded": true,
+      "system": false
+     }
+    ],
+    "sizes": [
+     13,
+     14,
+     15,
+     16,
+     18,
+     19,
+     22,
+     32,
+     35,
+     40,
+     50,
+     56,
+     65,
+     72,
+     86,
+     144,
+     216
+    ],
+    "bodySize": 14.4,
+    "smallRunning": 12,
+    "runningCount": 21,
+    "tinyText": [],
+    "contrast": [],
+    "pictures": {
+     "raster": 4,
+     "video": 0,
+     "ui": 0,
+     "bg": 0,
+     "drawings": 0,
+     "canvas": 0,
+     "broken": [
+      "http://127.0.0.1:42097/images/cs-logo-mark.png",
+      "http://127.0.0.1:42097/images/craig-about.jpg",
+      "http://127.0.0.1:42097/images/gym-exterior.jpg"
+     ],
+     "upscaled": [],
+     "noAlt": 0,
+     "sources": [
+      "lrmc-soldier-finds-purpose-in-powerlifting-7348222.jpg",
+      "2025-skelton-gym-powerlifting-competition-9326219.jpg",
+      "stefanie-dr-xler-clean-and-jerk-4316.jpg",
+      "20181006-lena-prucher-gewichtheben-bundesliga-finale-by-isiw"
+     ],
+     "repeated": [
+      "stefanie-dr-xler-clean-and-jerk-4316.jpg x2"
+     ],
+     "real": 4
+    },
+    "overflow": {
+     "scrollWidth": 1440,
+     "offenders": []
+    },
+    "actions": {
+     "buttons": 17,
+     "firstScreen": [
+      "Book a Free Taster",
+      "Book a Free Taster",
+      "Message Us on WhatsApp",
+      "See All Programmes"
+     ],
+     "feedback": 17
+    },
+    "tap": [],
+    "firstScreen": {
+     "h1Size": 144,
+     "h1Top": 388,
+     "largestMedia": 0.89,
+     "mainSize": 144
+    },
+    "empty": {
+     "screens": 9,
+     "empty": []
+    },
+    "copy": {
+     "placeholder": [],
+     "emoji": [],
+     "slop": [],
+     "notJust": 0,
+     "stockButtons": [],
+     "emDashes": 9,
+     "proof": []
+    },
+    "meta": {
+     "lang": "en",
+     "title": "Crazy Strength — Coached Strength Training, Amesbury",
+     "description": "Coached strength training gym in Amesbury, Wiltshire. Powerlifting, weightlifting, Ladies That Lift, Legends, Cubs. Free taster session. No experience needed.",
+     "viewport": true
+    },
+    "hidden": [],
+    "uncredited": [
+     "U.S. Air Force photo by Senior Airman Haiden Morris"
+    ]
+   }
+  },
+  {
+   "width": 768,
+   "motion": {
+    "elements": 35,
+    "css": 1,
+    "transitions": 34,
+    "scripted": 0
+   },
+   "collisions": [],
+   "errors": [],
+   "probe": {
+    "v": 1,
+    "vw": 768,
+    "vh": 1024,
+    "docH": 9114,
+    "dpr": 1,
+    "url": "http://127.0.0.1:42097/mockup.html",
+    "headings": [
+     {
+      "tag": "h1",
+      "text": "COACHED FROM DAY ONE.",
+      "size": 76.8,
+      "lines": 2,
+      "top": 643,
+      "family": "Bebas Neue",
+      "weight": 400,
+      "align": "start",
+      "accentWord": false,
+      "sel": "h1#hero-h1"
+     },
+     {
+      "tag": "h2",
+      "text": "FIND YOUR PROGRAMME",
+      "size": 32,
+      "lines": 1,
+      "top": 1413,
+      "family": "Bebas Neue",
+      "weight": 400,
+      "align": "start",
+      "accentWord": false,
+      "sel": "h2#finder-title"
+     },
+     {
+      "tag": "h3",
+      "text": "POWERLIFTING",
+      "size": 25.6,
+      "lines": 1,
+      "top": 1664,
+      "family": "Bebas Neue",
+      "weight": 400,
+      "align": "start",
+      "accentWord": false,
+      "sel": "article.prog-card > h3"
+     },
+     {
+      "tag": "h3",
+      "text": "OLYMPIC WEIGHTLIFTING",
+      "size": 25.6,
+      "lines": 1,
+      "top": 1664,
+      "family": "Bebas Neue",
+      "weight": 400,
+      "align": "start",
+      "accentWord": false,
+      "sel": "article.prog-card > h3"
+     },
+     {
+      "tag": "h3",
+      "text": "LADIES THAT LIFT",
+      "size": 25.6,
+      "lines": 1,
+      "top": 2041,
+      "family": "Bebas Neue",
+      "weight": 400,
+      "align": "start",
+      "accentWord": false,
+      "sel": "article.prog-card > h3"
+     },
+     {
+      "tag": "h3",
+      "text": "LEGENDS THAT LIFT",
+      "size": 25.6,
+      "lines": 1,
+      "top": 2041,
+      "family": "Bebas Neue",
+      "weight": 400,
+      "align": "start",
+      "accentWord": false,
+      "sel": "article.prog-card > h3"
+     },
+     {
+      "tag": "h3",
+      "text": "CUBS PROGRAMME",
+      "size": 25.6,
+      "lines": 1,
+      "top": 2418,
+      "family": "Bebas Neue",
+      "weight": 400,
+      "align": "start",
+      "accentWord": false,
+      "sel": "article.prog-card > h3"
+     },
+     {
+      "tag": "h3",
+      "text": "OPEN GYM",
+      "size": 25.6,
+      "lines": 1,
+      "top": 2418,
+      "family": "Bebas Neue",
+      "weight": 400,
+      "align": "start",
+      "accentWord": false,
+      "sel": "article.prog-card > h3"
+     },
+     {
+      "tag": "h3",
+      "text": "SEMI-REMOTE COACHING",
+      "size": 25.6,
+      "lines": 1,
+      "top": 2772,
+      "family": "Bebas Neue",
+      "weight": 400,
+      "align": "start",
+      "accentWord": false,
+      "sel": "article.prog-card > h3"
+     },
+     {
+      "tag": "h3",
+      "text": "PERSONAL TRAINING",
+      "size": 25.6,
+      "lines": 1,
+      "top": 2772,
+      "family": "Bebas Neue",
+      "weight": 400,
+      "align": "start",
+      "accentWord": false,
+      "sel": "article.prog-card > h3"
+     },
+     {
+      "tag": "h2",
+      "text": "HOW IT WORKS",
+      "size": 40,
+      "lines": 1,
+      "top": 3222,
+      "family": "Bebas Neue",
+      "weight": 400,
+      "align": "start",
+      "accentWord": false,
+      "sel": "h2#process-title"
+     },
+     {
+      "tag": "h2",
+      "text": "BOOK A FREE TASTER",
+      "size": 32,
+      "lines": 1,
+      "top": 3459,
+      "family": "Bebas Neue",
+      "weight": 400,
+      "align": "start",
+      "accentWord": false,
+      "sel": "div.process-step-text > h2"
+     },
+     {
+      "tag": "h2",
+      "text": "EVERY SESSION IS COACHED",
+      "size": 32,
+      "lines": 1,
+      "top": 3930,
+      "family": "Bebas Neue",
+      "weight": 400,
+      "align": "start",
+      "accentWord": false,
+      "sel": "div.process-step-text > h2"
+     },
+     {
+      "tag": "h2",
+      "text": "PICK YOUR PATH",
+      "size": 32,
+      "lines": 1,
+      "top": 4324,
+      "family": "Bebas Neue",
+      "weight": 400,
+      "align": "start",
+      "accentWord": false,
+      "sel": "div.process-step-text > h2"
+     },
+     {
+      "tag": "h2",
+      "text": "WHEN YOU'RE READY, THE PLATFORM IS THERE",
+      "size": 32,
+      "lines": 2,
+      "top": 4823,
+      "family": "Bebas Neue",
+      "weight": 400,
+      "align": "start",
+      "accentWord": false,
+      "sel": "div.process-step-text > h2"
+     },
+     {
+      "tag": "h2",
+      "text": "BUILT FROM THE BARBELL UP",
+      "size": 46.08,
+      "lines": 1,
+      "top": 6152,
+      "family": "Bebas Neue",
+      "weight": 400,
+      "align": "start",
+      "accentWord": false,
+      "sel": "h2#story-title"
+     },
+     {
+      "tag": "h2",
+      "text": "THE BEACON CENTRE, AMESBURY",
+      "size": 46.08,
+      "lines": 2,
+      "top": 7484,
+      "family": "Bebas Neue",
+      "weight": 400,
+      "align": "start",
+      "accentWord": false,
+      "sel": "h2#visit-title"
+     },
+     {
+      "tag": "h3",
+      "text": "Address",
+      "size": 17.6,
+      "lines": 1,
+      "top": 7649,
+      "family": "Bebas Neue",
+      "weight": 400,
+      "align": "start",
+      "accentWord": false,
+      "sel": "div.visit-cell > h3"
+     },
+     {
+      "tag": "h3",
+      "text": "Hours",
+      "size": 17.6,
+      "lines": 1,
+      "top": 7827,
+      "family": "Bebas Neue",
+      "weight": 400,
+      "align": "start",
+      "accentWord": false,
+      "sel": "div.visit-cell > h3"
+     },
+     {
+      "tag": "h3",
+      "text": "Get here",
+      "size": 17.6,
+      "lines": 1,
+      "top": 7981,
+      "family": "Bebas Neue",
+      "weight": 400,
+      "align": "start",
+      "accentWord": false,
+      "sel": "div.visit-cell > h3"
+     },
+     {
+      "tag": "h4",
+      "text": "Train",
+      "size": 14.08,
+      "lines": 1,
+      "top": 8269,
+      "family": "Bebas Neue",
+      "weight": 600,
+      "align": "start",
+      "accentWord": false,
+      "sel": "div.footer-col > h4"
+     },
+     {
+      "tag": "h4",
+      "text": "Learn",
+      "size": 14.08,
+      "lines": 1,
+      "top": 8269,
+      "family": "Bebas Neue",
+      "weight": 600,
+      "align": "start",
+      "accentWord": false,
+      "sel": "div.footer-col > h4"
+     },
+     {
+      "tag": "h4",
+      "text": "Crazy Strength",
+      "size": 14.08,
+      "lines": 1,
+      "top": 8517,
+      "family": "Bebas Neue",
+      "weight": 600,
+      "align": "start",
+      "accentWord": false,
+      "sel": "div.footer-col > h4"
+     }
+    ],
+    "h1count": 1,
+    "mainLine": {
+     "text": "COACHEDFROM DAY",
+     "size": 76.8,
+     "lines": 2,
+     "tag": "h1",
+     "family": "Bebas Neue"
+    },
+    "statements": [],
+    "microLabels": [],
+    "eyebrows": [],
+    "mono": [],
+    "indexNums": [],
+    "rules": [],
+    "outlined": [],
+    "dashed": 0,
+    "gradients": [],
+    "shadows": [],
+    "textShadows": 0,
+    "glass": [],
+    "radii": [
+     2,
+     2,
+     2,
+     100,
+     100,
+     100,
+     100,
+     100,
+     100,
+     100,
+     2,
+     2,
+     2,
+     2,
+     2,
+     2
+    ],
+    "pillNav": false,
+    "colours": {
+     "ground": "#0a0a0a",
+     "fields": [
+      "#0a0a0a",
+      "#e8220a",
+      "#1c1c1c",
+      "#141414"
+     ],
+     "buttons": [
+      "#e8220a",
+      "#0f7a3e",
+      "#f4f4ef",
+      "#141414",
+      "#ffffff"
+     ],
+     "links": [
+      "#ffffff",
+      "#f4f4ef",
+      "#f03018",
+      "#e8220a"
+     ],
+     "headings": [
+      "#f4f4ef",
+      "#ff4422"
+     ],
+     "gradients": [],
+     "accentText": [
+      "#f4f4ef",
+      "#f03018",
+      "#ffffff",
+      "#999999",
+      "#e8220a"
+     ],
+     "smallFields": [
+      "#0a0a0a",
+      "#e8220a",
+      "#0f7a3e",
+      "#1c1c1c",
+      "#141414",
+      "#ffffff"
+     ]
+    },
+    "iconCards": [],
+    "cardRows": [
+     {
+      "sel": "section#programmes > div.prog-grid",
+      "n": 8
+     }
+    ],
+    "centredShare": 0,
+    "families": [
+     {
+      "family": "DM Sans",
+      "chars": 5265,
+      "web": true,
+      "loaded": true,
+      "system": false
+     },
+     {
+      "family": "Bebas Neue",
+      "chars": 649,
+      "web": true,
+      "loaded": true,
+      "system": false
+     },
+     {
+      "family": "Arial",
+      "chars": 1,
+      "web": false,
+      "loaded": false,
+      "system": true
+     }
+    ],
+    "sizes": [
+     13,
+     14,
+     15,
+     16,
+     18,
+     21,
+     22,
+     24,
+     26,
+     32,
+     40,
+     46,
+     77,
+     80,
+     115
+    ],
+    "bodySize": 14.4,
+    "smallRunning": 12,
+    "runningCount": 21,
+    "tinyText": [],
+    "contrast": [],
+    "pictures": {
+     "raster": 4,
+     "video": 0,
+     "ui": 0,
+     "bg": 0,
+     "drawings": 0,
+     "canvas": 0,
+     "broken": [
+      "http://127.0.0.1:42097/images/cs-logo-mark.png",
+      "http://127.0.0.1:42097/images/craig-about.jpg",
+      "http://127.0.0.1:42097/images/gym-exterior.jpg"
+     ],
+     "upscaled": [],
+     "noAlt": 0,
+     "sources": [
+      "lrmc-soldier-finds-purpose-in-powerlifting-7348222.jpg",
+      "2025-skelton-gym-powerlifting-competition-9326219.jpg",
+      "stefanie-dr-xler-clean-and-jerk-4316.jpg",
+      "20181006-lena-prucher-gewichtheben-bundesliga-finale-by-isiw"
+     ],
+     "repeated": [
+      "stefanie-dr-xler-clean-and-jerk-4316.jpg x2"
+     ],
+     "real": 4
+    },
+    "overflow": {
+     "scrollWidth": 768,
+     "offenders": []
+    },
+    "actions": {
+     "buttons": 16,
+     "firstScreen": [
+      "Book a Free Taster",
+      "Message Us on WhatsApp",
+      "See All Programmes"
+     ],
+     "feedback": 16
+    },
+    "tap": [],
+    "firstScreen": {
+     "h1Size": 76.8,
+     "h1Top": 643,
+     "largestMedia": 0.91,
+     "mainSize": 76.8
+    },
+    "empty": {
+     "screens": 8,
+     "empty": []
+    },
+    "copy": {
+     "placeholder": [],
+     "emoji": [],
+     "slop": [],
+     "notJust": 0,
+     "stockButtons": [],
+     "emDashes": 9,
+     "proof": []
+    },
+    "meta": {
+     "lang": "en",
+     "title": "Crazy Strength — Coached Strength Training, Amesbury",
+     "description": "Coached strength training gym in Amesbury, Wiltshire. Powerlifting, weightlifting, Ladies That Lift, Legends, Cubs. Free taster session. No experience needed.",
+     "viewport": true
+    },
+    "hidden": [],
+    "uncredited": [
+     "U.S. Air Force photo by Senior Airman Haiden Morris"
+    ]
+   }
+  },
+  {
+   "width": 390,
+   "motion": {
+    "elements": 35,
+    "css": 1,
+    "transitions": 34,
+    "scripted": 0
+   },
+   "collisions": [],
+   "errors": [],
+   "probe": {
+    "v": 1,
+    "vw": 390,
+    "vh": 844,
+    "docH": 11622,
+    "dpr": 1,
+    "url": "http://127.0.0.1:42097/mockup.html",
+    "headings": [
+     {
+      "tag": "h1",
+      "text": "COACHED FROM DAY ONE.",
+      "size": 56,
+      "lines": 2,
+      "top": 320,
+      "family": "Bebas Neue",
+      "weight": 400,
+      "align": "start",
+      "accentWord": false,
+      "sel": "h1#hero-h1"
+     },
+     {
+      "tag": "h2",
+      "text": "FIND YOUR PROGRAMME",
+      "size": 32,
+      "lines": 1,
+      "top": 1288,
+      "family": "Bebas Neue",
+      "weight": 400,
+      "align": "start",
+      "accentWord": false,
+      "sel": "h2#finder-title"
+     },
+     {
+      "tag": "h3",
+      "text": "POWERLIFTING",
+      "size": 25.6,
+      "lines": 1,
+      "top": 1658,
+      "family": "Bebas Neue",
+      "weight": 400,
+      "align": "start",
+      "accentWord": false,
+      "sel": "article.prog-card > h3"
+     },
+     {
+      "tag": "h3",
+      "text": "OLYMPIC WEIGHTLIFTING",
+      "size": 25.6,
+      "lines": 1,
+      "top": 2035,
+      "family": "Bebas Neue",
+      "weight": 400,
+      "align": "start",
+      "accentWord": false,
+      "sel": "article.prog-card > h3"
+     },
+     {
+      "tag": "h3",
+      "text": "LADIES THAT LIFT",
+      "size": 25.6,
+      "lines": 1,
+      "top": 2390,
+      "family": "Bebas Neue",
+      "weight": 400,
+      "align": "start",
+      "accentWord": false,
+      "sel": "article.prog-card > h3"
+     },
+     {
+      "tag": "h3",
+      "text": "LEGENDS THAT LIFT",
+      "size": 25.6,
+      "lines": 1,
+      "top": 2744,
+      "family": "Bebas Neue",
+      "weight": 400,
+      "align": "start",
+      "accentWord": false,
+      "sel": "article.prog-card > h3"
+     },
+     {
+      "tag": "h3",
+      "text": "CUBS PROGRAMME",
+      "size": 25.6,
+      "lines": 1,
+      "top": 3098,
+      "family": "Bebas Neue",
+      "weight": 400,
+      "align": "start",
+      "accentWord": false,
+      "sel": "article.prog-card > h3"
+     },
+     {
+      "tag": "h3",
+      "text": "OPEN GYM",
+      "size": 25.6,
+      "lines": 1,
+      "top": 3452,
+      "family": "Bebas Neue",
+      "weight": 400,
+      "align": "start",
+      "accentWord": false,
+      "sel": "article.prog-card > h3"
+     },
+     {
+      "tag": "h3",
+      "text": "SEMI-REMOTE COACHING",
+      "size": 25.6,
+      "lines": 1,
+      "top": 3806,
+      "family": "Bebas Neue",
+      "weight": 400,
+      "align": "start",
+      "accentWord": false,
+      "sel": "article.prog-card > h3"
+     },
+     {
+      "tag": "h3",
+      "text": "PERSONAL TRAINING",
+      "size": 25.6,
+      "lines": 1,
+      "top": 4160,
+      "family": "Bebas Neue",
+      "weight": 400,
+      "align": "start",
+      "accentWord": false,
+      "sel": "article.prog-card > h3"
+     },
+     {
+      "tag": "h2",
+      "text": "HOW IT WORKS",
+      "size": 40,
+      "lines": 1,
+      "top": 4609,
+      "family": "Bebas Neue",
+      "weight": 400,
+      "align": "start",
+      "accentWord": false,
+      "sel": "h2#process-title"
+     },
+     {
+      "tag": "h2",
+      "text": "BOOK A FREE TASTER",
+      "size": 32,
+      "lines": 1,
+      "top": 5052,
+      "family": "Bebas Neue",
+      "weight": 400,
+      "align": "start",
+      "accentWord": false,
+      "sel": "div.process-step-text > h2"
+     },
+     {
+      "tag": "h2",
+      "text": "EVERY SESSION IS COACHED",
+      "size": 32,
+      "lines": 1,
+      "top": 5727,
+      "family": "Bebas Neue",
+      "weight": 400,
+      "align": "start",
+      "accentWord": false,
+      "sel": "div.process-step-text > h2"
+     },
+     {
+      "tag": "h2",
+      "text": "PICK YOUR PATH",
+      "size": 32,
+      "lines": 1,
+      "top": 6326,
+      "family": "Bebas Neue",
+      "weight": 400,
+      "align": "start",
+      "accentWord": false,
+      "sel": "div.process-step-text > h2"
+     },
+     {
+      "tag": "h2",
+      "text": "WHEN YOU'RE READY, THE PLATFORM IS THERE",
+      "size": 32,
+      "lines": 2,
+      "top": 7004,
+      "family": "Bebas Neue",
+      "weight": 400,
+      "align": "start",
+      "accentWord": false,
+      "sel": "div.process-step-text > h2"
+     },
+     {
+      "tag": "h2",
+      "text": "BUILT FROM THE BARBELL UP",
+      "size": 32,
+      "lines": 1,
+      "top": 8239,
+      "family": "Bebas Neue",
+      "weight": 400,
+      "align": "start",
+      "accentWord": false,
+      "sel": "h2#story-title"
+     },
+     {
+      "tag": "h2",
+      "text": "THE BEACON CENTRE, AMESBURY",
+      "size": 40,
+      "lines": 2,
+      "top": 9596,
+      "family": "Bebas Neue",
+      "weight": 400,
+      "align": "start",
+      "accentWord": false,
+      "sel": "h2#visit-title"
+     },
+     {
+      "tag": "h3",
+      "text": "Address",
+      "size": 17.6,
+      "lines": 1,
+      "top": 9750,
+      "family": "Bebas Neue",
+      "weight": 400,
+      "align": "start",
+      "accentWord": false,
+      "sel": "div.visit-cell > h3"
+     },
+     {
+      "tag": "h3",
+      "text": "Hours",
+      "size": 17.6,
+      "lines": 1,
+      "top": 9928,
+      "family": "Bebas Neue",
+      "weight": 400,
+      "align": "start",
+      "accentWord": false,
+      "sel": "div.visit-cell > h3"
+     },
+     {
+      "tag": "h3",
+      "text": "Get here",
+      "size": 17.6,
+      "lines": 1,
+      "top": 10082,
+      "family": "Bebas Neue",
+      "weight": 400,
+      "align": "start",
+      "accentWord": false,
+      "sel": "div.visit-cell > h3"
+     },
+     {
+      "tag": "h4",
+      "text": "Train",
+      "size": 14.08,
+      "lines": 1,
+      "top": 10547,
+      "family": "Bebas Neue",
+      "weight": 600,
+      "align": "start",
+      "accentWord": false,
+      "sel": "div.footer-col > h4"
+     },
+     {
+      "tag": "h4",
+      "text": "Learn",
+      "size": 14.08,
+      "lines": 1,
+      "top": 10795,
+      "family": "Bebas Neue",
+      "weight": 600,
+      "align": "start",
+      "accentWord": false,
+      "sel": "div.footer-col > h4"
+     },
+     {
+      "tag": "h4",
+      "text": "Crazy Strength",
+      "size": 14.08,
+      "lines": 1,
+      "top": 10980,
+      "family": "Bebas Neue",
+      "weight": 600,
+      "align": "start",
+      "accentWord": false,
+      "sel": "div.footer-col > h4"
+     }
+    ],
+    "h1count": 1,
+    "mainLine": {
+     "text": "COACHEDFROM DAY",
+     "size": 56,
+     "lines": 2,
+     "tag": "h1",
+     "family": "Bebas Neue"
+    },
+    "statements": [],
+    "microLabels": [],
+    "eyebrows": [],
+    "mono": [],
+    "indexNums": [],
+    "rules": [],
+    "outlined": [],
+    "dashed": 0,
+    "gradients": [],
+    "shadows": [],
+    "textShadows": 0,
+    "glass": [],
+    "radii": [
+     2,
+     2,
+     2,
+     100,
+     100,
+     100,
+     100,
+     100,
+     100,
+     100,
+     2,
+     2,
+     2,
+     2,
+     2,
+     2
+    ],
+    "pillNav": false,
+    "colours": {
+     "ground": "#0a0a0a",
+     "fields": [
+      "#0a0a0a",
+      "#e8220a",
+      "#1c1c1c",
+      "#141414"
+     ],
+     "buttons": [
+      "#e8220a",
+      "#0f7a3e",
+      "#f4f4ef",
+      "#141414",
+      "#ffffff"
+     ],
+     "links": [
+      "#ffffff",
+      "#f4f4ef",
+      "#f03018",
+      "#e8220a"
+     ],
+     "headings": [
+      "#f4f4ef",
+      "#ff4422"
+     ],
+     "gradients": [],
+     "accentText": [
+      "#f4f4ef",
+      "#f03018",
+      "#ffffff",
+      "#999999",
+      "#e8220a"
+     ],
+     "smallFields": [
+      "#0a0a0a",
+      "#e8220a",
+      "#0f7a3e",
+      "#1c1c1c",
+      "#141414",
+      "#ffffff"
+     ]
+    },
+    "iconCards": [],
+    "cardRows": [],
+    "centredShare": 0,
+    "families": [
+     {
+      "family": "DM Sans",
+      "chars": 5265,
+      "web": true,
+      "loaded": true,
+      "system": false
+     },
+     {
+      "family": "Bebas Neue",
+      "chars": 649,
+      "web": true,
+      "loaded": true,
+      "system": false
+     },
+     {
+      "family": "Arial",
+      "chars": 1,
+      "web": false,
+      "loaded": false,
+      "system": true
+     }
+    ],
+    "sizes": [
+     13,
+     14,
+     15,
+     16,
+     18,
+     21,
+     22,
+     24,
+     26,
+     32,
+     40,
+     56,
+     64
+    ],
+    "bodySize": 14.4,
+    "smallRunning": 12,
+    "runningCount": 21,
+    "tinyText": [],
+    "contrast": [],
+    "pictures": {
+     "raster": 4,
+     "video": 0,
+     "ui": 0,
+     "bg": 0,
+     "drawings": 0,
+     "canvas": 0,
+     "broken": [
+      "http://127.0.0.1:42097/images/cs-logo-mark.png",
+      "http://127.0.0.1:42097/images/craig-about.jpg",
+      "http://127.0.0.1:42097/images/gym-exterior.jpg"
+     ],
+     "upscaled": [],
+     "noAlt": 0,
+     "sources": [
+      "lrmc-soldier-finds-purpose-in-powerlifting-7348222.jpg",
+      "2025-skelton-gym-powerlifting-competition-9326219.jpg",
+      "stefanie-dr-xler-clean-and-jerk-4316.jpg",
+      "20181006-lena-prucher-gewichtheben-bundesliga-finale-by-isiw"
+     ],
+     "repeated": [
+      "stefanie-dr-xler-clean-and-jerk-4316.jpg x2"
+     ],
+     "real": 4
+    },
+    "overflow": {
+     "scrollWidth": 390,
+     "offenders": []
+    },
+    "actions": {
+     "buttons": 16,
+     "firstScreen": [
+      "Book a Free Taster",
+      "Message Us on WhatsApp",
+      "See All Programmes"
+     ],
+     "feedback": 16
+    },
+    "tap": [
+     "CRAZYSTRENGTH",
+     "End of Year Awards · Sun 13 De",
+     "BP SW Regional · Fri 29 May 20",
+     "CS Novice · Sat 10 Jul 2027",
+     "End of Year Awards · Sun 13 De",
+     "BP SW Regional · Fri 29 May 20",
+     "CS Novice · Sat 10 Jul 2027",
+     "Show all",
+     "Complete beginner",
+     "Want to compete",
+     "Women's programme",
+     "50 and over"
+    ],
+    "firstScreen": {
+     "h1Size": 56,
+     "h1Top": 320,
+     "largestMedia": 0.89,
+     "mainSize": 56
+    },
+    "empty": {
+     "screens": 13,
+     "empty": []
+    },
+    "copy": {
+     "placeholder": [],
+     "emoji": [],
+     "slop": [],
+     "notJust": 0,
+     "stockButtons": [],
+     "emDashes": 9,
+     "proof": []
+    },
+    "meta": {
+     "lang": "en",
+     "title": "Crazy Strength — Coached Strength Training, Amesbury",
+     "description": "Coached strength training gym in Amesbury, Wiltshire. Powerlifting, weightlifting, Ladies That Lift, Legends, Cubs. Free taster session. No experience needed.",
+     "viewport": true
+    },
+    "hidden": [],
+    "uncredited": [
+     "U.S. Air Force photo by Senior Airman Haiden Morris"
+    ]
+   }
+  }
+ ],
+ "shots": [
+  ".taste/check/desktop-fold.jpg",
+  ".taste/check/desktop-sheet-1.jpg",
+  ".taste/check/desktop-sheet-2.jpg",
+  ".taste/check/desktop-sheet-3.jpg",
+  ".taste/check/tablet-fold.jpg",
+  ".taste/check/tablet-sheet-1.jpg",
+  ".taste/check/tablet-sheet-2.jpg",
+  ".taste/check/tablet-sheet-3.jpg",
+  ".taste/check/phone-fold.jpg",
+  ".taste/check/phone-sheet-1.jpg",
+  ".taste/check/phone-sheet-2.jpg",
+  ".taste/check/phone-sheet-3.jpg"
+ ]
+}

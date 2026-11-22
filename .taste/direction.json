@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "seed": 132588585,
+  "kind": "local",
+  "tone": "bold",
+  "have": [
+    "photos",
+    "numbers",
+    "place"
+  ],
+  "keep": [
+    "palette",
+    "type"
+  ],
+  "brief": "Coached strength training gym in Amesbury — from first-timer to competitive lifter, everyone coached properly from day one",
+  "direction": "the-ritual",
+  "hero": "ritual-first-step",
+  "type": null,
+  "palette": null,
+  "sections": [
+    {
+      "role": "statement",
+      "id": "statement-wide"
+    },
+    {
+      "role": "list",
+      "id": "list-blocks"
+    },
+    {
+      "role": "process",
+      "id": "process-steps-pictures"
+    },
+    {
+      "role": "proof",
+      "id": "proof-quote"
+    },
+    {
+      "role": "story",
+      "id": "story-timeline"
+    },
+    {
+      "role": "visit",
+      "id": "visit-map-picture"
+    },
+    {
+      "role": "footer",
+      "id": "footer-name"
+    }
+  ],
+  "motion": "sticky-swap",
+  "allow": [],
+  "redraws": [],
+  "dealtAt": "2026-11-22T20:56:39.140Z"
+}

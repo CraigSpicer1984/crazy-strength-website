@@ -1,0 +1,29 @@
+{
+  "seed": 199232232,
+  "kind": "local",
+  "tone": "bold",
+  "have": [
+    "photos",
+    "numbers",
+    "place"
+  ],
+  "keep": [
+    "palette",
+    "type"
+  ],
+  "roles": [
+    "statement",
+    "list",
+    "process",
+    "proof",
+    "story",
+    "visit",
+    "footer"
+  ],
+  "brief": "Coached strength training gym in Amesbury — from first-timer to competitive lifter, everyone coached properly from day one",
+  "options": [
+    "place-first",
+    "the-ritual",
+    "big-numbers"
+  ]
+}

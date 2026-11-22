@@ -1,0 +1,243 @@
+[
+ {
+  "at": "2026-11-22T21:03:01.992Z",
+  "target": "mockup.html",
+  "fail": 10,
+  "warn": 12,
+  "reading": "broken",
+  "ids": [
+   "eyebrow",
+   "micro-label",
+   "tiny-text",
+   "contrast",
+   "broken-image",
+   "overflow",
+   "covered-text",
+   "never-revealed",
+   "hairlines",
+   "reduced-hidden",
+   "accent-word",
+   "statement-length",
+   "glow",
+   "glass",
+   "default-font",
+   "size-count",
+   "small-text",
+   "repeated-picture",
+   "emoji",
+   "em-dashes",
+   "uncredited",
+   "tap-size"
+  ]
+ },
+ {
+  "at": "2026-11-22T21:04:49.196Z",
+  "target": "mockup.html",
+  "fail": 6,
+  "warn": 8,
+  "reading": "broken",
+  "ids": [
+   "eyebrow",
+   "micro-label",
+   "tiny-text",
+   "contrast",
+   "broken-image",
+   "covered-text",
+   "statement-length",
+   "default-font",
+   "size-count",
+   "small-text",
+   "repeated-picture",
+   "em-dashes",
+   "uncredited",
+   "tap-size"
+  ]
+ },
+ {
+  "at": "2026-11-22T21:05:04.498Z",
+  "target": "mockup.html",
+  "fail": 6,
+  "warn": 8,
+  "reading": "broken",
+  "ids": [
+   "eyebrow",
+   "micro-label",
+   "tiny-text",
+   "contrast",
+   "broken-image",
+   "covered-text",
+   "statement-length",
+   "default-font",
+   "size-count",
+   "small-text",
+   "repeated-picture",
+   "em-dashes",
+   "uncredited",
+   "tap-size"
+  ]
+ },
+ {
+  "at": "2026-11-22T21:08:51.654Z",
+  "target": "mockup.html",
+  "fail": 5,
+  "warn": 8,
+  "reading": "broken",
+  "ids": [
+   "headline-lines",
+   "micro-label",
+   "tiny-text",
+   "contrast",
+   "broken-image",
+   "statement-length",
+   "default-font",
+   "size-count",
+   "small-text",
+   "repeated-picture",
+   "em-dashes",
+   "uncredited",
+   "tap-size"
+  ]
+ },
+ {
+  "at": "2026-11-22T21:11:42.405Z",
+  "target": "mockup.html",
+  "fail": 3,
+  "warn": 7,
+  "reading": "broken",
+  "ids": [
+   "tiny-text",
+   "contrast",
+   "broken-image",
+   "statement-length",
+   "default-font",
+   "size-count",
+   "small-text",
+   "em-dashes",
+   "uncredited",
+   "tap-size"
+  ]
+ },
+ {
+  "at": "2026-11-22T21:12:39.469Z",
+  "target": "mockup.html",
+  "fail": 1,
+  "warn": 8,
+  "reading": "broken",
+  "ids": [
+   "contrast",
+   "statement-length",
+   "default-font",
+   "size-count",
+   "small-text",
+   "repeated-picture",
+   "em-dashes",
+   "uncredited",
+   "tap-size"
+  ]
+ },
+ {
+  "at": "2026-11-22T21:15:40.724Z",
+  "target": "mockup.html",
+  "fail": 1,
+  "warn": 8,
+  "reading": "broken",
+  "ids": [
+   "contrast",
+   "statement-length",
+   "default-font",
+   "size-count",
+   "small-text",
+   "repeated-picture",
+   "em-dashes",
+   "uncredited",
+   "tap-size"
+  ]
+ },
+ {
+  "at": "2026-11-22T21:15:56.020Z",
+  "target": "mockup.html",
+  "fail": 1,
+  "warn": 8,
+  "reading": "broken",
+  "ids": [
+   "contrast",
+   "statement-length",
+   "default-font",
+   "size-count",
+   "small-text",
+   "repeated-picture",
+   "em-dashes",
+   "uncredited",
+   "tap-size"
+  ]
+ },
+ {
+  "at": "2026-11-22T21:16:22.525Z",
+  "target": "mockup.html",
+  "fail": 1,
+  "warn": 8,
+  "reading": "broken",
+  "ids": [
+   "contrast",
+   "statement-length",
+   "default-font",
+   "size-count",
+   "small-text",
+   "repeated-picture",
+   "em-dashes",
+   "uncredited",
+   "tap-size"
+  ]
+ },
+ {
+  "at": "2026-11-22T21:16:50.966Z",
+  "target": "mockup.html",
+  "fail": 0,
+  "warn": 8,
+  "reading": "clean",
+  "ids": [
+   "statement-length",
+   "default-font",
+   "size-count",
+   "small-text",
+   "repeated-picture",
+   "em-dashes",
+   "uncredited",
+   "tap-size"
+  ]
+ },
+ {
+  "at": "2026-11-22T21:17:06.515Z",
+  "target": "mockup.html",
+  "fail": 0,
+  "warn": 8,
+  "reading": "clean",
+  "ids": [
+   "statement-length",
+   "default-font",
+   "size-count",
+   "small-text",
+   "repeated-picture",
+   "em-dashes",
+   "uncredited",
+   "tap-size"
+  ]
+ },
+ {
+  "at": "2026-11-22T21:17:48.002Z",
+  "target": "mockup.html",
+  "fail": 0,
+  "warn": 8,
+  "reading": "clean",
+  "ids": [
+   "statement-length",
+   "default-font",
+   "size-count",
+   "small-text",
+   "repeated-picture",
+   "em-dashes",
+   "uncredited",
+   "tap-size"
+  ]
+ }
+]
