@@ -328,12 +328,7 @@ h1, h2, h3, h4 {
 }
 .process-step:hover .process-step-img img { transform: scale(1.03); }
 .process-step-word {
-  font-size: clamp(5rem, 10vw, 10rem);
-  font-family: var(--font-display);
-  color: rgba(244,244,239,.06);
-  line-height: 1;
-  margin-bottom: .5rem;
-  user-select: none;
+  display: none;
 }
 .process-step-text h2 {
   font-size: clamp(2rem, 3.5vw, 3.5rem);
@@ -439,11 +434,11 @@ h1, h2, h3, h4 {
   display: grid;
   grid-template-columns: 5rem 1fr;
   gap: 1.5rem;
-  padding: 1.2rem 0;
+  padding: 1.4rem 0;
   border-top: 1px solid rgba(244,244,239,.08);
-  font-size: .9rem;
+  font-size: 1rem;
   color: rgba(244,244,239,.7);
-  line-height: 1.55;
+  line-height: 1.6;
 }
 .timeline li:last-child { border-bottom: 1px solid rgba(244,244,239,.08); }
 .timeline-year {
@@ -631,6 +626,16 @@ h1, h2, h3, h4 {
 @media (max-width: 680px) {
   .hero-h1 { font-size: clamp(3.5rem, 14vw, 5.5rem); }
 
+  /* Phone: primary CTA full-width, secondaries smaller and stacked */
+  .hero-actions { flex-direction: column; gap: .5rem; }
+  .hero-actions .btn-primary { width: 100%; text-align: center; justify-content: center; }
+  .hero-actions .btn-wa,
+  .hero-actions .btn-ghost {
+    font-size: .8rem;
+    padding: .6rem 1.25rem;
+    opacity: .8;
+  }
+
   .process-step {
     grid-template-columns: 1fr;
     gap: 1.5rem;
@@ -638,7 +643,14 @@ h1, h2, h3, h4 {
   .process-step:nth-child(even) .process-step-img { order: unset; }
   .process-step:nth-child(even) .process-step-text { order: unset; }
   .process-step-img { aspect-ratio: 16/9; }
-  .process-step-word { font-size: 4rem; }
+
+  /* Timeline: single column on phone so descriptor doesn't wrap badly */
+  .timeline li {
+    grid-template-columns: 4rem 1fr;
+    gap: 1rem;
+    font-size: .85rem;
+  }
+  .timeline-year { font-size: 1.1rem; }
 
   .footer-links { grid-template-columns: 1fr; }
   .visit-cta { flex-direction: column; }

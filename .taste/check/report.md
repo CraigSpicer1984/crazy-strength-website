@@ -1,5 +1,5 @@
 # Taste check: mockup.html
-Checked 2026-11-22 21:46 at 1440, 768, 390px.
+Checked 2026-11-23 08:22 at 1440, 768, 390px.
 
 Reading: **clean**. FAIL 0 · WARN 7 · NOTE 0.
 
@@ -10,7 +10,7 @@ Reading: **clean**. FAIL 0 · WARN 7 · NOTE 0.
   Seen: Bebas Neue
   Fix: Use the dealt type pairing.
 - **WARN size-count** (desktop, tablet, phone): Too many font sizes.
-  Seen: 17 sizes: 13, 14, 15, 16, 18, 19, 22, 32, 35, 40, 50, 56, 65, 72, 86, 144, 216 · 15 sizes: 13, 14, 15, 16, 18, 21, 22, 24, 26, 32, 40, 46, 77, 80, 115 · 13 sizes: 13, 14, 15, 16, 18, 21, 22, 24, 26, 32, 40, 56, 64
+  Seen: 17 sizes: 13, 14, 15, 16, 18, 19, 22, 32, 35, 40, 50, 56, 65, 72, 86, 144, 216 · 14 sizes: 13, 14, 15, 16, 18, 21, 22, 24, 26, 32, 40, 46, 77, 115 · 13 sizes: 13, 14, 15, 16, 18, 21, 22, 24, 26, 32, 40, 56, 64
   Fix: Five sizes on a page is the ceiling: one very large, one small, little in between.
 - **WARN small-text** (desktop): Running text is set below 15px.
   Seen: median running text 14.4px
@@ -22,13 +22,13 @@ Reading: **clean**. FAIL 0 · WARN 7 · NOTE 0.
   Seen: 9 em dashes
   Fix: Use commas, colons or full stops.
 - **WARN tap-size** (phone): Small tap targets on the phone.
-  Seen: CRAZYSTRENGTH · End of Year Awards · Sun 13 De · BP SW Regional · Fri 29 May 20 · CS Novice · Sat 10 Jul 2027 · Show all · Complete beginner
+  Seen: CRAZYSTRENGTH · End of Year Awards · Sun 13 De · BP SW Regional · Fri 29 May 20 · CS Novice · Sat 10 Jul 2027 · Message Us on WhatsApp · Show all
   Fix: Make links and buttons at least 44px tall outside running text.
 
 ## Measurements
-- desktop 1440px: 9.2 screens tall; faces DM Sans, Bebas Neue; main line 144px; text 14.4px; sizes 17; real pictures 6 (drawings 0); ground #0a0a0a; buttons #e8220a #0f7a3e #f4f4ef #141414 #ffffff; moving elements 35
-- tablet 768px: 8.9 screens tall; faces DM Sans, Bebas Neue; main line 77px; text 14.4px; sizes 15; real pictures 6 (drawings 0); ground #0a0a0a; buttons #e8220a #0f7a3e #f4f4ef #141414 #ffffff; moving elements 35
-- phone 390px: 13.7 screens tall; faces DM Sans, Bebas Neue; main line 56px; text 14.4px; sizes 13; real pictures 6 (drawings 0); ground #0a0a0a; buttons #e8220a #0f7a3e #f4f4ef #141414 #ffffff; moving elements 35
+- desktop 1440px: 9.3 screens tall; faces DM Sans, Bebas Neue; main line 144px; text 14.4px; sizes 17; real pictures 6 (drawings 0); ground #0a0a0a; buttons #e8220a #0f7a3e #f4f4ef #141414 #ffffff; moving elements 35
+- tablet 768px: 8.6 screens tall; faces DM Sans, Bebas Neue; main line 77px; text 14.4px; sizes 14; real pictures 6 (drawings 0); ground #0a0a0a; buttons #e8220a #0f7a3e #f4f4ef #141414 #ffffff; moving elements 35
+- phone 390px: 13.3 screens tall; faces DM Sans, Bebas Neue; main line 56px; text 14.4px; sizes 13; real pictures 6 (drawings 0); ground #0a0a0a; buttons #e8220a #0f7a3e #f4f4ef #141414 #ffffff; moving elements 35
 
 ## Screenshots
 Open these and critique them as pictures, not as code:

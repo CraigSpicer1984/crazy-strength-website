@@ -323,5 +323,37 @@
    "em-dashes",
    "tap-size"
   ]
+ },
+ {
+  "at": "2026-11-23T08:21:29.167Z",
+  "target": "mockup.html",
+  "fail": 0,
+  "warn": 7,
+  "reading": "clean",
+  "ids": [
+   "statement-length",
+   "default-font",
+   "size-count",
+   "small-text",
+   "repeated-picture",
+   "em-dashes",
+   "tap-size"
+  ]
+ },
+ {
+  "at": "2026-11-23T08:22:09.575Z",
+  "target": "mockup.html",
+  "fail": 0,
+  "warn": 7,
+  "reading": "clean",
+  "ids": [
+   "statement-length",
+   "default-font",
+   "size-count",
+   "small-text",
+   "repeated-picture",
+   "em-dashes",
+   "tap-size"
+  ]
  }
 ]
