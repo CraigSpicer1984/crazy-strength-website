@@ -97,6 +97,16 @@ h1, h2, h3, h4 {
   transition: background .15s;
 }
 .nav-cta:hover { background: var(--accent2); }
+.nav-drop{position:relative}
+.nav-drop>a{display:flex;align-items:center;gap:.25rem}
+.nav-drop>a::after{content:'▾';font-size:.55rem;opacity:.6}
+.nav-dropmenu{display:none;position:absolute;top:calc(100% + 8px);left:0;
+  background:var(--surface);border:1px solid rgba(244,244,239,.1);
+  min-width:220px;z-index:200;padding:.5rem 0;border-radius:2px}
+.nav-drop:hover .nav-dropmenu{display:block}
+.nav-dropmenu a{display:block;padding:.6rem 1.2rem;font-size:.82rem;
+  color:rgba(244,244,239,.7);text-decoration:none;transition:all .12s;white-space:nowrap}
+.nav-dropmenu a:hover{color:var(--ink);background:var(--surface2)}
 .nav-hamburger {
   display: none;
   background: none; border: none; cursor: pointer; padding: .5rem;
@@ -608,7 +618,17 @@ h1, h2, h3, h4 {
 @media (max-width: 900px) {
   .nav-links { display: none; }
   .nav-cta { display: none; }
-  .nav-hamburger { display: block; }
+  .nav-drop{position:relative}
+.nav-drop>a{display:flex;align-items:center;gap:.25rem}
+.nav-drop>a::after{content:'▾';font-size:.55rem;opacity:.6}
+.nav-dropmenu{display:none;position:absolute;top:calc(100% + 8px);left:0;
+  background:var(--surface);border:1px solid rgba(244,244,239,.1);
+  min-width:220px;z-index:200;padding:.5rem 0;border-radius:2px}
+.nav-drop:hover .nav-dropmenu{display:block}
+.nav-dropmenu a{display:block;padding:.6rem 1.2rem;font-size:.82rem;
+  color:rgba(244,244,239,.7);text-decoration:none;transition:all .12s;white-space:nowrap}
+.nav-dropmenu a:hover{color:var(--ink);background:var(--surface2)}
+.nav-hamburger { display: block; }
 
   .numbers { grid-template-columns: 1fr 1fr; }
 
@@ -674,7 +694,27 @@ h1, h2, h3, h4 {
   </a>
   <ul class="nav-links" role="list">
     <li><a href="https://crazystrength.co.uk/education.html">Education</a></li>
-    <li><a href="https://crazystrength.co.uk/index.html#programmes">Train</a></li>
+    <li class="nav-drop">
+      <details>
+    <summary>Train</summary>
+    <div class="mobile-train-links">
+      <a href="https://crazystrength.co.uk/powerlifting.html">Beginner Powerlifting</a>
+      <a href="https://crazystrength.co.uk/weightlifting.html">Olympic Weightlifting</a>
+      <a href="https://crazystrength.co.uk/ladies-that-lift.html">Ladies That Lift</a>
+      <a href="https://crazystrength.co.uk/legends-that-lift.html">Legends That Lift</a>
+      <a href="https://crazystrength.co.uk/cubs.html">Cubs</a>
+      <a href="https://crazystrength.co.uk/open-gym.html">Open Gym</a>
+    </div>
+  </details>
+      <div class="nav-dropmenu">
+        <a href="https://crazystrength.co.uk/powerlifting.html">Beginner Powerlifting</a>
+        <a href="https://crazystrength.co.uk/weightlifting.html">Olympic Weightlifting</a>
+        <a href="https://crazystrength.co.uk/ladies-that-lift.html">Ladies That Lift</a>
+        <a href="https://crazystrength.co.uk/legends-that-lift.html">Legends That Lift</a>
+        <a href="https://crazystrength.co.uk/cubs.html">Cubs</a>
+        <a href="https://crazystrength.co.uk/open-gym.html">Open Gym</a>
+      </div>
+    </li>
     <li><a href="https://crazystrength.co.uk/events.html">Events</a></li>
     <li><a href="https://crazystrength.co.uk/blog">Blog</a></li>
     <li><a href="https://crazystrength.co.uk/shop.html">Shop</a></li>
@@ -688,7 +728,17 @@ h1, h2, h3, h4 {
 <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation" aria-hidden="true">
   <button class="mobile-nav-close" id="menuClose" aria-label="Close menu">✕</button>
   <a href="https://crazystrength.co.uk/education.html">Education</a>
-  <a href="https://crazystrength.co.uk/index.html#programmes">Train</a>
+  <details>
+    <summary>Train</summary>
+    <div class="mobile-train-links">
+      <a href="https://crazystrength.co.uk/powerlifting.html">Beginner Powerlifting</a>
+      <a href="https://crazystrength.co.uk/weightlifting.html">Olympic Weightlifting</a>
+      <a href="https://crazystrength.co.uk/ladies-that-lift.html">Ladies That Lift</a>
+      <a href="https://crazystrength.co.uk/legends-that-lift.html">Legends That Lift</a>
+      <a href="https://crazystrength.co.uk/cubs.html">Cubs</a>
+      <a href="https://crazystrength.co.uk/open-gym.html">Open Gym</a>
+    </div>
+  </details>
   <a href="https://crazystrength.co.uk/events.html">Events</a>
   <a href="https://crazystrength.co.uk/blog">Blog</a>
   <a href="https://crazystrength.co.uk/shop.html">Shop</a>

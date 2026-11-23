@@ -1,17 +1,183 @@
 {
- "target": "mockup.html",
- "at": "2026-11-23T08:22:09.574Z",
+ "target": "https://crazystrength.co.uk/powerlifting.html",
+ "at": "2026-11-23T09:54:45.126Z",
  "findings": [
   {
-   "id": "statement-length",
-   "level": "WARN",
-   "msg": "A large paragraph reads as a long headline.",
-   "fix": "Keep statements under about 25 words and three lines on desktop, or set them at text size.",
+   "id": "eyebrow",
+   "level": "FAIL",
+   "msg": "A small label or pill sits above a heading.",
+   "fix": "Fold the information into the heading or the first sentence, or delete it.",
+   "where": [
+    "desktop",
+    "tablet",
+    "phone"
+   ],
+   "samples": [
+    "\"Crazy Strength › Programmes › Powerlifting\" above \"Coached powerlifting in Amesbury\"",
+    "\"What Is Powerlifting?\" above \"Three Lifts. Real Strength.\"",
+    "\"When We Train\" above \"Timetable\"",
+    "\"Membership Pricing\" above \"Powerlifting Membership\"",
+    "\"Who’s Coaching You\" above \"Your Powerlifting Coaches\"",
+    "\"Stay in the loop\" above \"Get Training Insights Direct\""
+   ]
+  },
+  {
+   "id": "micro-label",
+   "level": "FAIL",
+   "msg": "Tiny letter-spaced capitals are scattered around the page.",
+   "fix": "Sentence case at a readable size, placed with the content it describes.",
+   "where": [
+    "desktop",
+    "tablet",
+    "phone"
+   ],
+   "samples": [
+    "\"Shop\"",
+    "\"Contact Us\"",
+    "\"Amesbury · Wiltshire\"",
+    "\"Education\"",
+    "\"Train\"",
+    "\"Coaching\""
+   ]
+  },
+  {
+   "id": "hairlines",
+   "level": "FAIL",
+   "msg": "Thin rules divide the page.",
+   "fix": "Use space, a tone step between surfaces, or a change of scale.",
+   "where": [
+    "desktop",
+    "tablet",
+    "phone"
+   ],
+   "samples": [
+    "div (bottom)",
+    "nav (bottom)",
+    "section (top)",
+    "footer (top)",
+    "div.fi > div (top)",
+    "div (top)"
+   ]
+  },
+  {
+   "id": "outlined-box",
+   "level": "FAIL",
+   "msg": "Content sits in thin outlined boxes.",
+   "fix": "Remove the outline; separate by a tone step or by space.",
+   "where": [
+    "desktop",
+    "tablet",
+    "phone"
+   ],
+   "samples": [
+    "section > div.feat-grid.reveal",
+    "div.reveal > div",
+    "div > div",
+    "section > div.coach-grid.reveal"
+   ]
+  },
+  {
+   "id": "gradient",
+   "level": "FAIL",
+   "msg": "A decorative gradient fills a surface or button.",
+   "fix": "Flat colour or a real photograph. A neutral scrim under text on a photo is the one exception.",
+   "where": [
+    "desktop",
+    "tablet",
+    "phone"
+   ],
+   "samples": [
+    "div.phero > div.phero-bg"
+   ]
+  },
+  {
+   "id": "tiny-text",
+   "level": "FAIL",
+   "msg": "Text below 12.5px appears in several places.",
+   "fix": "Raise it to at least 13px, or remove it.",
+   "where": [
+    "desktop",
+    "tablet",
+    "phone"
+   ],
+   "samples": [
+    "\"Shop\"",
+    "\"Contact Us\"",
+    "\"Amesbury · Wiltshire\"",
+    "\"Education\"",
+    "\"Train\"",
+    "\"Coaching\""
+   ]
+  },
+  {
+   "id": "contrast",
+   "level": "FAIL",
+   "msg": "Text fails contrast against its background.",
+   "fix": "Darken the text or lighten the ground: 4.5:1 for text, 3:1 for large text.",
+   "where": [
+    "desktop",
+    "tablet",
+    "phone"
+   ],
+   "samples": [
+    "\"Strength\" 4.4:1 (needs 4.5)",
+    "\"Training for your first competition →\" 4.19:1 (needs 4.5)",
+    "\"Book a Free Taster →\" 4.08:1 (needs 4.5)",
+    "\"Book a free taster session — no commitme\" 3.27:1 (needs 4.5)",
+    "\"What Is Powerlifting?\" 4.4:1 (needs 4.5)",
+    "\"When We Train\" 4.19:1 (needs 4.5)"
+   ]
+  },
+  {
+   "id": "few-pictures",
+   "level": "FAIL",
+   "msg": "Fewer than two real pictures on the page.",
+   "fix": "Add real pictures of the subject or its world (taste-pictures), or real interface fragments for software.",
    "where": [
     "desktop"
    ],
    "samples": [
-    "\"I have been going to Ladies That Lift sessions twice a week for the la\" (3 lines, 46 words)"
+    "0 real, 0 drawings"
+   ]
+  },
+  {
+   "id": "headline-lines",
+   "level": "FAIL",
+   "msg": "A headline runs to three or more lines.",
+   "fix": "Cut words first (about 32 characters fits two lines at a confident size), then widen the measure, then reduce the size.",
+   "where": [
+    "phone"
+   ],
+   "samples": [
+    "h1 \"Coached powerlifting in Amesbury\" (3 lines at 51px)"
+   ]
+  },
+  {
+   "id": "covered-text",
+   "level": "FAIL",
+   "msg": "Something lies on top of a heading, statement or button.",
+   "fix": "Move it, or give the text its own space; nothing sits on a headline.",
+   "where": [
+    "phone"
+   ],
+   "samples": [
+    "\"Three Lifts. Real Strength.\" under div.mob-prog-bar",
+    "\"Get In Touch →\" under a"
+   ]
+  },
+  {
+   "id": "card-rows",
+   "level": "WARN",
+   "msg": "Rows of identical boxed cards.",
+   "fix": "Compose the section from its blueprint; vary layout between neighbours.",
+   "where": [
+    "desktop",
+    "tablet"
+   ],
+   "samples": [
+    "section > div.feat-grid.reveal (4)",
+    "div.reveal > div (3)",
+    "section > div.coach-grid.reveal (5)"
    ]
   },
   {
@@ -39,9 +205,9 @@
     "phone"
    ],
    "samples": [
-    "17 sizes: 13, 14, 15, 16, 18, 19, 22, 32, 35, 40, 50, 56, 65, 72, 86, 144, 216",
-    "14 sizes: 13, 14, 15, 16, 18, 21, 22, 24, 26, 32, 40, 46, 77, 115",
-    "13 sizes: 13, 14, 15, 16, 18, 21, 22, 24, 26, 32, 40, 56, 64"
+    "18 sizes: 8, 9, 10, 11, 12, 13, 14, 15, 16, 19, 21, 22, 23, 35, 42, 45, 51, 96",
+    "18 sizes: 8, 9, 10, 11, 12, 13, 14, 15, 16, 19, 21, 22, 23, 31, 32, 35, 45, 54",
+    "18 sizes: 8, 9, 10, 11, 12, 13, 14, 15, 16, 19, 21, 22, 23, 26, 27, 29, 45, 51"
    ]
   },
   {
@@ -57,17 +223,22 @@
    ]
   },
   {
-   "id": "repeated-picture",
+   "id": "emoji",
    "level": "WARN",
-   "msg": "The same picture is used large more than once.",
-   "fix": "One picture once: find another real picture, or make the section use a different kind of visual.",
+   "msg": "Emoji used as icons or decoration.",
+   "fix": "Words, or a real picture.",
    "where": [
     "desktop",
     "tablet",
     "phone"
    ],
    "samples": [
-    "community-group.jpg x2"
+    "📷 @crazystrengthhq",
+    "🗣 Crazy Strength UK",
+    "▶ @crazy.strength",
+    "📞 WhatsApp: +44 7734 824897",
+    "📞 WhatsApp Us",
+    "✉ Email"
    ]
   },
   {
@@ -79,7 +250,7 @@
     "desktop"
    ],
    "samples": [
-    "9 em dashes"
+    "11 em dashes"
    ]
   },
   {
@@ -91,30 +262,30 @@
     "phone"
    ],
    "samples": [
-    "CRAZYSTRENGTH",
-    "End of Year Awards · Sun 13 De",
-    "BP SW Regional · Fri 29 May 20",
-    "CS Novice · Sat 10 Jul 2027",
-    "Message Us on WhatsApp",
-    "Show all"
+    "Shop",
+    "Contact Us",
+    "Menu",
+    "Crazy Strength",
+    "@craig.spicer",
+    "CrazyStrength"
    ]
   }
  ],
  "counts": {
-  "fail": 0,
+  "fail": 10,
   "warn": 7,
   "note": 0,
-  "tells": 1
+  "tells": 9
  },
- "reading": "clean",
+ "reading": "broken",
  "allow": [],
  "runs": [
   {
    "width": 1440,
    "motion": {
-    "elements": 35,
-    "css": 1,
-    "transitions": 34,
+    "elements": 7,
+    "css": 0,
+    "transitions": 7,
     "scripted": 0
    },
    "collisions": [],
@@ -123,311 +294,415 @@
     "v": 1,
     "vw": 1440,
     "vh": 900,
-    "docH": 8383,
+    "docH": 3978,
     "dpr": 1,
-    "url": "http://127.0.0.1:41547/mockup.html",
+    "url": "https://crazystrength.co.uk/powerlifting",
     "headings": [
      {
       "tag": "h1",
-      "text": "COACHED FROM DAY ONE.",
-      "size": 144,
-      "lines": 2,
-      "top": 358,
+      "text": "Coached powerlifting in Amesbury",
+      "size": 96,
+      "lines": 1,
+      "top": 109,
       "family": "Bebas Neue",
-      "weight": 400,
+      "weight": 700,
       "align": "start",
       "accentWord": false,
-      "sel": "h1#hero-h1"
+      "sel": "div.phero-c > h1.ptitle"
      },
      {
       "tag": "h2",
-      "text": "FIND YOUR PROGRAMME",
-      "size": 56,
+      "text": "Three Lifts. Real Strength.",
+      "size": 51.2,
       "lines": 1,
-      "top": 1209,
+      "top": 663,
       "family": "Bebas Neue",
-      "weight": 400,
+      "weight": 700,
       "align": "start",
       "accentWord": false,
-      "sel": "h2#finder-title"
-     },
-     {
-      "tag": "h3",
-      "text": "POWERLIFTING",
-      "size": 35.2,
-      "lines": 1,
-      "top": 1434,
-      "family": "Bebas Neue",
-      "weight": 400,
-      "align": "start",
-      "accentWord": false,
-      "sel": "article.prog-card > h3"
-     },
-     {
-      "tag": "h3",
-      "text": "OLYMPIC WEIGHTLIFTING",
-      "size": 35.2,
-      "lines": 1,
-      "top": 1434,
-      "family": "Bebas Neue",
-      "weight": 400,
-      "align": "start",
-      "accentWord": false,
-      "sel": "article.prog-card > h3"
-     },
-     {
-      "tag": "h3",
-      "text": "LADIES THAT LIFT",
-      "size": 35.2,
-      "lines": 1,
-      "top": 1434,
-      "family": "Bebas Neue",
-      "weight": 400,
-      "align": "start",
-      "accentWord": false,
-      "sel": "article.prog-card > h3"
-     },
-     {
-      "tag": "h3",
-      "text": "LEGENDS THAT LIFT",
-      "size": 35.2,
-      "lines": 1,
-      "top": 1434,
-      "family": "Bebas Neue",
-      "weight": 400,
-      "align": "start",
-      "accentWord": false,
-      "sel": "article.prog-card > h3"
-     },
-     {
-      "tag": "h3",
-      "text": "CUBS PROGRAMME",
-      "size": 35.2,
-      "lines": 1,
-      "top": 1820,
-      "family": "Bebas Neue",
-      "weight": 400,
-      "align": "start",
-      "accentWord": false,
-      "sel": "article.prog-card > h3"
-     },
-     {
-      "tag": "h3",
-      "text": "OPEN GYM",
-      "size": 35.2,
-      "lines": 1,
-      "top": 1820,
-      "family": "Bebas Neue",
-      "weight": 400,
-      "align": "start",
-      "accentWord": false,
-      "sel": "article.prog-card > h3"
-     },
-     {
-      "tag": "h3",
-      "text": "SEMI-REMOTE COACHING",
-      "size": 35.2,
-      "lines": 1,
-      "top": 1820,
-      "family": "Bebas Neue",
-      "weight": 400,
-      "align": "start",
-      "accentWord": false,
-      "sel": "article.prog-card > h3"
-     },
-     {
-      "tag": "h3",
-      "text": "PERSONAL TRAINING",
-      "size": 35.2,
-      "lines": 1,
-      "top": 1820,
-      "family": "Bebas Neue",
-      "weight": 400,
-      "align": "start",
-      "accentWord": false,
-      "sel": "article.prog-card > h3"
+      "sel": "div.reveal > h2.stitle"
      },
      {
       "tag": "h2",
-      "text": "HOW IT WORKS",
-      "size": 72,
+      "text": "Timetable",
+      "size": 51.2,
       "lines": 1,
-      "top": 2380,
+      "top": 1366,
       "family": "Bebas Neue",
-      "weight": 400,
+      "weight": 700,
       "align": "start",
       "accentWord": false,
-      "sel": "h2#process-title"
+      "sel": "div.reveal > h2.stitle"
      },
      {
       "tag": "h2",
-      "text": "BOOK A FREE TASTER",
-      "size": 50.4,
+      "text": "Powerlifting Membership",
+      "size": 51.2,
       "lines": 1,
-      "top": 2682,
+      "top": 1847,
       "family": "Bebas Neue",
-      "weight": 400,
+      "weight": 700,
       "align": "start",
       "accentWord": false,
-      "sel": "div.process-step-text > h2"
+      "sel": "div.reveal > h2.stitle"
      },
      {
       "tag": "h2",
-      "text": "EVERY SESSION IS COACHED",
-      "size": 50.4,
+      "text": "Your Powerlifting Coaches",
+      "size": 51.2,
       "lines": 1,
-      "top": 3311,
+      "top": 2609,
       "family": "Bebas Neue",
-      "weight": 400,
+      "weight": 700,
       "align": "start",
       "accentWord": false,
-      "sel": "div.process-step-text > h2"
-     },
-     {
-      "tag": "h2",
-      "text": "PICK YOUR PATH",
-      "size": 50.4,
-      "lines": 1,
-      "top": 3850,
-      "family": "Bebas Neue",
-      "weight": 400,
-      "align": "start",
-      "accentWord": false,
-      "sel": "div.process-step-text > h2"
-     },
-     {
-      "tag": "h2",
-      "text": "WHEN YOU'RE READY, THE PLATFORM IS THERE",
-      "size": 50.4,
-      "lines": 2,
-      "top": 4405,
-      "family": "Bebas Neue",
-      "weight": 400,
-      "align": "start",
-      "accentWord": false,
-      "sel": "div.process-step-text > h2"
-     },
-     {
-      "tag": "h2",
-      "text": "BUILT FROM THE BARBELL UP",
-      "size": 64.8,
-      "lines": 1,
-      "top": 5533,
-      "family": "Bebas Neue",
-      "weight": 400,
-      "align": "start",
-      "accentWord": false,
-      "sel": "h2#story-title"
-     },
-     {
-      "tag": "h2",
-      "text": "THE BEACON CENTRE, AMESBURY",
-      "size": 86.4,
-      "lines": 2,
-      "top": 7151,
-      "family": "Bebas Neue",
-      "weight": 400,
-      "align": "start",
-      "accentWord": false,
-      "sel": "h2#visit-title"
+      "sel": "div.reveal > h2.stitle"
      },
      {
       "tag": "h3",
-      "text": "Address",
-      "size": 17.6,
+      "text": "Ready to Give Powerlifting a Go?",
+      "size": 35.2,
       "lines": 1,
-      "top": 7390,
+      "top": 3058,
       "family": "Bebas Neue",
-      "weight": 400,
-      "align": "start",
+      "weight": 700,
+      "align": "center",
       "accentWord": false,
-      "sel": "div.visit-cell > h3"
+      "sel": "div.taster-bar > h3"
      },
      {
-      "tag": "h3",
-      "text": "Hours",
-      "size": 17.6,
+      "tag": "h2",
+      "text": "Get Training Insights Direct",
+      "size": 41.6,
       "lines": 1,
-      "top": 7390,
+      "top": 3347,
       "family": "Bebas Neue",
-      "weight": 400,
-      "align": "start",
+      "weight": 700,
+      "align": "center",
       "accentWord": false,
-      "sel": "div.visit-cell > h3"
-     },
-     {
-      "tag": "h3",
-      "text": "Get here",
-      "size": 17.6,
-      "lines": 1,
-      "top": 7390,
-      "family": "Bebas Neue",
-      "weight": 400,
-      "align": "start",
-      "accentWord": false,
-      "sel": "div.visit-cell > h3"
-     },
-     {
-      "tag": "h4",
-      "text": "Train",
-      "size": 14.08,
-      "lines": 1,
-      "top": 7733,
-      "family": "Bebas Neue",
-      "weight": 600,
-      "align": "start",
-      "accentWord": false,
-      "sel": "div.footer-col > h4"
-     },
-     {
-      "tag": "h4",
-      "text": "Learn",
-      "size": 14.08,
-      "lines": 1,
-      "top": 7733,
-      "family": "Bebas Neue",
-      "weight": 600,
-      "align": "start",
-      "accentWord": false,
-      "sel": "div.footer-col > h4"
-     },
-     {
-      "tag": "h4",
-      "text": "Crazy Strength",
-      "size": 14.08,
-      "lines": 1,
-      "top": 7733,
-      "family": "Bebas Neue",
-      "weight": 600,
-      "align": "start",
-      "accentWord": false,
-      "sel": "div.footer-col > h4"
+      "sel": "div > h2"
      }
     ],
     "h1count": 1,
     "mainLine": {
-     "text": "COACHEDFROM DAY",
-     "size": 144,
-     "lines": 2,
+     "text": "Coached powerlifting in Amesbury",
+     "size": 96,
+     "lines": 1,
      "tag": "h1",
      "family": "Bebas Neue"
     },
-    "statements": [
+    "statements": [],
+    "microLabels": [
      {
-      "text": "I have been going to Ladies That Lift sessions twice a week for the la",
-      "size": 32,
-      "lines": 3,
-      "words": 46
+      "text": "Shop",
+      "size": 9.92,
+      "ls": 0.09
+     },
+     {
+      "text": "Contact Us",
+      "size": 9.92,
+      "ls": 0.09
+     },
+     {
+      "text": "Amesbury · Wiltshire",
+      "size": 8,
+      "ls": 0.15
+     },
+     {
+      "text": "Education",
+      "size": 12,
+      "ls": 0.08
+     },
+     {
+      "text": "Train",
+      "size": 12,
+      "ls": 0.08
+     },
+     {
+      "text": "Coaching",
+      "size": 12,
+      "ls": 0.08
+     },
+     {
+      "text": "Facilities",
+      "size": 12,
+      "ls": 0.08
+     },
+     {
+      "text": "Team",
+      "size": 12,
+      "ls": 0.08
+     },
+     {
+      "text": "Events",
+      "size": 12,
+      "ls": 0.08
+     },
+     {
+      "text": "Blog",
+      "size": 12,
+      "ls": 0.08
+     },
+     {
+      "text": "Crazy Strength",
+      "size": 11.2,
+      "ls": 0.1
+     },
+     {
+      "text": "› Programmes › Powerlifting",
+      "size": 11.2,
+      "ls": 0.1
+     },
+     {
+      "text": "Book a Free Taster →",
+      "size": 12.8,
+      "ls": 0.1
+     },
+     {
+      "text": "Book Free Taster →",
+      "size": 12.8,
+      "ls": 0.1
+     },
+     {
+      "text": "What Is Powerlifting?",
+      "size": 11.2,
+      "ls": 0.2
+     },
+     {
+      "text": "When We Train",
+      "size": 11.2,
+      "ls": 0.2
+     },
+     {
+      "text": "Membership Pricing",
+      "size": 11.2,
+      "ls": 0.2
+     },
+     {
+      "text": "Most Popular",
+      "size": 9.28,
+      "ls": 0.1
+     },
+     {
+      "text": "Club Membership",
+      "size": 11.2,
+      "ls": 0.14
+     },
+     {
+      "text": "Club Bespoke",
+      "size": 11.2,
+      "ls": 0.14
+     },
+     {
+      "text": "Head Coach Programme",
+      "size": 11.2,
+      "ls": 0.14
+     },
+     {
+      "text": "Get In Touch →",
+      "size": 12.8,
+      "ls": 0.1
+     },
+     {
+      "text": "WhatsApp Us",
+      "size": 12.8,
+      "ls": 0.1
+     },
+     {
+      "text": "Who’s Coaching You",
+      "size": 11.2,
+      "ls": 0.2
+     },
+     {
+      "text": "Book Your Free Taster →",
+      "size": 13.6,
+      "ls": 0.1
+     },
+     {
+      "text": "Stay in the loop",
+      "size": 11.2,
+      "ls": 0.2
+     },
+     {
+      "text": "@craig.spicer",
+      "size": 10.88,
+      "ls": 0.06
+     },
+     {
+      "text": "Powerlifting",
+      "size": 12,
+      "ls": 0.06
+     },
+     {
+      "text": "Weightlifting",
+      "size": 12,
+      "ls": 0.06
+     },
+     {
+      "text": "Ladies That Lift",
+      "size": 12,
+      "ls": 0.06
+     },
+     {
+      "text": "Legends That Lift",
+      "size": 12,
+      "ls": 0.06
+     },
+     {
+      "text": "CUBS",
+      "size": 12,
+      "ls": 0.06
+     },
+     {
+      "text": "Class Packs",
+      "size": 12,
+      "ls": 0.06
+     },
+     {
+      "text": "Team",
+      "size": 12,
+      "ls": 0.06
+     },
+     {
+      "text": "Events",
+      "size": 12,
+      "ls": 0.06
+     },
+     {
+      "text": "Education",
+      "size": 12,
+      "ls": 0.06
+     },
+     {
+      "text": "Blog",
+      "size": 12,
+      "ls": 0.06
+     },
+     {
+      "text": "Privacy Policy",
+      "size": 12,
+      "ls": 0.06
+     },
+     {
+      "text": "Contact",
+      "size": 12,
+      "ls": 0.06
+     },
+     {
+      "text": "📞 WhatsApp Us",
+      "size": 11.84,
+      "ls": 0.08
+     },
+     {
+      "text": "✉ Email",
+      "size": 11.84,
+      "ls": 0.08
      }
     ],
-    "microLabels": [],
-    "eyebrows": [],
+    "eyebrows": [
+     {
+      "text": "Crazy Strength › Programmes › Powerlifting",
+      "heading": "Coached powerlifting in Amesbury",
+      "pill": false
+     },
+     {
+      "text": "What Is Powerlifting?",
+      "heading": "Three Lifts. Real Strength.",
+      "pill": false
+     },
+     {
+      "text": "When We Train",
+      "heading": "Timetable",
+      "pill": false
+     },
+     {
+      "text": "Membership Pricing",
+      "heading": "Powerlifting Membership",
+      "pill": false
+     },
+     {
+      "text": "Who’s Coaching You",
+      "heading": "Your Powerlifting Coaches",
+      "pill": false
+     },
+     {
+      "text": "Stay in the loop",
+      "heading": "Get Training Insights Direct",
+      "pill": false
+     }
+    ],
     "mono": [],
     "indexNums": [],
-    "rules": [],
-    "outlined": [],
+    "rules": [
+     {
+      "sel": "div",
+      "sides": "bottom"
+     },
+     {
+      "sel": "nav",
+      "sides": "bottom"
+     },
+     {
+      "sel": "div",
+      "sides": "bottom"
+     },
+     {
+      "sel": "section",
+      "sides": "top"
+     },
+     {
+      "sel": "footer",
+      "sides": "top"
+     },
+     {
+      "sel": "div.fi > div",
+      "sides": "top"
+     },
+     {
+      "sel": "div",
+      "sides": "top"
+     }
+    ],
+    "outlined": [
+     {
+      "sel": "section > div.feat-grid.reveal",
+      "w": 1296,
+      "h": 268
+     },
+     {
+      "sel": "div.reveal > div",
+      "w": 1296,
+      "h": 346
+     },
+     {
+      "sel": "div > div",
+      "w": 215,
+      "h": 344
+     },
+     {
+      "sel": "div > div",
+      "w": 215,
+      "h": 344
+     },
+     {
+      "sel": "div > div",
+      "w": 215,
+      "h": 344
+     },
+     {
+      "sel": "section > div.coach-grid.reveal",
+      "w": 1296,
+      "h": 174
+     }
+    ],
     "dashed": 0,
-    "gradients": [],
+    "gradients": [
+     {
+      "sel": "div.phero > div.phero-bg",
+      "text": false,
+      "area": 0.52
+     }
+    ],
     "shadows": [],
     "textShadows": 0,
     "glass": [],
@@ -436,15 +711,11 @@
      2,
      2,
      2,
-     100,
-     100,
-     100,
-     100,
-     100,
-     100,
-     100,
-     2,
-     2,
+     50,
+     50,
+     50,
+     50,
+     50,
      2,
      2,
      2,
@@ -454,95 +725,279 @@
     "colours": {
      "ground": "#0a0a0a",
      "fields": [
+      "#111111",
       "#0a0a0a",
-      "#e8220a",
-      "#1c1c1c",
-      "#141414"
+      "#282828",
+      "#e8220a"
      ],
      "buttons": [
       "#e8220a",
-      "#0f7a3e",
-      "#f4f4ef",
-      "#141414",
-      "#ffffff"
+      "#ffffff",
+      "#282828",
+      "#25d366"
      ],
      "links": [
-      "#ffffff",
-      "#f4f4ef",
-      "#f03018",
-      "#e8220a"
+      "#e8220a",
+      "#0000ee",
+      "#f4f4ef"
      ],
      "headings": [
       "#f4f4ef",
-      "#ff4422"
+      "#ffffff"
      ],
-     "gradients": [],
+     "gradients": [
+      "#000000"
+     ],
      "accentText": [
-      "#f4f4ef",
-      "#f03018",
-      "#ffffff",
       "#999999",
-      "#e8220a"
+      "#0000ee",
+      "#e8220a",
+      "#cccccc",
+      "#ffffff",
+      "#f4f4ef"
      ],
      "smallFields": [
+      "#000000",
       "#0a0a0a",
+      "#111111",
       "#e8220a",
-      "#0f7a3e",
-      "#1c1c1c",
-      "#141414",
-      "#ffffff"
+      "#ffffff",
+      "#282828",
+      "#191919",
+      "#25d366"
      ]
     },
     "iconCards": [],
     "cardRows": [
      {
-      "sel": "section#programmes > div.prog-grid",
-      "n": 8
+      "sel": "section > div.feat-grid.reveal",
+      "n": 4
+     },
+     {
+      "sel": "div.reveal > div",
+      "n": 3
+     },
+     {
+      "sel": "section > div.coach-grid.reveal",
+      "n": 5
      }
     ],
-    "centredShare": 0,
+    "centredShare": 0.18,
     "families": [
      {
       "family": "DM Sans",
-      "chars": 5207,
+      "chars": 3458,
       "web": true,
       "loaded": true,
       "system": false
      },
      {
       "family": "Bebas Neue",
-      "chars": 645,
+      "chars": 259,
       "web": true,
       "loaded": true,
       "system": false
      }
     ],
     "sizes": [
+     8,
+     9,
+     10,
+     11,
+     12,
      13,
      14,
      15,
      16,
-     18,
      19,
+     21,
      22,
-     32,
+     23,
      35,
-     40,
-     50,
-     56,
-     65,
-     72,
-     86,
-     144,
-     216
+     42,
+     45,
+     51,
+     96
     ],
     "bodySize": 14.4,
-    "smallRunning": 12,
-    "runningCount": 21,
-    "tinyText": [],
-    "contrast": [],
+    "smallRunning": 7,
+    "runningCount": 12,
+    "tinyText": [
+     "Shop",
+     "Contact Us",
+     "Amesbury · Wiltshire",
+     "Education",
+     "Train",
+     "Coaching",
+     "Facilities",
+     "Team",
+     "Events",
+     "Blog"
+    ],
+    "contrast": [
+     {
+      "text": "Strength",
+      "ratio": 4.4,
+      "need": 4.5,
+      "size": 23.2,
+      "fg": "#e8220a",
+      "bg": "#0a0a0a"
+     },
+     {
+      "text": "Training for your first competition →",
+      "ratio": 4.19,
+      "need": 4.5,
+      "size": 16,
+      "fg": "#e8220a",
+      "bg": "#111111"
+     },
+     {
+      "text": "Book a Free Taster →",
+      "ratio": 4.08,
+      "need": 4.5,
+      "size": 12.8,
+      "fg": "#f4f4ef",
+      "bg": "#e8220a"
+     },
+     {
+      "text": "Book a free taster session — no commitme",
+      "ratio": 3.27,
+      "need": 4.5,
+      "size": 12.8,
+      "fg": "#fad3ce",
+      "bg": "#e8220a"
+     },
+     {
+      "text": "What Is Powerlifting?",
+      "ratio": 4.4,
+      "need": 4.5,
+      "size": 11.2,
+      "fg": "#e8220a",
+      "bg": "#0a0a0a"
+     },
+     {
+      "text": "When We Train",
+      "ratio": 4.19,
+      "need": 4.5,
+      "size": 11.2,
+      "fg": "#e8220a",
+      "bg": "#111111"
+     },
+     {
+      "text": "Membership Pricing",
+      "ratio": 4.19,
+      "need": 4.5,
+      "size": 11.2,
+      "fg": "#e8220a",
+      "bg": "#111111"
+     },
+     {
+      "text": "Privacy Policy",
+      "ratio": 2.01,
+      "need": 4.5,
+      "size": 16,
+      "fg": "#0000ee",
+      "bg": "#111111"
+     },
+     {
+      "text": "Get In Touch →",
+      "ratio": 4.08,
+      "need": 4.5,
+      "size": 12.8,
+      "fg": "#f4f4ef",
+      "bg": "#e8220a"
+     },
+     {
+      "text": "Who’s Coaching You",
+      "ratio": 4.4,
+      "need": 4.5,
+      "size": 11.2,
+      "fg": "#e8220a",
+      "bg": "#0a0a0a"
+     },
+     {
+      "text": "CS",
+      "ratio": 3.66,
+      "need": 4.5,
+      "size": 20.8,
+      "fg": "#e8220a",
+      "bg": "#2e1a18"
+     },
+     {
+      "text": "AM",
+      "ratio": 3.66,
+      "need": 4.5,
+      "size": 20.8,
+      "fg": "#e8220a",
+      "bg": "#2e1a18"
+     },
+     {
+      "text": "DL",
+      "ratio": 3.66,
+      "need": 4.5,
+      "size": 20.8,
+      "fg": "#e8220a",
+      "bg": "#2e1a18"
+     },
+     {
+      "text": "CY",
+      "ratio": 3.66,
+      "need": 4.5,
+      "size": 20.8,
+      "fg": "#e8220a",
+      "bg": "#2e1a18"
+     },
+     {
+      "text": "SM",
+      "ratio": 3.66,
+      "need": 4.5,
+      "size": 20.8,
+      "fg": "#e8220a",
+      "bg": "#2e1a18"
+     },
+     {
+      "text": "Your first session is free. No experienc",
+      "ratio": 3.27,
+      "need": 4.5,
+      "size": 14.4,
+      "fg": "#fad3ce",
+      "bg": "#e8220a"
+     },
+     {
+      "text": "Stay in the loop",
+      "ratio": 4.19,
+      "need": 4.5,
+      "size": 11.2,
+      "fg": "#e8220a",
+      "bg": "#111111"
+     },
+     {
+      "text": "Privacy Policy",
+      "ratio": 4.19,
+      "need": 4.5,
+      "size": 11.52,
+      "fg": "#e8220a",
+      "bg": "#111111"
+     },
+     {
+      "text": "Strength",
+      "ratio": 4.19,
+      "need": 4.5,
+      "size": 19.2,
+      "fg": "#e8220a",
+      "bg": "#111111"
+     },
+     {
+      "text": "📞 WhatsApp Us",
+      "ratio": 1.98,
+      "need": 4.5,
+      "size": 11.84,
+      "fg": "#ffffff",
+      "bg": "#25d366"
+     }
+    ],
     "pictures": {
-     "raster": 6,
+     "raster": 0,
      "video": 0,
      "ui": 0,
      "bg": 0,
@@ -551,57 +1006,55 @@
      "broken": [],
      "upscaled": [],
      "noAlt": 0,
-     "sources": [
-      "hero-competition.jpg",
-      "community-group.jpg",
-      "coaching-deadlift.jpg",
-      "craig-lift-wide.jpg",
-      "craig-compete.jpg",
-      "craig-about.jpg"
-     ],
-     "repeated": [
-      "community-group.jpg x2"
-     ],
-     "real": 6
+     "sources": [],
+     "repeated": [],
+     "real": 0
     },
     "overflow": {
      "scrollWidth": 1440,
      "offenders": []
     },
     "actions": {
-     "buttons": 17,
+     "buttons": 8,
      "firstScreen": [
-      "Book a Free Taster",
-      "Book a Free Taster",
-      "Message Us on WhatsApp",
-      "See All Programmes"
+      "Book a Free Taster →",
+      "Book Free Taster →",
+      "📞 WhatsApp Us",
+      "✉ Email"
      ],
-     "feedback": 17
+     "feedback": 5
     },
     "tap": [],
     "firstScreen": {
-     "h1Size": 144,
-     "h1Top": 358,
-     "largestMedia": 0.89,
-     "mainSize": 144
+     "h1Size": 96,
+     "h1Top": 109,
+     "largestMedia": 0,
+     "mainSize": 96
     },
     "empty": {
-     "screens": 9,
+     "screens": 4,
      "empty": []
     },
     "copy": {
      "placeholder": [],
-     "emoji": [],
+     "emoji": [
+      "📷 @crazystrengthhq",
+      "🗣 Crazy Strength UK",
+      "▶ @crazy.strength",
+      "📞 WhatsApp: +44 7734 824897",
+      "📞 WhatsApp Us",
+      "✉ Email"
+     ],
      "slop": [],
      "notJust": 0,
      "stockButtons": [],
-     "emDashes": 9,
+     "emDashes": 11,
      "proof": []
     },
     "meta": {
      "lang": "en",
-     "title": "Crazy Strength — Coached Strength Training, Amesbury",
-     "description": "Coached strength training gym in Amesbury, Wiltshire. Powerlifting, weightlifting, Ladies That Lift, Legends, Cubs. Free taster session. No experience needed.",
+     "title": "Beginner and Competition Powerlifting in Amesbury | Crazy Strength",
+     "description": "Coached powerlifting in Amesbury, near Salisbury. Learn the squat, bench press and deadlift, start as a beginner or prepare for your first competition.",
      "viewport": true
     },
     "hidden": []
@@ -610,9 +1063,9 @@
   {
    "width": 768,
    "motion": {
-    "elements": 35,
-    "css": 1,
-    "transitions": 34,
+    "elements": 7,
+    "css": 0,
+    "transitions": 7,
     "scripted": 0
    },
    "collisions": [],
@@ -621,304 +1074,380 @@
     "v": 1,
     "vw": 768,
     "vh": 1024,
-    "docH": 8847,
+    "docH": 4359,
     "dpr": 1,
-    "url": "http://127.0.0.1:41547/mockup.html",
+    "url": "https://crazystrength.co.uk/powerlifting",
     "headings": [
      {
       "tag": "h1",
-      "text": "COACHED FROM DAY ONE.",
-      "size": 76.8,
-      "lines": 2,
-      "top": 643,
+      "text": "Coached powerlifting in Amesbury",
+      "size": 53.76,
+      "lines": 1,
+      "top": 212,
       "family": "Bebas Neue",
-      "weight": 400,
+      "weight": 700,
       "align": "start",
       "accentWord": false,
-      "sel": "h1#hero-h1"
+      "sel": "div.phero-c > h1.ptitle"
      },
      {
       "tag": "h2",
-      "text": "FIND YOUR PROGRAMME",
+      "text": "Three Lifts. Real Strength.",
       "size": 32,
       "lines": 1,
-      "top": 1413,
+      "top": 727,
       "family": "Bebas Neue",
-      "weight": 400,
+      "weight": 700,
       "align": "start",
       "accentWord": false,
-      "sel": "h2#finder-title"
-     },
-     {
-      "tag": "h3",
-      "text": "POWERLIFTING",
-      "size": 25.6,
-      "lines": 1,
-      "top": 1664,
-      "family": "Bebas Neue",
-      "weight": 400,
-      "align": "start",
-      "accentWord": false,
-      "sel": "article.prog-card > h3"
-     },
-     {
-      "tag": "h3",
-      "text": "OLYMPIC WEIGHTLIFTING",
-      "size": 25.6,
-      "lines": 1,
-      "top": 1664,
-      "family": "Bebas Neue",
-      "weight": 400,
-      "align": "start",
-      "accentWord": false,
-      "sel": "article.prog-card > h3"
-     },
-     {
-      "tag": "h3",
-      "text": "LADIES THAT LIFT",
-      "size": 25.6,
-      "lines": 1,
-      "top": 2041,
-      "family": "Bebas Neue",
-      "weight": 400,
-      "align": "start",
-      "accentWord": false,
-      "sel": "article.prog-card > h3"
-     },
-     {
-      "tag": "h3",
-      "text": "LEGENDS THAT LIFT",
-      "size": 25.6,
-      "lines": 1,
-      "top": 2041,
-      "family": "Bebas Neue",
-      "weight": 400,
-      "align": "start",
-      "accentWord": false,
-      "sel": "article.prog-card > h3"
-     },
-     {
-      "tag": "h3",
-      "text": "CUBS PROGRAMME",
-      "size": 25.6,
-      "lines": 1,
-      "top": 2418,
-      "family": "Bebas Neue",
-      "weight": 400,
-      "align": "start",
-      "accentWord": false,
-      "sel": "article.prog-card > h3"
-     },
-     {
-      "tag": "h3",
-      "text": "OPEN GYM",
-      "size": 25.6,
-      "lines": 1,
-      "top": 2418,
-      "family": "Bebas Neue",
-      "weight": 400,
-      "align": "start",
-      "accentWord": false,
-      "sel": "article.prog-card > h3"
-     },
-     {
-      "tag": "h3",
-      "text": "SEMI-REMOTE COACHING",
-      "size": 25.6,
-      "lines": 1,
-      "top": 2772,
-      "family": "Bebas Neue",
-      "weight": 400,
-      "align": "start",
-      "accentWord": false,
-      "sel": "article.prog-card > h3"
-     },
-     {
-      "tag": "h3",
-      "text": "PERSONAL TRAINING",
-      "size": 25.6,
-      "lines": 1,
-      "top": 2772,
-      "family": "Bebas Neue",
-      "weight": 400,
-      "align": "start",
-      "accentWord": false,
-      "sel": "article.prog-card > h3"
+      "sel": "div.reveal > h2.stitle"
      },
      {
       "tag": "h2",
-      "text": "HOW IT WORKS",
-      "size": 40,
-      "lines": 1,
-      "top": 3222,
-      "family": "Bebas Neue",
-      "weight": 400,
-      "align": "start",
-      "accentWord": false,
-      "sel": "h2#process-title"
-     },
-     {
-      "tag": "h2",
-      "text": "BOOK A FREE TASTER",
+      "text": "Timetable",
       "size": 32,
       "lines": 1,
-      "top": 3371,
+      "top": 1591,
       "family": "Bebas Neue",
-      "weight": 400,
+      "weight": 700,
       "align": "start",
       "accentWord": false,
-      "sel": "div.process-step-text > h2"
+      "sel": "div.reveal > h2.stitle"
      },
      {
       "tag": "h2",
-      "text": "EVERY SESSION IS COACHED",
+      "text": "Powerlifting Membership",
       "size": 32,
       "lines": 1,
-      "top": 3783,
+      "top": 2053,
       "family": "Bebas Neue",
-      "weight": 400,
+      "weight": 700,
       "align": "start",
       "accentWord": false,
-      "sel": "div.process-step-text > h2"
+      "sel": "div.reveal > h2.stitle"
      },
      {
       "tag": "h2",
-      "text": "PICK YOUR PATH",
+      "text": "Your Powerlifting Coaches",
       "size": 32,
       "lines": 1,
-      "top": 4118,
+      "top": 2794,
       "family": "Bebas Neue",
-      "weight": 400,
+      "weight": 700,
       "align": "start",
       "accentWord": false,
-      "sel": "div.process-step-text > h2"
-     },
-     {
-      "tag": "h2",
-      "text": "WHEN YOU'RE READY, THE PLATFORM IS THERE",
-      "size": 32,
-      "lines": 2,
-      "top": 4529,
-      "family": "Bebas Neue",
-      "weight": 400,
-      "align": "start",
-      "accentWord": false,
-      "sel": "div.process-step-text > h2"
-     },
-     {
-      "tag": "h2",
-      "text": "BUILT FROM THE BARBELL UP",
-      "size": 46.08,
-      "lines": 1,
-      "top": 5858,
-      "family": "Bebas Neue",
-      "weight": 400,
-      "align": "start",
-      "accentWord": false,
-      "sel": "h2#story-title"
-     },
-     {
-      "tag": "h2",
-      "text": "THE BEACON CENTRE, AMESBURY",
-      "size": 46.08,
-      "lines": 2,
-      "top": 7239,
-      "family": "Bebas Neue",
-      "weight": 400,
-      "align": "start",
-      "accentWord": false,
-      "sel": "h2#visit-title"
+      "sel": "div.reveal > h2.stitle"
      },
      {
       "tag": "h3",
-      "text": "Address",
-      "size": 17.6,
+      "text": "Ready to Give Powerlifting a Go?",
+      "size": 35.2,
       "lines": 1,
-      "top": 7404,
+      "top": 3378,
       "family": "Bebas Neue",
-      "weight": 400,
-      "align": "start",
+      "weight": 700,
+      "align": "center",
       "accentWord": false,
-      "sel": "div.visit-cell > h3"
+      "sel": "div.taster-bar > h3"
      },
      {
-      "tag": "h3",
-      "text": "Hours",
-      "size": 17.6,
+      "tag": "h2",
+      "text": "Get Training Insights Direct",
+      "size": 30.72,
       "lines": 1,
-      "top": 7582,
+      "top": 3667,
       "family": "Bebas Neue",
-      "weight": 400,
-      "align": "start",
+      "weight": 700,
+      "align": "center",
       "accentWord": false,
-      "sel": "div.visit-cell > h3"
-     },
-     {
-      "tag": "h3",
-      "text": "Get here",
-      "size": 17.6,
-      "lines": 1,
-      "top": 7737,
-      "family": "Bebas Neue",
-      "weight": 400,
-      "align": "start",
-      "accentWord": false,
-      "sel": "div.visit-cell > h3"
-     },
-     {
-      "tag": "h4",
-      "text": "Train",
-      "size": 14.08,
-      "lines": 1,
-      "top": 8024,
-      "family": "Bebas Neue",
-      "weight": 600,
-      "align": "start",
-      "accentWord": false,
-      "sel": "div.footer-col > h4"
-     },
-     {
-      "tag": "h4",
-      "text": "Learn",
-      "size": 14.08,
-      "lines": 1,
-      "top": 8024,
-      "family": "Bebas Neue",
-      "weight": 600,
-      "align": "start",
-      "accentWord": false,
-      "sel": "div.footer-col > h4"
-     },
-     {
-      "tag": "h4",
-      "text": "Crazy Strength",
-      "size": 14.08,
-      "lines": 1,
-      "top": 8272,
-      "family": "Bebas Neue",
-      "weight": 600,
-      "align": "start",
-      "accentWord": false,
-      "sel": "div.footer-col > h4"
+      "sel": "div > h2"
      }
     ],
     "h1count": 1,
     "mainLine": {
-     "text": "COACHEDFROM DAY",
-     "size": 76.8,
-     "lines": 2,
+     "text": "Coached powerlifting in Amesbury",
+     "size": 53.76,
+     "lines": 1,
      "tag": "h1",
      "family": "Bebas Neue"
     },
     "statements": [],
-    "microLabels": [],
-    "eyebrows": [],
+    "microLabels": [
+     {
+      "text": "Shop",
+      "size": 9.92,
+      "ls": 0.09
+     },
+     {
+      "text": "Contact Us",
+      "size": 9.92,
+      "ls": 0.09
+     },
+     {
+      "text": "Amesbury · Wiltshire",
+      "size": 8,
+      "ls": 0.15
+     },
+     {
+      "text": "Crazy Strength",
+      "size": 11.2,
+      "ls": 0.1
+     },
+     {
+      "text": "› Programmes › Powerlifting",
+      "size": 11.2,
+      "ls": 0.1
+     },
+     {
+      "text": "Book a Free Taster →",
+      "size": 12.8,
+      "ls": 0.1
+     },
+     {
+      "text": "Book Free Taster →",
+      "size": 12.8,
+      "ls": 0.1
+     },
+     {
+      "text": "What Is Powerlifting?",
+      "size": 11.2,
+      "ls": 0.2
+     },
+     {
+      "text": "When We Train",
+      "size": 11.2,
+      "ls": 0.2
+     },
+     {
+      "text": "Membership Pricing",
+      "size": 11.2,
+      "ls": 0.2
+     },
+     {
+      "text": "Most Popular",
+      "size": 9.28,
+      "ls": 0.1
+     },
+     {
+      "text": "Club Membership",
+      "size": 11.2,
+      "ls": 0.14
+     },
+     {
+      "text": "Club Bespoke",
+      "size": 11.2,
+      "ls": 0.14
+     },
+     {
+      "text": "Head Coach Programme",
+      "size": 11.2,
+      "ls": 0.14
+     },
+     {
+      "text": "Get In Touch →",
+      "size": 12.8,
+      "ls": 0.1
+     },
+     {
+      "text": "WhatsApp Us",
+      "size": 12.8,
+      "ls": 0.1
+     },
+     {
+      "text": "Who’s Coaching You",
+      "size": 11.2,
+      "ls": 0.2
+     },
+     {
+      "text": "Book Your Free Taster →",
+      "size": 13.6,
+      "ls": 0.1
+     },
+     {
+      "text": "Stay in the loop",
+      "size": 11.2,
+      "ls": 0.2
+     },
+     {
+      "text": "@craig.spicer",
+      "size": 10.88,
+      "ls": 0.06
+     },
+     {
+      "text": "Powerlifting",
+      "size": 12,
+      "ls": 0.06
+     },
+     {
+      "text": "Weightlifting",
+      "size": 12,
+      "ls": 0.06
+     },
+     {
+      "text": "Ladies That Lift",
+      "size": 12,
+      "ls": 0.06
+     },
+     {
+      "text": "Legends That Lift",
+      "size": 12,
+      "ls": 0.06
+     },
+     {
+      "text": "CUBS",
+      "size": 12,
+      "ls": 0.06
+     },
+     {
+      "text": "Class Packs",
+      "size": 12,
+      "ls": 0.06
+     },
+     {
+      "text": "Team",
+      "size": 12,
+      "ls": 0.06
+     },
+     {
+      "text": "Events",
+      "size": 12,
+      "ls": 0.06
+     },
+     {
+      "text": "Education",
+      "size": 12,
+      "ls": 0.06
+     },
+     {
+      "text": "Blog",
+      "size": 12,
+      "ls": 0.06
+     },
+     {
+      "text": "Privacy Policy",
+      "size": 12,
+      "ls": 0.06
+     },
+     {
+      "text": "Contact",
+      "size": 12,
+      "ls": 0.06
+     },
+     {
+      "text": "📞 WhatsApp Us",
+      "size": 11.84,
+      "ls": 0.08
+     },
+     {
+      "text": "✉ Email",
+      "size": 11.84,
+      "ls": 0.08
+     }
+    ],
+    "eyebrows": [
+     {
+      "text": "Crazy Strength › Programmes › Powerlifting",
+      "heading": "Coached powerlifting in Amesbury",
+      "pill": false
+     },
+     {
+      "text": "What Is Powerlifting?",
+      "heading": "Three Lifts. Real Strength.",
+      "pill": false
+     },
+     {
+      "text": "When We Train",
+      "heading": "Timetable",
+      "pill": false
+     },
+     {
+      "text": "Membership Pricing",
+      "heading": "Powerlifting Membership",
+      "pill": false
+     },
+     {
+      "text": "Who’s Coaching You",
+      "heading": "Your Powerlifting Coaches",
+      "pill": false
+     },
+     {
+      "text": "Stay in the loop",
+      "heading": "Get Training Insights Direct",
+      "pill": false
+     }
+    ],
     "mono": [],
     "indexNums": [],
-    "rules": [],
-    "outlined": [],
+    "rules": [
+     {
+      "sel": "div",
+      "sides": "bottom"
+     },
+     {
+      "sel": "nav",
+      "sides": "bottom"
+     },
+     {
+      "sel": "div",
+      "sides": "bottom"
+     },
+     {
+      "sel": "section",
+      "sides": "top"
+     },
+     {
+      "sel": "footer",
+      "sides": "top"
+     },
+     {
+      "sel": "div.fi > div",
+      "sides": "top"
+     },
+     {
+      "sel": "div",
+      "sides": "top"
+     }
+    ],
+    "outlined": [
+     {
+      "sel": "section > div.feat-grid.reveal",
+      "w": 691,
+      "h": 447
+     },
+     {
+      "sel": "div.reveal > div",
+      "w": 691,
+      "h": 323
+     },
+     {
+      "sel": "div > div",
+      "w": 229,
+      "h": 321
+     },
+     {
+      "sel": "div > div",
+      "w": 229,
+      "h": 321
+     },
+     {
+      "sel": "div > div",
+      "w": 229,
+      "h": 321
+     },
+     {
+      "sel": "section > div.coach-grid.reveal",
+      "w": 691,
+      "h": 329
+     }
+    ],
     "dashed": 0,
-    "gradients": [],
+    "gradients": [
+     {
+      "sel": "div.phero > div.phero-bg",
+      "text": false,
+      "area": 0.52
+     }
+    ],
     "shadows": [],
     "textShadows": 0,
     "glass": [],
@@ -926,15 +1455,12 @@
      2,
      2,
      2,
-     100,
-     100,
-     100,
-     100,
-     100,
-     100,
-     100,
      2,
-     2,
+     50,
+     50,
+     50,
+     50,
+     50,
      2,
      2,
      2,
@@ -944,99 +1470,279 @@
     "colours": {
      "ground": "#0a0a0a",
      "fields": [
+      "#111111",
       "#0a0a0a",
-      "#e8220a",
-      "#1c1c1c",
-      "#141414"
+      "#282828",
+      "#e8220a"
      ],
      "buttons": [
       "#e8220a",
-      "#0f7a3e",
-      "#f4f4ef",
-      "#141414",
-      "#ffffff"
+      "#ffffff",
+      "#282828",
+      "#25d366"
      ],
      "links": [
-      "#ffffff",
-      "#f4f4ef",
-      "#f03018",
-      "#e8220a"
+      "#e8220a",
+      "#0000ee",
+      "#f4f4ef"
      ],
      "headings": [
       "#f4f4ef",
-      "#ff4422"
+      "#ffffff"
      ],
-     "gradients": [],
+     "gradients": [
+      "#000000"
+     ],
      "accentText": [
-      "#f4f4ef",
-      "#f03018",
-      "#ffffff",
       "#999999",
-      "#e8220a"
+      "#0000ee",
+      "#e8220a",
+      "#ffffff",
+      "#f4f4ef",
+      "#cccccc"
      ],
      "smallFields": [
+      "#000000",
       "#0a0a0a",
+      "#111111",
       "#e8220a",
-      "#0f7a3e",
-      "#1c1c1c",
-      "#141414",
-      "#ffffff"
+      "#ffffff",
+      "#282828",
+      "#191919",
+      "#25d366"
      ]
     },
     "iconCards": [],
     "cardRows": [
      {
-      "sel": "section#programmes > div.prog-grid",
-      "n": 8
+      "sel": "section > div.feat-grid.reveal",
+      "n": 4
+     },
+     {
+      "sel": "div.reveal > div",
+      "n": 3
+     },
+     {
+      "sel": "section > div.coach-grid.reveal",
+      "n": 5
      }
     ],
-    "centredShare": 0,
+    "centredShare": 0.16,
     "families": [
      {
       "family": "DM Sans",
-      "chars": 5179,
+      "chars": 3412,
       "web": true,
       "loaded": true,
       "system": false
      },
      {
       "family": "Bebas Neue",
-      "chars": 627,
+      "chars": 259,
       "web": true,
       "loaded": true,
       "system": false
-     },
-     {
-      "family": "Arial",
-      "chars": 1,
-      "web": false,
-      "loaded": false,
-      "system": true
      }
     ],
     "sizes": [
+     8,
+     9,
+     10,
+     11,
+     12,
      13,
      14,
      15,
      16,
-     18,
+     19,
      21,
      22,
-     24,
-     26,
+     23,
+     31,
      32,
-     40,
-     46,
-     77,
-     115
+     35,
+     45,
+     54
     ],
     "bodySize": 14.4,
-    "smallRunning": 12,
-    "runningCount": 21,
-    "tinyText": [],
-    "contrast": [],
+    "smallRunning": 7,
+    "runningCount": 12,
+    "tinyText": [
+     "Shop",
+     "Contact Us",
+     "Amesbury · Wiltshire",
+     "Crazy Strength",
+     "› Programmes › Powerlifting",
+     "What Is Powerlifting?",
+     "When We Train",
+     "Membership Pricing",
+     "Most Popular",
+     "Club Membership"
+    ],
+    "contrast": [
+     {
+      "text": "Strength",
+      "ratio": 4.4,
+      "need": 4.5,
+      "size": 23.2,
+      "fg": "#e8220a",
+      "bg": "#0a0a0a"
+     },
+     {
+      "text": "Training for your first competition →",
+      "ratio": 4.19,
+      "need": 4.5,
+      "size": 16,
+      "fg": "#e8220a",
+      "bg": "#111111"
+     },
+     {
+      "text": "Book a Free Taster →",
+      "ratio": 4.08,
+      "need": 4.5,
+      "size": 12.8,
+      "fg": "#f4f4ef",
+      "bg": "#e8220a"
+     },
+     {
+      "text": "Book a free taster session — no commitme",
+      "ratio": 3.27,
+      "need": 4.5,
+      "size": 12.8,
+      "fg": "#fad3ce",
+      "bg": "#e8220a"
+     },
+     {
+      "text": "What Is Powerlifting?",
+      "ratio": 4.4,
+      "need": 4.5,
+      "size": 11.2,
+      "fg": "#e8220a",
+      "bg": "#0a0a0a"
+     },
+     {
+      "text": "When We Train",
+      "ratio": 4.19,
+      "need": 4.5,
+      "size": 11.2,
+      "fg": "#e8220a",
+      "bg": "#111111"
+     },
+     {
+      "text": "Membership Pricing",
+      "ratio": 4.19,
+      "need": 4.5,
+      "size": 11.2,
+      "fg": "#e8220a",
+      "bg": "#111111"
+     },
+     {
+      "text": "Privacy Policy",
+      "ratio": 2.01,
+      "need": 4.5,
+      "size": 16,
+      "fg": "#0000ee",
+      "bg": "#111111"
+     },
+     {
+      "text": "Get In Touch →",
+      "ratio": 4.08,
+      "need": 4.5,
+      "size": 12.8,
+      "fg": "#f4f4ef",
+      "bg": "#e8220a"
+     },
+     {
+      "text": "Who’s Coaching You",
+      "ratio": 4.4,
+      "need": 4.5,
+      "size": 11.2,
+      "fg": "#e8220a",
+      "bg": "#0a0a0a"
+     },
+     {
+      "text": "CS",
+      "ratio": 3.66,
+      "need": 4.5,
+      "size": 20.8,
+      "fg": "#e8220a",
+      "bg": "#2e1a18"
+     },
+     {
+      "text": "AM",
+      "ratio": 3.66,
+      "need": 4.5,
+      "size": 20.8,
+      "fg": "#e8220a",
+      "bg": "#2e1a18"
+     },
+     {
+      "text": "DL",
+      "ratio": 3.66,
+      "need": 4.5,
+      "size": 20.8,
+      "fg": "#e8220a",
+      "bg": "#2e1a18"
+     },
+     {
+      "text": "CY",
+      "ratio": 3.66,
+      "need": 4.5,
+      "size": 20.8,
+      "fg": "#e8220a",
+      "bg": "#2e1a18"
+     },
+     {
+      "text": "SM",
+      "ratio": 3.66,
+      "need": 4.5,
+      "size": 20.8,
+      "fg": "#e8220a",
+      "bg": "#2e1a18"
+     },
+     {
+      "text": "Your first session is free. No experienc",
+      "ratio": 3.27,
+      "need": 4.5,
+      "size": 14.4,
+      "fg": "#fad3ce",
+      "bg": "#e8220a"
+     },
+     {
+      "text": "Stay in the loop",
+      "ratio": 4.19,
+      "need": 4.5,
+      "size": 11.2,
+      "fg": "#e8220a",
+      "bg": "#111111"
+     },
+     {
+      "text": "Privacy Policy",
+      "ratio": 4.19,
+      "need": 4.5,
+      "size": 11.52,
+      "fg": "#e8220a",
+      "bg": "#111111"
+     },
+     {
+      "text": "Strength",
+      "ratio": 4.19,
+      "need": 4.5,
+      "size": 19.2,
+      "fg": "#e8220a",
+      "bg": "#111111"
+     },
+     {
+      "text": "📞 WhatsApp Us",
+      "ratio": 1.98,
+      "need": 4.5,
+      "size": 11.84,
+      "fg": "#ffffff",
+      "bg": "#25d366"
+     }
+    ],
     "pictures": {
-     "raster": 6,
+     "raster": 0,
      "video": 0,
      "ui": 0,
      "bg": 0,
@@ -1045,56 +1751,55 @@
      "broken": [],
      "upscaled": [],
      "noAlt": 0,
-     "sources": [
-      "hero-competition.jpg",
-      "community-group.jpg",
-      "coaching-deadlift.jpg",
-      "craig-lift-wide.jpg",
-      "craig-compete.jpg",
-      "craig-about.jpg"
-     ],
-     "repeated": [
-      "community-group.jpg x2"
-     ],
-     "real": 6
+     "sources": [],
+     "repeated": [],
+     "real": 0
     },
     "overflow": {
      "scrollWidth": 768,
      "offenders": []
     },
     "actions": {
-     "buttons": 16,
+     "buttons": 8,
      "firstScreen": [
-      "Book a Free Taster",
-      "Message Us on WhatsApp",
-      "See All Programmes"
+      "Book a Free Taster →",
+      "Book Free Taster →",
+      "📞 WhatsApp Us",
+      "✉ Email"
      ],
-     "feedback": 16
+     "feedback": 5
     },
     "tap": [],
     "firstScreen": {
-     "h1Size": 76.8,
-     "h1Top": 643,
-     "largestMedia": 0.91,
-     "mainSize": 76.8
+     "h1Size": 53.76,
+     "h1Top": 212,
+     "largestMedia": 0,
+     "mainSize": 53.76
     },
     "empty": {
-     "screens": 8,
+     "screens": 4,
      "empty": []
     },
     "copy": {
      "placeholder": [],
-     "emoji": [],
+     "emoji": [
+      "📷 @crazystrengthhq",
+      "🗣 Crazy Strength UK",
+      "▶ @crazy.strength",
+      "📞 WhatsApp: +44 7734 824897",
+      "📞 WhatsApp Us",
+      "✉ Email"
+     ],
      "slop": [],
      "notJust": 0,
      "stockButtons": [],
-     "emDashes": 9,
+     "emDashes": 11,
      "proof": []
     },
     "meta": {
      "lang": "en",
-     "title": "Crazy Strength — Coached Strength Training, Amesbury",
-     "description": "Coached strength training gym in Amesbury, Wiltshire. Powerlifting, weightlifting, Ladies That Lift, Legends, Cubs. Free taster session. No experience needed.",
+     "title": "Beginner and Competition Powerlifting in Amesbury | Crazy Strength",
+     "description": "Coached powerlifting in Amesbury, near Salisbury. Learn the squat, bench press and deadlift, start as a beginner or prepare for your first competition.",
      "viewport": true
     },
     "hidden": []
@@ -1103,315 +1808,405 @@
   {
    "width": 390,
    "motion": {
-    "elements": 35,
-    "css": 1,
-    "transitions": 34,
+    "elements": 7,
+    "css": 0,
+    "transitions": 7,
     "scripted": 0
    },
-   "collisions": [],
+   "collisions": [
+    {
+     "text": "Three Lifts. Real Strength.",
+     "by": "div.mob-prog-bar"
+    },
+    {
+     "text": "Get In Touch →",
+     "by": "a"
+    }
+   ],
    "errors": [],
    "probe": {
     "v": 1,
     "vw": 390,
     "vh": 844,
-    "docH": 11252,
+    "docH": 5921,
     "dpr": 1,
-    "url": "http://127.0.0.1:41547/mockup.html",
+    "url": "https://crazystrength.co.uk/powerlifting",
     "headings": [
      {
       "tag": "h1",
-      "text": "COACHED FROM DAY ONE.",
-      "size": 56,
-      "lines": 2,
-      "top": 354,
+      "text": "Coached powerlifting in Amesbury",
+      "size": 50.7,
+      "lines": 3,
+      "top": 71,
       "family": "Bebas Neue",
-      "weight": 400,
+      "weight": 700,
       "align": "start",
       "accentWord": false,
-      "sel": "h1#hero-h1"
+      "sel": "div.phero-c > h1.ptitle"
      },
      {
       "tag": "h2",
-      "text": "FIND YOUR PROGRAMME",
-      "size": 32,
+      "text": "Three Lifts. Real Strength.",
+      "size": 27.3,
       "lines": 1,
-      "top": 1288,
+      "top": 765,
       "family": "Bebas Neue",
-      "weight": 400,
+      "weight": 700,
       "align": "start",
       "accentWord": false,
-      "sel": "h2#finder-title"
-     },
-     {
-      "tag": "h3",
-      "text": "POWERLIFTING",
-      "size": 25.6,
-      "lines": 1,
-      "top": 1658,
-      "family": "Bebas Neue",
-      "weight": 400,
-      "align": "start",
-      "accentWord": false,
-      "sel": "article.prog-card > h3"
-     },
-     {
-      "tag": "h3",
-      "text": "OLYMPIC WEIGHTLIFTING",
-      "size": 25.6,
-      "lines": 1,
-      "top": 2035,
-      "family": "Bebas Neue",
-      "weight": 400,
-      "align": "start",
-      "accentWord": false,
-      "sel": "article.prog-card > h3"
-     },
-     {
-      "tag": "h3",
-      "text": "LADIES THAT LIFT",
-      "size": 25.6,
-      "lines": 1,
-      "top": 2390,
-      "family": "Bebas Neue",
-      "weight": 400,
-      "align": "start",
-      "accentWord": false,
-      "sel": "article.prog-card > h3"
-     },
-     {
-      "tag": "h3",
-      "text": "LEGENDS THAT LIFT",
-      "size": 25.6,
-      "lines": 1,
-      "top": 2744,
-      "family": "Bebas Neue",
-      "weight": 400,
-      "align": "start",
-      "accentWord": false,
-      "sel": "article.prog-card > h3"
-     },
-     {
-      "tag": "h3",
-      "text": "CUBS PROGRAMME",
-      "size": 25.6,
-      "lines": 1,
-      "top": 3098,
-      "family": "Bebas Neue",
-      "weight": 400,
-      "align": "start",
-      "accentWord": false,
-      "sel": "article.prog-card > h3"
-     },
-     {
-      "tag": "h3",
-      "text": "OPEN GYM",
-      "size": 25.6,
-      "lines": 1,
-      "top": 3452,
-      "family": "Bebas Neue",
-      "weight": 400,
-      "align": "start",
-      "accentWord": false,
-      "sel": "article.prog-card > h3"
-     },
-     {
-      "tag": "h3",
-      "text": "SEMI-REMOTE COACHING",
-      "size": 25.6,
-      "lines": 1,
-      "top": 3806,
-      "family": "Bebas Neue",
-      "weight": 400,
-      "align": "start",
-      "accentWord": false,
-      "sel": "article.prog-card > h3"
-     },
-     {
-      "tag": "h3",
-      "text": "PERSONAL TRAINING",
-      "size": 25.6,
-      "lines": 1,
-      "top": 4160,
-      "family": "Bebas Neue",
-      "weight": 400,
-      "align": "start",
-      "accentWord": false,
-      "sel": "article.prog-card > h3"
+      "sel": "div.reveal > h2.stitle"
      },
      {
       "tag": "h2",
-      "text": "HOW IT WORKS",
-      "size": 40,
+      "text": "Timetable",
+      "size": 27.3,
       "lines": 1,
-      "top": 4609,
+      "top": 2054,
       "family": "Bebas Neue",
-      "weight": 400,
+      "weight": 700,
       "align": "start",
       "accentWord": false,
-      "sel": "h2#process-title"
+      "sel": "div.reveal > h2.stitle"
      },
      {
       "tag": "h2",
-      "text": "BOOK A FREE TASTER",
-      "size": 32,
+      "text": "Powerlifting Membership",
+      "size": 27.3,
       "lines": 1,
-      "top": 4980,
+      "top": 2583,
       "family": "Bebas Neue",
-      "weight": 400,
+      "weight": 700,
       "align": "start",
       "accentWord": false,
-      "sel": "div.process-step-text > h2"
+      "sel": "div.reveal > h2.stitle"
      },
      {
       "tag": "h2",
-      "text": "EVERY SESSION IS COACHED",
-      "size": 32,
+      "text": "Your Powerlifting Coaches",
+      "size": 27.3,
       "lines": 1,
-      "top": 5583,
+      "top": 3738,
       "family": "Bebas Neue",
-      "weight": 400,
+      "weight": 700,
       "align": "start",
       "accentWord": false,
-      "sel": "div.process-step-text > h2"
-     },
-     {
-      "tag": "h2",
-      "text": "PICK YOUR PATH",
-      "size": 32,
-      "lines": 1,
-      "top": 6110,
-      "family": "Bebas Neue",
-      "weight": 400,
-      "align": "start",
-      "accentWord": false,
-      "sel": "div.process-step-text > h2"
-     },
-     {
-      "tag": "h2",
-      "text": "WHEN YOU'RE READY, THE PLATFORM IS THERE",
-      "size": 32,
-      "lines": 2,
-      "top": 6716,
-      "family": "Bebas Neue",
-      "weight": 400,
-      "align": "start",
-      "accentWord": false,
-      "sel": "div.process-step-text > h2"
-     },
-     {
-      "tag": "h2",
-      "text": "BUILT FROM THE BARBELL UP",
-      "size": 32,
-      "lines": 1,
-      "top": 7951,
-      "family": "Bebas Neue",
-      "weight": 400,
-      "align": "start",
-      "accentWord": false,
-      "sel": "h2#story-title"
-     },
-     {
-      "tag": "h2",
-      "text": "THE BEACON CENTRE, AMESBURY",
-      "size": 40,
-      "lines": 2,
-      "top": 9249,
-      "family": "Bebas Neue",
-      "weight": 400,
-      "align": "start",
-      "accentWord": false,
-      "sel": "h2#visit-title"
+      "sel": "div.reveal > h2.stitle"
      },
      {
       "tag": "h3",
-      "text": "Address",
-      "size": 17.6,
+      "text": "Ready to Give Powerlifting a Go?",
+      "size": 25.6,
       "lines": 1,
-      "top": 9402,
+      "top": 4765,
       "family": "Bebas Neue",
-      "weight": 400,
-      "align": "start",
+      "weight": 700,
+      "align": "center",
       "accentWord": false,
-      "sel": "div.visit-cell > h3"
+      "sel": "div.taster-bar > h3"
      },
      {
-      "tag": "h3",
-      "text": "Hours",
-      "size": 17.6,
+      "tag": "h2",
+      "text": "Get Training Insights Direct",
+      "size": 28.8,
       "lines": 1,
-      "top": 9580,
+      "top": 5056,
       "family": "Bebas Neue",
-      "weight": 400,
-      "align": "start",
+      "weight": 700,
+      "align": "center",
       "accentWord": false,
-      "sel": "div.visit-cell > h3"
-     },
-     {
-      "tag": "h3",
-      "text": "Get here",
-      "size": 17.6,
-      "lines": 1,
-      "top": 9735,
-      "family": "Bebas Neue",
-      "weight": 400,
-      "align": "start",
-      "accentWord": false,
-      "sel": "div.visit-cell > h3"
-     },
-     {
-      "tag": "h4",
-      "text": "Train",
-      "size": 14.08,
-      "lines": 1,
-      "top": 10199,
-      "family": "Bebas Neue",
-      "weight": 600,
-      "align": "start",
-      "accentWord": false,
-      "sel": "div.footer-col > h4"
-     },
-     {
-      "tag": "h4",
-      "text": "Learn",
-      "size": 14.08,
-      "lines": 1,
-      "top": 10447,
-      "family": "Bebas Neue",
-      "weight": 600,
-      "align": "start",
-      "accentWord": false,
-      "sel": "div.footer-col > h4"
-     },
-     {
-      "tag": "h4",
-      "text": "Crazy Strength",
-      "size": 14.08,
-      "lines": 1,
-      "top": 10633,
-      "family": "Bebas Neue",
-      "weight": 600,
-      "align": "start",
-      "accentWord": false,
-      "sel": "div.footer-col > h4"
+      "sel": "div > h2"
      }
     ],
     "h1count": 1,
     "mainLine": {
-     "text": "COACHEDFROM DAY",
-     "size": 56,
-     "lines": 2,
+     "text": "Coached powerlifting in Amesbury",
+     "size": 50.7,
+     "lines": 3,
      "tag": "h1",
      "family": "Bebas Neue"
     },
     "statements": [],
-    "microLabels": [],
-    "eyebrows": [],
+    "microLabels": [
+     {
+      "text": "Shop",
+      "size": 9.92,
+      "ls": 0.09
+     },
+     {
+      "text": "Contact Us",
+      "size": 9.92,
+      "ls": 0.09
+     },
+     {
+      "text": "Amesbury · Wiltshire",
+      "size": 8,
+      "ls": 0.15
+     },
+     {
+      "text": "Crazy Strength",
+      "size": 11.2,
+      "ls": 0.1
+     },
+     {
+      "text": "› Programmes › Powerlifting",
+      "size": 11.2,
+      "ls": 0.1
+     },
+     {
+      "text": "Book a Free Taster →",
+      "size": 12.48,
+      "ls": 0.1
+     },
+     {
+      "text": "Book Free Taster →",
+      "size": 12.8,
+      "ls": 0.1
+     },
+     {
+      "text": "What Is Powerlifting?",
+      "size": 11.2,
+      "ls": 0.2
+     },
+     {
+      "text": "When We Train",
+      "size": 11.2,
+      "ls": 0.2
+     },
+     {
+      "text": "Membership Pricing",
+      "size": 11.2,
+      "ls": 0.2
+     },
+     {
+      "text": "Most Popular",
+      "size": 9.28,
+      "ls": 0.1
+     },
+     {
+      "text": "Club Membership",
+      "size": 11.2,
+      "ls": 0.14
+     },
+     {
+      "text": "Club Bespoke",
+      "size": 11.2,
+      "ls": 0.14
+     },
+     {
+      "text": "Head Coach Programme",
+      "size": 11.2,
+      "ls": 0.14
+     },
+     {
+      "text": "Get In Touch →",
+      "size": 12.48,
+      "ls": 0.1
+     },
+     {
+      "text": "WhatsApp Us",
+      "size": 12.48,
+      "ls": 0.1
+     },
+     {
+      "text": "Who’s Coaching You",
+      "size": 11.2,
+      "ls": 0.2
+     },
+     {
+      "text": "Book Your Free Taster →",
+      "size": 13.6,
+      "ls": 0.1
+     },
+     {
+      "text": "Stay in the loop",
+      "size": 11.2,
+      "ls": 0.2
+     },
+     {
+      "text": "@craig.spicer",
+      "size": 10.88,
+      "ls": 0.06
+     },
+     {
+      "text": "Powerlifting",
+      "size": 12,
+      "ls": 0.06
+     },
+     {
+      "text": "Weightlifting",
+      "size": 12,
+      "ls": 0.06
+     },
+     {
+      "text": "Ladies That Lift",
+      "size": 12,
+      "ls": 0.06
+     },
+     {
+      "text": "Legends That Lift",
+      "size": 12,
+      "ls": 0.06
+     },
+     {
+      "text": "CUBS",
+      "size": 12,
+      "ls": 0.06
+     },
+     {
+      "text": "Class Packs",
+      "size": 12,
+      "ls": 0.06
+     },
+     {
+      "text": "Team",
+      "size": 12,
+      "ls": 0.06
+     },
+     {
+      "text": "Events",
+      "size": 12,
+      "ls": 0.06
+     },
+     {
+      "text": "Education",
+      "size": 12,
+      "ls": 0.06
+     },
+     {
+      "text": "Blog",
+      "size": 12,
+      "ls": 0.06
+     },
+     {
+      "text": "Privacy Policy",
+      "size": 12,
+      "ls": 0.06
+     },
+     {
+      "text": "Contact",
+      "size": 12,
+      "ls": 0.06
+     },
+     {
+      "text": "📞 WhatsApp Us",
+      "size": 11.84,
+      "ls": 0.08
+     },
+     {
+      "text": "✉ Email",
+      "size": 11.84,
+      "ls": 0.08
+     },
+     {
+      "text": "Free Taster →",
+      "size": 12,
+      "ls": 0.1
+     }
+    ],
+    "eyebrows": [
+     {
+      "text": "Crazy Strength › Programmes › Powerlifting",
+      "heading": "Coached powerlifting in Amesbury",
+      "pill": false
+     },
+     {
+      "text": "What Is Powerlifting?",
+      "heading": "Three Lifts. Real Strength.",
+      "pill": false
+     },
+     {
+      "text": "When We Train",
+      "heading": "Timetable",
+      "pill": false
+     },
+     {
+      "text": "Membership Pricing",
+      "heading": "Powerlifting Membership",
+      "pill": false
+     },
+     {
+      "text": "Who’s Coaching You",
+      "heading": "Your Powerlifting Coaches",
+      "pill": false
+     },
+     {
+      "text": "Stay in the loop",
+      "heading": "Get Training Insights Direct",
+      "pill": false
+     }
+    ],
     "mono": [],
     "indexNums": [],
-    "rules": [],
-    "outlined": [],
+    "rules": [
+     {
+      "sel": "div",
+      "sides": "bottom"
+     },
+     {
+      "sel": "nav",
+      "sides": "bottom"
+     },
+     {
+      "sel": "div",
+      "sides": "bottom"
+     },
+     {
+      "sel": "section",
+      "sides": "top"
+     },
+     {
+      "sel": "footer",
+      "sides": "top"
+     },
+     {
+      "sel": "div.fi > div",
+      "sides": "top"
+     },
+     {
+      "sel": "div",
+      "sides": "top"
+     }
+    ],
+    "outlined": [
+     {
+      "sel": "section > div.feat-grid.reveal",
+      "w": 351,
+      "h": 872
+     },
+     {
+      "sel": "div.reveal > div",
+      "w": 351,
+      "h": 678
+     },
+     {
+      "sel": "div > div",
+      "w": 349,
+      "h": 232
+     },
+     {
+      "sel": "div > div",
+      "w": 349,
+      "h": 209
+     },
+     {
+      "sel": "div > div",
+      "w": 349,
+      "h": 232
+     },
+     {
+      "sel": "section > div.coach-grid.reveal",
+      "w": 351,
+      "h": 773
+     }
+    ],
     "dashed": 0,
-    "gradients": [],
+    "gradients": [
+     {
+      "sel": "div.phero > div.phero-bg",
+      "text": false,
+      "area": 0.639
+     }
+    ],
     "shadows": [],
     "textShadows": 0,
     "glass": [],
@@ -1419,14 +2214,12 @@
      2,
      2,
      2,
-     100,
-     100,
-     100,
-     100,
-     100,
-     100,
-     100,
      2,
+     50,
+     50,
+     50,
+     50,
+     50,
      2,
      2,
      2,
@@ -1437,93 +2230,267 @@
     "colours": {
      "ground": "#0a0a0a",
      "fields": [
-      "#0a0a0a",
+      "#111111",
       "#e8220a",
-      "#1c1c1c",
-      "#141414"
+      "#0a0a0a",
+      "#282828",
+      "#191919"
      ],
      "buttons": [
       "#e8220a",
-      "#0f7a3e",
-      "#f4f4ef",
-      "#141414",
-      "#ffffff"
+      "#ffffff",
+      "#282828",
+      "#25d366"
      ],
      "links": [
-      "#ffffff",
-      "#f4f4ef",
-      "#f03018",
-      "#e8220a"
+      "#e8220a",
+      "#0000ee",
+      "#f4f4ef"
      ],
      "headings": [
       "#f4f4ef",
-      "#ff4422"
+      "#ffffff"
      ],
-     "gradients": [],
+     "gradients": [
+      "#000000"
+     ],
      "accentText": [
-      "#f4f4ef",
-      "#f03018",
-      "#ffffff",
       "#999999",
-      "#e8220a"
+      "#0000ee",
+      "#e8220a",
+      "#ffffff",
+      "#f4f4ef",
+      "#cccccc"
      ],
      "smallFields": [
+      "#000000",
       "#0a0a0a",
+      "#111111",
       "#e8220a",
-      "#0f7a3e",
-      "#1c1c1c",
-      "#141414",
-      "#ffffff"
+      "#ffffff",
+      "#282828",
+      "#191919",
+      "#25d366"
      ]
     },
     "iconCards": [],
     "cardRows": [],
-    "centredShare": 0,
+    "centredShare": 0.13,
     "families": [
      {
       "family": "DM Sans",
-      "chars": 5179,
+      "chars": 3468,
       "web": true,
       "loaded": true,
       "system": false
      },
      {
       "family": "Bebas Neue",
-      "chars": 627,
+      "chars": 259,
       "web": true,
       "loaded": true,
       "system": false
-     },
-     {
-      "family": "Arial",
-      "chars": 1,
-      "web": false,
-      "loaded": false,
-      "system": true
      }
     ],
     "sizes": [
+     8,
+     9,
+     10,
+     11,
+     12,
      13,
      14,
      15,
      16,
-     18,
+     19,
      21,
      22,
-     24,
+     23,
      26,
-     32,
-     40,
-     56,
-     64
+     27,
+     29,
+     45,
+     51
     ],
     "bodySize": 14.4,
-    "smallRunning": 12,
-    "runningCount": 21,
-    "tinyText": [],
-    "contrast": [],
+    "smallRunning": 8,
+    "runningCount": 12,
+    "tinyText": [
+     "Shop",
+     "Contact Us",
+     "Amesbury · Wiltshire",
+     "Crazy Strength",
+     "› Programmes › Powerlifting",
+     "Book a Free Taster →",
+     "What Is Powerlifting?",
+     "When We Train",
+     "Membership Pricing",
+     "Most Popular"
+    ],
+    "contrast": [
+     {
+      "text": "Strength",
+      "ratio": 4.4,
+      "need": 4.5,
+      "size": 23.2,
+      "fg": "#e8220a",
+      "bg": "#0a0a0a"
+     },
+     {
+      "text": "Training for your first competition →",
+      "ratio": 4.19,
+      "need": 4.5,
+      "size": 14.4,
+      "fg": "#e8220a",
+      "bg": "#111111"
+     },
+     {
+      "text": "Book a Free Taster →",
+      "ratio": 4.08,
+      "need": 4.5,
+      "size": 12.48,
+      "fg": "#f4f4ef",
+      "bg": "#e8220a"
+     },
+     {
+      "text": "Book a free taster session — no commitme",
+      "ratio": 3.27,
+      "need": 4.5,
+      "size": 12.8,
+      "fg": "#fad3ce",
+      "bg": "#e8220a"
+     },
+     {
+      "text": "What Is Powerlifting?",
+      "ratio": 4.4,
+      "need": 4.5,
+      "size": 11.2,
+      "fg": "#e8220a",
+      "bg": "#0a0a0a"
+     },
+     {
+      "text": "When We Train",
+      "ratio": 4.19,
+      "need": 4.5,
+      "size": 11.2,
+      "fg": "#e8220a",
+      "bg": "#111111"
+     },
+     {
+      "text": "Membership Pricing",
+      "ratio": 4.19,
+      "need": 4.5,
+      "size": 11.2,
+      "fg": "#e8220a",
+      "bg": "#111111"
+     },
+     {
+      "text": "Privacy Policy",
+      "ratio": 2.01,
+      "need": 4.5,
+      "size": 16,
+      "fg": "#0000ee",
+      "bg": "#111111"
+     },
+     {
+      "text": "Get In Touch →",
+      "ratio": 4.08,
+      "need": 4.5,
+      "size": 12.48,
+      "fg": "#f4f4ef",
+      "bg": "#e8220a"
+     },
+     {
+      "text": "Who’s Coaching You",
+      "ratio": 4.4,
+      "need": 4.5,
+      "size": 11.2,
+      "fg": "#e8220a",
+      "bg": "#0a0a0a"
+     },
+     {
+      "text": "CS",
+      "ratio": 3.66,
+      "need": 4.5,
+      "size": 20.8,
+      "fg": "#e8220a",
+      "bg": "#2e1a18"
+     },
+     {
+      "text": "AM",
+      "ratio": 3.66,
+      "need": 4.5,
+      "size": 20.8,
+      "fg": "#e8220a",
+      "bg": "#2e1a18"
+     },
+     {
+      "text": "DL",
+      "ratio": 3.66,
+      "need": 4.5,
+      "size": 20.8,
+      "fg": "#e8220a",
+      "bg": "#2e1a18"
+     },
+     {
+      "text": "CY",
+      "ratio": 3.66,
+      "need": 4.5,
+      "size": 20.8,
+      "fg": "#e8220a",
+      "bg": "#2e1a18"
+     },
+     {
+      "text": "SM",
+      "ratio": 3.66,
+      "need": 4.5,
+      "size": 20.8,
+      "fg": "#e8220a",
+      "bg": "#2e1a18"
+     },
+     {
+      "text": "Your first session is free. No experienc",
+      "ratio": 3.27,
+      "need": 4.5,
+      "size": 14.4,
+      "fg": "#fad3ce",
+      "bg": "#e8220a"
+     },
+     {
+      "text": "Stay in the loop",
+      "ratio": 4.19,
+      "need": 4.5,
+      "size": 11.2,
+      "fg": "#e8220a",
+      "bg": "#111111"
+     },
+     {
+      "text": "Privacy Policy",
+      "ratio": 4.19,
+      "need": 4.5,
+      "size": 11.52,
+      "fg": "#e8220a",
+      "bg": "#111111"
+     },
+     {
+      "text": "Strength",
+      "ratio": 4.19,
+      "need": 4.5,
+      "size": 19.2,
+      "fg": "#e8220a",
+      "bg": "#111111"
+     },
+     {
+      "text": "📞 WhatsApp Us",
+      "ratio": 1.98,
+      "need": 4.5,
+      "size": 11.84,
+      "fg": "#ffffff",
+      "bg": "#25d366"
+     }
+    ],
     "pictures": {
-     "raster": 6,
+     "raster": 0,
      "video": 0,
      "ui": 0,
      "bg": 0,
@@ -1532,69 +2499,69 @@
      "broken": [],
      "upscaled": [],
      "noAlt": 0,
-     "sources": [
-      "hero-competition.jpg",
-      "community-group.jpg",
-      "coaching-deadlift.jpg",
-      "craig-lift-wide.jpg",
-      "craig-compete.jpg",
-      "craig-about.jpg"
-     ],
-     "repeated": [
-      "community-group.jpg x2"
-     ],
-     "real": 6
+     "sources": [],
+     "repeated": [],
+     "real": 0
     },
     "overflow": {
      "scrollWidth": 390,
      "offenders": []
     },
     "actions": {
-     "buttons": 16,
+     "buttons": 9,
      "firstScreen": [
-      "Book a Free Taster",
-      "Message Us on WhatsApp",
-      "See All Programmes"
+      "Book a Free Taster →",
+      "Book Free Taster →",
+      "📞 WhatsApp Us",
+      "✉ Email",
+      "Free Taster →"
      ],
-     "feedback": 16
+     "feedback": 5
     },
     "tap": [
-     "CRAZYSTRENGTH",
-     "End of Year Awards · Sun 13 De",
-     "BP SW Regional · Fri 29 May 20",
-     "CS Novice · Sat 10 Jul 2027",
-     "End of Year Awards · Sun 13 De",
-     "BP SW Regional · Fri 29 May 20",
-     "CS Novice · Sat 10 Jul 2027",
-     "Message Us on WhatsApp",
-     "Show all",
-     "Complete beginner",
-     "Want to compete",
-     "Women's programme"
+     "Shop",
+     "Contact Us",
+     "Menu",
+     "Crazy Strength",
+     "",
+     "",
+     "",
+     "@craig.spicer",
+     "CrazyStrength",
+     "Powerlifting",
+     "Weightlifting",
+     "Ladies That Lift"
     ],
     "firstScreen": {
-     "h1Size": 56,
-     "h1Top": 354,
-     "largestMedia": 0.89,
-     "mainSize": 56
+     "h1Size": 50.7,
+     "h1Top": 71,
+     "largestMedia": 0.01,
+     "mainSize": 50.7
     },
     "empty": {
-     "screens": 13,
+     "screens": 7,
      "empty": []
     },
     "copy": {
      "placeholder": [],
-     "emoji": [],
+     "emoji": [
+      "📷 @crazystrengthhq",
+      "🗣 Crazy Strength UK",
+      "▶ @crazy.strength",
+      "📞 WhatsApp: +44 7734 824897",
+      "📞 WhatsApp Us",
+      "✉ Email"
+     ],
      "slop": [],
      "notJust": 0,
      "stockButtons": [],
-     "emDashes": 9,
+     "emDashes": 11,
      "proof": []
     },
     "meta": {
      "lang": "en",
-     "title": "Crazy Strength — Coached Strength Training, Amesbury",
-     "description": "Coached strength training gym in Amesbury, Wiltshire. Powerlifting, weightlifting, Ladies That Lift, Legends, Cubs. Free taster session. No experience needed.",
+     "title": "Beginner and Competition Powerlifting in Amesbury | Crazy Strength",
+     "description": "Coached powerlifting in Amesbury, near Salisbury. Learn the squat, bench press and deadlift, start as a beginner or prepare for your first competition.",
      "viewport": true
     },
     "hidden": []
@@ -1605,14 +2572,11 @@
   ".taste/check/desktop-fold.jpg",
   ".taste/check/desktop-sheet-1.jpg",
   ".taste/check/desktop-sheet-2.jpg",
-  ".taste/check/desktop-sheet-3.jpg",
   ".taste/check/tablet-fold.jpg",
   ".taste/check/tablet-sheet-1.jpg",
   ".taste/check/tablet-sheet-2.jpg",
-  ".taste/check/tablet-sheet-3.jpg",
   ".taste/check/phone-fold.jpg",
   ".taste/check/phone-sheet-1.jpg",
-  ".taste/check/phone-sheet-2.jpg",
-  ".taste/check/phone-sheet-3.jpg"
+  ".taste/check/phone-sheet-2.jpg"
  ]
 }

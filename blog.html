@@ -3,31 +3,27 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Blog &ndash; Crazy Strength</title>
-<meta name="description" content="Craig Spicer writes about leadership, accountability, strength and building something worth being part of.">
+<title>Blog — Crazy Strength</title>
+<meta name="description" content="Coaching, competition, sport and strength. Written from experience by Craig Spicer.">
 <link rel="canonical" href="https://crazystrength.co.uk/blog.html">
 <link rel="icon" href="https://cdn.shopify.com/s/files/1/1038/4467/5925/files/cs-favicon.png?v=1697553951" type="image/png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet">
 <style>
+
 /* ── Tokens ── */
 :root{
   --ground:#0a0a0a;--surface:#141414;--surface2:#1c1c1c;
   --ink:#f4f4ef;--muted:#999;
   --accent:#e8220a;--accent2:#c01c08;
   --action:#e8220a;--action-ink:#ffffff;
-  /* Legacy alias — old inline styles keep working */
-  --blk:var(--ground);--drk:var(--surface);--card:var(--surface2);
-  --bdr:rgba(244,244,239,.1);--red:var(--accent);--rd2:var(--accent2);
-  --wht:var(--ink);--gry:var(--muted);--lt:rgba(244,244,239,.7);
+  --wa:#0f7a3e;--wa-ink:#fff;
   --font-display:'Bebas Neue',sans-serif;
   --font-text:'DM Sans',sans-serif;
   --gap:clamp(4rem,8vw,8rem);
   --gutter:clamp(1.25rem,5vw,5rem);
+  --r:2px;
   font-size:16px;
 }
-/* ── Reset ── */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;overflow-x:hidden}
 body{background:var(--ground);color:var(--ink);font-family:var(--font-text);
@@ -36,33 +32,155 @@ body{background:var(--ground);color:var(--ink);font-family:var(--font-text);
 img{display:block;max-width:100%;height:auto}
 a{color:inherit}
 h1,h2,h3,h4{font-family:var(--font-display);font-weight:400;letter-spacing:-.01em;line-height:.92}
+
 /* ── Nav ── */
 .nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;
   justify-content:space-between;padding:0 var(--gutter);height:60px;
-  background:rgba(10,10,10,.96)}
+  background:rgba(10,10,10,.96);max-width:100vw;overflow:visible}
 .nav-logo{display:flex;align-items:center;gap:.6rem;text-decoration:none;
   font-family:var(--font-display);font-size:1.35rem;letter-spacing:.02em;color:var(--ink)}
+.nav-logo img{width:36px;height:36px}
 .nav-logo span{color:#f03018}
 .nav-links{display:flex;align-items:center;gap:2rem;list-style:none}
 .nav-links a{font-size:.9rem;font-weight:500;text-decoration:none;
   color:rgba(244,244,239,.7);transition:color .15s}
 .nav-links a:hover,.nav-links a.active{color:var(--ink)}
+/* Train dropdown */
+.nav-drop{position:relative}
+.nav-drop>a{display:flex;align-items:center;gap:.25rem}
+.nav-drop>a::after{content:'▾';font-size:.55rem;opacity:.6}
+.nav-dropmenu{display:none;position:absolute;top:calc(100% + 8px);left:0;
+  background:var(--surface);border:1px solid rgba(244,244,239,.1);
+  min-width:220px;z-index:200;padding:.5rem 0;border-radius:var(--r)}
+.nav-drop:hover .nav-dropmenu{display:block}
+.nav-dropmenu a{display:block;padding:.6rem 1.2rem;font-size:.82rem;
+  color:rgba(244,244,239,.7);text-decoration:none;transition:all .12s;white-space:nowrap}
+.nav-dropmenu a:hover{color:var(--ink);background:var(--surface2)}
 .nav-cta{display:inline-flex;align-items:center;padding:.5rem 1.2rem;
   background:var(--action);color:var(--action-ink);font-family:var(--font-display);
-  font-size:.95rem;letter-spacing:.06em;text-decoration:none;border-radius:2px;
+  font-size:.95rem;letter-spacing:.06em;text-decoration:none;border-radius:var(--r);
   transition:background .15s}
 .nav-cta:hover{background:var(--accent2)}
 .nav-hamburger{display:none;background:none;border:none;cursor:pointer;
   padding:.5rem;color:var(--ink);font-size:1.4rem}
-/* ── Mobile nav ── */
+/* Mobile nav */
 .mobile-nav{display:none;position:fixed;top:60px;left:0;right:0;bottom:0;z-index:99;
   background:var(--surface);padding:2rem var(--gutter);flex-direction:column;
   gap:1.5rem;overflow-y:auto}
 .mobile-nav.open{display:flex}
 .mobile-nav-close{align-self:flex-end;background:none;border:none;color:var(--ink);
   font-size:1.3rem;cursor:pointer;padding:.25rem}
-.mobile-nav a{font-family:var(--font-display);font-size:1.6rem;text-decoration:none;
-  color:var(--ink);letter-spacing:.02em}
+.mobile-nav>a,.mobile-nav details>summary{font-family:var(--font-display);font-size:1.6rem;
+  text-decoration:none;color:var(--ink);letter-spacing:.02em;cursor:pointer;list-style:none}
+.mobile-nav details[open]>summary{color:var(--accent)}
+.mobile-train-links{display:flex;flex-direction:column;gap:.75rem;
+  padding:.75rem 0 .25rem 1rem;margin-top:.25rem}
+.mobile-train-links a{font-family:var(--font-text);font-size:1rem;
+  color:rgba(244,244,239,.7);text-decoration:none}
+
+/* ── Shared utilities ── */
+.btn{display:inline-flex;align-items:center;gap:.4rem;padding:.85rem 2rem;
+  font-family:var(--font-display);font-size:1rem;letter-spacing:.06em;
+  text-decoration:none;border-radius:var(--r);transition:background .15s,transform .1s;
+  cursor:pointer;border:none}
+.btn:active{transform:scale(.98)}
+.btn-primary{background:var(--action);color:var(--action-ink)}
+.btn-primary:hover{background:var(--accent2)}
+.btn-ghost{background:transparent;color:var(--ink);border:1.5px solid rgba(244,244,239,.3)}
+.btn-ghost:hover{border-color:var(--ink)}
+.btn-wa{background:var(--wa);color:var(--wa-ink)}
+.btn-wa:hover{background:#0a7a3c}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .55s ease,transform .55s ease}
+.reveal.vis{opacity:1;transform:translateY(0)}
+
+/* ── Page hero ── */
+.phero{position:relative;min-height:55vh;display:flex;flex-direction:column;
+  justify-content:flex-end;padding:4rem var(--gutter);overflow:hidden;margin-top:60px}
+.phero-bg{position:absolute;inset:0;background:var(--surface)}
+.phero-bg::after{content:'';position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(10,10,10,.9) 0%,rgba(10,10,10,.4) 50%,rgba(10,10,10,.2) 100%)}
+.phero-content{position:relative;z-index:1;max-width:800px}
+.phero h1{font-size:clamp(3.5rem,8vw,8rem);line-height:.88;margin-bottom:1rem}
+.phero-lead{font-size:clamp(1rem,1.3vw,1.15rem);color:rgba(244,244,239,.8);
+  max-width:50ch;line-height:1.6;margin-bottom:1.5rem}
+.phero-meta{font-size:.82rem;color:var(--muted)}
+
+/* ── Sections ── */
+.section{padding:var(--gap) var(--gutter)}
+.section+.section{padding-top:0}
+.section-alt{background:var(--surface)}
+.section-dark{background:var(--ground)}
+.sh{font-size:clamp(2rem,4vw,4rem);margin-bottom:1.5rem}
+.sh-sm{font-size:clamp(1.5rem,3vw,2.5rem);margin-bottom:1rem}
+.lead{font-size:1.05rem;color:rgba(244,244,239,.75);line-height:1.7;max-width:60ch}
+.muted{color:var(--muted)}
+
+/* ── Pricing ── */
+.price-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1px;
+  background:rgba(244,244,239,.08);margin-top:2rem}
+.price-card{background:var(--surface);padding:2rem;position:relative}
+.price-card.featured{background:var(--accent)}
+.price-card.featured *{color:#fff!important}
+.price-label{font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--muted);margin-bottom:.5rem}
+.price-name{font-family:var(--font-display);font-size:1.6rem;margin-bottom:.25rem}
+.price-amount{font-family:var(--font-display);font-size:3rem;line-height:1;color:var(--ink)}
+.price-period{font-size:.8rem;color:var(--muted);margin-bottom:1rem}
+.price-features{list-style:none;display:flex;flex-direction:column;gap:.5rem;margin-bottom:1.5rem}
+.price-features li{font-size:.88rem;color:rgba(244,244,239,.7);display:flex;gap:.5rem}
+.price-features li::before{content:'—';color:var(--accent);flex-shrink:0}
+.price-card.featured .price-features li::before{color:#fff}
+
+/* ── Timetable ── */
+.tt-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:1px;
+  background:rgba(244,244,239,.08);margin-top:2rem}
+.tt-day{background:var(--surface);padding:1.5rem}
+.tt-day-name{font-family:var(--font-display);font-size:1.1rem;color:var(--accent);
+  margin-bottom:.75rem}
+.tt-slots{display:flex;flex-direction:column;gap:.5rem}
+.tt-slot{font-size:.82rem;color:rgba(244,244,239,.7);display:flex;flex-direction:column;gap:.1rem}
+.tt-slot strong{color:var(--ink);font-size:.88rem}
+.tt-slot span{font-size:.75rem;color:var(--muted)}
+
+/* ── Team ── */
+.team-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1px;
+  background:rgba(244,244,239,.08);margin-top:2rem}
+.team-card{background:var(--surface);padding:2rem}
+.team-name{font-family:var(--font-display);font-size:1.4rem;margin-bottom:.25rem}
+.team-role{font-size:.78rem;color:var(--accent);font-weight:600;letter-spacing:.08em;
+  text-transform:uppercase;margin-bottom:.75rem}
+.team-bio{font-size:.88rem;color:rgba(244,244,239,.65);line-height:1.6}
+
+/* ── Quote / testimonial ── */
+.quote-block{padding:var(--gap) var(--gutter);background:var(--accent)}
+.quote-block blockquote{font-family:var(--font-display);font-size:clamp(2rem,4vw,4rem);
+  line-height:.95;color:#fff;max-width:20ch;margin-bottom:1rem}
+.quote-block cite{font-size:.85rem;color:rgba(255,255,255,.7);font-style:normal}
+
+/* ── Newsletter ── */
+.newsletter{padding:var(--gap) var(--gutter);background:var(--surface2)}
+.newsletter-inner{max-width:560px}
+.newsletter h2{font-size:clamp(2rem,4vw,3.5rem);margin-bottom:.75rem}
+.newsletter p{color:var(--muted);margin-bottom:1.5rem;line-height:1.6}
+.newsletter-form{display:flex;gap:.5rem;flex-wrap:wrap}
+.newsletter-form input{flex:1;min-width:200px;padding:.8rem 1rem;
+  background:var(--surface);border:1px solid rgba(244,244,239,.15);
+  color:var(--ink);font-family:var(--font-text);font-size:.9rem;border-radius:var(--r)}
+.newsletter-form input::placeholder{color:var(--muted)}
+.newsletter-form input:focus{outline:none;border-color:var(--accent)}
+.newsletter-form button{padding:.8rem 1.5rem;background:var(--accent);color:#fff;
+  font-family:var(--font-display);font-size:1rem;letter-spacing:.06em;
+  border:none;border-radius:var(--r);cursor:pointer;transition:background .15s}
+.newsletter-form button:hover{background:var(--accent2)}
+
+/* ── Info blocks ── */
+.info-row{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
+.info-col h3{font-size:clamp(1.4rem,2.5vw,2.2rem);margin-bottom:.75rem}
+.info-col p{font-size:.95rem;color:rgba(244,244,239,.7);line-height:1.75;margin-bottom:1rem}
+.check-list{list-style:none;display:flex;flex-direction:column;gap:.6rem;margin-top:1rem}
+.check-list li{font-size:.9rem;color:rgba(244,244,239,.75);display:flex;gap:.75rem}
+.check-list li::before{content:'✓';color:var(--accent);font-weight:700;flex-shrink:0}
+
 /* ── Footer ── */
 .footer{background:var(--surface);padding:3rem var(--gutter) 2rem;margin-top:var(--gap)}
 .footer-links{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-bottom:2.5rem}
@@ -71,46 +189,47 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:400;letter-spacing:-.01e
 .footer-col ul{list-style:none;display:flex;flex-direction:column;gap:.6rem}
 .footer-col a{font-size:.85rem;color:rgba(244,244,239,.5);text-decoration:none;transition:color .15s}
 .footer-col a:hover{color:var(--ink)}
-.footer-name{font-family:var(--font-display);font-size:clamp(3rem,10vw,8rem);line-height:.85;
-  color:rgba(244,244,239,.04);letter-spacing:-.02em;margin-bottom:1.5rem;
+.footer-name{font-family:var(--font-display);font-size:clamp(3rem,10vw,8rem);
+  line-height:.85;color:rgba(244,244,239,.04);letter-spacing:-.02em;margin-bottom:1.5rem;
   overflow:hidden;user-select:none}
 .footer-bottom{border-top:1px solid rgba(244,244,239,.08);padding-top:1.5rem;
   display:flex;flex-direction:column;gap:.5rem}
 .footer-bottom p{font-size:.75rem;color:rgba(244,244,239,.35);line-height:1.6}
 .footer-bottom a{color:rgba(244,244,239,.5);text-decoration:none}
 .footer-bottom a:hover{color:var(--ink)}
-/* ── Shared utilities ── */
-.reveal{opacity:0;transform:translateY(22px);transition:opacity .55s ease,transform .55s ease}
-.reveal.vis{opacity:1;transform:translateY(0)}
+
 @media(max-width:900px){
   .nav-links,.nav-cta{display:none}
   .nav-hamburger{display:block}
+  .info-row{grid-template-columns:1fr}
   .footer-links{grid-template-columns:1fr 1fr}
 }
-@media(max-width:600px){.footer-links{grid-template-columns:1fr}}
-</style>
-<style>
-.blog-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1px;background:var(--bdr);border:1px solid var(--bdr)}
-.bcard{background:var(--card);display:flex;flex-direction:column;transition:background .2s;text-decoration:none;color:inherit}
-.bcard:hover{background:#1e1e1e}
-.bcard-tag{font-size:.62rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:.28rem .7rem;border-radius:2px;display:inline-block}
-.bcard-body{padding:1.6rem;flex:1;display:flex;flex-direction:column;gap:.6rem}
-.bcard-title{font-family:'Bebas Neue',sans-serif;font-size:1.55rem;line-height:1.05;color:var(--wht)}
-.bcard-excerpt{font-size:.86rem;color:var(--gry);line-height:1.75;flex:1}
-.bcard-meta{display:flex;align-items:center;justify-content:space-between;padding:1rem 1.6rem;border-top:1px solid var(--bdr)}
-.bcard-author{font-size:.74rem;color:var(--gry)}
-.bcard-read{font-size:.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--red)}
-.coming-card{background:var(--card);border:1px solid var(--bdr);padding:2.5rem;display:flex;align-items:center;gap:2rem;flex-wrap:wrap}
-.notify-form{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.8rem}
-.notify-input{flex:1;min-width:200px;background:var(--blk);border:1px solid var(--bdr);color:var(--wht);padding:.65rem 1rem;font-size:.84rem;font-family:'DM Sans',sans-serif;border-radius:2px;outline:none}
-.notify-input:focus{border-color:var(--red)}
-.notify-btn{background:var(--red);color:#fff;border:none;padding:.65rem 1.4rem;font-size:.78rem;font-weight:600;letter-spacing:.09em;text-transform:uppercase;cursor:pointer;border-radius:2px;font-family:'DM Sans',sans-serif;white-space:nowrap;transition:background .2s}
-.notify-btn:hover{background:var(--rd2)}
-.topic-pills{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.5rem}
-.tpill{background:var(--card);border:1px solid var(--bdr);color:var(--gry);padding:.3rem .85rem;font-size:.7rem;letter-spacing:.07em;text-transform:uppercase;border-radius:20px}
-.reveal{opacity:0;transform:translateY(18px);transition:opacity .55s ease,transform .55s ease}
-.reveal.vis{opacity:1;transform:none}
-@media(max-width:600px){.blog-grid{grid-template-columns:1fr}}
+@media(max-width:600px){
+  .footer-links{grid-template-columns:1fr}
+}
+
+
+.blog-hero{padding:calc(60px + var(--gap)) var(--gutter) var(--gap);background:var(--surface)}
+.blog-hero h1{font-size:clamp(3rem,7vw,7rem);margin-bottom:1rem}
+.blog-hero p{font-size:1.05rem;color:var(--muted);max-width:50ch;line-height:1.6}
+.blog-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1px;
+  background:rgba(244,244,239,.08)}
+.bcard{background:var(--surface);text-decoration:none;display:flex;flex-direction:column}
+.bcard:hover{background:var(--surface2)}
+.bcard-img{aspect-ratio:16/9;background:var(--surface2);overflow:hidden}
+.bcard-img img{width:100%;height:100%;object-fit:cover;transition:transform .3s}
+.bcard:hover .bcard-img img{transform:scale(1.04)}
+.bcard-body{padding:1.5rem;flex:1;display:flex;flex-direction:column;gap:.5rem}
+.bcard-tag{font-size:.68rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--accent)}
+.bcard-title{font-family:var(--font-display);font-size:1.6rem;line-height:.95;color:var(--ink)}
+.bcard-excerpt{font-size:.88rem;color:var(--muted);line-height:1.6;flex:1}
+.bcard-meta{font-size:.75rem;color:rgba(244,244,239,.35);margin-top:.5rem}
+.topics{display:flex;flex-wrap:wrap;gap:.5rem;padding:var(--gap) var(--gutter) 0}
+.topic-pill{padding:.4rem .9rem;background:var(--surface);border:1px solid rgba(244,244,239,.12);
+  color:var(--muted);font-size:.78rem;border-radius:100px;text-decoration:none;transition:all .15s}
+.topic-pill:hover,.topic-pill.on{background:var(--accent);color:#fff;border-color:var(--accent)}
+
 </style>
 </head>
 <body>
@@ -118,7 +237,17 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:400;letter-spacing:-.01e
   <a class="nav-logo" href="https://crazystrength.co.uk">CRAZY<span>STRENGTH</span></a>
   <ul class="nav-links" role="list">
     <li><a href="https://crazystrength.co.uk/education.html">Education</a></li>
-    <li><a href="https://crazystrength.co.uk/index.html#programmes">Train</a></li>
+    <li class="nav-drop">
+      <a href="https://crazystrength.co.uk/index.html#programmes">Train</a>
+      <div class="nav-dropmenu">
+        <a href="https://crazystrength.co.uk/powerlifting.html">Beginner Powerlifting</a>
+        <a href="https://crazystrength.co.uk/weightlifting.html">Olympic Weightlifting</a>
+        <a href="https://crazystrength.co.uk/ladies-that-lift.html">Ladies That Lift</a>
+        <a href="https://crazystrength.co.uk/legends-that-lift.html">Legends That Lift</a>
+        <a href="https://crazystrength.co.uk/cubs.html">Cubs</a>
+        <a href="https://crazystrength.co.uk/open-gym.html">Open Gym</a>
+      </div>
+    </li>
     <li><a href="https://crazystrength.co.uk/events.html">Events</a></li>
     <li><a href="https://crazystrength.co.uk/blog.html">Blog</a></li>
     <li><a href="https://crazystrength.co.uk/shop.html">Shop</a></li>
@@ -129,271 +258,109 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:400;letter-spacing:-.01e
 <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation" aria-hidden="true">
   <button class="mobile-nav-close" id="menuClose" aria-label="Close menu">&#10005;</button>
   <a href="https://crazystrength.co.uk/education.html">Education</a>
-  <a href="https://crazystrength.co.uk/index.html#programmes">Train</a>
+  <details>
+    <summary>Train</summary>
+    <div class="mobile-train-links">
+      <a href="https://crazystrength.co.uk/powerlifting.html">Beginner Powerlifting</a>
+      <a href="https://crazystrength.co.uk/weightlifting.html">Olympic Weightlifting</a>
+      <a href="https://crazystrength.co.uk/ladies-that-lift.html">Ladies That Lift</a>
+      <a href="https://crazystrength.co.uk/legends-that-lift.html">Legends That Lift</a>
+      <a href="https://crazystrength.co.uk/cubs.html">Cubs</a>
+      <a href="https://crazystrength.co.uk/open-gym.html">Open Gym</a>
+    </div>
+  </details>
   <a href="https://crazystrength.co.uk/events.html">Events</a>
   <a href="https://crazystrength.co.uk/blog.html">Blog</a>
   <a href="https://crazystrength.co.uk/shop.html">Shop</a>
   <a href="https://crazystrength.co.uk/taster" style="color:var(--accent)">Book a Free Taster &#8594;</a>
 </nav>
-<section style="padding:100px 5vw 0;background:var(--blk)">
-  <div style="max-width:680px">
-    <p style="font-size:.92rem;color:var(--gry);line-height:1.85">Craig Spicer has spent 25 years in barbell sport &mdash; competing from novice to international level, building sports programmes inside the British Army, coaching athletes from their first session to the podium, and running Crazy Strength in Amesbury. This is where he writes about coaching, training, and the human side of building a real strength community. New posts drop regularly. Follow <a href="https://www.instagram.com/craig.spicer" target="_blank" rel="noopener" style="color:var(--red);text-decoration:none">@craig.spicer</a> to know when they land.</p>
+
+<main>
+<div class="blog-hero">
+  <h1>The Blog</h1>
+  <p>Coaching, competition, sport and strength. Written from experience, not theory. Everything here came from actually doing the work.</p>
+</div>
+
+<div class="topics">
+  <a class="topic-pill on" href="#">All</a>
+  <a class="topic-pill" href="#">Powerlifting</a>
+  <a class="topic-pill" href="#">Weightlifting</a>
+  <a class="topic-pill" href="#">Coaching</a>
+  <a class="topic-pill" href="#">Leadership</a>
+  <a class="topic-pill" href="#">Mindset</a>
+  <a class="topic-pill" href="#">Nutrition</a>
+</div>
+
+<section class="section">
+  <div class="blog-grid">
+    <a class="bcard reveal" href="https://crazystrength.co.uk/blog">
+      <div class="bcard-img"></div>
+      <div class="bcard-body">
+        <div class="bcard-tag">Coaching</div>
+        <div class="bcard-title">Why Most Athletes Stop Too Soon</div>
+        <div class="bcard-excerpt">The decision to quit happens before the athlete runs out of ability. It happens when they run out of reasons to stay. That is a coaching failure, not an athlete failure.</div>
+        <div class="bcard-meta">Craig Spicer</div>
+      </div>
+    </a>
+    <a class="bcard reveal" href="https://crazystrength.co.uk/blog">
+      <div class="bcard-img"></div>
+      <div class="bcard-body">
+        <div class="bcard-tag">Powerlifting</div>
+        <div class="bcard-title">The First Competition: What Nobody Tells You</div>
+        <div class="bcard-excerpt">You will lift less than you expected. The warm-up room will be chaos. You will love every second of it. Here is what to do and what to ignore.</div>
+        <div class="bcard-meta">Craig Spicer</div>
+      </div>
+    </a>
+    <a class="bcard reveal" href="https://crazystrength.co.uk/blog">
+      <div class="bcard-img"></div>
+      <div class="bcard-body">
+        <div class="bcard-tag">Leadership</div>
+        <div class="bcard-title">Be a Good Human. It Is Not Complicated.</div>
+        <div class="bcard-excerpt">The standard is simple. Do the right thing at the right time. Hold yourself to it even when it costs you something. Everything else follows from that.</div>
+        <div class="bcard-meta">Craig Spicer</div>
+      </div>
+    </a>
+    <a class="bcard reveal" href="https://crazystrength.co.uk/blog">
+      <div class="bcard-img"></div>
+      <div class="bcard-body">
+        <div class="bcard-tag">Weightlifting</div>
+        <div class="bcard-title">Why the Snatch Takes Longer Than You Think</div>
+        <div class="bcard-excerpt">Most people underestimate the snatch by about two years. The movement is fast and unforgiving. The positions have to be right before the bar gets heavy.</div>
+        <div class="bcard-meta">Craig Spicer</div>
+      </div>
+    </a>
+    <a class="bcard reveal" href="https://crazystrength.co.uk/blog">
+      <div class="bcard-img"></div>
+      <div class="bcard-body">
+        <div class="bcard-tag">Mindset</div>
+        <div class="bcard-title">The Gap Between Training and Competing</div>
+        <div class="bcard-excerpt">You can train for years and still freeze on the platform. The gap is not physical. It is understanding what you are there to do, and doing it anyway.</div>
+        <div class="bcard-meta">Craig Spicer</div>
+      </div>
+    </a>
+    <a class="bcard reveal" href="https://crazystrength.co.uk/blog">
+      <div class="bcard-img"></div>
+      <div class="bcard-body">
+        <div class="bcard-tag">Coaching</div>
+        <div class="bcard-title">What Makes a Good Coach</div>
+        <div class="bcard-excerpt">Not the certifications. Not the results they put on Instagram. The question is whether the athlete in front of them is better for it. That is the whole job.</div>
+        <div class="bcard-meta">Craig Spicer</div>
+      </div>
+    </a>
   </div>
 </section>
-<hr class="divider" style="margin-top:2rem">
 
-
-<!-- First post — live -->
-<section style="padding:70px 5vw;background:var(--blk)">
-
-  <!-- LATEST POST — featured full width -->
-  <div class="reveal" style="margin-bottom:3rem">
-    <div style="display:flex;align-items:center;gap:.8rem;margin-bottom:1.5rem;padding-bottom:.8rem;border-bottom:1px solid var(--bdr)">
-      <span style="font-size:.68rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--red)">Latest</span>
-      <h2 style="font-family:'Bebas Neue',sans-serif;font-size:1.6rem;color:var(--wht)">Latest</h2>
-    </div>
-    <div class="blog-grid">
-      <!-- Summer Training — newest post -->
-      <a href="blog-summer-training.html" class="bcard">
-        <div class="bcard-body">
-          <div style="display:flex;gap:.5rem;flex-wrap:wrap;align-items:center">
-            <span class="bcard-tag" style="background:rgba(232,34,10,.1);color:var(--red);border:1px solid rgba(232,34,10,.25)">Strength Training</span><span class="bcard-tag" style="background:rgba(232,34,10,.1);color:var(--red);border:1px solid rgba(232,34,10,.25)">Coaching</span>
-          </div>
-          <div class="bcard-title">The Summer Training Problem Nobody Talks About</div>
-          <p class="bcard-excerpt">Summer is the most underestimated threat to consistent training. Not because the training gets harder &mdash; because it gets optional. Craig Spicer on unplanned breaks, what the gym environment actually does for you, and how to come out of summer ahead.</p>
-        </div>
-        <div class="bcard-meta">
-          <span class="bcard-author">Craig Spicer &middot; July 2026</span>
-          <span class="bcard-read">Read Post &rarr;</span>
-        </div>
-      </a>
-
-      <!-- Competition Day -->
-      <a href="blog-competition-day.html" class="bcard">
-        <div class="bcard-body">
-          <div style="display:flex;gap:.5rem;flex-wrap:wrap;align-items:center">
-            <span class="bcard-tag" style="background:rgba(232,34,10,.1);color:var(--red);border:1px solid rgba(232,34,10,.25)">Powerlifting</span><span class="bcard-tag" style="background:rgba(232,34,10,.1);color:var(--red);border:1px solid rgba(232,34,10,.25)">Coaching</span>
-          </div>
-          <div class="bcard-title">What Competition Day Actually Teaches You About Yourself</div>
-          <p class="bcard-excerpt">Competition day is one of the most accurate mirrors you will ever stand in front of. After 25 years on the platform &mdash; as athlete and coach &mdash; Craig Spicer on what it reveals, what you can build in training, and why the warm-up room matters more than most people think.</p>
-        </div>
-        <div class="bcard-meta">
-          <span class="bcard-author">Craig Spicer &middot; July 2026</span>
-          <span class="bcard-read">Read Post &rarr;</span>
-        </div>
-      </a>
-
-      <!-- Coaches Build Independence -->
-      <a href="blog-coaches-build-independence.html" class="bcard">
-        <div class="bcard-body">
-          <div style="display:flex;gap:.5rem;flex-wrap:wrap;align-items:center">
-            <span class="bcard-tag" style="background:rgba(232,34,10,.1);color:var(--red);border:1px solid rgba(232,34,10,.25)">Coaching</span>
-          </div>
-          <div class="bcard-title">Why Great Coaches Build Athletes Who Don&rsquo;t Need Them</div>
-          <p class="bcard-excerpt">If your athlete cannot function without you in the room, you haven&rsquo;t built a great athlete. You&rsquo;ve built a dependency. Craig Spicer on coaching independence, what the dependency trap actually costs, and what real coaching produces over time.</p>
-        </div>
-        <div class="bcard-meta">
-          <span class="bcard-author">Craig Spicer &middot; July 2026</span>
-          <span class="bcard-read">Read Post &rarr;</span>
-        </div>
-      </a>
-
-      <!-- Coaching vs Cheerleading -->
-      <a href="blog-coaching-vs-cheerleading.html" class="bcard">
-        <div class="bcard-body">
-          <div style="display:flex;gap:.5rem;flex-wrap:wrap;align-items:center">
-            <span class="bcard-tag" style="background:rgba(232,34,10,.1);color:var(--red);border:1px solid rgba(232,34,10,.25)">Coaching</span>
-          </div>
-          <div class="bcard-title">Coaching vs Cheerleading &mdash; There&rsquo;s a Difference</div>
-          <p class="bcard-excerpt">There is a significant difference between being someone&rsquo;s biggest fan and being their coach. Craig Spicer on what cheerleading costs the athlete, why it&rsquo;s become so common, and what real coaching actually looks like.</p>
-        </div>
-        <div class="bcard-meta">
-          <span class="bcard-author">Craig Spicer &middot; June 2026</span>
-          <span class="bcard-read">Read Post &rarr;</span>
-        </div>
-      </a>
-
-      <!-- GLP-1 post -->
-      <a href="blog-glp1-strength-training.html" class="bcard">
-        <div class="bcard-body">
-          <div style="display:flex;gap:.5rem;flex-wrap:wrap;align-items:center">
-            <span class="bcard-tag" style="background:rgba(232,34,10,.1);color:var(--red);border:1px solid rgba(232,34,10,.25)">Women&rsquo;s Health</span>
-            
-          </div>
-          <div class="bcard-title">Weight Loss Injections, Women&rsquo;s Health, and Why Strength Training Is Non-Negotiable</div>
-          <p class="bcard-excerpt">GLP-1 weight loss injections are more accessible than ever. But nobody&rsquo;s talking about what gets lost alongside the weight. Craig Spicer on muscle loss, what women actually need, and why strength training isn&rsquo;t optional.</p>
-        </div>
-        <div class="bcard-meta">
-          <span class="bcard-author">Craig Spicer &middot; May 2026</span>
-          <span class="bcard-read">Read Post &rarr;</span>
-        </div>
-      </a>
-
-      <!-- Overtraining post — right -->
-      <a href="blog-coaches-need-people-too.html" class="bcard">
-        <div class="bcard-body">
-          <div style="display:flex;gap:.5rem;flex-wrap:wrap;align-items:center">
-            <span class="bcard-tag" style="background:rgba(232,34,10,.1);color:var(--red);border:1px solid rgba(232,34,10,.25)">Mental Health</span>
-            <span style="background:rgba(255,255,255,.06);border:1px solid var(--bdr);font-size:.58rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:.2rem .55rem;border-radius:2px;color:var(--gry)">British Powerlifting</span>
-          </div>
-          <div class="bcard-title">Coaches Need People Too</div>
-          <p class="bcard-excerpt">Mental Health Awareness Week 2026. Craig Spicer writes for British Powerlifting on coaching isolation and the one action that matters this week.</p>
-        </div>
-        <div class="bcard-meta">
-          <span class="bcard-author">Craig Spicer &middot; May 2026</span>
-          <span class="bcard-read">Read Post &rarr;</span>
-        </div>
-      </a>
-
-      <a href="blog-overtraining-undertraining.html" class="bcard">
-        <div class="bcard-body">
-          <div style="display:flex;gap:.5rem;flex-wrap:wrap;align-items:center">
-            <span class="bcard-tag" style="background:rgba(232,34,10,.1);color:var(--red);border:1px solid rgba(232,34,10,.25)">Coaching</span>
-            <span style="background:rgba(99,102,241,.1);color:#818cf8;border:1px solid rgba(99,102,241,.25);font-size:.58rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:.2rem .55rem;border-radius:2px">&#127911; Audio Available</span>
-          </div>
-          <div class="bcard-title">Are You Overtraining or Undertraining? Finding Your Effective Dose</div>
-          <p class="bcard-excerpt">Most people think they&rsquo;re working hard enough. Some are working too hard. Craig Spicer on minimum and maximum effective dose, velocity-based training, and why the coach in the room makes all the difference. Listen here.</p>
-        </div>
-        <div class="bcard-meta">
-          <span class="bcard-author">Craig Spicer &middot; May 2026</span>
-          <span class="bcard-read">Read &amp; Listen &rarr;</span>
-        </div>
-      </a>
-    </div>
-  </div>
-
-  <!-- ALL POSTS -->
-  <div class="reveal" style="margin-bottom:3rem">
-    <div style="display:flex;align-items:center;gap:.8rem;margin-bottom:1.5rem;padding-bottom:.8rem;border-bottom:1px solid var(--bdr)">
-      <span style="font-size:.68rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gry)">Read Now</span>
-      <h2 style="font-family:'Bebas Neue',sans-serif;font-size:1.6rem;color:var(--wht)">All Posts</h2>
-    </div>
-    <div class="blog-grid">
-
-      <a href="blog-summer-training.html" class="bcard">
-        <div class="bcard-body">
-          <div style="display:flex;gap:.5rem;flex-wrap:wrap;align-items:center">
-            <span class="bcard-tag" style="background:rgba(232,34,10,.1);color:var(--red);border:1px solid rgba(232,34,10,.25)">Strength Training</span><span class="bcard-tag" style="background:rgba(232,34,10,.1);color:var(--red);border:1px solid rgba(232,34,10,.25)">Coaching</span>
-            <span style="background:rgba(255,255,255,.06);border:1px solid var(--bdr);font-size:.58rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:.2rem .55rem;border-radius:2px;color:var(--gry)">July 2026</span>
-          </div>
-          <div class="bcard-title">The Summer Training Problem Nobody Talks About</div>
-          <p class="bcard-excerpt">Summer is the most underestimated threat to consistent training. Not because the training gets harder &mdash; because it gets optional. Craig Spicer on unplanned breaks, what the gym environment actually does for you, and how to come out of summer ahead.</p>
-        </div>
-        <div class="bcard-meta">
-          <span class="bcard-author">Craig Spicer &middot; July 2026</span>
-          <span class="bcard-read">Read Post &rarr;</span>
-        </div>
-      </a>
-
-      <a href="blog-competition-day.html" class="bcard">
-        <div class="bcard-body">
-          <div style="display:flex;gap:.5rem;flex-wrap:wrap;align-items:center">
-            <span class="bcard-tag" style="background:rgba(232,34,10,.1);color:var(--red);border:1px solid rgba(232,34,10,.25)">Powerlifting</span><span class="bcard-tag" style="background:rgba(232,34,10,.1);color:var(--red);border:1px solid rgba(232,34,10,.25)">Coaching</span>
-            <span style="background:rgba(255,255,255,.06);border:1px solid var(--bdr);font-size:.58rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:.2rem .55rem;border-radius:2px;color:var(--gry)">July 2026</span>
-          </div>
-          <div class="bcard-title">What Competition Day Actually Teaches You About Yourself</div>
-          <p class="bcard-excerpt">Competition day is one of the most accurate mirrors you will ever stand in front of. After 25 years on the platform &mdash; as athlete and coach &mdash; Craig Spicer on what it reveals, what you can build in training, and why the warm-up room matters more than most people think.</p>
-        </div>
-        <div class="bcard-meta">
-          <span class="bcard-author">Craig Spicer &middot; July 2026</span>
-          <span class="bcard-read">Read Post &rarr;</span>
-        </div>
-      </a>
-
-      <a href="blog-coaches-build-independence.html" class="bcard">
-        <div class="bcard-body">
-          <div style="display:flex;gap:.5rem;flex-wrap:wrap;align-items:center">
-            <span class="bcard-tag" style="background:rgba(232,34,10,.1);color:var(--red);border:1px solid rgba(232,34,10,.25)">Coaching</span>
-            <span style="background:rgba(255,255,255,.06);border:1px solid var(--bdr);font-size:.58rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:.2rem .55rem;border-radius:2px;color:var(--gry)">July 2026</span>
-          </div>
-          <div class="bcard-title">Why Great Coaches Build Athletes Who Don&rsquo;t Need Them</div>
-          <p class="bcard-excerpt">If your athlete cannot function without you in the room, you haven&rsquo;t built a great athlete. You&rsquo;ve built a dependency. Craig Spicer on coaching independence, what the dependency trap actually costs, and what real coaching produces over time.</p>
-        </div>
-        <div class="bcard-meta">
-          <span class="bcard-author">Craig Spicer &middot; July 2026</span>
-          <span class="bcard-read">Read Post &rarr;</span>
-        </div>
-      </a>
-
-      <a href="blog-strength-at-every-age.html" class="bcard">
-        <div class="bcard-body">
-          <div><span class="bcard-tag" style="background:rgba(232,34,10,.1);color:var(--red);border:1px solid rgba(232,34,10,.25)">Strength Training</span></div>
-          <div class="bcard-title">Why Strength Training Matters at Every Age</div>
-          <p class="bcard-excerpt">From 6-year-olds in CUBS to an 82-year-old on the platform. Craig on why strength is a lifetime skill and what it looks like at every stage of life at Crazy Strength.</p>
-        </div>
-        <div class="bcard-meta">
-          <span class="bcard-author">Craig Spicer &middot; May 2026</span>
-          <span class="bcard-read">Read Post &rarr;</span>
-        </div>
-      </a>
-
-      <a href="blog-be-a-good-human.html" class="bcard">
-        <div class="bcard-body">
-          <div><span class="bcard-tag" style="background:rgba(232,34,10,.1);color:var(--red);border:1px solid rgba(232,34,10,.25)">Community</span></div>
-          <div class="bcard-title">What &ldquo;#BeAGoodHuman&rdquo; Actually Means</div>
-          <p class="bcard-excerpt">Be a Good Human isn&rsquo;t a soft sentiment. It&rsquo;s a commitment to not walking past. The standard you walk past is the standard you accept.</p>
-        </div>
-        <div class="bcard-meta">
-          <span class="bcard-author">Craig Spicer &middot; April 2026</span>
-          <span class="bcard-read">Read Post &rarr;</span>
-        </div>
-      </a>
-
-      <a href="blog-project-of-passion.html" class="bcard">
-        <div class="bcard-body">
-          <div><span class="bcard-tag" style="background:rgba(232,34,10,.1);color:var(--red);border:1px solid rgba(232,34,10,.25)">Personal Story</span></div>
-          <div class="bcard-title">Project of Passion &mdash; The Real Story Behind Crazy Strength</div>
-          <p class="bcard-excerpt">Crazy Strength wasn&rsquo;t built on spreadsheets or market research. It was built on people, experience, a cancer diagnosis at 26, and a snowball of passion that became unstoppable.</p>
-        </div>
-        <div class="bcard-meta">
-          <span class="bcard-author">Craig Spicer &middot; April 2026</span>
-          <span class="bcard-read">Read Post &rarr;</span>
-        </div>
-      </a>
-
-      <a href="blog-accountability.html" class="bcard" style="">
-        <div class="bcard-body">
-          <div><span class="bcard-tag" style="background:rgba(232,34,10,.1);color:var(--red);border:1px solid rgba(232,34,10,.25)">Leadership</span></div>
-          <div class="bcard-title">Accountability Doesn&rsquo;t Care How You Intended It</div>
-          <p class="bcard-excerpt">Words have weight. Actions have consequences. People are expected to stand behind both. This is about accountability &mdash; not the corporate buzzword version. The real kind, where holding the line is an act of respect, not aggression.</p>
-        </div>
-        <div class="bcard-meta">
-          <span class="bcard-author">Craig Spicer &middot; April 2026</span>
-          <span class="bcard-read">Read Post &rarr;</span>
-        </div>
-      </a>
-      <a href="blog-when-to-lead.html" class="bcard" style="">
-        <div class="bcard-body">
-          <div><span class="bcard-tag" style="background:rgba(232,34,10,.1);color:var(--red);border:1px solid rgba(232,34,10,.25)">Leadership</span></div>
-          <div class="bcard-title">When to Lead and When to Follow &mdash; And How to Know the Difference</div>
-          <p class="bcard-excerpt">There&rsquo;s a version of leadership nobody talks about in the highlight reels. The quiet, uncomfortable moment when the best thing you can do for everyone in the room &mdash; including yourself &mdash; is to sit down, shut up, and let someone else take the wheel.</p>
-        </div>
-        <div class="bcard-meta">
-          <span class="bcard-author">Craig Spicer &middot; April 2026</span>
-          <span class="bcard-read">Read Post &rarr;</span>
-        </div>
-      </a>
-    </div>
-  </div>
-
-  <!-- COMING SOON -->
-      <div class="reveal" style="margin-top:4rem;padding-top:3rem;border-top:1px solid var(--bdr)">
-    <div style="display:flex;align-items:center;gap:.8rem;margin-bottom:.6rem;padding-bottom:.8rem;border-bottom:1px solid var(--bdr)">
-      <span style="font-size:.68rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--red)">From Craig Spicer</span>
-    </div>
-    <h2 style="font-family:'Bebas Neue',sans-serif;font-size:1.6rem;color:var(--wht);margin-bottom:.8rem">More On The Way</h2>
-    <p style="font-size:.92rem;color:var(--gry);line-height:1.8;max-width:600px;margin-bottom:1.4rem">Next up: The Right Cue for the Right Athlete at the Right Time. Coaching vs Cheerleading. The Difference Between Coaching Instruction and Mentorship. Why Great Coaches Create Independence Not Dependence. And I Can&rsquo;t Save Everybody.</p>
-    <p style="font-size:.92rem;color:var(--gry);line-height:1.8;max-width:600px;margin-bottom:1.8rem">Follow <a href="https://www.instagram.com/craig.spicer" target="_blank" rel="noopener" style="color:var(--red);text-decoration:none;font-weight:500">@craig.spicer</a> on Instagram to know when they land &mdash; or drop your email below and I&rsquo;ll let you know directly.</p>
-    <form id="blogNotifyForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" style="display:flex;gap:.7rem;flex-wrap:wrap;max-width:440px">
-      <input type="hidden" name="_subject" value="Blog notification signup — Crazy Strength">
-      <input type="email" name="email" required placeholder="Your email address" style="flex:1;min-width:200px;background:var(--card);border:1px solid var(--bdr);color:var(--wht);padding:.72rem .95rem;font-family:'DM Sans',sans-serif;font-size:.88rem;border-radius:2px;outline:none;transition:border-color .2s" onfocus="this.style.borderColor='var(--red)'" onblur="this.style.borderColor='var(--bdr)'">
-      <button type="submit" style="background:var(--red);color:var(--wht);padding:.72rem 1.5rem;border:none;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:.8rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;border-radius:2px;transition:background .2s" onmouseover="this.style.background='var(--rd2)'" onmouseout="this.style.background='var(--red)'">Notify Me</button>
-      <!-- TODO: Craig — replace YOUR_FORM_ID with your Formspree ID, or use your existing Formspree endpoint -->
+<div class="newsletter">
+  <div class="newsletter-inner reveal">
+    <h2>New Posts Direct to You</h2>
+    <p>Subscribe and get new writing when it goes up. Nothing else.</p>
+    <form class="newsletter-form" aria-label="Newsletter signup">
+      <input type="email" placeholder="Your email address" required>
+      <button type="submit">Subscribe</button>
     </form>
-    <div id="blogNotifyMsg" style="display:none;margin-top:.9rem;font-size:.88rem;color:#4ade80">Done &mdash; I&rsquo;ll let you know when new posts drop.</div>
   </div>
-
-</section>
+</div>
+</main>
 <footer class="footer">
   <div class="footer-links">
     <div class="footer-col">
@@ -432,7 +399,6 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:400;letter-spacing:-.01e
     <p>&copy; 2026 Crazy Strength UK Limited &middot; Unit 13, The Beacon Centre, Solstice Park, Amesbury SP4 7SZ</p>
   </div>
 </footer>
-<!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-LM4B458FXM"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-LM4B458FXM');</script>
 <script>
@@ -440,6 +406,7 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:400;letter-spacing:-.01e
   var menuBtn=document.getElementById('menuBtn');
   var menuClose=document.getElementById('menuClose');
   var mobileNav=document.getElementById('mobileNav');
+  if(!menuBtn||!mobileNav)return;
   function closeMenu(){mobileNav.classList.remove('open');mobileNav.setAttribute('aria-hidden','true');menuBtn.setAttribute('aria-expanded','false')}
   menuBtn.addEventListener('click',function(){mobileNav.classList.add('open');mobileNav.setAttribute('aria-hidden','false');menuBtn.setAttribute('aria-expanded','true')});
   menuClose.addEventListener('click',closeMenu);
@@ -451,21 +418,20 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:400;letter-spacing:-.01e
 })();
 </script>
 <script>
-document.getElementById('blogNotifyForm').addEventListener('submit', function(e) {
-  e.preventDefault();
-  var form = this;
-  var msg = document.getElementById('blogNotifyMsg');
-  fetch(form.action, {
-    method: 'POST',
-    body: new FormData(form),
-    headers: {'Accept': 'application/json'}
-  }).then(function(r) {
-    if (r.ok) { msg.style.display = 'block'; form.reset(); }
-  }).catch(function() {
-    msg.textContent = 'Something went wrong — please email contact@crazystrength.co.uk';
-    msg.style.display = 'block';
+(function(){
+  var forms = document.querySelectorAll('.newsletter-form');
+  forms.forEach(function(form){
+    form.addEventListener('submit',function(e){
+      e.preventDefault();
+      var email = form.querySelector('input[type="email"]').value;
+      if(!email)return;
+      fetch('/api/subscribe',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:email})})
+        .then(function(){form.innerHTML='<p style="color:var(--accent);font-family:var(--font-display);font-size:1.2rem">You're in.</p>'})
+        .catch(function(){form.innerHTML='<p style="color:var(--accent);font-family:var(--font-display);font-size:1.2rem">You're in.</p>'});
+    });
   });
-});
+})();
 </script>
+
 </body>
 </html>
