@@ -925,9 +925,9 @@ h1, h2, h3, h4 {
     <div class="process-step reveal">
       <div class="process-step-img">
         <img
-          src="assets/pictures/craig-compete.jpg"
-          alt="Craig Spicer locks out a clean and jerk at England Championships 2025"
-          width="900" height="1100" loading="lazy"
+          src="https://cdn.shopify.com/s/files/1/1038/4467/5925/files/Craig.webp?v=1775921268"
+          alt="Craig Spicer, founder of Crazy Strength, on the gym floor"
+          width="800" height="1000" loading="lazy"
         >
       </div>
       <div class="process-step-text">
@@ -1106,10 +1106,12 @@ filterBtns.forEach(btn => {
     progCards.forEach(card => {
       if (filter === 'all') {
         card.removeAttribute('data-hidden');
+        card.classList.add('vis'); // ensure revealed
       } else {
         const tags = (card.dataset.tags || '').split(' ');
         if (tags.includes(filter)) {
           card.removeAttribute('data-hidden');
+          card.classList.add('vis'); // ensure revealed
         } else {
           card.setAttribute('data-hidden', '');
         }
