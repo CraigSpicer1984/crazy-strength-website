@@ -11,23 +11,15 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet">
 <style>
-/* ── Tokens ── */
 :root{
   --ground:#0a0a0a;--surface:#141414;--surface2:#1c1c1c;
   --ink:#f4f4ef;--muted:#999;
   --accent:#e8220a;--accent2:#c01c08;
-  --action:#e8220a;--action-ink:#ffffff;
-  /* Legacy alias — old inline styles keep working */
-  --blk:var(--ground);--drk:var(--surface);--card:var(--surface2);
-  --bdr:rgba(244,244,239,.1);--red:var(--accent);--rd2:var(--accent2);
-  --wht:var(--ink);--gry:var(--muted);--lt:rgba(244,244,239,.7);
   --font-display:'Bebas Neue',sans-serif;
   --font-text:'DM Sans',sans-serif;
-  --gap:clamp(4rem,8vw,8rem);
+  --gap:clamp(5rem,10vw,9rem);
   --gutter:clamp(1.25rem,5vw,5rem);
-  font-size:16px;
 }
-/* ── Reset ── */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;overflow-x:hidden}
 body{background:var(--ground);color:var(--ink);font-family:var(--font-text);
@@ -36,7 +28,8 @@ body{background:var(--ground);color:var(--ink);font-family:var(--font-text);
 img{display:block;max-width:100%;height:auto}
 a{color:inherit}
 h1,h2,h3,h4{font-family:var(--font-display);font-weight:400;letter-spacing:-.01em;line-height:.92}
-/* ── Nav ── */
+
+/* Nav */
 .nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;
   justify-content:space-between;padding:0 var(--gutter);height:60px;
   background:rgba(10,10,10,.96)}
@@ -48,13 +41,12 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:400;letter-spacing:-.01e
   color:rgba(244,244,239,.7);transition:color .15s}
 .nav-links a:hover,.nav-links a.active{color:var(--ink)}
 .nav-cta{display:inline-flex;align-items:center;padding:.5rem 1.2rem;
-  background:var(--action);color:var(--action-ink);font-family:var(--font-display);
+  background:var(--accent);color:#fff;font-family:var(--font-display);
   font-size:.95rem;letter-spacing:.06em;text-decoration:none;border-radius:2px;
   transition:background .15s}
 .nav-cta:hover{background:var(--accent2)}
 .nav-hamburger{display:none;background:none;border:none;cursor:pointer;
   padding:.5rem;color:var(--ink);font-size:1.4rem}
-/* ── Mobile nav ── */
 .mobile-nav{display:none;position:fixed;top:60px;left:0;right:0;bottom:0;z-index:99;
   background:var(--surface);padding:2rem var(--gutter);flex-direction:column;
   gap:1.5rem;overflow-y:auto}
@@ -63,8 +55,106 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:400;letter-spacing:-.01e
   font-size:1.3rem;cursor:pointer;padding:.25rem}
 .mobile-nav a{font-family:var(--font-display);font-size:1.6rem;text-decoration:none;
   color:var(--ink);letter-spacing:.02em}
-/* ── Footer ── */
-.footer{background:var(--surface);padding:3rem var(--gutter) 2rem;margin-top:var(--gap)}
+@media(max-width:900px){
+  .nav-links,.nav-cta{display:none}
+  .nav-hamburger{display:block}
+}
+
+/* Hero */
+.hero{position:relative;min-height:72vh;display:flex;align-items:flex-end;
+  padding:0 var(--gutter) clamp(3rem,6vw,5rem);overflow:hidden;background:var(--surface)}
+.hero-bg{position:absolute;inset:0;background:
+  linear-gradient(to bottom,rgba(10,10,10,0) 30%,rgba(10,10,10,.85) 100%),
+  url('https://cdn.shopify.com/s/files/1/1038/4467/5925/files/cs-coaching-hero.jpg?v=1697553951') center/cover no-repeat;
+  background-color:var(--surface)}
+.hero-stripe{position:absolute;top:0;left:0;width:4px;height:100%;background:var(--accent)}
+.hero-content{position:relative;z-index:1;max-width:800px}
+.hero-kicker{font-size:.75rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--accent);margin-bottom:1.2rem}
+.hero h1{font-size:clamp(3.5rem,8vw,7rem);line-height:.88;color:var(--ink);
+  margin-bottom:1.5rem}
+.hero-sub{font-size:clamp(1rem,1.3vw,1.15rem);color:rgba(244,244,239,.7);
+  max-width:520px;line-height:1.65;margin-bottom:2rem}
+.hero-creds{display:flex;gap:2.5rem;flex-wrap:wrap}
+.hero-cred{font-size:.8rem;color:rgba(244,244,239,.5);line-height:1.4}
+.hero-cred strong{display:block;font-size:.85rem;color:var(--ink);margin-bottom:.15rem}
+
+/* Sections */
+section{padding:var(--gap) var(--gutter)}
+
+/* Who it's for — full-bleed split */
+.who{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;background:var(--surface2)}
+.who-item{padding:clamp(2rem,4vw,3rem);border-right:1px solid rgba(244,244,239,.07)}
+.who-item:last-child{border-right:none}
+.who-num{font-family:var(--font-display);font-size:4rem;color:rgba(244,244,239,.06);
+  line-height:1;margin-bottom:.5rem}
+.who-title{font-family:var(--font-display);font-size:1.6rem;color:var(--ink);
+  margin-bottom:.7rem;line-height:1}
+.who-desc{font-size:.88rem;color:var(--muted);line-height:1.7}
+@media(max-width:700px){.who{grid-template-columns:1fr}.who-item{border-right:none;border-bottom:1px solid rgba(244,244,239,.07)}}
+
+/* Section header */
+.sec-head{margin-bottom:clamp(2rem,4vw,3.5rem)}
+.sec-org{font-size:.7rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;
+  margin-bottom:.8rem}
+.sec-org-bwl{color:#4a8cff}
+.sec-org-bp{color:var(--accent)}
+.sec-head h2{font-size:clamp(2.4rem,5vw,4rem);color:var(--ink);margin-bottom:.9rem}
+.sec-head p{font-size:1rem;color:var(--muted);max-width:600px;line-height:1.75}
+
+/* Course blocks */
+.course{margin-bottom:clamp(2.5rem,4vw,4rem)}
+.course-header{margin-bottom:1.5rem}
+.course-header h3{font-size:clamp(2rem,3.5vw,3rem);color:var(--ink);margin-bottom:.6rem}
+.course-header p{font-size:.93rem;color:var(--muted);max-width:640px;line-height:1.75}
+
+/* Date cards */
+.dates{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1px;
+  background:rgba(244,244,239,.07);margin-top:1.5rem}
+.date-card{background:var(--ground);padding:1.6rem 1.8rem;display:flex;flex-direction:column;gap:.6rem}
+.dc-badge{font-size:.62rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
+  padding:.2rem .55rem;border-radius:2px;display:inline-block;width:fit-content}
+.badge-bwl-l1{background:rgba(74,140,255,.1);color:#4a8cff;border:1px solid rgba(74,140,255,.25)}
+.badge-bwl-l2{background:rgba(99,179,237,.1);color:#63b3ed;border:1px solid rgba(99,179,237,.25)}
+.badge-bwl-combo{background:rgba(104,211,145,.1);color:#68d391;border:1px solid rgba(104,211,145,.25)}
+.badge-bp-l1{background:rgba(232,34,10,.1);color:var(--accent);border:1px solid rgba(232,34,10,.28)}
+.badge-bp-l2{background:rgba(251,191,36,.1);color:#fbbf24;border:1px solid rgba(251,191,36,.25)}
+.dc-date{font-family:var(--font-display);font-size:1.5rem;color:var(--ink);line-height:1.1}
+.dc-time{font-size:.78rem;color:var(--muted)}
+.dc-price{font-size:1.1rem;font-weight:600;color:var(--ink)}
+.dc-price em{font-style:normal;font-size:.75rem;font-weight:400;color:var(--muted)}
+.btn-bwl{display:inline-block;padding:.6rem 1.2rem;font-size:.73rem;font-weight:600;
+  letter-spacing:.09em;text-transform:uppercase;border-radius:2px;text-decoration:none;
+  transition:background .2s;background:#1a56db;color:#fff;margin-top:.4rem}
+.btn-bwl:hover{background:#1447b8}
+.btn-ext{display:inline-block;padding:.6rem 1.2rem;font-size:.73rem;font-weight:600;
+  letter-spacing:.09em;text-transform:uppercase;border-radius:2px;text-decoration:none;
+  transition:background .2s;background:var(--surface2);color:var(--ink);
+  border:1px solid rgba(244,244,239,.12);margin-top:.4rem}
+.btn-ext:hover{border-color:var(--ink)}
+.btn-red{display:inline-block;padding:.6rem 1.2rem;font-size:.73rem;font-weight:600;
+  letter-spacing:.09em;text-transform:uppercase;border-radius:2px;text-decoration:none;
+  transition:background .2s;background:var(--accent);color:#fff;margin-top:.4rem}
+.btn-red:hover{background:var(--accent2)}
+
+/* Tutor callout */
+.tutor{background:rgba(232,34,10,.04);border-left:3px solid var(--accent);
+  padding:1.4rem 1.8rem;margin-top:2rem}
+.tutor p{font-size:.9rem;color:rgba(244,244,239,.7);line-height:1.75}
+.tutor strong{color:var(--ink)}
+
+/* CTA band */
+.cta-band{background:var(--surface);padding:clamp(3rem,6vw,5rem) var(--gutter)}
+.cta-inner{display:flex;flex-wrap:wrap;gap:2rem;justify-content:space-between;align-items:center}
+.cta-inner h2{font-size:clamp(1.8rem,3.5vw,2.8rem);color:var(--ink);line-height:1}
+.cta-inner p{font-size:.9rem;color:var(--muted);margin-top:.5rem;max-width:420px}
+.cta-btn{display:inline-block;padding:1rem 2.2rem;background:var(--accent);color:#fff;
+  font-family:var(--font-display);font-size:1.1rem;letter-spacing:.06em;
+  text-decoration:none;border-radius:2px;transition:background .15s;white-space:nowrap}
+.cta-btn:hover{background:var(--accent2)}
+
+/* Footer */
+.footer{background:var(--surface);padding:3rem var(--gutter) 2rem;margin-top:0}
 .footer-links{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-bottom:2.5rem}
 .footer-col h4{font-size:.75rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;
   color:var(--muted);margin-bottom:1rem}
@@ -74,309 +164,278 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:400;letter-spacing:-.01e
 .footer-name{font-family:var(--font-display);font-size:clamp(3rem,10vw,8rem);line-height:.85;
   color:rgba(244,244,239,.04);letter-spacing:-.02em;margin-bottom:1.5rem;
   overflow:hidden;user-select:none}
-.footer-bottom{border-top:1px solid rgba(244,244,239,.08);padding-top:1.5rem;
-  display:flex;flex-direction:column;gap:.5rem}
+.footer-bottom{border-top:1px solid rgba(244,244,239,.08);padding-top:1.5rem}
 .footer-bottom p{font-size:.75rem;color:rgba(244,244,239,.35);line-height:1.6}
 .footer-bottom a{color:rgba(244,244,239,.5);text-decoration:none}
 .footer-bottom a:hover{color:var(--ink)}
-/* ── Shared utilities ── */
-.reveal{opacity:0;transform:translateY(22px);transition:opacity .55s ease,transform .55s ease}
-.reveal.vis{opacity:1;transform:translateY(0)}
-@media(max-width:900px){
-  .nav-links,.nav-cta{display:none}
-  .nav-hamburger{display:block}
-  .footer-links{grid-template-columns:1fr 1fr}
-}
+@media(max-width:900px){.footer-links{grid-template-columns:1fr 1fr}}
 @media(max-width:600px){.footer-links{grid-template-columns:1fr}}
-</style>
-<style>
+
+/* Reveal */
 .reveal{opacity:0;transform:translateY(22px);transition:opacity .55s ease,transform .55s ease}
 .reveal.vis{opacity:1;transform:translateY(0)}
-.btn{display:inline-block;padding:.8rem 1.8rem;font-size:.8rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;border-radius:2px;text-decoration:none;transition:background .2s,transform .15s}
-.btn:hover{transform:translateY(-1px)}
-.btn-r{background:var(--red);color:var(--wht)}.btn-r:hover{background:var(--rd2)}
-.btn-o{background:transparent;color:var(--wht);border:1px solid var(--bdr)}.btn-o:hover{border-color:var(--wht)}
-.slabel{font-size:.7rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--red);margin-bottom:.7rem}
-.stitle{font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,4vw,3.2rem);line-height:1;color:var(--wht);margin-bottom:.9rem}
-.sbody{font-size:.97rem;color:var(--gry);max-width:580px;line-height:1.8}
-.phero{position:relative;height:48vh;min-height:300px;overflow:hidden;background:var(--drk);display:flex;align-items:flex-end}
-.phero-bg{position:absolute;inset:0}
-.phero-c{position:relative;z-index:1;padding:2.5rem 5vw;width:100%}
-.bc{font-size:.7rem;color:rgba(255,255,255,.45);letter-spacing:.1em;text-transform:uppercase;margin-bottom:.8rem}
-.bc a{color:rgba(255,255,255,.45);text-decoration:none}
-.ptag{display:inline-block;font-size:.68rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;border:1px solid;padding:.25rem .7rem;margin-bottom:.8rem}
-.ptitle{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.8rem,6vw,5rem);line-height:.92;color:var(--wht);margin-bottom:.8rem}
-.psub{font-size:.93rem;color:var(--lt);max-width:580px;line-height:1.7}
-footer{background:var(--drk);border-top:1px solid var(--bdr);padding:2.5rem 5vw}
-.fi{display:flex;flex-wrap:wrap;gap:1.5rem;justify-content:space-between;align-items:center}
-.flogo{display:flex;align-items:center;gap:.6rem;text-decoration:none}
-.flogo img{height:32px}
-.flogot{font-family:'Bebas Neue',sans-serif;font-size:1.2rem;color:var(--wht)}
-.flogot span{color:var(--red)}
-.flinks{display:flex;gap:1.5rem;flex-wrap:wrap}
-.flinks a{font-size:.75rem;color:var(--gry);text-decoration:none;letter-spacing:.06em;text-transform:uppercase;transition:color .2s}
-.flinks a:hover{color:var(--wht)}
-@media(max-width:900px){.nlinks{display:none}.hbg{display:flex}}
-@media(max-width:600px){section{padding:60px 5vw!important}.phero{min-height:260px}}
-.course-block{margin-bottom:1px}
-.cb{background:var(--card);border:1px solid var(--bdr);position:relative;overflow:hidden}
-.cb::before{content:'';position:absolute;top:0;left:0;bottom:0;width:4px}
-.cb-bwl::before{background:#1a56db}
-.cb-bp::before{background:var(--red)}
-.cb-top{padding:2rem 2rem 1.5rem 2.2rem;border-bottom:1px solid var(--bdr)}
-.cb-org{font-size:.65rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;margin-bottom:.4rem}
-.cb-bwl .cb-org{color:#4a8cff}
-.cb-bp .cb-org{color:var(--red)}
-.cb-title{font-family:'Bebas Neue',sans-serif;font-size:2rem;color:var(--wht);margin-bottom:.6rem;line-height:1}
-.cb-desc{font-size:.87rem;color:var(--gry);line-height:1.75;max-width:640px}
-.dates-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1px;background:var(--bdr)}
-.date-card{background:var(--blk);padding:1.5rem 1.8rem;display:flex;flex-direction:column;gap:.7rem}
-.dc-level{font-size:.62rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:.18rem .55rem;border-radius:2px;display:inline-block;width:fit-content}
-.dc-bwl-l1{background:rgba(74,140,255,.1);color:#4a8cff;border:1px solid rgba(74,140,255,.25)}
-.dc-bwl-l2{background:rgba(99,179,237,.1);color:#63b3ed;border:1px solid rgba(99,179,237,.25)}
-.dc-bwl-comb{background:rgba(154,230,180,.1);color:#68d391;border:1px solid rgba(154,230,180,.25)}
-.dc-bp-l1{background:rgba(232,34,10,.1);color:var(--red);border:1px solid rgba(232,34,10,.28)}
-.dc-bp-l2{background:rgba(251,191,36,.1);color:#fbbf24;border:1px solid rgba(251,191,36,.25)}
-.dc-date{font-family:'Bebas Neue',sans-serif;font-size:1.4rem;color:var(--wht);line-height:1.1}
-.dc-time{font-size:.78rem;color:var(--gry)}
-.dc-price{font-size:1.1rem;font-weight:600;color:var(--wht)}
-.dc-price span{font-size:.75rem;font-weight:400;color:var(--gry)}
-.dc-btn{display:inline-block;padding:.6rem 1.2rem;font-size:.73rem;font-weight:600;letter-spacing:.09em;text-transform:uppercase;border-radius:2px;text-decoration:none;transition:background .2s;margin-top:.2rem;text-align:center}
-.dc-btn-bwl{background:#1a56db;color:#fff}.dc-btn-bwl:hover{background:#1447b8}
-.dc-btn-bp{background:var(--red);color:#fff}.dc-btn-bp:hover{background:var(--rd2)}
-.dc-btn-ext{background:var(--card);color:var(--wht);border:1px solid var(--bdr)}.dc-btn-ext:hover{border-color:var(--wht)}
-.tutor-box{background:rgba(232,34,10,.05);border-left:3px solid var(--red);padding:1.2rem 1.5rem;margin:1.5rem 2rem 0}
-.who-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:var(--bdr);border:1px solid var(--bdr);margin-top:2.5rem}
-.who-card{background:var(--card);padding:1.8rem;text-align:center}
-.who-icon{font-size:1.8rem;margin-bottom:.7rem}
-.who-title{font-size:.88rem;font-weight:600;color:var(--wht);margin-bottom:.4rem}
-.who-desc{font-size:.8rem;color:var(--gry);line-height:1.6}
-@media(max-width:900px){.who-grid{grid-template-columns:1fr}}
+
+/* Divider */
+.divider{border:none;border-top:1px solid rgba(244,244,239,.07)}
 </style>
 </head>
 <body>
+
 <nav class="nav" aria-label="Main navigation">
   <a class="nav-logo" href="https://crazystrength.co.uk">CRAZY<span>STRENGTH</span></a>
   <ul class="nav-links" role="list">
-    <li><a href="https://crazystrength.co.uk/education.html">Education</a></li>
-    <li><a href="https://crazystrength.co.uk/index.html#programmes">Train</a></li>
-    <li><a href="https://crazystrength.co.uk/events.html">Events</a></li>
-    <li><a href="https://crazystrength.co.uk/blog.html">Blog</a></li>
-    <li><a href="https://crazystrength.co.uk/shop.html">Shop</a></li>
+    <li><a href="education.html" class="active">Education</a></li>
+    <li class="nav-drop">
+      <a href="index.html#programmes">Train</a>
+      <ul class="nav-dropmenu">
+        <li><a href="powerlifting.html">Powerlifting</a></li>
+        <li><a href="weightlifting.html">Weightlifting</a></li>
+        <li><a href="ladies-that-lift.html">Ladies That Lift</a></li>
+        <li><a href="legends-that-lift.html">Legends That Lift</a></li>
+        <li><a href="cubs.html">Cubs</a></li>
+        <li><a href="open-gym.html">Open Gym</a></li>
+      </ul>
+    </li>
+    <li><a href="events.html">Events</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="shop.html">Shop</a></li>
   </ul>
   <a class="nav-cta" href="https://crazystrength.co.uk/taster">Book a Free Taster</a>
   <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false" id="menuBtn">&#9776;</button>
 </nav>
+
 <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation" aria-hidden="true">
   <button class="mobile-nav-close" id="menuClose" aria-label="Close menu">&#10005;</button>
-  <a href="https://crazystrength.co.uk/education.html">Education</a>
-  <a href="https://crazystrength.co.uk/index.html#programmes">Train</a>
-  <a href="https://crazystrength.co.uk/events.html">Events</a>
-  <a href="https://crazystrength.co.uk/blog.html">Blog</a>
-  <a href="https://crazystrength.co.uk/shop.html">Shop</a>
+  <a href="education.html">Education</a>
+  <a href="index.html#programmes">Train</a>
+  <a href="events.html">Events</a>
+  <a href="blog.html">Blog</a>
+  <a href="shop.html">Shop</a>
   <a href="https://crazystrength.co.uk/taster" style="color:var(--accent)">Book a Free Taster &#8594;</a>
 </nav>
-<section style="background:var(--blk);padding:140px 5vw">
-  <div class="reveal">
-    <div class="slabel">Who These Courses Are For</div>
-    <h2 class="stitle">Develop Your Coaching</h2>
-    <p class="sbody">Whether you&rsquo;re looking to start coaching, formalise your knowledge, or progress your existing qualifications &mdash; these are the only nationally recognised pathways in the sport.</p>
-  </div>
-  <div class="who-grid reveal">
-    <div class="who-card"><div class="who-icon">&#127947;</div><div class="who-title">Aspiring Coaches</div><div class="who-desc">New to coaching but passionate about the sport? Level 1 is your starting point &mdash; no prior coaching experience needed.</div></div>
-    <div class="who-card"><div class="who-icon">&#127970;</div><div class="who-title">Gym Owners &amp; PTs</div><div class="who-desc">Add nationally recognised qualifications to your offering and open your facility to club coaching and competition delivery.</div></div>
-    <div class="who-card"><div class="who-icon">&#127941;</div><div class="who-title">Competitive Athletes</div><div class="who-desc">Deepen your technical understanding of the sport and start giving something back to the community that made you.</div></div>
-  </div>
-</section>
-<hr class="divider">
 
-<section style="background:var(--drk);padding:80px 5vw">
-  <div class="reveal">
-    <div class="slabel" style="color:#4a8cff">British Weightlifting</div>
-    <h2 class="stitle">Weightlifting Coaching Courses</h2>
-    <p class="sbody">British Weightlifting&rsquo;s official coaching pathway &mdash; the only qualifications recognised for the BWL Coach Licence Scheme, which is required to coach at national competitions.</p>
-  </div>
-
-  <div style="margin-top:2.5rem" class="reveal">
-    <div class="cb cb-bwl">
-      <div class="cb-top">
-        <div class="cb-org">British Weightlifting &middot; Approved Venue</div>
-        <div class="cb-title">Level 1 Award in Coaching Weightlifting</div>
-        <p class="cb-desc">The first step on the BWL coaching pathway. Designed for those new to coaching who have some knowledge of the sport. Covers the processes and principles of coaching, safety, session design and how to assist qualified coaches. Includes 12&ndash;16 hours of updated e-learning (incorporating the new BWL Technical Model) plus a one-day practical at Crazy Strength. Assessment is now online, giving you more time to focus on practical application on the day.</p>
+<!-- Hero -->
+<div class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-stripe"></div>
+  <div class="hero-content reveal">
+    <div class="hero-kicker">Coaching Education</div>
+    <h1>Build the Coach<br>Behind the Athlete</h1>
+    <p class="hero-sub">Official British Weightlifting and British Powerlifting coaching qualifications, delivered at Crazy Strength in Amesbury by Craig Spicer &mdash; SW Regional Course Tutor.</p>
+    <div class="hero-creds">
+      <div class="hero-cred">
+        <strong>BWL Approved Venue</strong>
+        Level 1 &amp; Level 2 Weightlifting
       </div>
-      <div class="dates-grid">
-        
-        
-        <div class="date-card">
-          <span class="dc-level dc-bwl-l1">Level 1</span>
-          <div class="dc-date">Saturday 6 March 2027</div>
-          <div class="dc-time">10:00 &ndash; 17:00 &middot; Crazy Strength, Amesbury</div>
-          <div class="dc-price">&pound;375 <span>+ fee</span></div>
-          <a href="https://www.evini.com/locations/390/workshops/18243/534069e8" target="_blank" rel="noopener" class="dc-btn dc-btn-bwl">Book Now &rarr;</a>
-        </div>
-        <div class="date-card">
-          <span class="dc-level dc-bwl-l1">Level 1</span>
-          <div class="dc-date">Saturday 19 June 2027</div>
-          <div class="dc-time">10:00 &ndash; 17:00 &middot; Crazy Strength, Amesbury</div>
-          <div class="dc-price">&pound;375 <span>+ fee</span></div>
-          <a href="https://www.evini.com/locations/390/workshops/18245/f1bdb983" target="_blank" rel="noopener" class="dc-btn dc-btn-bwl">Book Now &rarr;</a>
-        </div>
-        <div class="date-card">
-          <span class="dc-level dc-bwl-l1">Level 1</span>
-          <div class="dc-date">Saturday 13 November 2027</div>
-          <div class="dc-time">10:00 &ndash; 17:00 &middot; Crazy Strength, Amesbury</div>
-          <div class="dc-price">&pound;375 <span>+ fee</span></div>
-          <a href="https://www.evini.com/locations/390/workshops/18246/62b0a600" target="_blank" rel="noopener" class="dc-btn dc-btn-bwl">Book Now &rarr;</a>
-        </div>
+      <div class="hero-cred">
+        <strong>BP South West Tutor</strong>
+        Level 1 &amp; Level 2 Powerlifting
+      </div>
+      <div class="hero-cred">
+        <strong>Craig Spicer</strong>
+        25+ years in strength sport
       </div>
     </div>
-  </div>
-
-  <div style="margin-top:1px" class="reveal">
-    <div class="cb cb-bwl">
-      <div class="cb-top">
-        <div class="cb-org">British Weightlifting &middot; Approved Venue</div>
-        <div class="cb-title">Level 2 Certificate in Coaching Weightlifting</div>
-        <p class="cb-desc">The next step for qualified Level 1 coaches. Provides the knowledge and skills to work as an independent Olympic Weightlifting coach. Holding a Level 2 also makes you eligible to apply for the BWL Coach Licence, which is required to coach athletes at national competitions. Combines advanced e-learning with a one-day practical at Crazy Strength.</p>
-      </div>
-      <div class="dates-grid">
-        <div class="date-card">
-          <span class="dc-level dc-bwl-l1">Level 2</span>
-          <div class="dc-date">Saturday 24 April 2027</div>
-          <div class="dc-time">10:00 &ndash; 17:00 &middot; Crazy Strength, Amesbury</div>
-          <div class="dc-price">&pound;500 <span>+ fee</span></div>
-          <a href="https://www.evini.com/locations/390/workshops/18244/188f5dbc" target="_blank" rel="noopener" class="dc-btn dc-btn-bwl">Book Now &rarr;</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div style="margin-top:1px" class="reveal">
-    <div class="cb cb-bwl">
-      <div class="cb-top">
-        <div class="cb-org">British Weightlifting &middot; Best Value</div>
-        <div class="cb-title">Combined Level 1 &amp; Level 2</div>
-        <p class="cb-desc">Take both qualifications back to back over one weekend and save &pound;100 on the individual course prices. The most efficient way to progress from complete beginner to independently licensed coach in a single weekend at Crazy Strength.</p>
-      </div>
-      <div class="dates-grid">
-        
-      </div>
-      <div class="tutor-box">
-        <div style="font-size:.68rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--red);margin-bottom:.4rem">Course Tutor</div>
-        <p style="font-size:.86rem;color:var(--lt);line-height:1.7">All British Weightlifting courses at Crazy Strength are delivered by or under the supervision of <strong>Craig Spicer</strong> &mdash; Coaching Lead for British Powerlifting and experienced BWL course tutor with over 25 years in strength sport.</p>
-      </div>
-    </div>
-  </div>
-</section>
-<hr class="divider">
-
-<section style="background:var(--blk);padding:80px 5vw">
-  <div class="reveal">
-    <div class="slabel" style="color:var(--red)">British Powerlifting</div>
-    <h2 class="stitle">Powerlifting Coaching Courses</h2>
-    <p class="sbody">Official British Powerlifting coaching qualifications. Craig Spicer is the <strong style="color:var(--wht)">South West Course Tutor for British Powerlifting</strong> &mdash; bringing national-level coaching education directly to Amesbury.</p>
-  </div>
-
-  <div style="margin-top:2.5rem" class="reveal">
-    <div class="cb cb-bp">
-      <div class="cb-top">
-        <div class="cb-org">British Powerlifting &middot; South West Tutor: Craig Spicer</div>
-        <div class="cb-title">Level 1 Coaching Course</div>
-        <p class="cb-desc">The British Powerlifting Level 1 coaching course covers the foundational principles of powerlifting coaching &mdash; technique, programming, competition preparation and athlete development. Suitable for anyone looking to start coaching squat, bench press and deadlift. No prior coaching experience required. Booking is through the British Powerlifting website.</p>
-      </div>
-      <div class="dates-grid">
-        
-        <div class="date-card">
-          <span class="dc-level dc-bp-l1">BP Level 1</span>
-          <div class="dc-date">Sat &amp; Sun 19&ndash;20 December 2026</div>
-          <div class="dc-time">Crazy Strength, Amesbury</div>
-          <a href="https://www.britishpowerlifting.org/coaching-courses" target="_blank" rel="noopener" class="dc-btn dc-btn-ext">Book via British Powerlifting &rarr;</a>
-        </div>
-        <div class="date-card">
-          <span class="dc-level dc-bp-l1">BP Level 1</span>
-          <div class="dc-date">Sat &amp; Sun 16&ndash;17 January 2027</div>
-          <div class="dc-time">Crazy Strength, Amesbury</div>
-          <a href="https://www.britishpowerlifting.org/coaching-courses" target="_blank" rel="noopener" class="dc-btn dc-btn-ext">Book via British Powerlifting &rarr;</a>
-        </div>
-        <div class="date-card">
-          <span class="dc-level dc-bp-l1">BP Level 1</span>
-          <div class="dc-date">Sat &amp; Sun 20&ndash;21 March 2027</div>
-          <div class="dc-time">Crazy Strength, Amesbury</div>
-          <a href="https://www.britishpowerlifting.org/coaching-courses" target="_blank" rel="noopener" class="dc-btn dc-btn-ext">Book via British Powerlifting &rarr;</a>
-        </div>
-        <div class="date-card">
-          <span class="dc-level dc-bp-l1">BP Level 1</span>
-          <div class="dc-date">Sat &amp; Sun 16&ndash;17 October 2027</div>
-          <div class="dc-time">Crazy Strength, Amesbury</div>
-          <a href="https://www.britishpowerlifting.org/coaching-courses" target="_blank" rel="noopener" class="dc-btn dc-btn-ext">Book via British Powerlifting &rarr;</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div style="margin-top:1px" class="reveal">
-    <div class="cb cb-bp">
-      <div class="cb-top">
-        <div class="cb-org">British Powerlifting &middot; Facilitated by Crazy Strength</div>
-        <div class="cb-title">Level 2 Qualification</div>
-        <p class="cb-desc">Crazy Strength helps facilitate the delivery of the British Powerlifting Level 2 qualification. Get in touch to find out how we can support your Level 2 journey and when the next opportunity is available.</p>
-      </div>
-      <div class="dates-grid">
-        <div class="date-card">
-          <span class="dc-level dc-bp-l2">BP Level 2</span>
-          <div class="dc-date">Dates on enquiry</div>
-          <div class="dc-time">Crazy Strength, Amesbury</div>
-          <a href="privacy.html">Privacy Policy</a> &nbsp;|&nbsp; <a href="contact.html" class="dc-btn dc-btn-bp">Enquire Now &rarr;</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div style="margin-top:1.5rem;padding:1.2rem 1.5rem;background:var(--card);border:1px solid var(--bdr);font-size:.84rem;color:var(--gry);line-height:1.7" class="reveal">
-    <strong style="color:var(--wht)">Not sure which course is right for you?</strong> Get in touch via the <a href="privacy.html">Privacy Policy</a> &nbsp;|&nbsp; <a href="contact.html" style="color:var(--red);text-decoration:none">contact form</a> or <a href="https://wa.me/447734824897" target="_blank" rel="noopener" style="color:#25d366;text-decoration:none">WhatsApp</a> and Craig will point you in the right direction.
-  </div>
-</section>
-<hr class="divider">
-
-<div style="padding:55px 5vw">
-  <div style="display:flex;flex-wrap:wrap;gap:1.8rem;justify-content:space-between;align-items:center;padding:2.2rem;background:var(--card);border:1px solid var(--bdr)" class="reveal">
-    <div>
-      <h3 style="font-family:'Bebas Neue',sans-serif;font-size:1.9rem;color:var(--wht)">Want to Host a Course or Find Out More?</h3>
-      <p style="color:var(--gry);font-size:.88rem;margin-top:.25rem">Get in touch to discuss upcoming courses, venue enquiries or how to book as a group.</p>
-    </div>
-    <a href="privacy.html">Privacy Policy</a> &nbsp;|&nbsp; <a href="contact.html" class="btn btn-r">Get In Touch &rarr;</a>
   </div>
 </div>
+
+<!-- Who it's for -->
+<div class="who reveal">
+  <div class="who-item">
+    <div class="who-num">01</div>
+    <div class="who-title">Aspiring Coaches</div>
+    <p class="who-desc">New to coaching but serious about the sport. Level 1 is your starting point &mdash; no prior coaching experience required.</p>
+  </div>
+  <div class="who-item">
+    <div class="who-num">02</div>
+    <div class="who-title">Gym Owners &amp; PTs</div>
+    <p class="who-desc">Add nationally recognised qualifications to your offer and open your facility to club coaching and competition delivery.</p>
+  </div>
+  <div class="who-item">
+    <div class="who-num">03</div>
+    <div class="who-title">Competitive Athletes</div>
+    <p class="who-desc">Deepen your technical understanding of the sport and start giving something back to the community that made you.</p>
+  </div>
+</div>
+
+<!-- BWL Section -->
+<section style="background:var(--ground)">
+  <div class="sec-head reveal">
+    <div class="sec-org sec-org-bwl">British Weightlifting &middot; Approved Venue</div>
+    <h2>Weightlifting Coaching Courses</h2>
+    <p>The only qualifications recognised for the BWL Coach Licence Scheme &mdash; required to coach athletes at national competitions.</p>
+  </div>
+
+  <!-- Level 1 -->
+  <div class="course reveal">
+    <div class="course-header">
+      <h3>Level 1 Award in Coaching Weightlifting</h3>
+      <p>The first step on the BWL coaching pathway. Covers the processes and principles of coaching, safety, session design and how to assist qualified coaches. Includes 12&ndash;16 hours of updated e-learning incorporating the new BWL Technical Model, plus a one-day practical at Crazy Strength. Assessment is now online, giving you more time to focus on practical application on the day.</p>
+    </div>
+    <div class="dates">
+      <div class="date-card">
+        <span class="dc-badge badge-bwl-l1">Level 1</span>
+        <div class="dc-date">Saturday 6 March 2027</div>
+        <div class="dc-time">10:00 &ndash; 17:00 &middot; Crazy Strength, Amesbury</div>
+        <div class="dc-price">&pound;375 <em>+ booking fee</em></div>
+        <a href="https://www.evini.com/locations/390/workshops/18243/534069e8" target="_blank" rel="noopener" class="btn-bwl">Book Now &rarr;</a>
+      </div>
+      <div class="date-card">
+        <span class="dc-badge badge-bwl-l1">Level 1</span>
+        <div class="dc-date">Saturday 19 June 2027</div>
+        <div class="dc-time">10:00 &ndash; 17:00 &middot; Crazy Strength, Amesbury</div>
+        <div class="dc-price">&pound;375 <em>+ booking fee</em></div>
+        <a href="https://www.evini.com/locations/390/workshops/18245/f1bdb983" target="_blank" rel="noopener" class="btn-bwl">Book Now &rarr;</a>
+      </div>
+      <div class="date-card">
+        <span class="dc-badge badge-bwl-l1">Level 1</span>
+        <div class="dc-date">Saturday 13 November 2027</div>
+        <div class="dc-time">10:00 &ndash; 17:00 &middot; Crazy Strength, Amesbury</div>
+        <div class="dc-price">&pound;375 <em>+ booking fee</em></div>
+        <a href="https://www.evini.com/locations/390/workshops/18246/62b0a600" target="_blank" rel="noopener" class="btn-bwl">Book Now &rarr;</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Level 2 -->
+  <div class="course reveal">
+    <div class="course-header">
+      <h3>Level 2 Certificate in Coaching Weightlifting</h3>
+      <p>The next step for qualified Level 1 coaches. Provides the knowledge and skills to work as an independent Olympic Weightlifting coach. Holding a Level 2 also makes you eligible to apply for the BWL Coach Licence, required to coach athletes at national competitions. Combines advanced e-learning with a one-day practical at Crazy Strength.</p>
+    </div>
+    <div class="dates">
+      <div class="date-card">
+        <span class="dc-badge badge-bwl-l2">Level 2</span>
+        <div class="dc-date">Saturday 24 April 2027</div>
+        <div class="dc-time">10:00 &ndash; 17:00 &middot; Crazy Strength, Amesbury</div>
+        <div class="dc-price">&pound;500 <em>+ booking fee</em></div>
+        <a href="https://www.evini.com/locations/390/workshops/18244/188f5dbc" target="_blank" rel="noopener" class="btn-bwl">Book Now &rarr;</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Combined -->
+  <div class="course reveal">
+    <div class="course-header">
+      <h3>Combined Level 1 &amp; Level 2</h3>
+      <p>Take both qualifications back to back over one weekend and save &pound;100 on the individual course prices. The most efficient way to progress from complete beginner to independently licensed coach in a single weekend at Crazy Strength.</p>
+    </div>
+    <div class="dates">
+      <div class="date-card" style="grid-column:1/-1;max-width:400px">
+        <span class="dc-badge badge-bwl-combo">Level 1 + Level 2</span>
+        <div class="dc-date">Contact for dates</div>
+        <div class="dc-time">Weekend format &middot; Crazy Strength, Amesbury</div>
+        <div class="dc-price">&pound;775 <em>+ booking fee (save &pound;100)</em></div>
+        <a href="https://wa.me/447734824897" target="_blank" rel="noopener" class="btn-bwl">Enquire via WhatsApp &rarr;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="tutor reveal">
+    <p>All British Weightlifting courses at Crazy Strength are delivered by or under the supervision of <strong>Craig Spicer</strong> &mdash; Coaching Lead for British Powerlifting and experienced BWL course tutor with over 25 years in strength sport.</p>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- BP Section -->
+<section style="background:var(--surface)">
+  <div class="sec-head reveal">
+    <div class="sec-org sec-org-bp">British Powerlifting &middot; South West Tutor: Craig Spicer</div>
+    <h2>Powerlifting Coaching Courses</h2>
+    <p>Official British Powerlifting coaching qualifications. Craig is the South West Regional Course Tutor &mdash; bringing national-level coaching education directly to Amesbury.</p>
+  </div>
+
+  <!-- BP Level 1 -->
+  <div class="course reveal">
+    <div class="course-header">
+      <h3>Level 1 Coaching Course</h3>
+      <p>Covers the foundational principles of powerlifting coaching &mdash; technique, programming, competition preparation and athlete development. Suitable for anyone looking to start coaching squat, bench press and deadlift. No prior coaching experience required. Booking is handled directly through the British Powerlifting website.</p>
+    </div>
+    <div class="dates">
+      <div class="date-card">
+        <span class="dc-badge badge-bp-l1">BP Level 1</span>
+        <div class="dc-date">Sat &amp; Sun 19&ndash;20 Dec 2026</div>
+        <div class="dc-time">Crazy Strength, Amesbury</div>
+        <a href="https://www.britishpowerlifting.org/coaching-courses" target="_blank" rel="noopener" class="btn-ext">Book via British Powerlifting &rarr;</a>
+      </div>
+      <div class="date-card">
+        <span class="dc-badge badge-bp-l1">BP Level 1</span>
+        <div class="dc-date">Sat &amp; Sun 16&ndash;17 Jan 2027</div>
+        <div class="dc-time">Crazy Strength, Amesbury</div>
+        <a href="https://www.britishpowerlifting.org/coaching-courses" target="_blank" rel="noopener" class="btn-ext">Book via British Powerlifting &rarr;</a>
+      </div>
+      <div class="date-card">
+        <span class="dc-badge badge-bp-l1">BP Level 1</span>
+        <div class="dc-date">Sat &amp; Sun 20&ndash;21 Mar 2027</div>
+        <div class="dc-time">Crazy Strength, Amesbury</div>
+        <a href="https://www.britishpowerlifting.org/coaching-courses" target="_blank" rel="noopener" class="btn-ext">Book via British Powerlifting &rarr;</a>
+      </div>
+      <div class="date-card">
+        <span class="dc-badge badge-bp-l1">BP Level 1</span>
+        <div class="dc-date">Sat &amp; Sun 16&ndash;17 Oct 2027</div>
+        <div class="dc-time">Crazy Strength, Amesbury</div>
+        <a href="https://www.britishpowerlifting.org/coaching-courses" target="_blank" rel="noopener" class="btn-ext">Book via British Powerlifting &rarr;</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- BP Level 2 -->
+  <div class="course reveal">
+    <div class="course-header">
+      <h3>Level 2 Qualification</h3>
+      <p>Crazy Strength facilitates delivery of the British Powerlifting Level 2 qualification. Get in touch to find out how we can support your Level 2 journey and when the next opportunity is available.</p>
+    </div>
+    <div class="dates">
+      <div class="date-card" style="max-width:340px">
+        <span class="dc-badge badge-bp-l2">BP Level 2</span>
+        <div class="dc-date">Dates on enquiry</div>
+        <div class="dc-time">Crazy Strength, Amesbury</div>
+        <a href="https://wa.me/447734824897" target="_blank" rel="noopener" class="btn-red">Enquire via WhatsApp &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Band -->
+<div class="cta-band">
+  <div class="cta-inner reveal">
+    <div>
+      <h2>Not sure which course is right for you?</h2>
+      <p>Craig will point you in the right direction. Get in touch and we&rsquo;ll talk through your goals, your current experience, and which qualification makes sense.</p>
+    </div>
+    <a href="https://wa.me/447734824897" target="_blank" rel="noopener" class="cta-btn">WhatsApp Craig &rarr;</a>
+  </div>
+</div>
+
 <footer class="footer">
   <div class="footer-links">
     <div class="footer-col">
       <h4>Train</h4>
       <ul>
-        <li><a href="https://crazystrength.co.uk/powerlifting.html">Beginner Powerlifting</a></li>
-        <li><a href="https://crazystrength.co.uk/weightlifting.html">Olympic Weightlifting</a></li>
-        <li><a href="https://crazystrength.co.uk/ladies-that-lift.html">Ladies That Lift</a></li>
-        <li><a href="https://crazystrength.co.uk/legends-that-lift.html">Legends That Lift</a></li>
-        <li><a href="https://crazystrength.co.uk/cubs.html">Cubs Programme</a></li>
-        <li><a href="https://crazystrength.co.uk/open-gym.html">Open Gym</a></li>
+        <li><a href="powerlifting.html">Beginner Powerlifting</a></li>
+        <li><a href="weightlifting.html">Olympic Weightlifting</a></li>
+        <li><a href="ladies-that-lift.html">Ladies That Lift</a></li>
+        <li><a href="legends-that-lift.html">Legends That Lift</a></li>
+        <li><a href="cubs.html">Cubs Programme</a></li>
+        <li><a href="open-gym.html">Open Gym</a></li>
       </ul>
     </div>
     <div class="footer-col">
       <h4>Learn</h4>
       <ul>
-        <li><a href="https://crazystrength.co.uk/education.html">Education</a></li>
-        <li><a href="https://crazystrength.co.uk/blog.html">Blog</a></li>
-        <li><a href="https://crazystrength.co.uk/events.html">Events &amp; Competitions</a></li>
-        <li><a href="https://crazystrength.co.uk/timetable.html">Timetable</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="events.html">Events &amp; Competitions</a></li>
       </ul>
     </div>
     <div class="footer-col">
       <h4>Crazy Strength</h4>
       <ul>
-        <li><a href="https://crazystrength.co.uk/meet-the-team.html">The Team</a></li>
-        <li><a href="https://crazystrength.co.uk/shop.html">Shop</a></li>
+        <li><a href="shop.html">Shop</a></li>
         <li><a href="https://crazystrength.co.uk/taster">Free Taster Session</a></li>
         <li><a href="https://wa.me/447734824897" target="_blank" rel="noopener">WhatsApp</a></li>
-        <li><a href="https://crazystrength.co.uk/privacy.html">Privacy Policy</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
       </ul>
     </div>
   </div>
@@ -385,6 +444,7 @@ footer{background:var(--drk);border-top:1px solid var(--bdr);padding:2.5rem 5vw}
     <p>&copy; 2026 Crazy Strength UK Limited &middot; Unit 13, The Beacon Centre, Solstice Park, Amesbury SP4 7SZ</p>
   </div>
 </footer>
+
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-LM4B458FXM"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-LM4B458FXM');</script>
