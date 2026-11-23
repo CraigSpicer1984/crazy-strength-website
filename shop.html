@@ -209,9 +209,16 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:400;letter-spacing:-.01e
 }
 
 
-.shop-hero{padding:calc(60px + var(--gap)) var(--gutter) var(--gap);background:var(--surface)}
-.shop-hero h1{font-size:clamp(3rem,7vw,7rem);margin-bottom:1rem}
-.shop-hero p{font-size:1.05rem;color:var(--muted);max-width:50ch;line-height:1.6}
+.shop-hero{position:relative;min-height:62vh;display:flex;flex-direction:column;
+  justify-content:flex-end;padding:0 var(--gutter) clamp(2.5rem,5vw,4rem);
+  overflow:hidden;background:var(--surface);margin-top:60px}
+.shop-hero::before{content:'';position:absolute;inset:0;
+  background:linear-gradient(to bottom,rgba(10,10,10,.1) 0%,rgba(10,10,10,.7) 60%,rgba(10,10,10,.95) 100%)}
+.shop-hero-stripe{position:absolute;top:0;left:0;width:4px;height:100%;background:var(--accent)}
+.shop-hero h1{position:relative;z-index:1;font-size:clamp(3.5rem,8vw,7.5rem);line-height:.88;
+  margin-bottom:1rem;color:var(--ink)}
+.shop-hero p{position:relative;z-index:1;font-size:1rem;color:rgba(244,244,239,.65);
+  max-width:42ch;line-height:1.65;margin-bottom:0}
 /* Cart button in nav */
 .nav-cart{background:none;border:none;color:rgba(244,244,239,.7);cursor:pointer;
   position:relative;padding:.3rem;display:flex;align-items:center;gap:.35rem;
@@ -376,8 +383,9 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:400;letter-spacing:-.01e
 
 <main>
 <div class="shop-hero">
-  <h1>Shop</h1>
-  <p>Official Crazy Strength merchandise. Gear that represents something.</p>
+  <div class="shop-hero-stripe"></div>
+  <h1>Gear That<br>Represents<br>Something</h1>
+  <p>Official Crazy Strength merchandise. Built for people who train, not people who want to look like they do.</p>
 </div>
 
 <div class="shop-filters section">
@@ -538,8 +546,13 @@ var activeMode='type',activeCat='all';
 
 function loadShop(){
   var tried=0;
+  function fetchWithTimeout(url,ms){
+    var ctrl=new AbortController();
+    var id=setTimeout(function(){ctrl.abort();},ms);
+    return fetch(url,{signal:ctrl.signal}).finally(function(){clearTimeout(id);});
+  }
   function attempt(url){
-    fetch(url)
+    fetchWithTimeout(url,8000)
       .then(function(r){if(!r.ok)throw r.status;return r.json();})
       .then(function(d){
         prods=(d.products||[]).filter(function(p){return parseFloat((p.variants[0]||{}).price||0)>0;});
