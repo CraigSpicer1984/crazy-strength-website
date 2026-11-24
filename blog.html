@@ -49,7 +49,7 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:400;letter-spacing:-.01e
 .nav-drop{position:relative}
 .nav-drop>a{display:flex;align-items:center;gap:.25rem}
 .nav-drop>a::after{content:'▾';font-size:.55rem;opacity:.6}
-.nav-dropmenu{display:none;position:absolute;top:calc(100% + 8px);left:0;
+.nav-dropmenu{display:none;position:absolute;top:100%;left:0;
   background:var(--surface);border:1px solid rgba(244,244,239,.1);
   min-width:220px;z-index:200;padding:.5rem 0;border-radius:var(--r)}
 .nav-drop:hover .nav-dropmenu{display:block}
@@ -209,9 +209,14 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:400;letter-spacing:-.01e
 }
 
 
-.blog-hero{padding:calc(60px + var(--gap)) var(--gutter) var(--gap);background:var(--surface)}
-.blog-hero h1{font-size:clamp(3rem,7vw,7rem);margin-bottom:1rem}
-.blog-hero p{font-size:1.05rem;color:var(--muted);max-width:50ch;line-height:1.6}
+.blog-hero{position:relative;padding:calc(60px + var(--gap)) var(--gutter) var(--gap);
+  background:var(--surface);overflow:hidden;min-height:40vh;display:flex;flex-direction:column;justify-content:flex-end}
+.blog-hero::before{content:'BLOG';position:absolute;bottom:-.1em;right:-.02em;
+  font-family:var(--font-display);font-size:clamp(10rem,22vw,22rem);
+  color:rgba(244,244,239,.03);line-height:.85;pointer-events:none;letter-spacing:-.02em;z-index:0}
+.blog-hero-content{position:relative;z-index:1}
+.blog-hero h1{font-size:clamp(3.5rem,8vw,8rem);margin-bottom:1rem;line-height:.88}
+.blog-hero p{font-size:1.05rem;color:var(--muted);max-width:50ch;line-height:1.65}
 .blog-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1px;
   background:rgba(244,244,239,.08)}
 .bcard{background:var(--surface);text-decoration:none;display:flex;flex-direction:column}
@@ -240,7 +245,7 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:400;letter-spacing:-.01e
     <li class="nav-drop">
       <a href="https://crazystrength.co.uk/index.html#programmes">Train</a>
       <div class="nav-dropmenu">
-        <a href="https://crazystrength.co.uk/powerlifting.html">Beginner Powerlifting</a>
+        <a href="https://crazystrength.co.uk/powerlifting.html">Powerlifting</a>
         <a href="https://crazystrength.co.uk/weightlifting.html">Olympic Weightlifting</a>
         <a href="https://crazystrength.co.uk/ladies-that-lift.html">Ladies That Lift</a>
         <a href="https://crazystrength.co.uk/legends-that-lift.html">Legends That Lift</a>
@@ -261,7 +266,7 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:400;letter-spacing:-.01e
   <details>
     <summary>Train</summary>
     <div class="mobile-train-links">
-      <a href="https://crazystrength.co.uk/powerlifting.html">Beginner Powerlifting</a>
+      <a href="https://crazystrength.co.uk/powerlifting.html">Powerlifting</a>
       <a href="https://crazystrength.co.uk/weightlifting.html">Olympic Weightlifting</a>
       <a href="https://crazystrength.co.uk/ladies-that-lift.html">Ladies That Lift</a>
       <a href="https://crazystrength.co.uk/legends-that-lift.html">Legends That Lift</a>
@@ -277,8 +282,10 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:400;letter-spacing:-.01e
 
 <main>
 <div class="blog-hero">
-  <h1>The Blog</h1>
-  <p>Coaching, competition, sport and strength. Written from experience, not theory. Everything here came from actually doing the work.</p>
+  <div class="blog-hero-content">
+    <h1>The Blog</h1>
+    <p>Coaching, competition, sport and strength. Written from experience, not theory. Everything here came from actually doing the work.</p>
+  </div>
 </div>
 
 <div class="topics">
@@ -420,7 +427,7 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:400;letter-spacing:-.01e
     <div class="footer-col">
       <h4>Train</h4>
       <ul>
-        <li><a href="https://crazystrength.co.uk/powerlifting.html">Beginner Powerlifting</a></li>
+        <li><a href="https://crazystrength.co.uk/powerlifting.html">Powerlifting</a></li>
         <li><a href="https://crazystrength.co.uk/weightlifting.html">Olympic Weightlifting</a></li>
         <li><a href="https://crazystrength.co.uk/ladies-that-lift.html">Ladies That Lift</a></li>
         <li><a href="https://crazystrength.co.uk/legends-that-lift.html">Legends That Lift</a></li>

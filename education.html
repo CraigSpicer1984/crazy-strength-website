@@ -40,6 +40,17 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:400;letter-spacing:-.01e
 .nav-links a{font-size:.9rem;font-weight:500;text-decoration:none;
   color:rgba(244,244,239,.7);transition:color .15s}
 .nav-links a:hover,.nav-links a.active{color:var(--ink)}
+.nav-drop{position:relative}
+.nav-drop>a{display:flex;align-items:center;gap:.25rem}
+.nav-drop>a::after{content:'▾';font-size:.55rem;opacity:.6}
+.nav-dropmenu{display:none;position:absolute;top:100%;left:0;
+  background:var(--surface);border:1px solid rgba(244,244,239,.1);
+  min-width:220px;z-index:200;padding-top:8px;padding-bottom:.5rem;border-radius:2px;
+  list-style:none}
+.nav-drop:hover .nav-dropmenu{display:block}
+.nav-dropmenu li a{display:block;padding:.6rem 1.2rem;font-size:.82rem;
+  color:rgba(244,244,239,.7);text-decoration:none;transition:all .12s;white-space:nowrap}
+.nav-dropmenu li a:hover{color:var(--ink);background:var(--surface2)}
 .nav-cta{display:inline-flex;align-items:center;padding:.5rem 1.2rem;
   background:var(--accent);color:#fff;font-family:var(--font-display);
   font-size:.95rem;letter-spacing:.06em;text-decoration:none;border-radius:2px;
@@ -86,8 +97,7 @@ section{padding:var(--gap) var(--gutter)}
 .who{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;background:var(--surface2)}
 .who-item{padding:clamp(2rem,4vw,3rem);border-right:1px solid rgba(244,244,239,.07)}
 .who-item:last-child{border-right:none}
-.who-num{font-family:var(--font-display);font-size:4rem;color:rgba(244,244,239,.06);
-  line-height:1;margin-bottom:.5rem}
+
 .who-title{font-family:var(--font-display);font-size:1.6rem;color:var(--ink);
   margin-bottom:.7rem;line-height:1}
 .who-desc{font-size:.88rem;color:var(--muted);line-height:1.7}
@@ -207,7 +217,12 @@ section{padding:var(--gap) var(--gutter)}
 <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation" aria-hidden="true">
   <button class="mobile-nav-close" id="menuClose" aria-label="Close menu">&#10005;</button>
   <a href="education.html">Education</a>
-  <a href="index.html#programmes">Train</a>
+  <a href="powerlifting.html">Powerlifting</a>
+  <a href="weightlifting.html">Olympic Weightlifting</a>
+  <a href="ladies-that-lift.html">Ladies That Lift</a>
+  <a href="legends-that-lift.html">Legends That Lift</a>
+  <a href="cubs.html">Cubs</a>
+  <a href="open-gym.html">Open Gym</a>
   <a href="events.html">Events</a>
   <a href="blog.html">Blog</a>
   <a href="shop.html">Shop</a>
@@ -217,9 +232,7 @@ section{padding:var(--gap) var(--gutter)}
 <!-- Hero -->
 <div class="hero">
   <div class="hero-bg"></div>
-  <div class="hero-stripe"></div>
   <div class="hero-content reveal">
-    <div class="hero-kicker">Coaching Education</div>
     <h1>Build the Coach<br>Behind the Athlete</h1>
     <p class="hero-sub">Official British Weightlifting and British Powerlifting coaching qualifications, delivered at Crazy Strength in Amesbury by Craig Spicer &mdash; SW Regional Course Tutor.</p>
     <div class="hero-creds">
@@ -242,17 +255,17 @@ section{padding:var(--gap) var(--gutter)}
 <!-- Who it's for -->
 <div class="who reveal">
   <div class="who-item">
-    <div class="who-num">01</div>
+    
     <div class="who-title">Aspiring Coaches</div>
     <p class="who-desc">New to coaching but serious about the sport. Level 1 is your starting point &mdash; no prior coaching experience required.</p>
   </div>
   <div class="who-item">
-    <div class="who-num">02</div>
+    
     <div class="who-title">Gym Owners &amp; PTs</div>
     <p class="who-desc">Add nationally recognised qualifications to your offer and open your facility to club coaching and competition delivery.</p>
   </div>
   <div class="who-item">
-    <div class="who-num">03</div>
+    
     <div class="who-title">Competitive Athletes</div>
     <p class="who-desc">Deepen your technical understanding of the sport and start giving something back to the community that made you.</p>
   </div>
@@ -413,7 +426,7 @@ section{padding:var(--gap) var(--gutter)}
     <div class="footer-col">
       <h4>Train</h4>
       <ul>
-        <li><a href="powerlifting.html">Beginner Powerlifting</a></li>
+        <li><a href="powerlifting.html">Powerlifting</a></li>
         <li><a href="weightlifting.html">Olympic Weightlifting</a></li>
         <li><a href="ladies-that-lift.html">Ladies That Lift</a></li>
         <li><a href="legends-that-lift.html">Legends That Lift</a></li>
