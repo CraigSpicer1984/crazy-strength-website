@@ -34,7 +34,7 @@ a{color:inherit}
 h1,h2,h3,h4{font-family:var(--font-display);font-weight:400;letter-spacing:-.01em;line-height:.92}
 
 /* ── Nav ── */
-.nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;
+.nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:center;
   justify-content:space-between;padding:0 var(--gutter);height:60px;
   background:rgba(10,10,10,.96);max-width:100vw;overflow:visible}
 .nav-logo{display:flex;align-items:center;gap:.6rem;text-decoration:none;
@@ -51,7 +51,7 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:400;letter-spacing:-.01e
 .nav-drop>a::after{content:'▾';font-size:.55rem;opacity:.6}
 .nav-dropmenu{display:none;position:absolute;top:100%;left:0;
   background:var(--surface);border:1px solid rgba(244,244,239,.1);
-  min-width:220px;z-index:200;padding:.5rem 0;border-radius:var(--r)}
+  min-width:220px;z-index:1100;padding:.5rem 0;border-radius:var(--r)}
 .nav-drop:hover .nav-dropmenu{display:block}
 .nav-dropmenu a{display:block;padding:.6rem 1.2rem;font-size:.82rem;
   color:rgba(244,244,239,.7);text-decoration:none;transition:all .12s;white-space:nowrap}
@@ -152,10 +152,11 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:400;letter-spacing:-.01e
 .team-bio{font-size:.88rem;color:rgba(244,244,239,.65);line-height:1.6}
 
 /* ── Quote / testimonial ── */
-.quote-block{padding:var(--gap) var(--gutter);background:var(--accent)}
-.quote-block blockquote{font-family:var(--font-display);font-size:clamp(2rem,4vw,4rem);
-  line-height:.95;color:#fff;max-width:20ch;margin-bottom:1rem}
-.quote-block cite{font-size:.85rem;color:rgba(255,255,255,.7);font-style:normal}
+.quote-block{padding:var(--gap) var(--gutter);background:var(--surface)}
+.quote-block-inner{max-width:680px;border-left:3px solid var(--accent);padding-left:2rem}
+.quote-block blockquote{font-family:var(--font-display);font-size:clamp(1.5rem,2.5vw,2.2rem);
+  line-height:1.05;color:var(--ink);margin-bottom:.75rem}
+.quote-block cite{font-size:.82rem;color:var(--muted);font-style:normal;letter-spacing:.04em}
 
 /* ── Newsletter ── */
 .newsletter{padding:var(--gap) var(--gutter);background:var(--surface2)}
@@ -337,8 +338,10 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:400;letter-spacing:-.01e
 </section>
 
 <section class="quote-block">
+  <div class="quote-block-inner">
   <blockquote>"At 58, I'm stronger than I have ever been. That is not an accident."</blockquote>
   <cite>Legends That Lift member</cite>
+  </div>
 </section>
 
 <section class="section reveal">

@@ -152,10 +152,11 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:400;letter-spacing:-.01e
 .team-bio{font-size:.88rem;color:rgba(244,244,239,.65);line-height:1.6}
 
 /* ── Quote / testimonial ── */
-.quote-block{padding:var(--gap) var(--gutter);background:var(--accent)}
-.quote-block blockquote{font-family:var(--font-display);font-size:clamp(2rem,4vw,4rem);
-  line-height:.95;color:#fff;max-width:20ch;margin-bottom:1rem}
-.quote-block cite{font-size:.85rem;color:rgba(255,255,255,.7);font-style:normal}
+.quote-block{padding:var(--gap) var(--gutter);background:var(--surface)}
+.quote-block-inner{max-width:680px;border-left:3px solid var(--accent);padding-left:2rem}
+.quote-block blockquote{font-family:var(--font-display);font-size:clamp(1.5rem,2.5vw,2.2rem);
+  line-height:1.05;color:var(--ink);margin-bottom:.75rem}
+.quote-block cite{font-size:.82rem;color:var(--muted);font-style:normal;letter-spacing:.04em}
 
 /* ── Newsletter ── */
 .newsletter{padding:var(--gap) var(--gutter);background:var(--surface2)}
@@ -337,8 +338,10 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:400;letter-spacing:-.01e
 </section>
 
 <section class="quote-block">
-  <blockquote>"Their ladies that lift class is simply fab! I'm several months postpartum and was really nervous about going back to lifting but the support, advice, and correct balance of challenge vs not overdoing it has been excellent. 10/10 from me and I'll definitely be recommending it!"</blockquote>
-  <cite>Ladies That Lift member</cite>
+  <div class="quote-block-inner">
+    <blockquote>"Their ladies that lift class is simply fab! I'm several months postpartum and was really nervous about going back to lifting but the support, advice, and correct balance of challenge vs not overdoing it has been excellent. 10/10 from me and I'll definitely be recommending it!"</blockquote>
+    <cite>Ladies That Lift member</cite>
+  </div>
 </section>
 
 <section class="section reveal">
