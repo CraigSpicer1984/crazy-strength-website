@@ -513,8 +513,8 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:400;letter-spacing:-.01e
       var email = form.querySelector('input[type="email"]').value;
       if(!email)return;
       fetch('/api/subscribe',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:email})})
-        .then(function(){form.innerHTML='<p style="color:var(--accent);font-family:var(--font-display);font-size:1.2rem">You're in.</p>'})
-        .catch(function(){form.innerHTML='<p style="color:var(--accent);font-family:var(--font-display);font-size:1.2rem">You're in.</p>'});
+        .then(function(){form.innerHTML='<p style="color:var(--accent);font-family:var(--font-display);font-size:1.2rem">You\'re in.</p>'})
+        .catch(function(){form.innerHTML='<p style="color:var(--accent);font-family:var(--font-display);font-size:1.2rem">You\'re in.</p>';});
     });
   });
 })();
@@ -625,7 +625,7 @@ function cardHTML(p,i){
   var img=p.images&&p.images[0]?p.images[0].src:'';
   var single=p.variants.length===1;
   var firstAv=p.variants.filter(function(v){return v.available;})[0]||p.variants[0];
-  var iH=img?'<img src="'+img+'" alt="" loading="lazy">'+'<div class="pci-ph">+</div>';
+  var iH=img?'<img src="'+img+'" alt="" loading="lazy">'+'<div class="pci-ph">+</div>':'';
   var pH='<span class="pp'+(ca>price?' s':'')+'">'+fp(price)+'</span>'+(ca>price?'<span class="pw">'+fp(ca)+'</span>':'');
   var sB=ca>price?'<span class="sdot">Sale</span>':'';
   var vH='';
