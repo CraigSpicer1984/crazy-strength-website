@@ -1,237 +1,5 @@
 [
  {
-  "at": "2026-11-22T21:08:51.654Z",
-  "target": "mockup.html",
-  "fail": 5,
-  "warn": 8,
-  "reading": "broken",
-  "ids": [
-   "headline-lines",
-   "micro-label",
-   "tiny-text",
-   "contrast",
-   "broken-image",
-   "statement-length",
-   "default-font",
-   "size-count",
-   "small-text",
-   "repeated-picture",
-   "em-dashes",
-   "uncredited",
-   "tap-size"
-  ]
- },
- {
-  "at": "2026-11-22T21:11:42.405Z",
-  "target": "mockup.html",
-  "fail": 3,
-  "warn": 7,
-  "reading": "broken",
-  "ids": [
-   "tiny-text",
-   "contrast",
-   "broken-image",
-   "statement-length",
-   "default-font",
-   "size-count",
-   "small-text",
-   "em-dashes",
-   "uncredited",
-   "tap-size"
-  ]
- },
- {
-  "at": "2026-11-22T21:12:39.469Z",
-  "target": "mockup.html",
-  "fail": 1,
-  "warn": 8,
-  "reading": "broken",
-  "ids": [
-   "contrast",
-   "statement-length",
-   "default-font",
-   "size-count",
-   "small-text",
-   "repeated-picture",
-   "em-dashes",
-   "uncredited",
-   "tap-size"
-  ]
- },
- {
-  "at": "2026-11-22T21:15:40.724Z",
-  "target": "mockup.html",
-  "fail": 1,
-  "warn": 8,
-  "reading": "broken",
-  "ids": [
-   "contrast",
-   "statement-length",
-   "default-font",
-   "size-count",
-   "small-text",
-   "repeated-picture",
-   "em-dashes",
-   "uncredited",
-   "tap-size"
-  ]
- },
- {
-  "at": "2026-11-22T21:15:56.020Z",
-  "target": "mockup.html",
-  "fail": 1,
-  "warn": 8,
-  "reading": "broken",
-  "ids": [
-   "contrast",
-   "statement-length",
-   "default-font",
-   "size-count",
-   "small-text",
-   "repeated-picture",
-   "em-dashes",
-   "uncredited",
-   "tap-size"
-  ]
- },
- {
-  "at": "2026-11-22T21:16:22.525Z",
-  "target": "mockup.html",
-  "fail": 1,
-  "warn": 8,
-  "reading": "broken",
-  "ids": [
-   "contrast",
-   "statement-length",
-   "default-font",
-   "size-count",
-   "small-text",
-   "repeated-picture",
-   "em-dashes",
-   "uncredited",
-   "tap-size"
-  ]
- },
- {
-  "at": "2026-11-22T21:16:50.966Z",
-  "target": "mockup.html",
-  "fail": 0,
-  "warn": 8,
-  "reading": "clean",
-  "ids": [
-   "statement-length",
-   "default-font",
-   "size-count",
-   "small-text",
-   "repeated-picture",
-   "em-dashes",
-   "uncredited",
-   "tap-size"
-  ]
- },
- {
-  "at": "2026-11-22T21:17:06.515Z",
-  "target": "mockup.html",
-  "fail": 0,
-  "warn": 8,
-  "reading": "clean",
-  "ids": [
-   "statement-length",
-   "default-font",
-   "size-count",
-   "small-text",
-   "repeated-picture",
-   "em-dashes",
-   "uncredited",
-   "tap-size"
-  ]
- },
- {
-  "at": "2026-11-22T21:17:48.002Z",
-  "target": "mockup.html",
-  "fail": 0,
-  "warn": 8,
-  "reading": "clean",
-  "ids": [
-   "statement-length",
-   "default-font",
-   "size-count",
-   "small-text",
-   "repeated-picture",
-   "em-dashes",
-   "uncredited",
-   "tap-size"
-  ]
- },
- {
-  "at": "2026-11-22T21:40:44.516Z",
-  "target": "mockup.html",
-  "fail": 1,
-  "warn": 8,
-  "reading": "broken",
-  "ids": [
-   "broken-image",
-   "statement-length",
-   "default-font",
-   "size-count",
-   "small-text",
-   "repeated-picture",
-   "em-dashes",
-   "uncredited",
-   "tap-size"
-  ]
- },
- {
-  "at": "2026-11-22T21:41:57.327Z",
-  "target": "mockup.html",
-  "fail": 0,
-  "warn": 8,
-  "reading": "clean",
-  "ids": [
-   "statement-length",
-   "default-font",
-   "size-count",
-   "small-text",
-   "repeated-picture",
-   "em-dashes",
-   "uncredited",
-   "tap-size"
-  ]
- },
- {
-  "at": "2026-11-22T21:43:13.635Z",
-  "target": "mockup.html",
-  "fail": 0,
-  "warn": 8,
-  "reading": "clean",
-  "ids": [
-   "statement-length",
-   "default-font",
-   "size-count",
-   "small-text",
-   "repeated-picture",
-   "em-dashes",
-   "uncredited",
-   "tap-size"
-  ]
- },
- {
-  "at": "2026-11-22T21:43:49.048Z",
-  "target": "mockup.html",
-  "fail": 0,
-  "warn": 7,
-  "reading": "clean",
-  "ids": [
-   "statement-length",
-   "default-font",
-   "size-count",
-   "small-text",
-   "repeated-picture",
-   "em-dashes",
-   "tap-size"
-  ]
- },
- {
   "at": "2026-11-22T21:46:15.284Z",
   "target": "mockup.html",
   "fail": 0,
@@ -363,6 +131,251 @@
    "small-text",
    "emoji",
    "em-dashes",
+   "tap-size"
+  ]
+ },
+ {
+  "at": "2026-11-24T17:52:42.331Z",
+  "target": "https://crazystrength.co.uk",
+  "fail": 0,
+  "warn": 6,
+  "reading": "clean",
+  "ids": [
+   "statement-length",
+   "default-font",
+   "size-count",
+   "small-text",
+   "em-dashes",
+   "tap-size"
+  ]
+ },
+ {
+  "at": "2026-11-24T17:52:56.850Z",
+  "target": "https://crazystrength.co.uk/blog.html",
+  "fail": 3,
+  "warn": 6,
+  "reading": "broken",
+  "ids": [
+   "micro-label",
+   "tiny-text",
+   "contrast",
+   "default-font",
+   "size-count",
+   "repeated-picture",
+   "em-dashes",
+   "page-errors",
+   "tap-size"
+  ]
+ },
+ {
+  "at": "2026-11-24T17:53:09.533Z",
+  "target": "https://crazystrength.co.uk/blog.html",
+  "fail": 3,
+  "warn": 6,
+  "reading": "broken",
+  "ids": [
+   "micro-label",
+   "tiny-text",
+   "contrast",
+   "default-font",
+   "size-count",
+   "repeated-picture",
+   "em-dashes",
+   "page-errors",
+   "tap-size"
+  ]
+ },
+ {
+  "at": "2026-11-24T17:53:22.559Z",
+  "target": "https://crazystrength.co.uk/ladies-that-lift.html",
+  "fail": 4,
+  "warn": 6,
+  "reading": "broken",
+  "ids": [
+   "micro-label",
+   "tiny-text",
+   "contrast",
+   "few-pictures",
+   "statement-length",
+   "card-rows",
+   "default-font",
+   "size-count",
+   "page-errors",
+   "tap-size"
+  ]
+ },
+ {
+  "at": "2026-11-24T17:53:34.754Z",
+  "target": "https://crazystrength.co.uk/events.html",
+  "fail": 7,
+  "warn": 5,
+  "reading": "broken",
+  "ids": [
+   "eyebrow",
+   "micro-label",
+   "outlined-box",
+   "gradient",
+   "tiny-text",
+   "contrast",
+   "few-pictures",
+   "default-font",
+   "size-count",
+   "emoji",
+   "em-dashes",
+   "tap-size"
+  ]
+ },
+ {
+  "at": "2026-11-24T17:53:46.046Z",
+  "target": "https://crazystrength.co.uk/education.html",
+  "fail": 6,
+  "warn": 6,
+  "reading": "broken",
+  "ids": [
+   "eyebrow",
+   "micro-label",
+   "gradient",
+   "tiny-text",
+   "contrast",
+   "few-pictures",
+   "card-rows",
+   "default-font",
+   "size-count",
+   "small-text",
+   "em-dashes",
+   "tap-size"
+  ]
+ },
+ {
+  "at": "2026-11-24T17:54:07.559Z",
+  "target": "https://crazystrength.co.uk/index.html",
+  "fail": 0,
+  "warn": 6,
+  "reading": "clean",
+  "ids": [
+   "statement-length",
+   "default-font",
+   "size-count",
+   "small-text",
+   "em-dashes",
+   "tap-size"
+  ]
+ },
+ {
+  "at": "2026-11-24T17:56:28.399Z",
+  "target": "https://crazystrength.co.uk/powerlifting.html",
+  "fail": 4,
+  "warn": 6,
+  "reading": "broken",
+  "ids": [
+   "micro-label",
+   "tiny-text",
+   "contrast",
+   "few-pictures",
+   "card-rows",
+   "default-font",
+   "size-count",
+   "stock-buttons",
+   "page-errors",
+   "tap-size"
+  ]
+ },
+ {
+  "at": "2026-11-24T17:56:49.325Z",
+  "target": "https://crazystrength.co.uk/shop.html",
+  "fail": 5,
+  "warn": 6,
+  "reading": "broken",
+  "ids": [
+   "headline-lines",
+   "micro-label",
+   "hairlines",
+   "tiny-text",
+   "overflow",
+   "default-font",
+   "size-count",
+   "contrast",
+   "empty-screen",
+   "still-page",
+   "tap-size"
+  ]
+ },
+ {
+  "at": "2026-11-24T17:56:59.858Z",
+  "target": "https://crazystrength.co.uk/weightlifting.html",
+  "fail": 4,
+  "warn": 7,
+  "reading": "broken",
+  "ids": [
+   "micro-label",
+   "tiny-text",
+   "contrast",
+   "few-pictures",
+   "card-rows",
+   "default-font",
+   "size-count",
+   "empty-screen",
+   "stock-buttons",
+   "page-errors",
+   "tap-size"
+  ]
+ },
+ {
+  "at": "2026-11-24T17:57:10.113Z",
+  "target": "https://crazystrength.co.uk/cubs.html",
+  "fail": 5,
+  "warn": 7,
+  "reading": "broken",
+  "ids": [
+   "micro-label",
+   "index-numbers",
+   "tiny-text",
+   "contrast",
+   "few-pictures",
+   "card-rows",
+   "default-font",
+   "size-count",
+   "empty-screen",
+   "em-dashes",
+   "page-errors",
+   "tap-size"
+  ]
+ },
+ {
+  "at": "2026-11-24T17:57:19.366Z",
+  "target": "https://crazystrength.co.uk/open-gym.html",
+  "fail": 4,
+  "warn": 5,
+  "reading": "broken",
+  "ids": [
+   "micro-label",
+   "tiny-text",
+   "contrast",
+   "few-pictures",
+   "default-font",
+   "size-count",
+   "empty-screen",
+   "page-errors",
+   "tap-size"
+  ]
+ },
+ {
+  "at": "2026-11-24T17:57:28.969Z",
+  "target": "https://crazystrength.co.uk/legends-that-lift.html",
+  "fail": 4,
+  "warn": 7,
+  "reading": "broken",
+  "ids": [
+   "micro-label",
+   "tiny-text",
+   "contrast",
+   "few-pictures",
+   "default-font",
+   "size-count",
+   "small-text",
+   "empty-screen",
+   "stock-buttons",
+   "page-errors",
    "tap-size"
   ]
  }
