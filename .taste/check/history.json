@@ -1,37 +1,5 @@
 [
  {
-  "at": "2026-11-22T21:46:15.284Z",
-  "target": "mockup.html",
-  "fail": 0,
-  "warn": 7,
-  "reading": "clean",
-  "ids": [
-   "statement-length",
-   "default-font",
-   "size-count",
-   "small-text",
-   "repeated-picture",
-   "em-dashes",
-   "tap-size"
-  ]
- },
- {
-  "at": "2026-11-23T08:21:29.167Z",
-  "target": "mockup.html",
-  "fail": 0,
-  "warn": 7,
-  "reading": "clean",
-  "ids": [
-   "statement-length",
-   "default-font",
-   "size-count",
-   "small-text",
-   "repeated-picture",
-   "em-dashes",
-   "tap-size"
-  ]
- },
- {
   "at": "2026-11-23T08:22:09.575Z",
   "target": "mockup.html",
   "fail": 0,
@@ -375,6 +343,48 @@
    "small-text",
    "empty-screen",
    "stock-buttons",
+   "page-errors",
+   "tap-size"
+  ]
+ },
+ {
+  "at": "2026-11-24T18:43:48.179Z",
+  "target": "https://crazystrength.co.uk/cubs.html",
+  "fail": 5,
+  "warn": 7,
+  "reading": "broken",
+  "ids": [
+   "micro-label",
+   "index-numbers",
+   "tiny-text",
+   "contrast",
+   "few-pictures",
+   "card-rows",
+   "default-font",
+   "size-count",
+   "empty-screen",
+   "em-dashes",
+   "page-errors",
+   "tap-size"
+  ]
+ },
+ {
+  "at": "2026-11-24T18:46:21.660Z",
+  "target": "https://crazystrength.co.uk/cubs.html",
+  "fail": 5,
+  "warn": 7,
+  "reading": "broken",
+  "ids": [
+   "micro-label",
+   "index-numbers",
+   "tiny-text",
+   "contrast",
+   "few-pictures",
+   "card-rows",
+   "default-font",
+   "size-count",
+   "empty-screen",
+   "em-dashes",
    "page-errors",
    "tap-size"
   ]

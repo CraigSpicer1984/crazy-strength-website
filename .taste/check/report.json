@@ -1,6 +1,6 @@
 {
- "target": "https://crazystrength.co.uk/legends-that-lift.html",
- "at": "2026-11-24T17:57:28.968Z",
+ "target": "https://crazystrength.co.uk/cubs.html",
+ "at": "2026-11-24T18:46:21.659Z",
  "findings": [
   {
    "id": "micro-label",
@@ -12,12 +12,30 @@
     "phone"
    ],
    "samples": [
-    "\"Standard\"",
-    "\"Full Access\"",
+    "\"Stage 1 — Age 8+\"",
+    "\"Stage 2\"",
+    "\"Stage 3\"",
     "\"Lead Coach\"",
-    "\"Head Coach & Founder\"",
-    "\"Train\"",
-    "\"Learn\""
+    "\"Weightlifting & CUBS Coach\"",
+    "\"CUBS & LTL Coach\""
+   ]
+  },
+  {
+   "id": "index-numbers",
+   "level": "FAIL",
+   "msg": "Sections or steps are numbered 01, 02, 03.",
+   "fix": "Show order by position, scale or the words; use a real ordered list if order matters.",
+   "where": [
+    "desktop",
+    "phone"
+   ],
+   "samples": [
+    "\"Stage 1 — Foundation\"",
+    "\"Stage 3 — WL / PL Pathway\"",
+    "\"Stage 2 — Development\"",
+    "\"Stage 1 — Age 8+\"",
+    "\"Stage 2\"",
+    "\"Stage 3\""
    ]
   },
   {
@@ -30,12 +48,12 @@
     "phone"
    ],
    "samples": [
-    "\"Morning Session\"",
-    "\"Standard\"",
-    "\"Full Access\"",
-    "\"Lead Coach\"",
-    "\"Head Coach & Founder\"",
-    "\"Train\""
+    "\"Stage 1 — Foundation\"",
+    "\"Stage 3 — WL / PL Pathway\"",
+    "\"Stage 2 — Development\"",
+    "\"Stage 1 — Age 8+\"",
+    "\"Stage 2\"",
+    "\"Stage 3\""
    ]
   },
   {
@@ -48,12 +66,12 @@
     "phone"
    ],
    "samples": [
-    "\"Monday\" 4.09:1 (needs 4.5)",
-    "\"Thursday\" 4.09:1 (needs 4.5)",
-    "\"Get Started\" 1:1 (needs 4.5)",
+    "\"Monday / Wed / Fri\" 4.09:1 (needs 4.5)",
+    "\"Tuesday / Thursday\" 4.09:1 (needs 4.5)",
+    "\"Enquire\" 1:1 (needs 4.5)",
     "\"Lead Coach\" 4.09:1 (needs 4.5)",
-    "\"Head Coach & Founder\" 4.09:1 (needs 4.5)",
-    "\"© 2026 Crazy Strength UK Limited · Unit \" 3.03:1 (needs 4.5)"
+    "\"Weightlifting & CUBS Coach\" 4.09:1 (needs 4.5)",
+    "\"CUBS & LTL Coach\" 4.09:1 (needs 4.5)"
    ]
   },
   {
@@ -66,6 +84,19 @@
    ],
    "samples": [
     "0 real, 0 drawings"
+   ]
+  },
+  {
+   "id": "card-rows",
+   "level": "WARN",
+   "msg": "Rows of identical boxed cards.",
+   "fix": "Compose the section from its blueprint; vary layout between neighbours.",
+   "where": [
+    "desktop"
+   ],
+   "samples": [
+    "section.section > div.price-grid (3)",
+    "section.section > div.team-grid (5)"
    ]
   },
   {
@@ -91,20 +122,8 @@
     "phone"
    ],
    "samples": [
-    "14 sizes: 12, 13, 14, 15, 16, 18, 22, 26, 35, 48, 56, 58, 115, 128",
-    "12 sizes: 12, 13, 14, 15, 16, 18, 22, 24, 26, 32, 48, 56"
-   ]
-  },
-  {
-   "id": "small-text",
-   "level": "WARN",
-   "msg": "Running text is set below 15px.",
-   "fix": "Body text at 16 to 20px in full ink.",
-   "where": [
-    "desktop"
-   ],
-   "samples": [
-    "median running text 14.4px"
+    "15 sizes: 12, 13, 14, 15, 16, 17, 18, 22, 26, 35, 48, 56, 58, 115, 128",
+    "12 sizes: 12, 13, 14, 15, 16, 17, 18, 22, 26, 32, 48, 56"
    ]
   },
   {
@@ -120,15 +139,15 @@
    ]
   },
   {
-   "id": "stock-buttons",
+   "id": "em-dashes",
    "level": "WARN",
-   "msg": "Buttons say \"Get started\" or \"Learn more\".",
-   "fix": "Name the action: Book a table, Start the 14-day trial, See the menu.",
+   "msg": "Many em dashes in the copy.",
+   "fix": "Use commas, colons or full stops.",
    "where": [
     "desktop"
    ],
    "samples": [
-    "Get Started"
+    "7 em dashes"
    ]
   },
   {
@@ -163,10 +182,10 @@
   }
  ],
  "counts": {
-  "fail": 4,
+  "fail": 5,
   "warn": 7,
   "note": 0,
-  "tells": 3
+  "tells": 4
  },
  "reading": "broken",
  "allow": [],
@@ -187,13 +206,13 @@
     "v": 1,
     "vw": 1440,
     "vh": 900,
-    "docH": 4158,
+    "docH": 3976,
     "dpr": 1,
-    "url": "https://crazystrength.co.uk/legends-that-lift",
+    "url": "https://crazystrength.co.uk/cubs",
     "headings": [
      {
       "tag": "h1",
-      "text": "Legends That Lift",
+      "text": "Cubs Programme",
       "size": 115.2,
       "lines": 1,
       "top": 237,
@@ -205,7 +224,7 @@
      },
      {
       "tag": "h2",
-      "text": "Built for the Long Game",
+      "text": "Three Stages of Development",
       "size": 57.6,
       "lines": 1,
       "top": 670,
@@ -217,7 +236,7 @@
      },
      {
       "tag": "h3",
-      "text": "The Science Is Clear",
+      "text": "What Children Learn",
       "size": 35.2,
       "lines": 1,
       "top": 670,
@@ -241,10 +260,10 @@
      },
      {
       "tag": "h2",
-      "text": "Membership",
+      "text": "The Three Stages",
       "size": 57.6,
       "lines": 1,
-      "top": 1357,
+      "top": 1497,
       "family": "Bebas Neue",
       "weight": 400,
       "align": "start",
@@ -253,10 +272,10 @@
      },
      {
       "tag": "h2",
-      "text": "What to Know Before You Start",
+      "text": "What You Need to Know",
       "size": 57.6,
       "lines": 1,
-      "top": 2431,
+      "top": 2239,
       "family": "Bebas Neue",
       "weight": 400,
       "align": "start",
@@ -268,7 +287,7 @@
       "text": "Your Coaches",
       "size": 57.6,
       "lines": 1,
-      "top": 2779,
+      "top": 2597,
       "family": "Bebas Neue",
       "weight": 400,
       "align": "start",
@@ -280,7 +299,7 @@
       "text": "Stay in the Loop",
       "size": 56,
       "lines": 1,
-      "top": 3248,
+      "top": 3066,
       "family": "Bebas Neue",
       "weight": 400,
       "align": "start",
@@ -292,7 +311,7 @@
       "text": "TRAIN",
       "size": 12,
       "lines": 1,
-      "top": 3685,
+      "top": 3503,
       "family": "Bebas Neue",
       "weight": 600,
       "align": "start",
@@ -304,7 +323,7 @@
       "text": "LEARN",
       "size": 12,
       "lines": 1,
-      "top": 3685,
+      "top": 3503,
       "family": "Bebas Neue",
       "weight": 600,
       "align": "start",
@@ -316,7 +335,7 @@
       "text": "CRAZY STRENGTH",
       "size": 12,
       "lines": 1,
-      "top": 3685,
+      "top": 3503,
       "family": "Bebas Neue",
       "weight": 600,
       "align": "start",
@@ -326,33 +345,46 @@
     ],
     "h1count": 1,
     "mainLine": {
-     "text": "Legends That Lift",
+     "text": "Cubs Programme",
      "size": 115.2,
      "lines": 1,
      "tag": "h1",
      "family": "Bebas Neue"
     },
-    "statements": [
-     {
-      "text": "\"At 58, I'm stronger than I have ever been. That is not an accident.\"",
-      "size": 35.2,
-      "lines": 2,
-      "words": 14
-     }
-    ],
+    "statements": [],
     "microLabels": [
      {
-      "text": "Standard",
+      "text": "Stage 1 — Age 8+",
       "size": 11.52,
       "ls": 0.12
      },
      {
-      "text": "Full Access",
+      "text": "Stage 2",
+      "size": 11.52,
+      "ls": 0.12
+     },
+     {
+      "text": "Stage 3",
       "size": 11.52,
       "ls": 0.12
      },
      {
       "text": "Lead Coach",
+      "size": 12.48,
+      "ls": 0.08
+     },
+     {
+      "text": "Weightlifting & CUBS Coach",
+      "size": 12.48,
+      "ls": 0.08
+     },
+     {
+      "text": "CUBS & LTL Coach",
+      "size": 12.48,
+      "ls": 0.08
+     },
+     {
+      "text": "CUBS Coach",
       "size": 12.48,
       "ls": 0.08
      },
@@ -379,7 +411,26 @@
     ],
     "eyebrows": [],
     "mono": [],
-    "indexNums": [],
+    "indexNums": [
+     {
+      "text": "Stage 1 — Foundation"
+     },
+     {
+      "text": "Stage 3 — WL / PL Pathway"
+     },
+     {
+      "text": "Stage 2 — Development"
+     },
+     {
+      "text": "Stage 1 — Age 8+"
+     },
+     {
+      "text": "Stage 2"
+     },
+     {
+      "text": "Stage 3"
+     }
+    ],
     "rules": [],
     "outlined": [],
     "dashed": 0,
@@ -388,6 +439,7 @@
     "textShadows": 0,
     "glass": [],
     "radii": [
+     2,
      2,
      2,
      2,
@@ -432,19 +484,28 @@
      ]
     },
     "iconCards": [],
-    "cardRows": [],
+    "cardRows": [
+     {
+      "sel": "section.section > div.price-grid",
+      "n": 3
+     },
+     {
+      "sel": "section.section > div.team-grid",
+      "n": 5
+     }
+    ],
     "centredShare": 0,
     "families": [
      {
       "family": "DM Sans",
-      "chars": 1714,
+      "chars": 2242,
       "web": true,
       "loaded": true,
       "system": false
      },
      {
       "family": "Bebas Neue",
-      "chars": 420,
+      "chars": 411,
       "web": true,
       "loaded": true,
       "system": false
@@ -456,6 +517,7 @@
      14,
      15,
      16,
+     17,
      18,
      22,
      26,
@@ -466,24 +528,24 @@
      115,
      128
     ],
-    "bodySize": 14.4,
-    "smallRunning": 7,
-    "runningCount": 13,
+    "bodySize": 15.2,
+    "smallRunning": 5,
+    "runningCount": 12,
     "tinyText": [
-     "Morning Session",
-     "Morning Session",
-     "Standard",
-     "Full Access",
+     "Stage 1 — Foundation",
+     "Stage 3 — WL / PL Pathway",
+     "Stage 2 — Development",
+     "Stage 1 — Age 8+",
+     "Stage 2",
+     "Stage 3",
      "Lead Coach",
-     "Head Coach & Founder",
-     "Train",
-     "Learn",
-     "Crazy Strength",
-     "© 2026 Crazy Strength UK Limited · Unit "
+     "Weightlifting & CUBS Coach",
+     "CUBS & LTL Coach",
+     "CUBS Coach"
     ],
     "contrast": [
      {
-      "text": "Monday",
+      "text": "Monday / Wed / Fri",
       "ratio": 4.09,
       "need": 4.5,
       "size": 17.6,
@@ -491,7 +553,7 @@
       "bg": "#141414"
      },
      {
-      "text": "Thursday",
+      "text": "Tuesday / Thursday",
       "ratio": 4.09,
       "need": 4.5,
       "size": 17.6,
@@ -499,7 +561,7 @@
       "bg": "#141414"
      },
      {
-      "text": "Get Started",
+      "text": "Enquire",
       "ratio": 1,
       "need": 4.5,
       "size": 13.6,
@@ -508,6 +570,30 @@
      },
      {
       "text": "Lead Coach",
+      "ratio": 4.09,
+      "need": 4.5,
+      "size": 12.48,
+      "fg": "#e8220a",
+      "bg": "#141414"
+     },
+     {
+      "text": "Weightlifting & CUBS Coach",
+      "ratio": 4.09,
+      "need": 4.5,
+      "size": 12.48,
+      "fg": "#e8220a",
+      "bg": "#141414"
+     },
+     {
+      "text": "CUBS & LTL Coach",
+      "ratio": 4.09,
+      "need": 4.5,
+      "size": 12.48,
+      "fg": "#e8220a",
+      "bg": "#141414"
+     },
+     {
+      "text": "CUBS Coach",
       "ratio": 4.09,
       "need": 4.5,
       "size": 12.48,
@@ -550,13 +636,13 @@
      "offenders": []
     },
     "actions": {
-     "buttons": 7,
+     "buttons": 8,
      "firstScreen": [
       "Book a Free Taster",
       "Book a Free Taster",
       "Ask a Question"
      ],
-     "feedback": 7
+     "feedback": 8
     },
     "tap": [],
     "firstScreen": {
@@ -570,7 +656,7 @@
      "empty": [
       {
        "screen": 4,
-       "share": 0.043
+       "share": 0.045
       }
      ]
     },
@@ -579,17 +665,14 @@
      "emoji": [],
      "slop": [],
      "notJust": 0,
-     "stockButtons": [
-      "Get Started",
-      "Get Started"
-     ],
-     "emDashes": 2,
+     "stockButtons": [],
+     "emDashes": 7,
      "proof": []
     },
     "meta": {
      "lang": "en",
-     "title": "Legends That Lift — Strength Training for Over 50s — Crazy Strength",
-     "description": "Coached strength training for the over 50s at Crazy Strength, Amesbury. Built for the long game.",
+     "title": "Cubs Programme — Strength for Ages 8–16 — Crazy Strength",
+     "description": "Coached strength and conditioning for children aged 8–11 in Amesbury. Movement, confidence, athletic development.",
      "viewport": true
     },
     "hidden": []
@@ -611,16 +694,16 @@
     "v": 1,
     "vw": 390,
     "vh": 844,
-    "docH": 4840,
+    "docH": 5796,
     "dpr": 1,
-    "url": "https://crazystrength.co.uk/legends-that-lift",
+    "url": "https://crazystrength.co.uk/cubs",
     "headings": [
      {
       "tag": "h1",
-      "text": "Legends That Lift",
+      "text": "Cubs Programme",
       "size": 56,
       "lines": 1,
-      "top": 266,
+      "top": 240,
       "family": "Bebas Neue",
       "weight": 400,
       "align": "start",
@@ -629,7 +712,7 @@
      },
      {
       "tag": "h2",
-      "text": "Built for the Long Game",
+      "text": "Three Stages of Development",
       "size": 32,
       "lines": 1,
       "top": 588,
@@ -641,7 +724,7 @@
      },
      {
       "tag": "h3",
-      "text": "The Science Is Clear",
+      "text": "What Children Learn",
       "size": 22.4,
       "lines": 1,
       "top": 950,
@@ -656,7 +739,7 @@
       "text": "Timetable",
       "size": 32,
       "lines": 1,
-      "top": 1290,
+      "top": 1300,
       "family": "Bebas Neue",
       "weight": 400,
       "align": "start",
@@ -665,10 +748,10 @@
      },
      {
       "tag": "h2",
-      "text": "Membership",
+      "text": "The Three Stages",
       "size": 32,
       "lines": 1,
-      "top": 1545,
+      "top": 1704,
       "family": "Bebas Neue",
       "weight": 400,
       "align": "start",
@@ -677,10 +760,10 @@
      },
      {
       "tag": "h2",
-      "text": "What to Know Before You Start",
+      "text": "What You Need to Know",
       "size": 32,
       "lines": 1,
-      "top": 2713,
+      "top": 3208,
       "family": "Bebas Neue",
       "weight": 400,
       "align": "start",
@@ -692,7 +775,7 @@
       "text": "Your Coaches",
       "size": 32,
       "lines": 1,
-      "top": 3211,
+      "top": 3787,
       "family": "Bebas Neue",
       "weight": 400,
       "align": "start",
@@ -704,7 +787,7 @@
       "text": "Stay in the Loop",
       "size": 32,
       "lines": 1,
-      "top": 3669,
+      "top": 4651,
       "family": "Bebas Neue",
       "weight": 400,
       "align": "start",
@@ -716,7 +799,7 @@
       "text": "TRAIN",
       "size": 12,
       "lines": 1,
-      "top": 4008,
+      "top": 4963,
       "family": "Bebas Neue",
       "weight": 600,
       "align": "start",
@@ -728,7 +811,7 @@
       "text": "LEARN",
       "size": 12,
       "lines": 1,
-      "top": 4263,
+      "top": 5219,
       "family": "Bebas Neue",
       "weight": 600,
       "align": "start",
@@ -740,7 +823,7 @@
       "text": "CRAZY STRENGTH",
       "size": 12,
       "lines": 1,
-      "top": 4450,
+      "top": 5406,
       "family": "Bebas Neue",
       "weight": 600,
       "align": "start",
@@ -750,33 +833,46 @@
     ],
     "h1count": 1,
     "mainLine": {
-     "text": "Legends That Lift",
+     "text": "Cubs Programme",
      "size": 56,
      "lines": 1,
      "tag": "h1",
      "family": "Bebas Neue"
     },
-    "statements": [
-     {
-      "text": "\"At 58, I'm stronger than I have ever been. That is not an accident.\"",
-      "size": 24,
-      "lines": 2,
-      "words": 14
-     }
-    ],
+    "statements": [],
     "microLabels": [
      {
-      "text": "Standard",
+      "text": "Stage 1 — Age 8+",
       "size": 11.52,
       "ls": 0.12
      },
      {
-      "text": "Full Access",
+      "text": "Stage 2",
+      "size": 11.52,
+      "ls": 0.12
+     },
+     {
+      "text": "Stage 3",
       "size": 11.52,
       "ls": 0.12
      },
      {
       "text": "Lead Coach",
+      "size": 12.48,
+      "ls": 0.08
+     },
+     {
+      "text": "Weightlifting & CUBS Coach",
+      "size": 12.48,
+      "ls": 0.08
+     },
+     {
+      "text": "CUBS & LTL Coach",
+      "size": 12.48,
+      "ls": 0.08
+     },
+     {
+      "text": "CUBS Coach",
       "size": 12.48,
       "ls": 0.08
      },
@@ -803,7 +899,26 @@
     ],
     "eyebrows": [],
     "mono": [],
-    "indexNums": [],
+    "indexNums": [
+     {
+      "text": "Stage 1 — Foundation"
+     },
+     {
+      "text": "Stage 3 — WL / PL Pathway"
+     },
+     {
+      "text": "Stage 2 — Development"
+     },
+     {
+      "text": "Stage 1 — Age 8+"
+     },
+     {
+      "text": "Stage 2"
+     },
+     {
+      "text": "Stage 3"
+     }
+    ],
     "rules": [],
     "outlined": [],
     "dashed": 0,
@@ -812,6 +927,7 @@
     "textShadows": 0,
     "glass": [],
     "radii": [
+     2,
      2,
      2,
      2,
@@ -861,14 +977,14 @@
     "families": [
      {
       "family": "DM Sans",
-      "chars": 1686,
+      "chars": 2214,
       "web": true,
       "loaded": true,
       "system": false
      },
      {
       "family": "Bebas Neue",
-      "chars": 402,
+      "chars": 393,
       "web": true,
       "loaded": true,
       "system": false
@@ -887,32 +1003,32 @@
      14,
      15,
      16,
+     17,
      18,
      22,
-     24,
      26,
      32,
      48,
      56
     ],
-    "bodySize": 14.4,
-    "smallRunning": 7,
-    "runningCount": 13,
+    "bodySize": 15.2,
+    "smallRunning": 5,
+    "runningCount": 12,
     "tinyText": [
-     "Morning Session",
-     "Morning Session",
-     "Standard",
-     "Full Access",
+     "Stage 1 — Foundation",
+     "Stage 3 — WL / PL Pathway",
+     "Stage 2 — Development",
+     "Stage 1 — Age 8+",
+     "Stage 2",
+     "Stage 3",
      "Lead Coach",
-     "Head Coach & Founder",
-     "Train",
-     "Learn",
-     "Crazy Strength",
-     "© 2026 Crazy Strength UK Limited · Unit "
+     "Weightlifting & CUBS Coach",
+     "CUBS & LTL Coach",
+     "CUBS Coach"
     ],
     "contrast": [
      {
-      "text": "Monday",
+      "text": "Monday / Wed / Fri",
       "ratio": 4.09,
       "need": 4.5,
       "size": 17.6,
@@ -920,7 +1036,7 @@
       "bg": "#141414"
      },
      {
-      "text": "Thursday",
+      "text": "Tuesday / Thursday",
       "ratio": 4.09,
       "need": 4.5,
       "size": 17.6,
@@ -928,7 +1044,7 @@
       "bg": "#141414"
      },
      {
-      "text": "Get Started",
+      "text": "Enquire",
       "ratio": 1,
       "need": 4.5,
       "size": 13.6,
@@ -937,6 +1053,30 @@
      },
      {
       "text": "Lead Coach",
+      "ratio": 4.09,
+      "need": 4.5,
+      "size": 12.48,
+      "fg": "#e8220a",
+      "bg": "#141414"
+     },
+     {
+      "text": "Weightlifting & CUBS Coach",
+      "ratio": 4.09,
+      "need": 4.5,
+      "size": 12.48,
+      "fg": "#e8220a",
+      "bg": "#141414"
+     },
+     {
+      "text": "CUBS & LTL Coach",
+      "ratio": 4.09,
+      "need": 4.5,
+      "size": 12.48,
+      "fg": "#e8220a",
+      "bg": "#141414"
+     },
+     {
+      "text": "CUBS Coach",
       "ratio": 4.09,
       "need": 4.5,
       "size": 12.48,
@@ -979,12 +1119,12 @@
      "offenders": []
     },
     "actions": {
-     "buttons": 6,
+     "buttons": 7,
      "firstScreen": [
       "Book a Free Taster",
       "Ask a Question"
      ],
-     "feedback": 6
+     "feedback": 7
     },
     "tap": [
      "CRAZYSTRENGTH",
@@ -1002,12 +1142,12 @@
     ],
     "firstScreen": {
      "h1Size": 56,
-     "h1Top": 266,
+     "h1Top": 240,
      "largestMedia": 0,
      "mainSize": 56
     },
     "empty": {
-     "screens": 5,
+     "screens": 6,
      "empty": []
     },
     "copy": {
@@ -1015,17 +1155,14 @@
      "emoji": [],
      "slop": [],
      "notJust": 0,
-     "stockButtons": [
-      "Get Started",
-      "Get Started"
-     ],
-     "emDashes": 2,
+     "stockButtons": [],
+     "emDashes": 7,
      "proof": []
     },
     "meta": {
      "lang": "en",
-     "title": "Legends That Lift — Strength Training for Over 50s — Crazy Strength",
-     "description": "Coached strength training for the over 50s at Crazy Strength, Amesbury. Built for the long game.",
+     "title": "Cubs Programme — Strength for Ages 8–16 — Crazy Strength",
+     "description": "Coached strength and conditioning for children aged 8–11 in Amesbury. Movement, confidence, athletic development.",
      "viewport": true
     },
     "hidden": []
