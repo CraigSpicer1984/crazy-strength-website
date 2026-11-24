@@ -545,19 +545,20 @@ function getProgCat(p){var t=p.title.toLowerCase(),h=p.handle.toLowerCase();for(
 var activeMode='type',activeCat='all';
 
 function loadShop(){
-  function fetchWithTimeout(url,ms){
-    var ctrl=new AbortController();
-    var id=setTimeout(function(){ctrl.abort();},ms);
-    return fetch(url,{signal:ctrl.signal}).finally(function(){clearTimeout(id);});
+  var tried=0;
+  function attempt(url){
+    fetch(url)
+      .then(function(r){if(!r.ok)throw r.status;return r.json();})
+      .then(function(d){
+        prods=(d.products||[]).filter(function(p){return parseFloat((p.variants[0]||{}).price||0)>0;});
+        if(prods.length>0){buildFilters();renderGrid('all');}else{showFallback();}
+      })
+      .catch(function(){
+        if(tried===0){tried=1;attempt(CHECKOUT+'/products.json?limit=250');}
+        else{showFallback();}
+      });
   }
-  // Use our Cloudflare Pages proxy to avoid CORS issues
-  fetchWithTimeout('/api/shop-products',10000)
-    .then(function(r){if(!r.ok)throw r.status;return r.json();})
-    .then(function(d){
-      prods=(d.products||[]).filter(function(p){return parseFloat((p.variants[0]||{}).price||0)>0;});
-      if(prods.length>0){buildFilters();renderGrid('all');}else{showFallback();}
-    })
-    .catch(function(){showFallback();});
+  attempt(SHOP+'/products.json?limit=250');
 }
 
 function showFallback(){
