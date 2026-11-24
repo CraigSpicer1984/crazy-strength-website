@@ -30,7 +30,7 @@ a{color:inherit}
 h1,h2,h3,h4{font-family:var(--font-display);font-weight:400;letter-spacing:-.01em;line-height:.92}
 
 /* Nav */
-.nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;
+.nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:center;
   justify-content:space-between;padding:0 var(--gutter);height:60px;
   background:rgba(10,10,10,.96)}
 .nav-logo{display:flex;align-items:center;gap:.6rem;text-decoration:none;
@@ -45,7 +45,7 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:400;letter-spacing:-.01e
 .nav-drop>a::after{content:'▾';font-size:.55rem;opacity:.6}
 .nav-dropmenu{display:none;position:absolute;top:100%;left:0;
   background:var(--surface);border:1px solid rgba(244,244,239,.1);
-  min-width:220px;z-index:200;padding-top:8px;padding-bottom:.5rem;border-radius:2px;list-style:none}
+  min-width:220px;z-index:1100;padding-top:8px;padding-bottom:.5rem;border-radius:2px;list-style:none}
 .nav-drop:hover .nav-dropmenu{display:block}
 .nav-dropmenu li a{display:block;padding:.6rem 1.2rem;font-size:.82rem;
   color:rgba(244,244,239,.7);text-decoration:none;transition:all .12s;white-space:nowrap}
@@ -76,7 +76,7 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:400;letter-spacing:-.01e
   margin-top:60px}
 .hero-bg{position:absolute;inset:0;
   background:linear-gradient(to bottom,rgba(10,10,10,0) 20%,rgba(10,10,10,.88) 100%),
-  url('assets/pictures/2025-skelton-gym-powerlifting-competition-9326219.jpg') center/cover no-repeat;
+  url('assets/pictures/csdaydeadlift-oct26-120.jpg') center/cover no-repeat;
   background-color:var(--surface)}
 .hero-content{position:relative;z-index:1;max-width:800px}
 .hero h1{font-size:clamp(4rem,10vw,8rem);line-height:.88;color:var(--ink);margin-bottom:1rem}
@@ -225,8 +225,8 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:400;letter-spacing:-.01e
     <div class="ongoing-grid">
       <div class="ongoing-card reveal">
         <h3>Introduction to Weightlifting Course</h3>
-        <p>Four weekly sessions — Sat 1, 8, 22 &amp; 29 August 2026, 09:00–10:00. Learn to perform the Olympic lifts safely in a structured environment. Complete beginners welcome. Graduates are invited to continue on the Crazy Strength programme.</p>
-        <a class="btn btn-primary" href="https://crazystrength.co.uk/contact.html">Book Your Place &rarr;</a>
+        <p>Four weekly Saturday sessions, 09:00–10:00. Learn to perform the Olympic lifts safely in a structured environment. Complete beginners welcome. Graduates are invited to continue on the Crazy Strength programme. Contact us for the next available dates.</p>
+        <a class="btn btn-primary" href="https://crazystrength.co.uk/contact.html">Get Dates &rarr;</a>
       </div>
       <div class="ongoing-card reveal">
         <h3>InBody Body Composition Scanning</h3>
@@ -237,132 +237,79 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:400;letter-spacing:-.01e
   </div>
 </section>
 
-<!-- 2026 Upcoming Events -->
+<!-- 2027 Events -->
 <section class="section">
   <div class="inner">
     <div class="section-head reveal">
-      <h2>2026 Upcoming Events</h2>
-      <p>Competitions, workshops, camps and club events across the year.</p>
+      <h2>2027 Events</h2>
+      <p>Competitions, workshops, camps and club events coming up — dates confirmed as we have them. Check back or follow us on socials for the latest.</p>
     </div>
     <div class="events-list">
 
-      <!-- Weightlifting Workshop -->
+      <!-- Day of the Deadlift 2027 -->
       <div class="event-card reveal">
         <div>
-          <div class="event-tag">Workshop &middot; Booking Open</div>
-          <h3>Weightlifting Workshop</h3>
+          <div class="event-tag">Club Event &middot; Annual</div>
+          <h3>Day of the Deadlift &#127875; 2027</h3>
           <div class="event-meta">
-            <span><strong>Saturday 19 September 2026</strong></span>
-            <span>Morning &amp; Afternoon &middot; Crazy Strength, Amesbury</span>
-          </div>
-          <p class="event-desc">A full-day weightlifting workshop split into two 2.5-hour sessions. The morning covers technique and movement coaching. The afternoon runs as a simulated competition — building confidence and understanding how it all works before you step on the platform for real.</p>
-          <div class="event-actions">
-            <a class="btn btn-primary" href="https://crazystrength.co.uk/contact.html">Book Your Place &rarr;</a>
-          </div>
-        </div>
-        <div class="event-badge open">Booking<br>Open</div>
-      </div>
-
-      <!-- CUBS Summer Camp Juniors -->
-      <div class="event-card featured reveal">
-        <div>
-          <div class="event-tag">Summer Camp &middot; Booking Open</div>
-          <h3>CUBS Summer Weightlifting Camp &mdash; Juniors</h3>
-          <div class="event-meta">
-            <span><strong>Mon&ndash;Fri 3&ndash;7 August 2026</strong></span>
-            <span>09:00&ndash;12:00 &middot; Unit 13, The Beacon Centre, Amesbury</span>
-            <span>Ages 6&ndash;11</span>
-          </div>
-          <p class="event-desc">A week-long introduction to Olympic weightlifting for young athletes. Expert coaching on technique, safe lifting, coordination and confidence. Fun workouts, relay races, team challenges and group activities throughout the week. Campers leave stronger, more confident and with skills that last a lifetime.</p>
-          <div class="event-actions">
-            <a class="btn btn-primary" href="https://crazystrength.co.uk/contact.html">Book Now &rarr;</a>
-          </div>
-        </div>
-        <div class="event-badge open">Booking<br>Open</div>
-      </div>
-
-      <!-- CUBS Summer Camp Seniors -->
-      <div class="event-card featured reveal">
-        <div>
-          <div class="event-tag">Summer Camp &middot; Booking Open</div>
-          <h3>CUBS Summer Weightlifting Camp &mdash; Seniors</h3>
-          <div class="event-meta">
-            <span><strong>Mon&ndash;Fri 24&ndash;28 August 2026</strong></span>
-            <span>09:00&ndash;12:00 &middot; Unit 13, The Beacon Centre, Amesbury</span>
-            <span>Ages 12&ndash;16</span>
-          </div>
-          <p class="event-desc">A week-long introduction to Olympic weightlifting for young athletes. Expert coaching on technique, safe lifting, coordination and confidence. Fun workouts, relay races, team challenges and group activities throughout the week. Campers leave stronger, more confident and with skills that last a lifetime.</p>
-          <div class="event-actions">
-            <a class="btn btn-primary" href="https://crazystrength.co.uk/contact.html">Book Now &rarr;</a>
-          </div>
-        </div>
-        <div class="event-badge open">Booking<br>Open</div>
-      </div>
-
-      <!-- BWL Masters Tier 3 -->
-      <div class="event-card reveal">
-        <div>
-          <div class="event-tag">Competition &middot; Hosting</div>
-          <h3>BWL Masters Weightlifting &mdash; Tier 3</h3>
-          <div class="event-meta">
-            <span><strong>Saturday 15 August 2026</strong></span>
-            <span>Crazy Strength, Amesbury &middot; British Weightlifting</span>
-          </div>
-          <p class="event-desc">A British Weightlifting Masters Tier 3 competition hosted at Crazy Strength. Open to Masters category weightlifters. Entry through the British Weightlifting Sport 80 system.</p>
-          <div class="event-actions">
-            <a class="btn btn-primary" href="https://www.bwl.co.uk" target="_blank" rel="noopener">Enter via Sport 80 &rarr;</a>
-          </div>
-        </div>
-        <div class="event-badge hosting">BWL<br>Official</div>
-      </div>
-
-      <!-- BWL Tier 3 September -->
-      <div class="event-card reveal">
-        <div>
-          <div class="event-tag">Competition &middot; Hosting</div>
-          <h3>BWL Weightlifting &mdash; Tier 3 Competition</h3>
-          <div class="event-meta">
-            <span><strong>Saturday 12 September 2026</strong></span>
-            <span>Crazy Strength, Amesbury &middot; British Weightlifting</span>
-          </div>
-          <p class="event-desc">A British Weightlifting Tier 3 competition hosted at Crazy Strength. Entry through the British Weightlifting Sport 80 system.</p>
-          <div class="event-actions">
-            <a class="btn btn-primary" href="https://www.bwl.co.uk" target="_blank" rel="noopener">Enter via Sport 80 &rarr;</a>
-          </div>
-        </div>
-        <div class="event-badge hosting">BWL<br>Official</div>
-      </div>
-
-      <!-- Day of the Deadlift Halloween -->
-      <div class="event-card reveal">
-        <div>
-          <div class="event-tag">Club Event &middot; Internal</div>
-          <h3>Day of the Deadlift &#127875;</h3>
-          <div class="event-meta">
-            <span><strong>Saturday 31 October 2026</strong></span>
+            <span><strong>Date TBC &mdash; October 2027</strong></span>
             <span>Crazy Strength, Amesbury &middot; Halloween</span>
           </div>
-          <p class="event-desc">Our Halloween lifting event. An internal competition open to CUBS, Ladies That Lift, Powerlifting and Legends That Lift members. Fancy dress encouraged. More details to follow &mdash; watch our socials.</p>
+          <p class="event-desc">Our annual Halloween lifting event. An internal competition open to CUBS, Ladies That Lift, Powerlifting and Legends That Lift members. Fancy dress very much encouraged. Dates will be announced on our socials.</p>
           <div class="event-actions">
-            <a class="btn btn-ghost" href="https://www.instagram.com/crazystrengthhq/" target="_blank" rel="noopener">Follow for Details &rarr;</a>
+            <a class="btn btn-ghost" href="https://www.instagram.com/crazystrengthhq/" target="_blank" rel="noopener">Follow for Updates &rarr;</a>
           </div>
         </div>
-        <div class="event-badge hosting">Members<br>Only</div>
+        <div class="event-badge hosting">Date<br>TBC</div>
       </div>
 
-      <!-- BP Regional -->
+      <!-- CUBS Summer Camp 2027 -->
+      <div class="event-card featured reveal">
+        <div>
+          <div class="event-tag">Summer Camp &middot; Annual</div>
+          <h3>CUBS Summer Weightlifting Camp 2027</h3>
+          <div class="event-meta">
+            <span><strong>Dates TBC &mdash; Summer 2027</strong></span>
+            <span>Unit 13, The Beacon Centre, Amesbury</span>
+            <span>Ages 6&ndash;16 (Junior &amp; Senior weeks)</span>
+          </div>
+          <p class="event-desc">Our annual week-long weightlifting camp for young athletes. Junior and Senior weeks run separately across the summer. Expert coaching, fun workouts, relay races and team challenges. Campers leave stronger and more confident.</p>
+          <div class="event-actions">
+            <a class="btn btn-primary" href="https://crazystrength.co.uk/contact.html">Register Interest &rarr;</a>
+          </div>
+        </div>
+        <div class="event-badge open">Coming<br>2027</div>
+      </div>
+
+      <!-- BWL Competitions 2027 -->
       <div class="event-card reveal">
         <div>
           <div class="event-tag">Competition &middot; Hosting</div>
-          <h3>British Powerlifting Regional Competition</h3>
+          <h3>BWL Weightlifting Competitions 2027</h3>
           <div class="event-meta">
-            <span><strong>Saturday 7 November 2026</strong></span>
+            <span><strong>Dates TBC &mdash; 2027</strong></span>
+            <span>Crazy Strength, Amesbury &middot; British Weightlifting</span>
+          </div>
+          <p class="event-desc">We will again be hosting British Weightlifting Tier 3 competitions including the Masters event. Entry is through the British Weightlifting Sport 80 system. Dates will be confirmed and listed here as soon as they're set.</p>
+          <div class="event-actions">
+            <a class="btn btn-primary" href="https://www.bwl.co.uk" target="_blank" rel="noopener">British Weightlifting &rarr;</a>
+          </div>
+        </div>
+        <div class="event-badge hosting">BWL<br>Official</div>
+      </div>
+
+      <!-- BP Regional 2027 -->
+      <div class="event-card reveal">
+        <div>
+          <div class="event-tag">Competition &middot; Hosting</div>
+          <h3>British Powerlifting Regional Competition 2027</h3>
+          <div class="event-meta">
+            <span><strong>Date TBC &mdash; 2027</strong></span>
             <span>Crazy Strength, Amesbury &middot; British Powerlifting</span>
           </div>
-          <p class="event-desc">An official British Powerlifting Regional competition hosted at Crazy Strength. Entries are now open &mdash; book your place below.</p>
+          <p class="event-desc">We will be hosting a British Powerlifting Regional competition again in 2027. Date to be confirmed. Keep an eye on our socials or check back here for entry information.</p>
           <div class="event-actions">
-            <a class="btn btn-primary" href="https://www.britishpowerlifting.org" target="_blank" rel="noopener">Male Entry &rarr;</a>
-            <a class="btn btn-ghost" href="https://www.britishpowerlifting.org" target="_blank" rel="noopener">Female Entry &rarr;</a>
+            <a class="btn btn-primary" href="https://www.britishpowerlifting.org" target="_blank" rel="noopener">British Powerlifting &rarr;</a>
           </div>
         </div>
         <div class="event-badge hosting">BP<br>Official</div>
