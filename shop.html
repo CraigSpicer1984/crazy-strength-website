@@ -275,13 +275,18 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:400;letter-spacing:-.01e
   padding:.6rem 1.2rem;font-size:.78rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
   cursor:pointer;font-family:var(--font-text);transition:all .2s;margin-bottom:-1px}
 .sntab.on{color:var(--ink);border-bottom-color:var(--accent)}
-#sncards{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:.5rem}
+#sncards{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:.5rem;margin-bottom:1rem}
+.sizebar{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.5rem;margin-bottom:.5rem}
+.szb{background:var(--surface);border:1px solid rgba(244,244,239,.12);color:var(--muted);
+  padding:.35rem .8rem;font-size:.72rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;
+  cursor:pointer;font-family:var(--font-text);border-radius:2px;transition:all .15s}
+.szb:hover{color:var(--ink);border-color:rgba(244,244,239,.3)}
+.szb.on{background:var(--accent);border-color:var(--accent);color:#fff}
 .sncard{background:var(--surface);border:1px solid rgba(244,244,239,.08);
   border-top:2px solid transparent;padding:1rem .8rem;cursor:pointer;
   transition:all .2s;text-align:left;font-family:var(--font-text);border-radius:var(--r)}
 .sncard:hover{background:var(--surface2);border-color:rgba(244,244,239,.15)}
 .sncard.on{border-top-color:var(--accent)}
-.sncard-icon{font-size:1.3rem;margin-bottom:.4rem;line-height:1}
 .sncard-label{font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
   color:var(--ink);display:block;margin-bottom:.15rem}
 .sncard-count{font-size:.65rem;color:var(--muted)}
@@ -390,10 +395,11 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:400;letter-spacing:-.01e
 
 <div class="shop-filters section">
   <div class="sntabs">
-    <button class="sntab on" data-mode="type">By Type</button>
+    <button class="sntab on" data-mode="type">By Product</button>
     <button class="sntab" data-mode="programme">By Programme</button>
   </div>
   <div id="sncards"></div>
+  <div id="sizebar" class="sizebar"></div>
 </div>
 
 <div id="meta"></div>
@@ -527,22 +533,58 @@ var cart = [], prods = [], curCat = 'all';
 function fp(n){return '\xa3'+parseFloat(n).toFixed(2);}
 
 var TYPE_CATS=[
-  {key:'apparel',label:'Apparel',icon:'👕',match:function(t,h){return/(t.shirt|hoodie|jumper|top|vest|shorts|leggings|jogger|jacket|zip)/i.test(t)||/(t-shirt|hoodie|top)/i.test(h);}},
-  {key:'accessories',label:'Accessories',icon:'🎒',match:function(t,h){return/(bag|bottle|mug|cup|cap|hat|beanie|gloves|belt|wrist)/i.test(t);}},
-  {key:'equipment',label:'Equipment',icon:'🏋️',match:function(t,h){return/(chalk|wrap|strap|sleeve|bar|plate|bumper)/i.test(t);}},
-  {key:'crazystrength',label:'Everything',icon:'💪',match:function(){return true;}}
+  {key:'tshirts',label:'T-Shirts',match:function(t,h){return/(t[\-\s]?shirt|tee|crop top|vest|singlet)/i.test(t)&&!/hoodie|jumper|crewneck|jogger/i.test(t);}},
+  {key:'hoodies',label:'Hoodies & Crewnecks',match:function(t,h){return/(hoodie|crewneck|jumper|sweatshirt)/i.test(t);}},
+  {key:'bottoms',label:'Bottoms',match:function(t,h){return/(jogger|joggers|bottoms|shorts|leggings)/i.test(t);}},
+  {key:'accessories',label:'Accessories',match:function(t,h){return/(hat|beanie|bobble|bag|patch|sock|socks|wrap|wrist|tape|shaker|ball|book|note)/i.test(t);}},
+  {key:'giftcards',label:'Gift Cards',match:function(t,h){return/gift.?card/i.test(t)||p_type==='gift_cards';}},
+  {key:'all',label:'Everything',match:function(){return true;}}
 ];
 var PROG_CATS=[
-  {key:'powerlifting',label:'Powerlifting',icon:'🔱',match:function(t,h){return/powerlifting/i.test(t+h);}},
-  {key:'weightlifting',label:'Weightlifting',icon:'🏅',match:function(t,h){return/(weightlifting|olympic)/i.test(t+h);}},
-  {key:'ladiestlift',label:'Ladies That Lift',icon:'🌟',match:function(t,h){return/(ladies|ltl)/i.test(t+h);}},
-  {key:'crazystrength',label:'Everything',icon:'💪',match:function(){return true;}}
+  {key:'powerlifting',label:'Powerlifting',match:function(t,h){return/powerlifting|power.lifter/i.test(t+h);}},
+  {key:'weightlifting',label:'Weightlifting',match:function(t,h){return/weightlifting|weight.lifter|olympic/i.test(t+h);}},
+  {key:'ladiestlift',label:'Ladies That Lift',match:function(t,h){return/(ladies|lady).*(lift|lifts)/i.test(t+h);}},
+  {key:'legends',label:'Legends That Lift',match:function(t,h){return/(legend).*(lift)/i.test(t+h);}},
+  {key:'cubs',label:'Cubs',match:function(t,h){return/\bcub\b/i.test(t+h);}},
+  {key:'all',label:'Everything',match:function(){return true;}}
 ];
 
-function getTypeCat(p){var t=p.title.toLowerCase(),h=p.handle.toLowerCase();for(var i=0;i<TYPE_CATS.length-1;i++){if(TYPE_CATS[i].match(t,h))return TYPE_CATS[i].key;}return 'crazystrength';}
-function getProgCat(p){var t=p.title.toLowerCase(),h=p.handle.toLowerCase();for(var i=0;i<PROG_CATS.length-1;i++){if(PROG_CATS[i].match(t,h))return PROG_CATS[i].key;}return 'crazystrength';}
+// Normalise messy Shopify variant titles to standard sizes
+var SIZE_ORDER=['XXS','XS','S','M','L','XL','2XL','3XL','4XL','5XL','One Size'];
+function normaliseSize(s){
+  if(!s)return null;
+  var v=s.trim();
+  // strip colour prefixes like "Blue Medium" → "Medium"
+  v=v.replace(/^(blue|pink|red|black|white|yellow|purple|green|navy)\s+/i,'');
+  var map={'XXS':'XXS','2XXS':'XXS','XS':'XS','XS B&W':'XS','XS Multi-Col on Black':'XS','XS Yellow On Purple':'XS',
+    'Small':'S','Sm B&W':'S','Sm Multi-Col on Black':'S','Sm Yellow On Purple':'S','S':'S',
+    'Medium':'M','Me B&W':'M','Me Multi-Col on Black':'M','Me Yellow On Purple':'M','M':'M',
+    'Large':'L','Lg B&W':'L','Lg Multi-Col on Black':'L','Lg Yellow On Purple':'L','L':'L',
+    'X-Large':'XL','XL':'XL','XL B&W':'XL','XL Multi-Col on Black':'XL','XL Yellow On Purple':'XL',
+    '2X-Large':'2XL','2XL':'2XL','2XL B&W':'2XL','2XL Multi-Col on Black':'2XL','2XL Yellow On Purple':'2XL',
+    '3XL':'3XL','3XL B&W':'3XL','3XL Multi-Col on Black':'3XL','3XL Yellow On Purple':'3XL',
+    '4XL':'4XL','5XL':'5XL',
+    'One':'One Size','One Size':'One Size'};
+  return map[v]||null;
+}
+function getSizes(p){
+  var out=[];
+  p.variants.forEach(function(v){
+    var s=normaliseSize(v.option1)||normaliseSize(v.option2);
+    if(s&&out.indexOf(s)<0)out.push(s);
+  });
+  return out;
+}
 
-var activeMode='type',activeCat='all';
+function getTypeCat(p){
+  var t=p.title,h=p.handle,p_type=(p.product_type||'').toLowerCase();
+  if(/gift.?card/i.test(t)||p_type==='gift_cards')return 'giftcards';
+  for(var i=0;i<TYPE_CATS.length-1;i++){if(TYPE_CATS[i].match(t,h))return TYPE_CATS[i].key;}
+  return 'all';
+}
+function getProgCat(p){var t=p.title,h=p.handle;for(var i=0;i<PROG_CATS.length-1;i++){if(PROG_CATS[i].match(t,h))return PROG_CATS[i].key;}return 'all';}
+
+var activeMode='type',activeCat='all',activeSize='all';
 
 function loadShop(){
   var tried=0;
@@ -573,27 +615,56 @@ function buildFilters(){
   document.querySelectorAll('.sntab').forEach(function(tab){
     tab.addEventListener('click',function(){
       document.querySelectorAll('.sntab').forEach(function(t){t.classList.remove('on');});
-      tab.classList.add('on');activeMode=tab.dataset.mode;activeCat='all';
-      renderCategoryCards();renderGrid('all');
+      tab.classList.add('on');activeMode=tab.dataset.mode;activeCat='all';activeSize='all';
+      renderCategoryCards();renderSizeBar();renderGrid('all');
     });
   });
   renderCategoryCards();
+  renderSizeBar();
+}
+
+function renderSizeBar(){
+  var bar=document.getElementById('sizebar');
+  if(!bar)return;
+  // collect sizes present in current product set
+  var allSizes=[];
+  prods.forEach(function(p){
+    getSizes(p).forEach(function(s){if(allSizes.indexOf(s)<0)allSizes.push(s);});
+  });
+  // sort by standard order
+  allSizes.sort(function(a,b){
+    var ai=SIZE_ORDER.indexOf(a),bi=SIZE_ORDER.indexOf(b);
+    if(ai<0)ai=99;if(bi<0)bi=99;return ai-bi;
+  });
+  if(allSizes.length===0){bar.style.display='none';return;}
+  bar.style.display='flex';
+  var html='<button class="szb'+(activeSize==='all'?' on':'')+'" data-sz="all">All Sizes</button>';
+  allSizes.forEach(function(s){
+    html+='<button class="szb'+(activeSize===s?' on':'')+'" data-sz="'+s+'">'+s+'</button>';
+  });
+  bar.innerHTML=html;
+  bar.querySelectorAll('.szb').forEach(function(b){
+    b.addEventListener('click',function(){
+      activeSize=b.dataset.sz;
+      bar.querySelectorAll('.szb').forEach(function(x){x.classList.remove('on');});
+      b.classList.add('on');renderGrid(activeCat);
+    });
+  });
 }
 
 function renderCategoryCards(){
   var cats=activeMode==='type'?TYPE_CATS:PROG_CATS;
   var container=document.getElementById('sncards');
   var html='<button class="sncard'+(activeCat==='all'?' on':'')+'" data-cat="all">'+
-    '<div class="sncard-icon">\ud83d\uded2</div>'+
     '<span class="sncard-label">All</span>'+
     '<span class="sncard-count">'+prods.length+' items</span>'+
     '</button>';
   cats.forEach(function(cat){
+    if(cat.key==='all')return;
     var matchFn=activeMode==='type'?getTypeCat:getProgCat;
     var n=prods.filter(function(p){return matchFn(p)===cat.key;}).length;
     if(n===0)return;
     html+='<button class="sncard'+(activeCat===cat.key?' on':'')+'" data-cat="'+cat.key+'">'+
-      '<div class="sncard-icon">'+cat.icon+'</div>'+
       '<span class="sncard-label">'+cat.label+'</span>'+
       '<span class="sncard-count">'+n+' item'+(n!==1?'s':'')+'</span>'+
       '</button>';
@@ -610,10 +681,13 @@ function renderCategoryCards(){
 
 function renderGrid(cat){
   var matchFn=activeMode==='type'?getTypeCat:getProgCat;
-  var list=(cat==='all')?prods:prods.filter(function(p){return matchFn(p)===cat;});
+  var list=(cat==='all')?prods.slice():prods.filter(function(p){return matchFn(p)===cat;});
+  if(activeSize!=='all'){
+    list=list.filter(function(p){return getSizes(p).indexOf(activeSize)>-1;});
+  }
   document.getElementById('grid').innerHTML=list.length
     ?list.map(function(p,i){return cardHTML(p,i);}).join('')
-    :'<div style="grid-column:1/-1;padding:3rem;text-align:center;background:var(--surface)"><p style="color:var(--muted);font-size:.88rem">No products in this category yet.</p></div>';
+    :'<div style="grid-column:1/-1;padding:3rem;text-align:center;background:var(--surface)"><p style="color:var(--muted);font-size:.88rem">No products found.</p></div>';
   var m=document.getElementById('meta');
   if(m)m.textContent=list.length+' product'+(list.length!==1?'s':'');
 }
