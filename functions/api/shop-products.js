@@ -1,5 +1,5 @@
 export async function onRequest(context) {
-  const url = 'https://shop.crazystrength.co.uk/products.json?limit=250';
+  const url = 'https://crazy-strength.myshopify.com/products.json?limit=250';
   
   try {
     const response = await fetch(url, {
