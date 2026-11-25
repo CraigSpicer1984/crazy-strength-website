@@ -4,216 +4,103 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Open Gym — Crazy Strength, Amesbury</title>
-<meta name="description" content="Open gym access at Crazy Strength, Amesbury. Barbells, platforms, full facility. Your session, your programme.">
+<meta name="description" content="Open gym access in Amesbury. Train on your own terms at Crazy Strength. Early mornings to late evenings, 7 days a week. Pre-book via evini.">
 <link rel="canonical" href="https://crazystrength.co.uk/open-gym.html">
 <link rel="icon" href="https://cdn.shopify.com/s/files/1/1038/4467/5925/files/cs-favicon.png?v=1697553951" type="image/png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet">
 <style>
-
-/* ── Tokens ── */
-:root{
-  --ground:#0a0a0a;--surface:#141414;--surface2:#1c1c1c;
-  --ink:#f4f4ef;--muted:#aaa;
-  --accent:#e8220a;--accent2:#c01c08;
-  --action:#e8220a;--action-ink:#ffffff;
-  --wa:#0f7a3e;--wa-ink:#fff;
-  --font-display:'Bebas Neue',sans-serif;
-  --font-text:'DM Sans',sans-serif;
-  --gap:clamp(4rem,8vw,8rem);
-  --gutter:clamp(1.25rem,5vw,5rem);
-  --r:2px;
-  font-size:16px;
-}
+:root{--ground:#0a0a0a;--surface:#141414;--surface2:#1c1c1c;--ink:#f4f4ef;--muted:#aaa;--accent:#e8220a;--accent2:#c01c08;--action:#e8220a;--action-ink:#ffffff;--wa:#0f7a3e;--wa-ink:#fff;--font-display:'Bebas Neue',sans-serif;--font-text:'DM Sans',sans-serif;--gap:clamp(4rem,8vw,8rem);--gutter:clamp(1.25rem,5vw,5rem);--r:2px;font-size:16px}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;overflow-x:hidden}
-body{background:var(--ground);color:var(--ink);font-family:var(--font-text);
-  font-size:clamp(1rem,1.1vw,1.125rem);line-height:1.55;
-  -webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{background:var(--ground);color:var(--ink);font-family:var(--font-text);font-size:clamp(1rem,1.1vw,1.125rem);line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 img{display:block;max-width:100%;height:auto}
 a{color:inherit}
 h1,h2,h3,h4{font-family:var(--font-display);font-weight:400;letter-spacing:-.01em;line-height:.92}
-
-/* ── Nav ── */
-.nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:center;
-  justify-content:space-between;padding:0 var(--gutter);height:60px;
-  background:rgba(10,10,10,.96);max-width:100vw;overflow:visible}
-.nav-logo{display:flex;align-items:center;gap:.6rem;text-decoration:none;
-  font-family:var(--font-display);font-size:1.35rem;letter-spacing:.02em;color:var(--ink)}
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 var(--gutter);height:60px;background:rgba(10,10,10,.96);max-width:100vw;overflow:visible}
+.nav-logo{display:flex;align-items:center;gap:.6rem;text-decoration:none;font-family:var(--font-display);font-size:1.35rem;letter-spacing:.02em;color:var(--ink)}
 .nav-logo img{width:36px;height:36px}
 .nav-logo span{color:#f03018}
 .nav-links{display:flex;align-items:center;gap:2rem;list-style:none}
-.nav-links a{font-size:.9rem;font-weight:500;text-decoration:none;
-  color:rgba(244,244,239,.7);transition:color .15s}
+.nav-links a{font-size:.9rem;font-weight:500;text-decoration:none;color:rgba(244,244,239,.7);transition:color .15s}
 .nav-links a:hover,.nav-links a.active{color:var(--ink)}
-/* Train dropdown */
 .nav-drop{position:relative}
 .nav-drop>a{display:flex;align-items:center;gap:.25rem}
 .nav-drop>a::after{content:'▾';font-size:.55rem;opacity:.6}
-.nav-dropmenu{display:none;position:absolute;top:100%;left:0;
-  background:var(--surface);border:1px solid rgba(244,244,239,.1);
-  min-width:220px;z-index:1100;padding:.5rem 0;border-radius:var(--r)}
+.nav-dropmenu{display:none;position:absolute;top:100%;left:0;background:var(--surface);border:1px solid rgba(244,244,239,.1);min-width:220px;z-index:200;padding:.5rem 0;border-radius:var(--r)}
 .nav-drop:hover .nav-dropmenu{display:block}
-.nav-dropmenu a{display:block;padding:.6rem 1.2rem;font-size:.82rem;
-  color:rgba(244,244,239,.7);text-decoration:none;transition:all .12s;white-space:nowrap}
+.nav-dropmenu a{display:block;padding:.6rem 1.2rem;font-size:.82rem;color:rgba(244,244,239,.7);text-decoration:none;transition:all .12s;white-space:nowrap}
 .nav-dropmenu a:hover{color:var(--ink);background:var(--surface2)}
-.nav-cta{display:inline-flex;align-items:center;padding:.5rem 1.2rem;
-  background:var(--action);color:var(--action-ink);font-family:var(--font-display);
-  font-size:.95rem;letter-spacing:.06em;text-decoration:none;border-radius:var(--r);
-  transition:background .15s}
+.nav-cta{display:inline-flex;align-items:center;padding:.5rem 1.2rem;background:var(--action);color:var(--action-ink);font-family:var(--font-display);font-size:.95rem;letter-spacing:.06em;text-decoration:none;border-radius:var(--r);transition:background .15s}
 .nav-cta:hover{background:var(--accent2)}
-.nav-hamburger{display:none;background:none;border:none;cursor:pointer;
-  padding:.5rem;color:var(--ink);font-size:1.4rem}
-/* Mobile nav */
-.mobile-nav{display:none;position:fixed;top:60px;left:0;right:0;bottom:0;z-index:99;
-  background:var(--surface);padding:2rem var(--gutter);flex-direction:column;
-  gap:1.5rem;overflow-y:auto}
+.nav-hamburger{display:none;background:none;border:none;cursor:pointer;padding:.5rem;color:var(--ink);font-size:1.4rem}
+.mobile-nav{display:none;position:fixed;top:60px;left:0;right:0;bottom:0;z-index:99;background:var(--surface);padding:2rem var(--gutter);flex-direction:column;gap:1.5rem;overflow-y:auto}
 .mobile-nav.open{display:flex}
-.mobile-nav-close{align-self:flex-end;background:none;border:none;color:var(--ink);
-  font-size:1.3rem;cursor:pointer;padding:.25rem}
-.mobile-nav>a,.mobile-nav details>summary{font-family:var(--font-display);font-size:1.6rem;
-  text-decoration:none;color:var(--ink);letter-spacing:.02em;cursor:pointer;list-style:none}
+.mobile-nav-close{align-self:flex-end;background:none;border:none;color:var(--ink);font-size:1.3rem;cursor:pointer;padding:.25rem}
+.mobile-nav>a,.mobile-nav details>summary{font-family:var(--font-display);font-size:1.6rem;text-decoration:none;color:var(--ink);letter-spacing:.02em;cursor:pointer;list-style:none}
 .mobile-nav details[open]>summary{color:var(--accent)}
-.mobile-train-links{display:flex;flex-direction:column;gap:.75rem;
-  padding:.75rem 0 .25rem 1rem;margin-top:.25rem}
-.mobile-train-links a{font-family:var(--font-text);font-size:1rem;
-  color:rgba(244,244,239,.7);text-decoration:none}
-
-/* ── Shared utilities ── */
-.btn{display:inline-flex;align-items:center;gap:.4rem;padding:.85rem 2rem;
-  font-family:var(--font-display);font-size:1rem;letter-spacing:.06em;
-  text-decoration:none;border-radius:var(--r);transition:background .15s,transform .1s;
-  cursor:pointer;border:none}
+.mobile-train-links{display:flex;flex-direction:column;gap:.75rem;padding:.75rem 0 .25rem 1rem;margin-top:.25rem}
+.mobile-train-links a{font-family:var(--font-text);font-size:1rem;color:rgba(244,244,239,.7);text-decoration:none}
+.btn{display:inline-flex;align-items:center;gap:.4rem;padding:.85rem 2rem;font-family:var(--font-display);font-size:1rem;letter-spacing:.06em;text-decoration:none;border-radius:var(--r);transition:background .15s,transform .1s;cursor:pointer;border:none}
 .btn:active{transform:scale(.98)}
 .btn-primary{background:var(--action);color:var(--action-ink)}
 .btn-primary:hover{background:var(--accent2)}
 .btn-ghost{background:transparent;color:var(--ink);border:1.5px solid rgba(244,244,239,.3)}
 .btn-ghost:hover{border-color:var(--ink)}
-.btn-wa{background:var(--wa);color:var(--wa-ink)}
-.btn-wa:hover{background:#0a7a3c}
 .reveal{opacity:0;transform:translateY(22px);transition:opacity .55s ease,transform .55s ease}
 .reveal.vis{opacity:1;transform:translateY(0)}
-
-/* ── Page hero ── */
 .phero{position:relative;min-height:72vh;display:flex;align-items:flex-start;padding:clamp(3rem,6vw,5rem) var(--gutter);overflow:hidden;margin-top:60px}
-.phero-bg{position:absolute;inset:0;background:
-  linear-gradient(to bottom,rgba(10,10,10,.8) 0%,rgba(10,10,10,.4) 50%,rgba(10,10,10,0) 100%),
-  url('assets/pictures/wl-course-new-space.jpg') center 30%/cover no-repeat;
-  background-color:var(--surface)}
+.phero-bg{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(10,10,10,.8) 0%,rgba(10,10,10,.4) 50%,rgba(10,10,10,0) 100%),url('assets/pictures/wl-course-new-space.jpg') center 30%/cover no-repeat;background-color:var(--surface)}
 .phero-content{position:relative;z-index:1;max-width:800px}
 .phero h1{font-size:clamp(3.5rem,8vw,7rem);line-height:.88;margin-bottom:1rem}
-.phero-lead{font-size:clamp(1rem,1.3vw,1.15rem);color:rgba(244,244,239,.8);
-  max-width:50ch;line-height:1.6;margin-bottom:1.5rem}
-.phero-meta{font-size:.82rem;color:var(--muted)}
-
-/* ── Sections ── */
+.phero-lead{font-size:clamp(1rem,1.3vw,1.15rem);color:rgba(244,244,239,.8);max-width:50ch;line-height:1.6;margin-bottom:1.5rem}
 .section{padding:var(--gap) var(--gutter)}
 .section+.section{padding-top:0}
 .section-alt{background:var(--surface)}
-.section-dark{background:var(--ground)}
 .sh{font-size:clamp(2rem,4vw,4rem);margin-bottom:1.5rem}
 .sh-sm{font-size:clamp(1.5rem,3vw,2.5rem);margin-bottom:1rem}
-.lead{font-size:1.05rem;color:rgba(244,244,239,.75);line-height:1.7;max-width:60ch}
-.muted{color:var(--muted)}
-
-/* ── Pricing ── */
-.price-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1px;
-  background:rgba(244,244,239,.08);margin-top:2rem}
-.price-card{background:var(--surface);padding:2rem;position:relative}
-.price-card.featured{background:var(--accent)}
-.price-card.featured *{color:#fff!important}
-.price-label{font-size:.82rem;font-weight:600;letter-spacing:.03em;text-transform:uppercase;
-  color:var(--muted);margin-bottom:.5rem}
-.price-name{font-family:var(--font-display);font-size:1.6rem;margin-bottom:.25rem}
-.price-amount{font-family:var(--font-display);font-size:3rem;line-height:1;color:var(--ink)}
-.price-period{font-size:.8rem;color:var(--muted);margin-bottom:1rem}
-.price-features{list-style:none;display:flex;flex-direction:column;gap:.5rem;margin-bottom:1.5rem}
-.price-features li{font-size:.88rem;color:rgba(244,244,239,.7);display:flex;gap:.5rem}
-.price-features li::before{content:'—';color:var(--accent);flex-shrink:0}
-.price-card.featured .price-features li::before{color:#fff}
-
-/* ── Timetable ── */
-.tt-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:1px;
-  background:rgba(244,244,239,.08);margin-top:2rem}
+.tt-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:1px;background:rgba(244,244,239,.08);margin-top:2rem}
 .tt-day{background:var(--surface);padding:1.5rem}
-.tt-day-name{font-family:var(--font-display);font-size:1.1rem;color:var(--accent);
-  margin-bottom:.75rem}
+.tt-day-name{font-family:var(--font-display);font-size:1.1rem;color:var(--accent);margin-bottom:.75rem}
 .tt-slots{display:flex;flex-direction:column;gap:.5rem}
 .tt-slot{font-size:.82rem;color:rgba(244,244,239,.7);display:flex;flex-direction:column;gap:.1rem}
 .tt-slot strong{color:var(--ink);font-size:.88rem}
 .tt-slot span{font-size:.82rem;color:var(--muted)}
-
-/* ── Team ── */
-.team-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1px;
-  background:rgba(244,244,239,.08);margin-top:2rem}
+.team-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1px;background:rgba(244,244,239,.08);margin-top:2rem}
 .team-card{background:var(--surface);padding:2rem}
 .team-name{font-family:var(--font-display);font-size:1.4rem;margin-bottom:.25rem}
-.team-role{font-size:.82rem;color:var(--accent);font-weight:600;letter-spacing:.02em;
-  text-transform:uppercase;margin-bottom:.75rem}
-.team-bio{font-size:.88rem;color:rgba(244,244,239,.65);line-height:1.6}
-
-/* ── Quote / testimonial ── */
+.team-role{font-size:.82rem;color:var(--accent);font-weight:600;letter-spacing:.02em;text-transform:uppercase;margin-bottom:.75rem}
 .quote-block{padding:var(--gap) var(--gutter);background:var(--surface)}
 .quote-block-inner{max-width:680px;border-left:3px solid var(--accent);padding-left:2rem}
-.quote-block blockquote{font-family:var(--font-display);font-size:clamp(1.5rem,2.5vw,2.2rem);
-  line-height:1.05;color:var(--ink);margin-bottom:.75rem}
+.quote-block blockquote{font-family:var(--font-display);font-size:clamp(1.5rem,2.5vw,2.2rem);line-height:1.05;color:var(--ink);margin-bottom:.75rem}
 .quote-block cite{font-size:.82rem;color:var(--muted);font-style:normal;letter-spacing:.04em}
-
-/* ── Newsletter ── */
 .newsletter{padding:var(--gap) var(--gutter);background:var(--surface2)}
 .newsletter-inner{max-width:560px}
 .newsletter h2{font-size:clamp(2rem,4vw,3.5rem);margin-bottom:.75rem}
 .newsletter p{color:var(--muted);margin-bottom:1.5rem;line-height:1.6}
 .newsletter-form{display:flex;gap:.5rem;flex-wrap:wrap}
-.newsletter-form input{flex:1;min-width:200px;padding:.8rem 1rem;
-  background:var(--surface);border:1px solid rgba(244,244,239,.15);
-  color:var(--ink);font-family:var(--font-text);font-size:.9rem;border-radius:var(--r)}
+.newsletter-form input{flex:1;min-width:200px;padding:.8rem 1rem;background:var(--surface);border:1px solid rgba(244,244,239,.15);color:var(--ink);font-family:var(--font-text);font-size:.9rem;border-radius:var(--r)}
 .newsletter-form input::placeholder{color:var(--muted)}
 .newsletter-form input:focus{outline:none;border-color:var(--accent)}
-.newsletter-form button{padding:.8rem 1.5rem;background:var(--accent);color:#fff;
-  font-family:var(--font-display);font-size:1rem;letter-spacing:.06em;
-  border:none;border-radius:var(--r);cursor:pointer;transition:background .15s}
+.newsletter-form button{padding:.8rem 1.5rem;background:var(--accent);color:#fff;font-family:var(--font-display);font-size:1rem;letter-spacing:.06em;border:none;border-radius:var(--r);cursor:pointer;transition:background .15s}
 .newsletter-form button:hover{background:var(--accent2)}
-
-/* ── Info blocks ── */
 .info-row{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
-.info-col h3{font-size:clamp(1.4rem,2.5vw,2.2rem);margin-bottom:.75rem}
 .info-col p{font-size:.95rem;color:rgba(244,244,239,.7);line-height:1.75;margin-bottom:1rem}
 .check-list{list-style:none;display:flex;flex-direction:column;gap:.6rem;margin-top:1rem}
 .check-list li{font-size:.9rem;color:rgba(244,244,239,.75);display:flex;gap:.75rem}
 .check-list li::before{content:'✓';color:var(--accent);font-weight:700;flex-shrink:0}
-
-/* ── Footer ── */
 .footer{background:var(--surface);padding:3rem var(--gutter) 2rem;margin-top:var(--gap)}
 .footer-links{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-bottom:2.5rem}
-.footer-col h4{font-size:.82rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;
-  color:var(--muted);margin-bottom:1rem}
+.footer-col h4{font-size:.82rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:1rem}
 .footer-col ul{list-style:none;display:flex;flex-direction:column;gap:.6rem}
 .footer-col a{font-size:.85rem;color:rgba(244,244,239,.5);text-decoration:none;transition:color .15s}
 .footer-col a:hover{color:var(--ink)}
-.footer-name{font-family:var(--font-display);font-size:clamp(3rem,10vw,8rem);
-  line-height:.85;color:rgba(244,244,239,.04);letter-spacing:-.02em;margin-bottom:1.5rem;
-  overflow:hidden;user-select:none}
-.footer-bottom{border-top:1px solid rgba(244,244,239,.08);padding-top:1.5rem;
-  display:flex;flex-direction:column;gap:.5rem}
+.footer-name{font-family:var(--font-display);font-size:clamp(3rem,10vw,8rem);line-height:.85;color:rgba(244,244,239,.04);letter-spacing:-.02em;margin-bottom:1.5rem;overflow:hidden;user-select:none}
+.footer-bottom{border-top:1px solid rgba(244,244,239,.08);padding-top:1.5rem;display:flex;flex-direction:column;gap:.5rem}
 .footer-bottom p{font-size:.82rem;color:rgba(244,244,239,.35);line-height:1.6}
 .footer-bottom a{color:rgba(244,244,239,.5);text-decoration:none}
 .footer-bottom a:hover{color:var(--ink)}
-
-@media(max-width:900px){
-  .nav-links,.nav-cta{display:none}
-  .nav-hamburger{display:block}
-  .info-row{grid-template-columns:1fr}
-  .footer-links{grid-template-columns:1fr 1fr}
-}
-@media(max-width:600px){
-  .footer-links{grid-template-columns:1fr}
-}
-
-
-
-/* ── Page photo strip ── */
-.page-photo{width:100%;height:clamp(260px,40vh,500px);overflow:hidden;position:relative}
-.page-photo img{width:100%;height:100%;object-fit:cover;object-position:center 30%;display:block}
+@media(max-width:900px){.nav-links,.nav-cta{display:none}.nav-hamburger{display:block}.info-row{grid-template-columns:1fr}.footer-links{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.footer-links{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -258,80 +145,125 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:400;letter-spacing:-.01e
   <a href="https://crazystrength.co.uk/shop.html">Shop</a>
   <a href="https://crazystrength.co.uk/taster" style="color:var(--accent)">Book a Free Taster &#8594;</a>
 </nav>
-
 <main>
 <div class="phero">
   <div class="phero-bg"></div>
   <div class="phero-content">
     <h1>Open Gym</h1>
-    <p class="phero-lead">Your session, your programme. Access to the full facility with no coach telling you what to do.</p>
+    <p class="phero-lead">Train on your own terms. Pre-book a slot, come in, and get the work done. Early mornings, lunchtimes, evenings, weekends — the facility is here when you are.</p>
     <div style="display:flex;gap:.75rem;flex-wrap:wrap">
-      <a class="btn btn-primary" href="https://crazystrength.co.uk/taster">Join Open Gym</a>
+      <a class="btn btn-primary" href="https://www.evini.com/locations/390" target="_blank" rel="noopener">Pre-Book a Session</a>
       <a class="btn btn-ghost" href="https://wa.me/447734824897" target="_blank">Ask a Question</a>
     </div>
   </div>
-
+</div>
 <section class="section section-alt reveal">
   <div class="info-row">
     <div class="info-col">
-      <h2 class="sh">Your Gym, Your Session</h2>
-      <p>Open Gym is exactly what it sounds like. You come in, you train, you leave. Access to barbells, plates, lifting platforms, squat racks, and everything else in the facility. No class structure, no coach overhead.</p>
-      <p>Most Open Gym members also hold a coached programme membership. Some are here just to train on their own terms. Both work.</p>
+      <h2 class="sh">Your Training. Your Schedule.</h2>
+      <p>Open Gym gives you access to the full Crazy Strength facility for independent training. All the equipment, none of the noise. Pre-book your slot through evini and you're in.</p>
+      <p>Open Gym access is included with every coached programme membership. If you train with us on a coached programme, the facility is already yours.</p>
     </div>
     <div class="info-col">
-      <h3 class="sh-sm">Who Trains Open Gym</h3>
+      <h3 class="sh-sm">What You Get</h3>
       <ul class="check-list">
-        <li>Experienced lifters who know their programme</li>
-        <li>Members adding extra sessions around coached training</li>
-        <li>People who prefer to train alone</li>
-        <li>Athletes in-season managing their own load</li>
-        <li>Members doing rehabilitation or return-to-training</li>
+        <li>Full access to barbells, platforms, and racks</li>
+        <li>Competition-spec equipment throughout</li>
+        <li>Pre-booked sessions — no queuing, no overcrowding</li>
+        <li>Included with all coached programme memberships</li>
+        <li>Available early mornings through to late evenings</li>
+        <li>7 days a week</li>
       </ul>
     </div>
   </div>
 </section>
-
 <section class="section reveal">
-  <h2 class="sh">Session Times</h2>
-  <p class="lead muted" style="margin-bottom:1.5rem">Pre-booking required via evini. Select your slot below.</p>
+  <h2 class="sh">Available Sessions</h2>
   <div class="tt-grid">
     <div class="tt-day">
       <div class="tt-day-name">Weekdays</div>
       <div class="tt-slots">
-        <div class="tt-slot"><strong>05:00</strong><span>Early morning</span></div>
-        <div class="tt-slot"><strong>10:00</strong><span>Mid-morning</span></div>
+        <div class="tt-slot"><strong>05:00</strong><span>Early Morning</span></div>
+        <div class="tt-slot"><strong>10:00</strong><span>Mid-Morning</span></div>
         <div class="tt-slot"><strong>13:30</strong><span>Lunchtime</span></div>
-        <div class="tt-slot"><strong>14:00</strong><span>Early afternoon</span></div>
+        <div class="tt-slot"><strong>14:00</strong><span>Early Afternoon</span></div>
         <div class="tt-slot"><strong>19:00</strong><span>Evening</span></div>
-        <div class="tt-slot"><strong>21:00</strong><span>Late evening</span></div>
+        <div class="tt-slot"><strong>21:00</strong><span>Late Evening</span></div>
       </div>
     </div>
     <div class="tt-day">
       <div class="tt-day-name">Weekends</div>
       <div class="tt-slots">
-        <div class="tt-slot"><strong>05:00</strong><span>Early morning</span></div>
-        <div class="tt-slot"><strong>10:00</strong><span>Mid-morning</span></div>
+        <div class="tt-slot"><strong>05:00</strong><span>Early Morning</span></div>
+        <div class="tt-slot"><strong>10:00</strong><span>Morning</span></div>
         <div class="tt-slot"><strong>12:00</strong><span>Midday</span></div>
         <div class="tt-slot"><strong>15:00</strong><span>Afternoon</span></div>
-        <div class="tt-slot"><strong>18:00</strong><span>Early evening</span></div>
-        <div class="tt-slot"><strong>21:00</strong><span>Late evening</span></div>
+        <div class="tt-slot"><strong>18:00</strong><span>Evening</span></div>
+        <div class="tt-slot"><strong>21:00</strong><span>Late Evening</span></div>
       </div>
     </div>
   </div>
-  <div style="margin-top:2rem;text-align:center">
-    <a class="btn btn-primary" href="https://www.evini.com/locations/390" target="_blank" rel="noopener" style="font-size:.9rem;padding:.8rem 2rem">Book a Session on evini</a>
-  </div>
+  <p style="margin-top:1.5rem;color:var(--muted);font-size:.88rem">Pre-booking is required. Book through <a href="https://www.evini.com/locations/390" target="_blank" rel="noopener" style="color:var(--ink);text-decoration:underline">evini</a>. Session availability may vary.</p>
 </section>
-
 <section class="section section-alt reveal">
-  <h2 class="sh">Membership</h2>
-  <p>Open gym access is included with all Crazy Strength coached programme memberships. For pricing and availability, get in touch.</p>
-  <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.5rem">
-    <a href="https://wa.me/447734824897" target="_blank" rel="noopener" class="btn btn-primary">WhatsApp Us</a>
-    <a href="mailto:contact@crazystrength.co.uk" class="btn">Email Us</a>
+  <h2 class="sh">How to Book</h2>
+  <div class="info-row">
+    <div class="info-col">
+      <p>All open gym sessions are pre-booked through evini. Select your slot, confirm your booking, and you're set. No drop-ins — the booking system keeps sessions uncrowded and the facility yours to use properly.</p>
+      <p>If you're already a coached programme member, open gym access is part of your membership. Just book a slot and come in.</p>
+    </div>
+    <div class="info-col">
+      <h3 class="sh-sm">What to Know Before You Arrive</h3>
+      <ul class="check-list">
+        <li>Pre-booking is required — walk-ins not accepted</li>
+        <li>Arrive on time for your slot</li>
+        <li>Full access to all equipment during your session</li>
+        <li>Coached programme members book the same way</li>
+      </ul>
+      <div style="margin-top:1.5rem;display:flex;gap:.75rem;flex-wrap:wrap">
+        <a class="btn btn-primary" href="https://www.evini.com/locations/390" target="_blank" rel="noopener">Book on evini</a>
+      </div>
+    </div>
   </div>
 </section>
-
+<section class="quote-block">
+  <div class="quote-block-inner">
+    <blockquote>"05:00 on a Monday. No excuses, no distractions, just work. That's why I'm here."</blockquote>
+    <cite>Crazy Strength Open Gym member</cite>
+  </div>
+</section>
+<section class="section reveal">
+  <h2 class="sh">Your Coaches</h2>
+  <p style="color:var(--muted);margin-bottom:2rem">Our coaches are on hand across coached programme sessions. If you need guidance during open gym, they're available to help.</p>
+  <div class="team-grid">
+    <div class="team-card"><div class="team-name">Craig Spicer</div><div class="team-role">Head Coach &amp; Founder</div></div>
+    <div class="team-card"><div class="team-name">Allie Marrow</div><div class="team-role">Lead Coach</div></div>
+    <div class="team-card"><div class="team-name">Dan Ling</div><div class="team-role">Powerlifting Coach</div></div>
+    <div class="team-card"><div class="team-name">Pip Fox</div><div class="team-role">WL &amp; CUBS Coach</div></div>
+  </div>
+</section>
+<section class="section reveal">
+  <h2 class="sh">Join a Coached Programme</h2>
+  <div class="info-row">
+    <div class="info-col">
+      <p>Open gym works best alongside a programme. If you're training independently but want structure, a written plan, and proper coaching, our programmes are worth looking at.</p>
+      <p>Open gym access is included with every coached membership — so you get both.</p>
+    </div>
+    <div class="info-col">
+      <h3 class="sh-sm">Our Programmes</h3>
+      <ul class="check-list">
+        <li><a href="https://crazystrength.co.uk/weightlifting.html" style="color:inherit;text-decoration:underline">Olympic Weightlifting</a></li>
+        <li><a href="https://crazystrength.co.uk/powerlifting.html" style="color:inherit;text-decoration:underline">Powerlifting</a></li>
+        <li><a href="https://crazystrength.co.uk/ladies-that-lift.html" style="color:inherit;text-decoration:underline">Ladies That Lift</a></li>
+        <li><a href="https://crazystrength.co.uk/legends-that-lift.html" style="color:inherit;text-decoration:underline">Legends That Lift</a></li>
+        <li><a href="https://crazystrength.co.uk/cubs.html" style="color:inherit;text-decoration:underline">Cubs (ages 6–11)</a></li>
+      </ul>
+      <div style="margin-top:1.5rem">
+        <a class="btn btn-primary" href="https://crazystrength.co.uk/taster">Book a Free Taster</a>
+      </div>
+    </div>
+  </div>
+</section>
 <div class="newsletter">
   <div class="newsletter-inner reveal">
     <h2>Stay in the Loop</h2>
@@ -345,41 +277,30 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:400;letter-spacing:-.01e
 </main>
 <footer class="footer">
   <div class="footer-links">
-    <div class="footer-col">
-      <h4>Train</h4>
-      <ul>
-        <li><a href="https://crazystrength.co.uk/powerlifting.html">Powerlifting</a></li>
-        <li><a href="https://crazystrength.co.uk/weightlifting.html">Olympic Weightlifting</a></li>
-        <li><a href="https://crazystrength.co.uk/ladies-that-lift.html">Ladies That Lift</a></li>
-        <li><a href="https://crazystrength.co.uk/legends-that-lift.html">Legends That Lift</a></li>
-        <li><a href="https://crazystrength.co.uk/cubs.html">Cubs Programme</a></li>
-        <li><a href="https://crazystrength.co.uk/open-gym.html">Open Gym</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h4>Learn</h4>
-      <ul>
-        <li><a href="https://crazystrength.co.uk/education.html">Education</a></li>
-        <li><a href="https://crazystrength.co.uk/blog.html">Blog</a></li>
-        <li><a href="https://crazystrength.co.uk/events.html">Events &amp; Competitions</a></li>
-        <li><a href="https://crazystrength.co.uk/timetable.html">Timetable</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h4>Crazy Strength</h4>
-      <ul>
-        <li><a href="https://crazystrength.co.uk/meet-the-team.html">The Team</a></li>
-        <li><a href="https://crazystrength.co.uk/shop.html">Shop</a></li>
-        <li><a href="https://crazystrength.co.uk/taster">Free Taster Session</a></li>
-        <li><a href="https://wa.me/447734824897" target="_blank" rel="noopener">WhatsApp</a></li>
-        <li><a href="https://crazystrength.co.uk/privacy.html">Privacy Policy</a></li>
-      </ul>
-    </div>
+    <div class="footer-col"><h4>Train</h4><ul>
+      <li><a href="https://crazystrength.co.uk/powerlifting.html">Powerlifting</a></li>
+      <li><a href="https://crazystrength.co.uk/weightlifting.html">Olympic Weightlifting</a></li>
+      <li><a href="https://crazystrength.co.uk/ladies-that-lift.html">Ladies That Lift</a></li>
+      <li><a href="https://crazystrength.co.uk/legends-that-lift.html">Legends That Lift</a></li>
+      <li><a href="https://crazystrength.co.uk/cubs.html">Cubs Programme</a></li>
+      <li><a href="https://crazystrength.co.uk/open-gym.html">Open Gym</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Learn</h4><ul>
+      <li><a href="https://crazystrength.co.uk/education.html">Education</a></li>
+      <li><a href="https://crazystrength.co.uk/blog.html">Blog</a></li>
+      <li><a href="https://crazystrength.co.uk/events.html">Events &amp; Competitions</a></li>
+      <li><a href="https://crazystrength.co.uk/timetable.html">Timetable</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Crazy Strength</h4><ul>
+      <li><a href="https://crazystrength.co.uk/meet-the-team.html">The Team</a></li>
+      <li><a href="https://crazystrength.co.uk/shop.html">Shop</a></li>
+      <li><a href="https://crazystrength.co.uk/taster">Free Taster Session</a></li>
+      <li><a href="https://wa.me/447734824897" target="_blank" rel="noopener">WhatsApp</a></li>
+      <li><a href="https://crazystrength.co.uk/privacy.html">Privacy Policy</a></li>
+    </ul></div>
   </div>
   <div class="footer-name" aria-hidden="true">CRAZY STRENGTH</div>
-  <div class="footer-bottom">
-    <p>&copy; 2026 Crazy Strength UK Limited &middot; Unit 13, The Beacon Centre, Solstice Park, Amesbury SP4 7SZ</p>
-  </div>
+  <div class="footer-bottom"><p>&copy; 2026 Crazy Strength UK Limited &middot; Unit 13, The Beacon Centre, Solstice Park, Amesbury SP4 7SZ</p></div>
 </footer>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-LM4B458FXM"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-LM4B458FXM');</script>
@@ -401,19 +322,18 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:400;letter-spacing:-.01e
 </script>
 <script>
 (function(){
-  var forms = document.querySelectorAll('.newsletter-form');
+  var forms=document.querySelectorAll('.newsletter-form');
   forms.forEach(function(form){
     form.addEventListener('submit',function(e){
       e.preventDefault();
-      var email = form.querySelector('input[type="email"]').value;
+      var email=form.querySelector('input[type="email"]').value;
       if(!email)return;
       fetch('/api/subscribe',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:email})})
-        .then(function(){form.innerHTML='<p style="color:var(--accent);font-family:var(--font-display);font-size:1.2rem">You're in.</p>'})
-        .catch(function(){form.innerHTML='<p style="color:var(--accent);font-family:var(--font-display);font-size:1.2rem">You're in.</p>'});
+        .then(function(){form.innerHTML='<p style="color:var(--accent);font-family:var(--font-display);font-size:1.2rem">You\'re in.</p>'})
+        .catch(function(){form.innerHTML='<p style="color:var(--accent);font-family:var(--font-display);font-size:1.2rem">You\'re in.</p>'});
     });
   });
 })();
 </script>
-
 </body>
 </html>
