@@ -94,11 +94,12 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:400;letter-spacing:-.01e
 .reveal.vis{opacity:1;transform:translateY(0)}
 
 /* ── Page hero ── */
-.phero{position:relative;min-height:55vh;display:flex;flex-direction:column;
-  justify-content:flex-end;padding:4rem var(--gutter);overflow:hidden;margin-top:60px}
-.phero-bg{position:absolute;inset:0;background:var(--surface);background-image:url('assets/pictures/wl-course-new-space.jpg');background-size:cover;background-position:center 30%}
-.phero-bg::after{content:'';position:absolute;inset:0;
-  background:linear-gradient(to top,rgba(10,10,10,.9) 0%,rgba(10,10,10,.4) 50%,rgba(10,10,10,.2) 100%)}
+.phero{position:relative;min-height:72vh;display:flex;flex-direction:column;
+  justify-content:flex-end;padding:0 var(--gutter) clamp(3rem,6vw,5rem);overflow:hidden;margin-top:60px}
+.phero-bg{position:absolute;inset:0;background:
+  linear-gradient(to bottom,rgba(10,10,10,0) 30%,rgba(10,10,10,.85) 100%),
+  url('assets/pictures/wl-course-new-space.jpg') center 30%/cover no-repeat;
+  background-color:var(--surface)}
 .phero-content{position:relative;z-index:1;max-width:800px}
 .phero h1{font-size:clamp(3.5rem,8vw,8rem);line-height:.88;margin-bottom:1rem}
 .phero-lead{font-size:clamp(1rem,1.3vw,1.15rem);color:rgba(244,244,239,.8);
