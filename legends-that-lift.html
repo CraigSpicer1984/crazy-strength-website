@@ -94,9 +94,9 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:400;letter-spacing:-.01e
 .reveal.vis{opacity:1;transform:translateY(0)}
 
 /* ── Page hero ── */
-.phero{position:relative;min-height:72vh;display:flex;align-items:flex-end;padding:0 var(--gutter) clamp(3rem,6vw,5rem);overflow:hidden;margin-top:60px}
+.phero{position:relative;min-height:72vh;display:flex;align-items:flex-start;padding:clamp(3rem,6vw,5rem) var(--gutter);overflow:hidden;margin-top:60px}
 .phero-bg{position:absolute;inset:0;background:
-  linear-gradient(to bottom,rgba(10,10,10,0) 30%,rgba(10,10,10,.85) 100%),
+  linear-gradient(to bottom,rgba(10,10,10,.8) 0%,rgba(10,10,10,.4) 50%,rgba(10,10,10,0) 100%),
   url('assets/pictures/csdaydeadlift-oct26-152.jpg') center 30%/cover no-repeat;
   background-color:var(--surface)}
 .phero-bg::after{content:'';position:absolute;inset:0;
